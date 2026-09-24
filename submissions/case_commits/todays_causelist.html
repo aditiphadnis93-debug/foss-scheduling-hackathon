@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today's Cause List</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #f0f2f5;
+    --text: #1b1f24;
+    --muted: #5f6b7a;
+    --border: #dde1e6;
+    --accent: #2f5bd3;
+    --bar-sub: #2f5bd3;
+    --bar-age: #8a4fd1;
+    --bar-cluster: #1f8a8a;
+    --bar-time: #c2410c;
+    --shadow: 0 10px 40px rgba(15, 20, 30, .25);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111418; --surface: #1a1e24; --surface-2: #232830; --text: #e6e9ed; --muted: #9aa5b1;
+      --border: #2e343d; --accent: #7c9cf5; --shadow: 0 10px 40px rgba(0, 0, 0, .6);
+      --bar-sub: #7c9cf5; --bar-age: #b98cf0; --bar-cluster: #4cc3c3; --bar-time: #f39a5e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111418; --surface: #1a1e24; --surface-2: #232830; --text: #e6e9ed; --muted: #9aa5b1;
+    --border: #2e343d; --accent: #7c9cf5; --shadow: 0 10px 40px rgba(0, 0, 0, .6);
+    --bar-sub: #7c9cf5; --bar-age: #b98cf0; --bar-cluster: #4cc3c3; --bar-time: #f39a5e;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  .sub { color: var(--muted); margin-bottom: 16px; }
+
+  .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  tbody tr:last-child td { border-bottom: 0; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; background: var(--surface-2); white-space: nowrap; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.time { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.time .dur { color: var(--muted); font-size: 12px; margin-left: 6px; }
+  tr.case { cursor: pointer; }
+  tr.case:hover td { background: var(--surface-2); }
+  tr.case:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  tr.break td, tr.gap td { color: var(--muted); font-size: 13px; text-align: center; font-style: italic; }
+  tr.break td { background: var(--surface-2); }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+  .score { font-weight: 700; }
+
+  /* Modal */
+  dialog {
+    width: min(620px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+    padding: 0; border: 1px solid var(--border); border-radius: 12px;
+    background: var(--surface); color: var(--text); box-shadow: var(--shadow);
+  }
+  dialog::backdrop { background: rgba(10, 14, 20, .45); }
+  .m-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--surface); }
+  .m-head h3 { margin: 0; font-size: 18px; }
+  .m-head .sub { font-size: 13px; margin: 4px 0 0; }
+  .m-section { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .m-section:last-child { border-bottom: 0; }
+  .m-section h4 { margin: 0 0 12px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; }
+  .facts > div { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; font-size: 12px; color: var(--muted); }
+  .facts b { display: block; color: var(--text); font-weight: 600; font-size: 14px; margin-top: 1px; }
+  .facts .note-line { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .breakdown { display: grid; grid-template-columns: minmax(150px, 210px) 1fr 60px; gap: 8px 12px; align-items: center; }
+  .breakdown .bar-track { background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .breakdown .bar { height: 10px; border-radius: 3px; }
+  .breakdown .val { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; }
+  .breakdown .lbl { font-size: 13px; color: var(--muted); }
+  .breakdown .lbl small { display: block; font-size: 11px; }
+  .breakdown .divider { grid-column: 1 / -1; height: 1px; background: var(--border); margin: 4px 0; }
+  .breakdown .total { color: var(--text); font-size: 14px; font-weight: 700; }
+  .summary { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.5; }
+  button { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+  button:hover { background: var(--surface-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="title">Today's cause list</h1>
+  <div class="sub" id="sub"></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Case no.</th><th>Hearing type</th><th class="num">Case age</th><th class="num">Score</th><th>Time</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<dialog id="modal" aria-labelledby="mTitle"></dialog>
+
+<script>
+// Hearing length and gap to next hearing, from data/hearing_type_reference.csv
+const REF = {
+  ADMISSION:                   { label: "Admission",                dur: 5,  gap: 5 },
+  COGNIZANCE:                  { label: "Cognizance",               dur: 10, gap: 14 },
+  DELAY_CONDONATION_HEARING:   { label: "Delay condonation",        dur: 5,  gap: 5 },
+  APPEARANCE:                  { label: "Appearance",               dur: 10, gap: 21 },
+  WARRANT:                     { label: "Warrant",                  dur: 10, gap: 21 },
+  PLEA:                        { label: "Plea",                     dur: 15, gap: 14 },
+  EXAMINATION_UNDER_S351_BNSS: { label: "Examination u/s 351 BNSS", dur: 30, gap: 14 },
+  EVIDENCE_COMPLAINANT:        { label: "Evidence (complainant)",   dur: 30, gap: 14 },
+  EVIDENCE_ACCUSED:            { label: "Evidence (accused)",       dur: 30, gap: 14 },
+  ARGUMENTS:                   { label: "Arguments",                dur: 30, gap: 14 },
+  JUDGEMENT:                   { label: "Judgement",                dur: 30, gap: 21 },
+  BAIL:                        { label: "Bail",                     dur: 15, gap: 14 },
+  REPORTS:                     { label: "Reports",                  dur: 10, gap: 45 },
+  APPLICATION_REVIEW:          { label: "Application review",       dur: 10, gap: 5 },
+};
+
+// Court holidays from data/court_calendar.csv (weekends are handled separately)
+const HOLIDAYS = {
+  "2026-09-04": "Janmashtami", "2026-09-15": "Samvatsari", "2026-10-02": "Gandhi Jayanti",
+  "2026-10-20": "Dussehra", "2026-11-08": "Diwali", "2026-11-09": "Diwali (New Year)",
+};
+
+// Court hours in minutes from midnight: 10:00–18:00 with a lunch break 13:00–14:00.
+// Hearings are booked only in the windows either side of the break.
+const BREAK = { start: 780, end: 840 };
+const WINDOWS = [{ start: 600, end: BREAK.start }, { start: BREAK.end, end: 1080 }];
+
+// All 100 cases from data/roster_sample_100.csv
+// [case no., filing no., filing date, advocate, current stage, next-hearing purpose, hearings at that purpose, total hearings, last hearing summary]
+const ROSTER = [
+  ["ST/819/2023", "KL-000761-2023", "2023-01-09", "ADV-005", "Evidence Accused", "EVIDENCE_ACCUSED", 4, 35, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/1028/2023", "KL-000183-2023", "2023-06-01", "ADV-028", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 4, 27, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nApplication taken up for review; other side to file objections."],
+  ["ST/792/2024", "KL-000738-2024", "2024-08-04", "ADV-037", "Examination Under S351 Bnss", "EXAMINATION_UNDER_S351_BNSS", 2, 23, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nAwait warrant. For return of warrant."],
+  ["ST/522/2023", "KL-001721-2023", "2023-10-19", "ADV-025", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 5, 26, "Present: Complainant, Complainant's Advocate\nAbsent: Accused, Accused Advocate\nComplainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination."],
+  ["ST/576/2024", "KL-000887-2024", "2024-09-06", "ADV-028", "Appearance", "WARRANT", 0, 11, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/655/2025", "KL-001421-2025", "2025-07-14", "ADV-022", "Warrant", "BAIL", 0, 14, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant is continuously absent. Steps not taken even after repeated direction. Complainant shall be present."],
+  ["ST/947/2022", "KL-000393-2022", "2022-03-03", "ADV-003", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 3, 23, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/697/2021", "KL-001313-2021", "2021-12-18", "ADV-011", "Evidence Accused", "EVIDENCE_ACCUSED", 3, 27, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nWitness shall be present."],
+  ["ST/934/2024", "KL-001112-2024", "2024-04-06", "ADV-021", "Warrant", "PLEA", 0, 11, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant is continuously absent. Steps not taken even after repeated direction. Complainant shall be present."],
+  ["ST/387/2020", "KL-000464-2020", "2020-03-07", "ADV-012", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 3, 21, "Present: Complainant, Complainant's Advocate\nAbsent: Accused, Accused Advocate\nComplainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination."],
+  ["ST/92/2026", "KL-000546-2026", "2026-04-30", "ADV-028", "Delay Condonation Hearing", "DELAY_CONDONATION_HEARING", 2, 5, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nNotice served against accused. For objection and hearing."],
+  ["ST/617/2022", "KL-000739-2022", "2022-09-05", "ADV-036", "Arguments", "JUDGEMENT", 0, 29, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Accused, Complainant\nHeard from the side of the complainant. For the hearing of the accused."],
+  ["ST/1278/2018", "KL-000263-2018", "2018-06-11", "ADV-011", "Judgement", "JUDGEMENT", 1, 35, "Present: Accused, Accused Advocate\nAbsent: Complainant, Complainant's Advocate\nAccused found guilty and convicted u/s.138 of the NI Act. Sentenced to imprisonment till the rising of the court and directed to pay compensation to the complainant, in default to undergo simple imprisonment. Sentence suspended for a short period on application."],
+  ["ST/7/2025", "KL-001618-2025", "2025-09-05", "ADV-023", "Appearance", "WARRANT", 0, 6, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/262/2022", "KL-001596-2022", "2022-09-18", "ADV-026", "Evidence Accused", "EVIDENCE_ACCUSED", 4, 36, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present. Accused is examined in chief as DW1. Exhibits marked. For further evidence of the accused."],
+  ["ST/1227/2025", "KL-001717-2025", "2025-03-01", "ADV-042", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 27, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/545/2024", "KL-000610-2024", "2024-10-28", "ADV-011", "Plea", "EXAMINATION_UNDER_S351_BNSS", 0, 13, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present with sureties. Particulars of the offence u/s.138 of NI Act read over and explained. Accused pleaded not guilty and claimed trial. Case to proceed as a summons case."],
+  ["ST/979/2022", "KL-000626-2022", "2022-12-07", "ADV-027", "Evidence Accused", "ARGUMENTS", 0, 31, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/770/2023", "KL-000763-2023", "2023-06-24", "ADV-042", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 22, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/367/2023", "KL-000602-2023", "2023-03-22", "ADV-009", "Judgement", "JUDGEMENT", 2, 42, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+  ["ST/872/2025", "KL-000869-2025", "2025-02-18", "ADV-017", "Plea", "EXAMINATION_UNDER_S351_BNSS", 0, 15, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present with sureties. Particulars of the offence u/s.138 of NI Act read over and explained. Accused pleaded not guilty and claimed trial. Case to proceed as a summons case."],
+  ["ST/219/2017", "KL-001305-2017", "2017-05-26", "ADV-020", "Arguments", "JUDGEMENT", 0, 44, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Accused, Complainant\nHeard from the side of the complainant. For the hearing of the accused."],
+  ["ST/652/2020", "KL-000502-2020", "2020-03-06", "ADV-012", "Evidence Complainant", "REPORTS", 0, 22, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/572/2017", "KL-001654-2017", "2017-11-18", "ADV-022", "Judgement", "REPORTS", 0, 44, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nAccused shall be present. For judgment."],
+  ["ST/1015/2023", "KL-001081-2023", "2023-01-21", "ADV-033", "Evidence Accused", "EVIDENCE_ACCUSED", 2, 25, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor reporting progress in mediation, last chance."],
+  ["ST/1166/2023", "KL-000443-2023", "2023-12-06", "ADV-017", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 4, 21, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor reporting progress in mediation, last chance."],
+  ["ST/1118/2021", "KL-001660-2021", "2021-02-02", "ADV-022", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 25, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the evidence of the complainant."],
+  ["ST/416/2024", "KL-001210-2024", "2024-07-21", "ADV-008", "Appearance", "WARRANT", 0, 5, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nAwait summons. For return of summons."],
+  ["ST/1046/2023", "KL-001411-2023", "2023-12-27", "ADV-011", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 5, 24, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/645/2023", "KL-001154-2023", "2023-04-09", "ADV-009", "Evidence Accused", "ARGUMENTS", 0, 26, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nWitness shall be present."],
+  ["ST/341/2017", "KL-001797-2017", "2017-08-13", "ADV-037", "Evidence Accused", "EVIDENCE_ACCUSED", 3, 28, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present. Accused is examined in chief as DW1. Exhibits marked. For further evidence of the accused."],
+  ["ST/1266/2023", "KL-000298-2023", "2023-03-26", "ADV-003", "Judgement", "JUDGEMENT", 2, 42, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+  ["ST/804/2023", "KL-000639-2023", "2023-04-21", "ADV-033", "Judgement", "APPLICATION_REVIEW", 0, 40, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nJudgment pronounced; accused acquitted, benefit of doubt extended."],
+  ["ST/1261/2017", "KL-000224-2017", "2017-07-13", "ADV-021", "Arguments", "JUDGEMENT", 0, 43, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nHeard. For judgment."],
+  ["ST/1343/2026", "KL-000293-2026", "2026-05-16", "ADV-044", "Appearance", "WARRANT", 0, 9, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the appearance of the parties."],
+  ["ST/181/2025", "KL-000399-2025", "2025-08-04", "ADV-034", "Warrant", "PLEA", 0, 10, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant is continuously absent. Steps not taken even after repeated direction. Complainant shall be present."],
+  ["ST/803/2026", "KL-000894-2026", "2026-02-11", "ADV-020", "Admission", "ADMISSION", 1, 1, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\n225 affidavit filed. No delay in filing the complaint. The accused resides outside the jurisdiction of this court, hence enquiry conducted u/s.225 of BNSS. Heard. Perused the records. Satisfied that there is sufficient ground to proceed against the accused for the offence punishable u/s.138 of NI Act. Hence the court took cognizance of the aforesaid offence and the case is taken on file as ST. Issue summons to accused. Take steps. For return of summons."],
+  ["ST/917/2021", "KL-001766-2021", "2021-12-16", "ADV-015", "Evidence Accused", "ARGUMENTS", 0, 31, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present. Accused is examined in chief as DW1. Exhibits marked. For further evidence of the accused."],
+  ["ST/1012/2025", "KL-001562-2025", "2025-05-12", "ADV-030", "Examination Under S351 Bnss", "EVIDENCE_COMPLAINANT", 0, 15, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused filed application. For objection and hearing."],
+  ["ST/485/2021", "KL-000143-2021", "2021-11-19", "ADV-045", "Judgement", "JUDGEMENT", 1, 44, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nApplication taken up for review; other side to file objections."],
+  ["ST/465/2025", "KL-000589-2025", "2025-06-29", "ADV-010", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 25, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/571/2023", "KL-000303-2023", "2023-02-28", "ADV-027", "Evidence Complainant", "REPORTS", 0, 21, "Present: Complainant, Complainant's Advocate\nAbsent: Accused, Accused Advocate\nComplainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination."],
+  ["ST/555/2023", "KL-001392-2023", "2023-11-17", "ADV-008", "Appearance", "WARRANT", 0, 7, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the appearance of the parties."],
+  ["ST/977/2024", "KL-000894-2024", "2024-11-08", "ADV-027", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 27, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the evidence of the complainant."],
+  ["ST/739/2022", "KL-000234-2022", "2022-12-18", "ADV-022", "Evidence Accused", "EVIDENCE_ACCUSED", 2, 33, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present. Accused is examined in chief as DW1. Exhibits marked. For further evidence of the accused."],
+  ["ST/554/2021", "KL-001684-2021", "2021-12-11", "ADV-010", "Judgement", "APPLICATION_REVIEW", 0, 37, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+  ["ST/1048/2025", "KL-000064-2025", "2025-12-18", "ADV-038", "Delay Condonation Hearing", "DELAY_CONDONATION_HEARING", 1, 4, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue DCA notice to accused. Take steps. For return of notice."],
+  ["ST/374/2024", "KL-001413-2024", "2024-09-21", "ADV-001", "Examination Under S351 Bnss", "EVIDENCE_COMPLAINANT", 0, 20, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused filed application. For objection and hearing."],
+  ["ST/789/2022", "KL-000515-2022", "2022-08-22", "ADV-039", "Judgement", "JUDGEMENT", 1, 43, "Present: Accused, Accused Advocate\nAbsent: Complainant, Complainant's Advocate\nAccused found guilty and convicted u/s.138 of the NI Act. Sentenced to imprisonment till the rising of the court and directed to pay compensation to the complainant, in default to undergo simple imprisonment. Sentence suspended for a short period on application."],
+  ["ST/1198/2026", "KL-001423-2026", "2026-08-25", "ADV-043", "Delay Condonation Hearing", "DELAY_CONDONATION_HEARING", 1, 3, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nNotice is returned as addressee out of India. Hence notice can be deemed to be served. For objection and hearing."],
+  ["ST/628/2022", "KL-000107-2022", "2022-11-05", "ADV-012", "Judgement", "REPORTS", 0, 44, "Present: Accused, Accused Advocate\nAbsent: Complainant, Complainant's Advocate\nAccused found guilty and convicted u/s.138 of the NI Act. Sentenced to imprisonment till the rising of the court and directed to pay compensation to the complainant, in default to undergo simple imprisonment. Sentence suspended for a short period on application."],
+  ["ST/363/2026", "KL-000694-2026", "2026-03-28", "ADV-044", "Cognizance", "APPEARANCE", 0, 6, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nDelay condonation application allowed. Enquiry u/s.225 of BNSS dispensed with as accused resides within jurisdiction. Heard. Perused the records. Satisfied that there is sufficient ground to proceed. Hence the court took cognizance of the aforesaid offence and the case is taken on file as ST. Issue summons to accused."],
+  ["ST/950/2023", "KL-001358-2023", "2023-03-09", "ADV-001", "Judgement", "APPLICATION_REVIEW", 0, 35, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nJudgment pronounced; accused acquitted, benefit of doubt extended."],
+  ["ST/356/2016", "KL-000678-2016", "2016-11-07", "ADV-032", "Arguments", "JUDGEMENT", 0, 36, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nHeard. For further hearing."],
+  ["ST/344/2023", "KL-000415-2023", "2023-04-01", "ADV-013", "Judgement", "APPLICATION_REVIEW", 0, 33, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+  ["ST/330/2025", "KL-000251-2025", "2025-03-08", "ADV-036", "Warrant", "WARRANT", 3, 15, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/1230/2025", "KL-000958-2025", "2025-02-13", "ADV-008", "Appearance", "APPLICATION_REVIEW", 0, 8, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the appearance of the parties."],
+  ["ST/954/2021", "KL-000830-2021", "2021-02-05", "ADV-016", "Judgement", "APPLICATION_REVIEW", 0, 36, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nAccused shall be present. For judgment."],
+  ["ST/884/2023", "KL-001697-2023", "2023-02-06", "ADV-034", "Evidence Accused", "EVIDENCE_ACCUSED", 2, 28, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nWitness shall be present."],
+  ["ST/1244/2025", "KL-001539-2025", "2025-03-28", "ADV-031", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 2, 24, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor reporting progress in mediation."],
+  ["ST/1178/2026", "KL-001775-2026", "2026-03-24", "ADV-012", "Admission", "ADMISSION", 1, 1, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nAccused filed affidavit u/s.225 of BNSS. No delay in filing the complaint. Enquiry conducted u/s.225 of BNSS. Heard. Perused the records. Satisfied that there is sufficient ground to proceed for the offence u/s.138 of NI Act. Case taken on file as ST. Issue summons to accused. Take steps. For return of summons."],
+  ["ST/629/2022", "KL-000353-2022", "2022-10-12", "ADV-032", "Evidence Accused", "ARGUMENTS", 0, 29, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nWitness shall be present."],
+  ["ST/1283/2022", "KL-001013-2022", "2022-09-28", "ADV-020", "Judgement", "APPLICATION_REVIEW", 0, 43, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nJudgment pronounced; accused acquitted, benefit of doubt extended."],
+  ["ST/1187/2026", "KL-001123-2026", "2026-02-02", "ADV-001", "Appearance", "WARRANT", 0, 6, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nSummons served. For the appearance of the accused."],
+  ["ST/177/2024", "KL-001205-2024", "2024-03-10", "ADV-006", "Examination Under S351 Bnss", "EVIDENCE_COMPLAINANT", 0, 15, "Present: Complainant, Complainant's Advocate, Accused, Accused Advocate\nPower of attorney holder for the complainant present. Accused is examined u/s.351(1)(b) of BNSS. Accused filed witness schedule. Allowed. Issue summons to witness. Take steps. For return of summons."],
+  ["ST/69/2022", "KL-000577-2022", "2022-10-09", "ADV-023", "Evidence Accused", "EVIDENCE_ACCUSED", 3, 27, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/293/2026", "KL-000083-2026", "2026-04-01", "ADV-037", "Admission", "DELAY_CONDONATION_HEARING", 0, 1, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nAwait notice. For return of notice."],
+  ["ST/199/2022", "KL-001770-2022", "2022-04-11", "ADV-037", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 19, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nFor the evidence of the complainant."],
+  ["ST/551/2023", "KL-001521-2023", "2023-12-02", "ADV-004", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 3, 26, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nApplication taken up for review; other side to file objections."],
+  ["ST/176/2026", "KL-000648-2026", "2026-08-13", "ADV-010", "Appearance", "APPEARANCE", 1, 6, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nAwait summons. For return of summons."],
+  ["ST/481/2020", "KL-001031-2020", "2020-07-21", "ADV-004", "Evidence Accused", "EVIDENCE_ACCUSED", 3, 34, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/733/2025", "KL-001243-2025", "2025-07-23", "ADV-041", "Appearance", "APPLICATION_REVIEW", 0, 10, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/702/2026", "KL-000004-2026", "2026-07-13", "ADV-011", "Admission", "DELAY_CONDONATION_HEARING", 0, 1, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\n225 affidavit filed. No delay in filing the complaint. The accused resides outside the jurisdiction of this court, hence enquiry conducted u/s.225 of BNSS. Heard. Perused the records. Satisfied that there is sufficient ground to proceed against the accused for the offence punishable u/s.138 of NI Act. Hence the court took cognizance of the aforesaid offence and the case is taken on file as ST. Issue summons to accused. Take steps. For return of summons."],
+  ["ST/164/2023", "KL-000643-2023", "2023-10-14", "ADV-030", "Appearance", "WARRANT", 0, 8, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/1284/2018", "KL-000024-2018", "2018-08-17", "ADV-040", "Evidence Accused", "ARGUMENTS", 0, 28, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence."],
+  ["ST/655/2021", "KL-000740-2021", "2021-03-19", "ADV-044", "Judgement", "REPORTS", 0, 36, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+  ["ST/1355/2023", "KL-000350-2023", "2023-04-12", "ADV-022", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 3, 26, "Present: Complainant, Complainant's Advocate\nAbsent: Accused, Accused Advocate\nComplainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination."],
+  ["ST/1109/2025", "KL-001616-2025", "2025-09-27", "ADV-019", "Delay Condonation Hearing", "DELAY_CONDONATION_HEARING", 2, 5, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nNotice served against accused. For objection and hearing."],
+  ["ST/1272/2023", "KL-001665-2023", "2023-11-23", "ADV-025", "Appearance", "REPORTS", 0, 11, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/434/2022", "KL-000904-2022", "2022-05-29", "ADV-021", "Evidence Complainant", "APPLICATION_REVIEW", 0, 27, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nComplainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis."],
+  ["ST/1295/2025", "KL-000930-2025", "2025-05-08", "ADV-007", "Appearance", "WARRANT", 0, 11, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/940/2022", "KL-000484-2022", "2022-08-22", "ADV-002", "Evidence Accused", "EVIDENCE_ACCUSED", 4, 29, "Present: Complainant's Advocate, Accused, Accused Advocate\nAbsent: Complainant\nAccused present. Accused is examined in chief as DW1. Exhibits marked. For further evidence of the accused."],
+  ["ST/1115/2021", "KL-000880-2021", "2021-11-07", "ADV-004", "Arguments", "JUDGEMENT", 0, 27, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Accused, Complainant\nHeard from the side of the complainant. For the hearing of the accused."],
+  ["ST/1113/2022", "KL-000155-2022", "2022-02-23", "ADV-025", "Arguments", "ARGUMENTS", 2, 37, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Accused, Complainant\nHeard from the side of the complainant. For the hearing of the accused."],
+  ["ST/1147/2021", "KL-001315-2021", "2021-12-31", "ADV-011", "Evidence Complainant", "EVIDENCE_COMPLAINANT", 3, 27, "Present: Complainant, Complainant's Advocate\nAbsent: Accused, Accused Advocate\nComplainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination."],
+  ["ST/135/2022", "KL-000974-2022", "2022-10-23", "ADV-038", "Evidence Complainant", "EVIDENCE_ACCUSED", 0, 19, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nFor the evidence of the complainant."],
+  ["ST/679/2024", "KL-000838-2024", "2024-12-17", "ADV-027", "Appearance", "WARRANT", 0, 8, "Present: Complainant, Accused\nAbsent: Complainant's Advocate, Accused Advocate\nBoth complainant and accused present; parties referred for mediation."],
+  ["ST/514/2023", "KL-001227-2023", "2023-09-23", "ADV-019", "Arguments", "JUDGEMENT", 0, 39, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Accused, Complainant\nHeard from the side of the complainant. For the hearing of the accused."],
+  ["ST/313/2023", "KL-001214-2023", "2023-02-03", "ADV-016", "Arguments", "ARGUMENTS", 3, 40, "Present: Accused Advocate\nAbsent: Complainant, Complainant's Advocate, Accused\nHeard. For judgment."],
+  ["ST/1156/2024", "KL-000849-2024", "2024-12-06", "ADV-037", "Warrant", "PLEA", 0, 13, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nCMP allowed. Issue by hand warrant to accused. Take steps. For return of warrant."],
+  ["ST/1269/2025", "KL-000601-2025", "2025-07-11", "ADV-034", "Appearance", "APPEARANCE", 1, 7, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nSummons served. For the appearance of the accused."],
+  ["ST/608/2017", "KL-000693-2017", "2017-05-19", "ADV-013", "Evidence Accused", "EVIDENCE_ACCUSED", 2, 37, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/459/2023", "KL-000387-2023", "2023-10-17", "ADV-005", "Appearance", "APPEARANCE", 2, 7, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nSummons served. For the appearance of the accused."],
+  ["ST/262/2025", "KL-000712-2025", "2025-03-23", "ADV-026", "Appearance", "WARRANT", 0, 6, "Present: Complainant, Accused\nAbsent: Complainant's Advocate, Accused Advocate\nBoth complainant and accused present; parties referred for mediation."],
+  ["ST/565/2026", "KL-001726-2026", "2026-03-30", "ADV-024", "Delay Condonation Hearing", "COGNIZANCE", 0, 4, "Present: Complainant's Advocate\nAbsent: Complainant, Accused, Accused Advocate\nIssue DCA notice to accused. Take steps. For return of notice."],
+  ["ST/831/2022", "KL-000332-2022", "2022-08-03", "ADV-021", "Arguments", "JUDGEMENT", 0, 38, "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nHeard. For further hearing."],
+  ["ST/990/2025", "KL-000257-2025", "2025-02-25", "ADV-029", "Warrant", "PLEA", 0, 12, "Absent: Complainant, Complainant's Advocate, Accused, Accused Advocate\nIssue NBW to accused. Take steps. For return of warrant."],
+  ["ST/29/2022", "KL-000594-2022", "2022-12-06", "ADV-009", "Evidence Accused", "ARGUMENTS", 0, 30, "Present: Complainant, Complainant's Advocate, Accused Advocate\nAbsent: Accused\nFor defence evidence, last chance."],
+  ["ST/1340/2026", "KL-001724-2026", "2026-06-28", "ADV-001", "Appearance", "APPEARANCE", 1, 8, "Present: Complainant, Accused\nAbsent: Complainant's Advocate, Accused Advocate\nBoth complainant and accused present; parties referred for mediation."],
+  ["ST/178/2017", "KL-000853-2017", "2017-02-20", "ADV-002", "Judgement", "REPORTS", 0, 37, "Present: Accused Advocate\nAbsent: Complainant's Advocate, Accused, Complainant\nProduce the order of the Hon'ble District Court, if any."],
+];
+
+// ---------- Helpers ----------
+const DAY_MS = 86400000;
+const parse = s => new Date(s + "T00:00:00Z");
+const iso = d => d.toISOString().slice(0, 10);
+const addDays = (s, n) => iso(new Date(parse(s).getTime() + n * DAY_MS));
+const isWorking = s => ![0, 6].includes(parse(s).getUTCDay()) && !HOLIDAYS[s];
+const onOrAfterWorking = s => { while (!isWorking(s)) s = addDays(s, 1); return s; };
+const fmt = s => parse(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const fmtLong = s => parse(s).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+const fmtTime = m => `${(Math.floor(m / 60) + 11) % 12 + 1}:${String(m % 60).padStart(2, "0")} ${m < 720 ? "AM" : "PM"}`;
+const esc = s => String(s).replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+// Case age: months if under a year, otherwise years to one decimal place
+const fmtAge = days => {
+  if (days < 365) { const m = Math.max(1, Math.floor(days / 30.44)); return `${m} month${m === 1 ? "" : "s"}`; }
+  const y = (days / 365).toFixed(1);
+  return `${y} year${y === "1.0" ? "" : "s"}`;
+};
+
+const now = new Date();
+const TODAY = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+const PLAN_DATE = onOrAfterWorking(TODAY);  // today, or the next working day if today has no sitting
+
+// Seeded random numbers: the same scores all day, new scores the next day
+function rng(seed) { return () => { seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const rand = rng(Number(PLAN_DATE.replaceAll("-", "")));
+
+// ---------- Cases and scores ----------
+// Score (0–100) = chance of a productive hearing × 55 + case age × 30 + same advocate × 8 − time taken.
+// The chance of a productive hearing is random (30–99%), standing in for the model.
+// The other three parts come from the case's own data.
+const W = { sub: 55, age: 30, cluster: 8, time: 100 };
+const DAY_MINUTES = WINDOWS.reduce((m, w) => m + w.end - w.start, 0);
+const cases = ROSTER.map(([caseNo, filingNo, filed, adv, stage, type, atStage, held, summary]) => ({
+  caseNo, filingNo, filed, adv, stage, type, atStage, held, summary,
+  ageDays: Math.round((parse(PLAN_DATE) - parse(filed)) / DAY_MS),
+  dur: REF[type].dur,
+  p: 0.30 + rand() * 0.69,
+}));
+const advCount = {};
+cases.forEach(c => advCount[c.adv] = (advCount[c.adv] || 0) + 1);
+cases.forEach(c => {
+  c.parts = {
+    sub: c.p * W.sub,
+    age: Math.min(c.ageDays / (4 * 365), 1) * W.age,
+    cluster: advCount[c.adv] > 1 ? W.cluster : 0,
+    time: -(c.dur / DAY_MINUTES) * W.time,
+  };
+  c.score = Math.round(c.parts.sub + c.parts.age + c.parts.cluster + c.parts.time);
+});
+const byNo = Object.fromEntries(cases.map(c => [c.caseNo, c]));
+
+// ---------- Today's plan ----------
+// Highest score first, each case at the earliest free time that fits
+// without running into the lunch break or past 6:00 PM.
+function firstFit(dur, booked) {
+  for (const w of WINDOWS) {
+    let t = w.start;
+    while (t + dur <= w.end) {
+      const clash = booked.filter(b => b.start < t + dur && t < b.end);
+      if (!clash.length) return t;
+      t = Math.max(...clash.map(b => b.end));
+    }
+  }
+  return null;
+}
+
+const booked = [];
+[...cases].sort((a, b) => b.score - a.score).forEach(c => {
+  const t = firstFit(c.dur, booked);
+  if (t !== null) { c.start = t; c.end = t + c.dur; booked.push(c); }
+});
+booked.sort((a, b) => a.start - b.start);
+
+// ---------- Table ----------
+const $ = id => document.getElementById(id);
+$("title").textContent = `Cause list: ${fmtLong(PLAN_DATE)}`;
+$("sub").textContent = PLAN_DATE === TODAY
+  ? `${booked.length} cases listed today, 10:00 AM – 6:00 PM`
+  : `No sitting today. ${booked.length} cases listed for the next working day, 10:00 AM – 6:00 PM`;
+
+let rows = "";
+WINDOWS.forEach((w, i) => {
+  let t = w.start;
+  booked.filter(c => c.start >= w.start && c.start < w.end).forEach(c => {
+    if (c.start > t) rows += `<tr class="gap"><td colspan="5">Free: ${fmtTime(t)} – ${fmtTime(c.start)}</td></tr>`;
+    rows += `<tr class="case" tabindex="0" data-case="${esc(c.caseNo)}">
+      <td class="mono">${esc(c.caseNo)}</td>
+      <td>${REF[c.type].label}</td>
+      <td class="num">${fmtAge(c.ageDays)}</td>
+      <td class="num"><span class="score">${c.score}</span></td>
+      <td class="time">${fmtTime(c.start)} – ${fmtTime(c.end)}<span class="dur">(${c.dur} min)</span></td>
+    </tr>`;
+    t = c.end;
+  });
+  if (t < w.end) rows += `<tr class="gap"><td colspan="5">Free: ${fmtTime(t)} – ${fmtTime(w.end)}</td></tr>`;
+  if (i < WINDOWS.length - 1) rows += `<tr class="break"><td colspan="5">Lunch break · ${fmtTime(BREAK.start)} – ${fmtTime(BREAK.end)}</td></tr>`;
+});
+$("tbody").innerHTML = rows;
+
+// ---------- Case details window ----------
+const modal = $("modal");
+function breakdown(c) {
+  const years = (c.ageDays / 365).toFixed(1);
+  const items = [
+    ["Chance of a productive hearing", `${Math.round(c.p * 100)}%`, c.parts.sub, "var(--bar-sub)"],
+    ["Case age", `${years} years${c.ageDays >= 4 * 365 ? ", full weight at 4+ years" : ""}`, c.parts.age, "var(--bar-age)"],
+    ["Same advocate has another case", advCount[c.adv] > 1 ? `${c.adv} has ${advCount[c.adv]} cases` : "No other cases", c.parts.cluster, "var(--bar-cluster)"],
+    ["Time this hearing takes", `${c.dur} of ${DAY_MINUTES} min`, c.parts.time, "var(--bar-time)"],
+  ];
+  const max = Math.max(...items.map(i => Math.abs(i[2])), 0.01);
+  return items.map(([l, note, v, col]) => `
+      <div class="lbl">${l}<small>${esc(note)}</small></div>
+      <div class="bar-track"><div class="bar" style="width:${Math.abs(v) / max * 100}%;background:${col};opacity:${v < 0 ? .6 : 1}"></div></div>
+      <div class="val">${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(1)}</div>`).join("")
+    + `<div class="divider"></div><div class="lbl total">Total score</div><div class="total"></div><div class="val total">${c.score}</div>`;
+}
+
+function openModal(no) {
+  const c = byNo[no];
+  const next = onOrAfterWorking(addDays(PLAN_DATE, REF[c.type].gap));
+  modal.innerHTML = `
+    <div class="m-head">
+      <div>
+        <h3 id="mTitle" class="mono">${esc(c.caseNo)}</h3>
+        <div class="sub">${REF[c.type].label} · Score ${c.score}</div>
+      </div>
+      <button id="mClose" aria-label="Close">✕</button>
+    </div>
+    <div class="m-section">
+      <h4>Case details</h4>
+      <div class="facts">
+        <div>Hearing time<b>${fmtTime(c.start)} – ${fmtTime(c.end)}</b><span class="note-line">${c.dur} min</span></div>
+        <div>Filing no.<b class="mono">${esc(c.filingNo)}</b></div>
+        <div>Filed on<b>${fmt(c.filed)}</b><span class="note-line">${(c.ageDays / 365).toFixed(1)} years ago</span></div>
+        <div>Advocate<b class="mono">${esc(c.adv)}</b></div>
+        <div>Current stage<b>${esc(c.stage)}</b></div>
+        <div>Hearings held<b>${c.held} total</b><span class="note-line">${c.atStage} for ${REF[c.type].label.toLowerCase()}</span></div>
+        <div>Recommended next date<b>${fmt(next)}</b><span class="note-line">${REF[c.type].gap}-day gap after today's hearing</span></div>
+      </div>
+    </div>
+    <div class="m-section">
+      <div class="breakdown">
+        ${breakdown(c)}
+      </div>
+    </div>`;
+  modal.showModal();
+}
+
+document.addEventListener("click", e => {
+  const tr = e.target.closest("tr.case[data-case]");
+  if (tr) openModal(tr.dataset.case);
+});
+document.addEventListener("keydown", e => {
+  const tr = e.target.closest?.("tr.case[data-case]");
+  if (tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openModal(tr.dataset.case); }
+});
+modal.addEventListener("click", e => {
+  if (e.target === modal || e.target.closest("#mClose")) modal.close();
+});
+</script>
+</body>
+</html>
