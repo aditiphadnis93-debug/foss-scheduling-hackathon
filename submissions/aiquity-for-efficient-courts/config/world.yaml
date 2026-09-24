@@ -1,0 +1,108 @@
+# Synthetic town used as the court's inflow source (L4 world model).
+# Every person, place and business is invented. All rates are stated assumptions.
+population: 600              # people in the town (scaled up when adopting a large roster)
+household_size: [1, 6]       # min, max people per household
+businesses: 40
+advocates: 24                # town advocate pool (roster advocates are added on adoption)
+
+warmup_days: 60              # the world runs this many calendar days before the first sitting
+notice_delay_days: [3, 25]   # bounce -> legal notice
+notice_period_days: 15       # statutory time to pay after notice
+file_delay_days: [1, 25]     # notice period expiry -> complaint filed
+
+# Court-to-world feedback.
+wage_fraction_waiting: 1.0   # day wage lost when the matter is not reached / adjourned
+wage_fraction_heard: 0.6     # day wage lost when heard in an appointment window
+frustration_adjourned: 0.15
+frustration_not_reached: 0.20
+frustration_not_ready: 0.10
+frustration_relief_heard: 0.05
+p_settle_per_frustration: 0.03   # per adjournment: P(settle) = this * frustration
+compromise_share: 0.7        # share of the claim paid in a settlement
+p_conviction: 0.65           # judgement in favour of the complainant
+
+adopt_roster: true           # map roster parties / advocates to synthetic people
+history_events: 30           # events kept in each snapshot's feed
+
+# ---------------------------------------------------------------------------------------------
+# Dispute funnel from population. Court inflow is DERIVED from these numbers:
+#   disputes/yr = city_population / 1000 * per_1000_per_year, then each stage converts a share.
+# Every value carries a source; "assumed" = no public figure in the repo docs, a stated guess.
+# Default population is scaled so one court room receives ~2 complaints per sitting day.
+funnel:
+  city_population: {value: 200000, source: "assumed: catchment of one magistrate court room, scaled so inflow is ~2 per sitting day"}
+  household_size_mean: {value: 4.0, source: assumed}
+  background_sample: {value: 0.15, source: "display only: share of other-forum disputes simulated as town agents"}
+  kinds:
+    cheque_loan:
+      label: Cheque / loan repayment
+      relationship: lender_borrower
+      forum: this_court
+      per_1000_per_year: {value: 5.0, source: assumed}
+      stages:
+        legal_notice: {value: 0.85, source: assumed}
+        paid_on_notice: {value: 0.35, source: assumed}
+        negotiation: {value: 0.50, source: assumed}
+        settled_in_negotiation: {value: 0.30, source: assumed}
+        complaint_filed: {value: 0.85, source: assumed}
+        reaches_court: {value: 0.95, source: "assumed: share registered, not returned at filing"}
+    supplier:
+      label: Supplier credit (bounced payment cheque)
+      relationship: supplier_shop
+      forum: this_court
+      per_1000_per_year: {value: 1.5, source: assumed}
+      stages:
+        legal_notice: {value: 0.90, source: assumed}
+        paid_on_notice: {value: 0.40, source: assumed}
+        negotiation: {value: 0.60, source: assumed}
+        settled_in_negotiation: {value: 0.35, source: assumed}
+        complaint_filed: {value: 0.80, source: assumed}
+        reaches_court: {value: 0.95, source: assumed}
+    wages:
+      label: Unpaid wages
+      relationship: employer_worker
+      forum: labour authority
+      per_1000_per_year: {value: 4.0, source: assumed}
+      stages:
+        legal_notice: {value: 0.30, source: assumed}
+        paid_on_notice: {value: 0.40, source: assumed}
+        negotiation: {value: 0.70, source: assumed}
+        settled_in_negotiation: {value: 0.50, source: assumed}
+        complaint_filed: {value: 0.30, source: assumed}
+        reaches_court: {value: 0.0, source: "heard in another forum"}
+    rent:
+      label: Rent arrears
+      relationship: landlord_tenant
+      forum: rent authority
+      per_1000_per_year: {value: 3.0, source: assumed}
+      stages:
+        legal_notice: {value: 0.40, source: assumed}
+        paid_on_notice: {value: 0.45, source: assumed}
+        negotiation: {value: 0.60, source: assumed}
+        settled_in_negotiation: {value: 0.50, source: assumed}
+        complaint_filed: {value: 0.35, source: assumed}
+        reaches_court: {value: 0.0, source: "heard in another forum"}
+    family_property:
+      label: Family / property
+      relationship: null
+      forum: civil court
+      per_1000_per_year: {value: 2.5, source: assumed}
+      stages:
+        legal_notice: {value: 0.35, source: assumed}
+        paid_on_notice: {value: 0.10, source: assumed}
+        negotiation: {value: 0.70, source: assumed}
+        settled_in_negotiation: {value: 0.40, source: assumed}
+        complaint_filed: {value: 0.40, source: assumed}
+        reaches_court: {value: 0.0, source: "heard in another forum"}
+    other:
+      label: Other quarrels
+      relationship: null
+      forum: other forum
+      per_1000_per_year: {value: 3.0, source: assumed}
+      stages:
+        legal_notice: {value: 0.15, source: assumed}
+        paid_on_notice: {value: 0.30, source: assumed}
+        negotiation: {value: 0.50, source: assumed}
+        settled_in_negotiation: {value: 0.50, source: assumed}
+        complaint_filed: {value: 0.20, source: assumed}
+        reaches_court: {value: 0.0, source: "heard in another forum"}

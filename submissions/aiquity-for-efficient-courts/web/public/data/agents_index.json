@@ -1,0 +1,24 @@
+{
+  "scenarios": [
+    {
+      "id": "100_combined",
+      "label": "One world",
+      "note": "The town, the people and the court in one run: town disputes become filings, people decide for themselves (many decisions written by a language model), and the recommended list plans each day. Includes a two-day bus and auto strike."
+    },
+    {
+      "id": "100_sarvam",
+      "label": "Ten days, decided by a language model",
+      "note": "Every decision and the reason given for it was written by a language model, and recorded so it can be replayed."
+    },
+    {
+      "id": "100_rules",
+      "label": "The full period, decided by rules",
+      "note": "The same people over every sitting day, each deciding by simple rules from their own situation."
+    },
+    {
+      "id": "demo",
+      "label": "Sample",
+      "note": "Made-up sample for trying the page."
+    }
+  ]
+}

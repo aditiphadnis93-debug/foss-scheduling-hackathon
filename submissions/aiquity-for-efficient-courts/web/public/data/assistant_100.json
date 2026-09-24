@@ -1,0 +1,288 @@
+{
+ "questions": [
+  "Why is the first matter on today's list there?",
+  "What went wrong today, and what should I change for tomorrow?",
+  "Who caused today's delays?"
+ ],
+ "answers": {
+  "2026-09-28": {
+   "Why is the first matter on today's list there?": {
+    "answer": "The first matter on today's list is ST/940/2022, an application review, which was heard urgently before the main list at 10:00 AM. This was done under the reserve rule because it was an urgent matter pulled from the reserve. The record shows it was heard for 8.7 minutes before the regular list began.",
+    "suggestions": [
+     "Ensure the reserve list is checked early for any urgent matters requiring pre-list hearing."
+    ],
+    "cited_cases": [
+     "ST/940/2022"
+    ],
+    "source": "ai"
+   },
+   "What went wrong today, and what should I change for tomorrow?": {
+    "answer": "The court exceeded its 360-minute capacity by 6.1 minutes today, with ST/940/2022 taking 8.7 minutes from the reserve. The main issue is that 47 cases were held back under the checklist rule due to missing witness lists, agency reports, or warrants, and 3 cases were interrupted or rescheduled, creating significant delays. Several cases, like ST/1198/2026 and ST/7/2025, were held back because warrants had not yet been executed or returned by the police.",
+    "suggestions": [
+     "Reduce the number of cases listed in the morning session to prevent the 360-minute capacity from being exceeded.",
+     "Instruct the court registry to verify that all warrants are executed and returned by the police before the next listing.",
+     "Require advocates to file written arguments and case summaries in advance to avoid last-minute adjournments."
+    ],
+    "cited_cases": [
+     "ST/940/2022",
+     "ST/1187/2026",
+     "ST/7/2025",
+     "ST/1198/2026",
+     "ST/1156/2024"
+    ],
+    "source": "ai"
+   },
+   "Who caused today's delays?": {
+    "answer": "The day's delays were caused by the court hearing an urgent application review, ST/940/2022, from the reserve at 10:00, which consumed 8.7 minutes. Additionally, several matters were held back because the checklist was not met, including ST/792/2024 due to a process report from the agency, ST/697/2021 because the defence witness list was not filed, and ST/387/2020 because witnesses were not summoned.",
+    "suggestions": [
+     "Consider reducing the time allocated for urgent matters from the reserve to prevent them from consuming the first slot.",
+     "Instruct the registry to follow up with state agencies to ensure reports and warrant returns are filed on time.",
+     "Direct counsel in ST/792/2024 to file the process report by the next hearing."
+    ],
+    "cited_cases": [
+     "ST/940/2022",
+     "ST/792/2024",
+     "ST/697/2021",
+     "ST/387/2020"
+    ],
+    "source": "ai"
+   }
+  },
+  "2026-09-29": {
+   "Why is the first matter on today's list there?": {
+    "answer": "The first matter on the list is ST/655/2025, an application review, because it was heard urgently from the reserve before the scheduled sitting began. It was placed at the top under the 'reserve' rule as an urgent mention. The next matter, ST/262/2022, was also heard urgently from the reserve under the same rule, and ST/330/2025 followed this procedure. These urgent matters were heard between 10:00 and 11:00, taking a total of 16.4 minutes.",
+    "suggestions": [
+     "Consider scheduling future urgent reserve matters for the 14:00-16:30 session to balance the morning docket.",
+     "Review the criteria for what qualifies as an urgent reserve matter to prevent list disruption."
+    ],
+    "cited_cases": [
+     "ST/655/2025",
+     "ST/262/2022",
+     "ST/330/2025"
+    ],
+    "source": "ai"
+   },
+   "What went wrong today, and what should I change for tomorrow?": {
+    "answer": "The day ran nearly to capacity at 353.8 of 360 minutes, with significant delays from 11 cases adjourned or not ready, including ST/739/2022, ST/1355/2023, ST/29/2022, and ST/1166/2023, primarily due to party absence or unreadiness. Additionally, 4 cases (ST/522/2023, ST/1046/2023, ST/1227/2025, ST/645/2023) were held back due to incomplete filings like defence witness lists and written arguments.",
+    "suggestions": [
+     "Schedule adjournment-prone cases like ST/1355/2023 and ST/29/2022 in shorter, earlier time slots to minimize disruption.",
+     "Direct advocates in cases held back under the checklist rule to file missing documents before the next listing on 2026-10-06 to avoid repeated adjournments.",
+     "Reserve the 10-minute slots for low-risk application reviews like ST/954/2021 and ST/181/2025 to protect substantive hearing time."
+    ],
+    "cited_cases": [
+     "ST/739/2022",
+     "ST/1355/2023",
+     "ST/29/2022",
+     "ST/1166/2023",
+     "ST/522/2023",
+     "ST/1046/2023",
+     "ST/1227/2025",
+     "ST/645/2023"
+    ],
+    "source": "ai"
+   },
+   "Who caused today's delays?": {
+    "answer": "Today's delays were caused by urgent application reviews heard from the reserve (ST/655/2025, ST/262/2022, ST/330/2025) and several cases being held back due to unmet filing requirements (ST/522/2023, ST/1046/2023, ST/1227/2025, ST/645/2023). Additionally, ST/1283/2022, ST/181/2025, and ST/979/2022 were interrupted by filed reports, while ST/313/2023, ST/69/2022, ST/884/2023, ST/979/2022, ST/135/2022, ST/629/2022, and ST/1015/2023 were adjourned or not ready due to party absence or lack of preparation.",
+    "suggestions": [
+     "Ensure defence witness lists are filed before listing to avoid checklist holds.",
+     "Require advocates to confirm report filings before the hearing to prevent interruptions.",
+     "Review the readiness of cases with low P(moves forward) scores to minimize adjournments."
+    ],
+    "cited_cases": [
+     "ST/655/2025",
+     "ST/262/2022",
+     "ST/330/2025",
+     "ST/522/2023",
+     "ST/1046/2023",
+     "ST/1227/2025",
+     "ST/645/2023",
+     "ST/1283/2022",
+     "ST/181/2025",
+     "ST/979/2022"
+    ],
+    "source": "ai"
+   }
+  },
+  "2026-09-30": {
+   "Why is the first matter on today's list there?": {
+    "answer": "The first matter on the list is ST/1115/2021, scheduled for the 10:00-11:00 window for a judgment. It was listed because the system confirmed the advocate is reliable, the litigant is patient, and there is high trust, making it ready for a substantive hearing with a 97% chance of going ahead.",
+    "suggestions": [
+     "Consider confirming with ADV-004 that the judgment is finalized to avoid wasting the 10:00 slot."
+    ],
+    "cited_cases": [
+     "ST/1115/2021"
+    ],
+    "source": "ai"
+   },
+   "What went wrong today, and what should I change for tomorrow?": {
+    "answer": "The court used 135.3 minutes of 360 capacity, leaving significant time unused. Four cases were adjourned: ST/1244/2025 due to both sides seeking time, ST/465/2025 because evidence was not ready, ST/176/2026 due to respondent absence, and ST/1012/2025 because both parties were unready. Urgent matters ST/1244/2025 and ST/1355/2023 were heard from reserve, consuming 17.9 minutes.",
+    "suggestions": [
+     "Reschedule adjourned cases to the next listing date of 2026-10-14 to avoid wasted slots.",
+     "Require advocates for ST/1244/2025 and ST/1012/2025 to confirm readiness before the next hearing.",
+     "Review ST/465/2025 to ensure evidence filings are completed prior to the next date."
+    ],
+    "cited_cases": [
+     "ST/1244/2025",
+     "ST/465/2025",
+     "ST/176/2026",
+     "ST/1012/2025"
+    ],
+    "source": "ai"
+   },
+   "Who caused today's delays?": {
+    "answer": "The delays were caused by the parties in cases ST/1244/2025, ST/465/2025, ST/176/2026, and ST/1012/2025, who sought time or were unready. ST/831/2022 was also adjourned due to the advocate's prior broken confirmation and low diligence. No judge emergency or held-back matters were listed.",
+    "suggestions": [
+     "Consider scheduling a pre-sitting readiness conference for cases with low preparedness scores to reduce future adjournments."
+    ],
+    "cited_cases": [
+     "ST/1244/2025",
+     "ST/465/2025",
+     "ST/176/2026",
+     "ST/1012/2025",
+     "ST/831/2022"
+    ],
+    "source": "ai"
+   }
+  }
+ },
+ "proposals": {
+  "day": "2026-09-29",
+  "items": [
+   {
+    "answer": "The day was heavily overbooked with 360 minutes of capacity but 353.8 minutes used, leaving almost no room for the 25 listed matters. Several matters were not reached because they were held back due to missing filings or because the court ran out of time, and multiple parties did not appear or sought adjournments.",
+    "proposal": {
+     "overbook": 0.9,
+     "reserve_minutes": 45,
+     "use_readiness": true
+    },
+    "why": "Keeping holding back matters that are not ready ensures matters with incomplete filings are held back, preventing them from consuming time and causing adjournments.",
+    "cited_cases": [
+     "ST/1283/2022",
+     "ST/522/2023",
+     "ST/1046/2023",
+     "ST/1227/2025",
+     "ST/645/2023"
+    ],
+    "source": "ai",
+    "effect": {
+     "justice_weighted_progress_per_hour": {
+      "now": 1.31,
+      "with_change": 1.35
+     },
+     "substantive_total": {
+      "now": 70.5,
+      "with_change": 71.0
+     },
+     "disposed": {
+      "now": 12.0,
+      "with_change": 12.0
+     },
+     "reach_rate_pct": {
+      "now": 98.55,
+      "with_change": 98.9
+     },
+     "utilisation_pct": {
+      "now": 30.65,
+      "with_change": 36.35
+     },
+     "advocate_trips": {
+      "now": 104.5,
+      "with_change": 102.5
+     },
+     "backlog_4y_heard_pct": {
+      "now": 66.1,
+      "with_change": 69.35
+     }
+    },
+    "question": "Too many matters were not reached and several parties did not turn up today. What should I change?"
+   },
+   {
+    "answer": "Old cases are not moving fast enough because the minimum time for old cases is set to 0.25, which allocates only 25% of hearing time to cases four years old or more, and the minutes kept for urgent matters is only 30, limiting the ability to pull in urgent old matters. Additionally, the how full the day is listed setting of 1.0 prevents listing more than the expected capacity, which constrains the total number of matters that can be scheduled.",
+    "proposal": {
+     "ageing_share": 0.4,
+     "reserve_minutes": 60,
+     "overbook": 1.15
+    },
+    "why": "Increasing minimum time for old cases gives older cases a larger guaranteed share of hearing time to ensure they progress.",
+    "cited_cases": [],
+    "source": "ai",
+    "effect": {
+     "justice_weighted_progress_per_hour": {
+      "now": 1.31,
+      "with_change": 1.42
+     },
+     "substantive_total": {
+      "now": 70.5,
+      "with_change": 73.5
+     },
+     "disposed": {
+      "now": 12.0,
+      "with_change": 12.0
+     },
+     "reach_rate_pct": {
+      "now": 98.55,
+      "with_change": 96.55
+     },
+     "utilisation_pct": {
+      "now": 30.65,
+      "with_change": 32.3
+     },
+     "advocate_trips": {
+      "now": 104.5,
+      "with_change": 113.0
+     },
+     "backlog_4y_heard_pct": {
+      "now": 66.1,
+      "with_change": 74.2
+     }
+    },
+    "question": "Old cases are not moving fast enough. What should I change in my settings?"
+   },
+   {
+    "answer": "Advocates are making too many trips because the system is listing many matters with low readiness and high adjournment risk, causing repeated returns for the same advocate. This is exacerbated by a high overbooking factor and a low minutes kept for urgent matters setting that forces urgent and standby matters to be heard, fragmenting the schedule. The record shows 24 matters listed against a 6-hour capacity with 353.8 minutes used, and several cases (like ST/1283/2022 and ST/979/2022) were interrupted and moved to reports, requiring future hearings.",
+    "proposal": {
+     "overbook": 1.0,
+     "reserve_minutes": 45,
+     "use_readiness": true
+    },
+    "why": "Reducing how full the day is listed prevents listing more matters than capacity, lowering the chance of repeat trips.",
+    "cited_cases": [
+     "ST/1283/2022",
+     "ST/979/2022"
+    ],
+    "source": "ai",
+    "effect": {
+     "justice_weighted_progress_per_hour": {
+      "now": 1.31,
+      "with_change": 1.35
+     },
+     "substantive_total": {
+      "now": 70.5,
+      "with_change": 70.5
+     },
+     "disposed": {
+      "now": 12.0,
+      "with_change": 12.0
+     },
+     "reach_rate_pct": {
+      "now": 98.55,
+      "with_change": 96.05
+     },
+     "utilisation_pct": {
+      "now": 30.65,
+      "with_change": 34.7
+     },
+     "advocate_trips": {
+      "now": 104.5,
+      "with_change": 113.5
+     },
+     "backlog_4y_heard_pct": {
+      "now": 66.1,
+      "with_change": 72.55
+     }
+    },
+    "question": "Advocates are making too many trips for single matters. How do I reduce that without hurting old cases?"
+   }
+  ]
+ }
+}

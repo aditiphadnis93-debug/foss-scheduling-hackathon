@@ -1,0 +1,2673 @@
+{
+ "sarvam:sarvam-105b:0ba22d2cfb90624627a9b0e4": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.5,
+     "attend": 0.15,
+     "c": 1,
+     "id": "ST/819/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "accused absent; litigant patience low, likely seeks adjournment"
+    },
+    {
+     "ask_time": 0.5,
+     "attend": 0.25,
+     "c": 1,
+     "id": "ST/522/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 7,
+     "side": null,
+     "why": "accused absent; litigant patience moderate, likely seeks adjournment"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.25,
+     "c": 1,
+     "id": "ST/387/2020",
+     "m": null,
+     "o": "S",
+     "prepared": 0.8,
+     "r": 7,
+     "side": null,
+     "why": "long case, advocate reliable; litigant patient, may seek time"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/1227/2025",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant trusts court, likely present and ready"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/545/2024",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive; litigant has honoured appointment, likely ready"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.25,
+     "c": 1,
+     "id": "ST/770/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.8,
+     "r": 7,
+     "side": null,
+     "why": "accused absent; litigant patience moderate, may seek adjournment"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/872/2025",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive; litigant has honoured appointment, likely ready"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.5,
+     "c": 1,
+     "id": "ST/1015/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 7,
+     "side": null,
+     "why": "advocate reliable; litigant impatience high, likely seeks time"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.45,
+     "c": 1,
+     "id": "ST/1166/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "litigant patience very low; likely seeks adjournment after wasted trip"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.5,
+     "c": 1,
+     "id": "ST/1046/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "litigant patience moderate; likely seeks adjournment after wasted trip"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/645/2023",
+     "m": null,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "stage is arguments; litigant patience low, likely seeks adjournment"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.45,
+     "c": 1,
+     "id": "ST/739/2022",
+     "m": null,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "litigant patience high but wasted trip; likely seeks adjournment"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:19737586d3b440e3bac16386": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.0,
+     "attend": 0.92,
+     "c": 1,
+     "id": "ST/374/2024",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel; litigant nearby, trusts court, no wasted trips"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.35,
+     "c": 0,
+     "id": "ST/884/2023",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.45,
+     "r": 5,
+     "side": "L",
+     "why": "advocate not confirming; litigant low trust, high wage loss, no appointments kept"
+    },
+    {
+     "ask_time": 0.6,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/629/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.25,
+     "r": 7,
+     "side": null,
+     "why": "advocate low diligence, case has adjournments; litigant impatient, no appointments kept"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/177/2024",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable, litigant nearby, high trust, no wasted trips, no adjournments"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.3,
+     "c": 0,
+     "id": "ST/69/2022",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.35,
+     "r": 5,
+     "side": "L",
+     "why": "advocate not confirming; litigant no appointments kept, high wage loss, low trust"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/176/2026",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable, litigant high trust, only 0.2 years old, no adjournments, 7 hearings"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.4,
+     "c": 0,
+     "id": "ST/1355/2023",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.4,
+     "r": 7,
+     "side": "L",
+     "why": "advocate not confirming; litigant no appointments, low trust, no trips made yet, case long"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.55,
+     "c": 0,
+     "id": "ST/1147/2021",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.4,
+     "r": 7,
+     "side": "L",
+     "why": "advocate not confirming; litigant no appointments, low trust, wasted trips, case old"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.5,
+     "c": 0,
+     "id": "ST/135/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.25,
+     "r": 7,
+     "side": "L",
+     "why": "advocate not confirming; litigant no appointments kept, low trust, wasted trips, case old"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/313/2023",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.45,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant no appointments kept, low trust, wasted trips, but 41 hearings"
+    },
+    {
+     "ask_time": 0.6,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/608/2017",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.35,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant no appointments kept, low trust, case 9.4 years old, high seek_time"
+    },
+    {
+     "ask_time": 0.5,
+     "attend": 0.6,
+     "c": 0,
+     "id": "ST/29/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.15,
+     "r": 7,
+     "side": "L",
+     "why": "advocate not confirming; litigant no appointments kept, very low trust, 41 hearings, high seek_time"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:323bef5f379ab65248561908": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.1,
+     "attend": 0.13,
+     "c": 1,
+     "id": "ST/181/2025",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "litigant has zero trust in court and high wage loss risk"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.575,
+     "c": 0,
+     "id": "ST/739/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.8,
+     "r": 7,
+     "side": null,
+     "why": "advocate cost-sensitive and low diligence; seeks time to prepare"
+    },
+    {
+     "ask_time": 0.036,
+     "attend": 0.638,
+     "c": 1,
+     "id": "ST/374/2024",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.964,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel confirmed; litigant patient and trusts court"
+    },
+    {
+     "ask_time": 0.063,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/954/2021",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.937,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant local and patient; brief hearing"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.405,
+     "c": 1,
+     "id": "ST/884/2023",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.5,
+     "r": 5,
+     "side": "L",
+     "why": "litigant low trust and high wage loss; likely absent"
+    },
+    {
+     "ask_time": 0.501,
+     "attend": 0.9,
+     "c": 0,
+     "id": "ST/629/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.499,
+     "r": 7,
+     "side": null,
+     "why": "advocate low diligence and poor reliability; seeks adjournment"
+    },
+    {
+     "ask_time": 0.063,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/1283/2022",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.937,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; litigant patient; brief judgment hearing"
+    },
+    {
+     "ask_time": 0.036,
+     "attend": 0.638,
+     "c": 1,
+     "id": "ST/177/2024",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.964,
+     "r": null,
+     "side": null,
+     "why": "counsel confirmed; litigant patient and trusts court"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.405,
+     "c": 1,
+     "id": "ST/69/2022",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.25,
+     "r": 5,
+     "side": "L",
+     "why": "litigant low trust and very high wage loss; likely absent"
+    },
+    {
+     "ask_time": 0.043,
+     "attend": 0.664,
+     "c": 1,
+     "id": "ST/176/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.957,
+     "r": null,
+     "side": null,
+     "why": "counsel confirmed; litigant patient and high trust; short hearing"
+    },
+    {
+     "ask_time": 0.051,
+     "attend": 0.493,
+     "c": 0,
+     "id": "ST/1355/2023",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.949,
+     "r": 7,
+     "side": null,
+     "why": "advocate cost-sensitive and low diligence; seeks time"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.405,
+     "c": 1,
+     "id": "ST/135/2022",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.5,
+     "r": 5,
+     "side": "L",
+     "why": "litigant low trust and high wage loss; likely absent"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:3ddf57cc02fffa8370b3c552": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.01,
+     "attend": 0.93,
+     "c": 1,
+     "id": "ST/1343/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.94,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel; litigant trusts court; warrant hearing"
+    },
+    {
+     "ask_time": 0.04,
+     "attend": 0.67,
+     "c": 1,
+     "id": "ST/1269/2025",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.65,
+     "r": 5,
+     "side": "L",
+     "why": "low litigant patience and trust; advocate has broken confirmations"
+    },
+    {
+     "ask_time": 0.01,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/262/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "high litigant patience; no prior absences; warrant stage"
+    },
+    {
+     "ask_time": 0.03,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0020/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.88,
+     "r": 5,
+     "side": "L",
+     "why": "very low litigant patience and trust; first admission hearing"
+    },
+    {
+     "ask_time": 0.03,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0021/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.88,
+     "r": null,
+     "side": null,
+     "why": "advocate has kept confirmations; litigant moderately patient"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:4be519df5d0ea60eb01dee7d": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.45,
+     "attend": 0.62,
+     "c": 0,
+     "id": "ST/792/2024",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.55,
+     "r": 4,
+     "side": "L",
+     "why": "advocate unconfirmed; litigant patience low after 24 hearings"
+    },
+    {
+     "ask_time": 0.12,
+     "attend": 0.58,
+     "c": 0,
+     "id": "ST/617/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.88,
+     "r": 7,
+     "side": "V",
+     "why": "advocate seeks time due to high caseload pressure and broken confirmations"
+    },
+    {
+     "ask_time": 0.38,
+     "attend": 0.68,
+     "c": 0,
+     "id": "ST/262/2022",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.62,
+     "r": 4,
+     "side": "L",
+     "why": "litigant lost trust after wasted trip; advocate unresponsive to appointments"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.55,
+     "c": 1,
+     "id": "ST/554/2021",
+     "m": 28,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate confirmed; litigant travels short distance and still trusts court"
+    },
+    {
+     "ask_time": 0.22,
+     "attend": 0.82,
+     "c": 0,
+     "id": "ST/1198/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.78,
+     "r": 7,
+     "side": "V",
+     "why": "advocate seeks time due to wasted appearance history and low reliability"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.35,
+     "c": 1,
+     "id": "ST/344/2023",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.9,
+     "r": 5,
+     "side": "L",
+     "why": "litigant has low patience and 70km travel; high risk of absence despite advocate ready"
+    },
+    {
+     "ask_time": 0.08,
+     "attend": 0.55,
+     "c": 1,
+     "id": "ST/1230/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.92,
+     "r": null,
+     "side": null,
+     "why": "advocate confirmed; litigant close by and trusts court despite accused absent last time"
+    },
+    {
+     "ask_time": 0.55,
+     "attend": 0.15,
+     "c": 0,
+     "id": "ST/293/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.45,
+     "r": 6,
+     "side": "B",
+     "why": "both parties unready: 3 adjournments, 2 wasted trips, 0 honoured appointments"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.62,
+     "c": 1,
+     "id": "ST/733/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate confirmed; litigant close, high trust, no wasted trips"
+    },
+    {
+     "ask_time": 0.02,
+     "attend": 0.5,
+     "c": 1,
+     "id": "ST/1109/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.98,
+     "r": null,
+     "side": null,
+     "why": "advocate confirmed; litigant local, low cost sensitivity, no wasted trips"
+    },
+    {
+     "ask_time": 0.35,
+     "attend": 0.78,
+     "c": 0,
+     "id": "ST/1113/2022",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.65,
+     "r": 4,
+     "side": "L",
+     "why": "litigant low trust, 1 wasted trip; advocate seeks time due to broken confirmations"
+    },
+    {
+     "ask_time": 0.12,
+     "attend": 0.45,
+     "c": 1,
+     "id": "ST/565/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.88,
+     "r": 4,
+     "side": "L",
+     "why": "litigant lost trust, 1 wasted trip; advocate confirmed but litigant distant"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:52ae09d3092e7cfbb2884c86": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.05,
+     "attend": 0.55,
+     "c": 1,
+     "id": "WST/0018/2026",
+     "m": 15,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 7,
+     "side": null,
+     "why": "advocate unreliable; litigant impatient and 29km away"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.88,
+     "c": 1,
+     "id": "WST/0022/2026",
+     "m": 15,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 7,
+     "side": null,
+     "why": "advocate responsive but cost-sensitive; litigant absent, no trips made"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0023/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant close, trusted, honoured appointment"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:5eba668bde8663f5da40c280": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.85,
+     "attend": 0.1,
+     "c": 0,
+     "id": "ST/293/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.15,
+     "r": 5,
+     "side": "L",
+     "why": "litigant has broken 2 appointments; low trust and patience; advocate likely absent or unprepared"
+    },
+    {
+     "ask_time": 0.9,
+     "attend": 0.3,
+     "c": 0,
+     "id": "ST/702/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "litigant never honoured 1 appointment; low trust; 2 adjournments already; advocate unreliable"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.45,
+     "c": 1,
+     "id": "ST/434/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 3,
+     "side": null,
+     "why": "old case, accused absent last time; advocate may need warrant return or evidence filing"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.92,
+     "c": 1,
+     "id": "ST/679/2024",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable and diligent; short travel; litigant patient; ready to proceed"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.73,
+     "c": 1,
+     "id": "ST/459/2023",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.7,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent and reliable; litigant patient; no prior absences; ready to proceed"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/990/2025",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.8,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent and reliable; litigant patient and trusting; ready to proceed"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/1340/2026",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable and diligent; litigant very patient and trusting; ready to proceed"
+    },
+    {
+     "ask_time": 0.9,
+     "attend": 0.88,
+     "c": 0,
+     "id": "WST/0003/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.1,
+     "r": 7,
+     "side": "L",
+     "why": "litigant has wasted 2 trips and low patience; 2 adjournments; advocate likely seeks time"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.95,
+     "c": 1,
+     "id": "WST/0006/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable and diligent; litigant patient and honoured 1 appointment; ready to proceed"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.89,
+     "c": 1,
+     "id": "WST/0011/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable and diligent; litigant patient despite wasted trips; ready to proceed"
+    },
+    {
+     "ask_time": 0.8,
+     "attend": 0.89,
+     "c": 0,
+     "id": "WST/0013/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.2,
+     "r": 7,
+     "side": "V",
+     "why": "advocate responds poorly to appointments; wasted appearance; litigant low trust; likely seeks time"
+    },
+    {
+     "ask_time": 0.9,
+     "attend": 0.89,
+     "c": 0,
+     "id": "WST/0016/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.1,
+     "r": 7,
+     "side": "L",
+     "why": "litigant has wasted 2 trips; low trust; 2 adjournments; advocate unreliable; likely seeks time"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:60470a2ba32072e88923e275": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.05,
+     "attend": 0.9,
+     "c": 1,
+     "id": "ST/804/2023",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant close by; low patience but no prior adjournments"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/1187/2026",
+     "m": 15,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 7,
+     "side": null,
+     "why": "Advocate broke 2 confirmations; litigant patient but distant; likely seek time"
+    },
+    {
+     "ask_time": 0.45,
+     "attend": 0.55,
+     "c": 1,
+     "id": "WST/0036/2026",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.4,
+     "r": 7,
+     "side": null,
+     "why": "Advocate very unreliable; no hearings yet; likely seek time for admission prep"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:674df56e0ae0a2241aa776b0": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.05,
+     "attend": 0.98,
+     "c": 1,
+     "id": "ST/789/2022",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; case near judgement with no prior absences"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/1178/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.92,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; accused present last hearing; stage early and simple"
+    },
+    {
+     "ask_time": 0.35,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/1284/2018",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.55,
+     "r": 7,
+     "side": null,
+     "why": "advocate unreliable with broken confirmations; accused absent last time; high adjournment risk"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0014/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.88,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; admission stage; litigant has not travelled yet but counsel ready"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.75,
+     "c": 1,
+     "id": "WST/0029/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.8,
+     "r": null,
+     "side": null,
+     "why": "litigant has honoured three appointments; advocate unresponsive and unreliable but counsel confirms"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:6a517d4fcc8aa99632a98043": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0008/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.966,
+     "r": null,
+     "side": null,
+     "why": "first admission hearing; advocate confirmed; litigant nearby and patient"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:6f23314341844ac4a7f4acf5": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.1,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/1028/2023",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel confirmed; litigant lives close and still trusts the court"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.4,
+     "c": 1,
+     "id": "ST/1118/2021",
+     "m": 30,
+     "o": "N",
+     "prepared": 0.95,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and high cost sensitivity likely absent"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.51,
+     "c": 1,
+     "id": "ST/977/2024",
+     "m": 30,
+     "o": "N",
+     "prepared": 0.9,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and recent adjournment likely absent"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.8,
+     "c": 1,
+     "id": "ST/954/2021",
+     "m": 30,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "judgement stage; advocate reliable and litigant local with past attendance"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.58,
+     "c": 1,
+     "id": "ST/551/2023",
+     "m": 30,
+     "o": "N",
+     "prepared": 0.9,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and recent adjournment likely absent"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.51,
+     "c": 1,
+     "id": "ST/481/2020",
+     "m": 30,
+     "o": "N",
+     "prepared": 0.8,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and recent adjournment likely absent"
+    },
+    {
+     "ask_time": 0.01,
+     "attend": 0.93,
+     "c": 1,
+     "id": "ST/1295/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate confirms; warrant stage, litigant high patience and nearby"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.31,
+     "c": 1,
+     "id": "ST/940/2022",
+     "m": 30,
+     "o": "A",
+     "prepared": 0.95,
+     "r": 5,
+     "side": "L",
+     "why": "advocate present; litigant high patience but low trust and distant likely absent"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0009/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "cognizance stage; litigant made 2 trips and honoured appointment"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.86,
+     "c": 1,
+     "id": "WST/0014/2026",
+     "m": 5,
+     "o": "N",
+     "prepared": 0.9,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and recent adjournment likely absent"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.86,
+     "c": 1,
+     "id": "WST/0029/2026",
+     "m": 5,
+     "o": "N",
+     "prepared": 0.9,
+     "r": null,
+     "side": "L",
+     "why": "advocate present; litigant low trust and recent adjournment likely absent"
+    },
+    {
+     "ask_time": 0.03,
+     "attend": 0.92,
+     "c": 1,
+     "id": "WST/0030/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate present; litigant made trip and has moderate trust"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:74f0976a23176e6d13ccb927": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.04,
+     "attend": 0.82,
+     "c": 1,
+     "id": "WST/0032/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.92,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant low trust but close and patient; admission stage"
+    },
+    {
+     "ask_time": 0.08,
+     "attend": 0.75,
+     "c": 0,
+     "id": "WST/0034/2026",
+     "m": 15,
+     "o": "S",
+     "prepared": 0.55,
+     "r": 7,
+     "side": null,
+     "why": "Advocate unreliable, broke confirmations, litigant not honoured past; likely seeks time"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.35,
+     "c": 1,
+     "id": "WST/0035/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.25,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant lost trust after wasted trip, high wage loss, low patience; unlikely to attend"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:75205e73dbdf91e97b125ab4": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.03,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0010/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "diligent advocate confirmed; litigant nearby and trusts court; no prior issues"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.7,
+     "c": 1,
+     "id": "WST/0012/2026",
+     "o": "S",
+     "prepared": 0.45,
+     "r": 7,
+     "side": null,
+     "why": "cost-sensitive advocate likely seeks time; litigant has broken prior appointments and low trust"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:77e76f838b1822f9b7dcee2b": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.15,
+     "attend": 0.36,
+     "c": 1,
+     "id": "ST/313/2023",
+     "m": null,
+     "o": "N",
+     "prepared": 0.75,
+     "r": 5,
+     "side": "L",
+     "why": "accused absent last time; litigant low trust, 4.4km away, patience 0.643"
+    },
+    {
+     "ask_time": 0.75,
+     "attend": 0.31,
+     "c": 0,
+     "id": "ST/29/2022",
+     "m": null,
+     "o": "S",
+     "prepared": 0.2,
+     "r": 7,
+     "side": "B",
+     "why": "advocate unreliable, low diligence, 9km travel, litigant patience 0.381, seeks time"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:7973a484281e3e3a94262f1c": {
+  "json": {
+   "ask_time": 0.0,
+   "attend": 0.15,
+   "c": 1,
+   "id": "ST/819/2023",
+   "m": 0,
+   "o": "A",
+   "prepared": 0.0,
+   "r": 5,
+   "side": "L",
+   "why": "accused absent last time; litigant low trust and patience; counsel diligent but not enough"
+  }
+ },
+ "sarvam:sarvam-105b:79a923c0df8df072fc65b819": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/697/2021",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; litigant close and trusting"
+    },
+    {
+     "ask_time": 0.125,
+     "attend": 0.749,
+     "c": 1,
+     "id": "ST/934/2024",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.875,
+     "r": 7,
+     "side": null,
+     "why": "advocate responsive; litigant compliant but time-seeking"
+    },
+    {
+     "ask_time": 0.238,
+     "attend": 0.66,
+     "c": 1,
+     "id": "ST/92/2026",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.762,
+     "r": 7,
+     "side": null,
+     "why": "advocate diligent; litigant patient but seeks time"
+    },
+    {
+     "ask_time": 0.051,
+     "attend": 0.493,
+     "c": 1,
+     "id": "ST/652/2020",
+     "m": 30,
+     "o": "A",
+     "prepared": 0.949,
+     "r": 4,
+     "side": "L",
+     "why": "advocate reliable; litigant likely absent due to low trust"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.927,
+     "c": 1,
+     "id": "ST/416/2024",
+     "m": 15,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive; litigant local and compliant"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.316,
+     "c": 1,
+     "id": "ST/341/2017",
+     "m": 30,
+     "o": "A",
+     "prepared": 1.0,
+     "r": 4,
+     "side": "L",
+     "why": "advocate unreliable; litigant likely absent after wasted trips"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/1048/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive; litigant honors appointments"
+    },
+    {
+     "ask_time": 0.18,
+     "attend": 0.743,
+     "c": 1,
+     "id": "ST/1198/2026",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.82,
+     "r": 7,
+     "side": null,
+     "why": "advocate unreliable; litigant low trust seeks time"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.927,
+     "c": 1,
+     "id": "ST/363/2026",
+     "m": 15,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; litigant compliant and local"
+    },
+    {
+     "ask_time": 0.059,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/950/2023",
+     "m": 10,
+     "o": "S",
+     "prepared": 0.941,
+     "r": 7,
+     "side": null,
+     "why": "advocate diligent; litigant exhausted but attends"
+    },
+    {
+     "ask_time": 0.01,
+     "attend": 0.94,
+     "c": 1,
+     "id": "ST/330/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.99,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive; litigant highly trusting"
+    },
+    {
+     "ask_time": 0.051,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/1283/2022",
+     "m": 10,
+     "o": "S",
+     "prepared": 0.949,
+     "r": 7,
+     "side": null,
+     "why": "advocate diligent; litigant patient but seeks time"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:88a61776e60bc4bbc51baedd": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.15,
+     "attend": 0.9,
+     "c": 1,
+     "id": "ST/1048/2025",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "diligent advocate; litigant nearby; low cost sensitivity"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.6,
+     "c": 1,
+     "id": "ST/1198/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 7,
+     "side": null,
+     "why": "low reliability; high cost sensitivity; litigant distrustful"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.7,
+     "c": 1,
+     "id": "ST/363/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "highly diligent advocate; patient litigant; long travel"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/950/2023",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate highly reliable; case old but ready for judgement"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/356/2016",
+     "m": 30,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; long case but both present and ready"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/344/2023",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant patient; long travel but willing"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/330/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant high trust; warrant stage ready"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/1230/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant patient; no prior adjournments"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/1187/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable; litigant high trust; warrant stage ready"
+    },
+    {
+     "ask_time": 0.35,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/293/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.65,
+     "r": 7,
+     "side": null,
+     "why": "low reliability; low response; litigant impatient but willing"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/733/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate highly reliable; litigant patient; moderate travel"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.5,
+     "c": 1,
+     "id": "ST/702/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.5,
+     "r": 5,
+     "side": "L",
+     "why": "litigant low trust; advocate low reliability; high cost sensitivity"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:8a673eb336aadb95ad5e1270": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.358,
+     "attend": 0.928,
+     "c": 1,
+     "id": "ST/917/2021",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 7,
+     "side": null,
+     "why": "high caseload pressure; litigant low patience and trust"
+    },
+    {
+     "ask_time": 0.036,
+     "attend": 0.638,
+     "c": 1,
+     "id": "ST/1012/2025",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent; litigant patient and trusting; low time request risk"
+    },
+    {
+     "ask_time": 0.051,
+     "attend": 0.493,
+     "c": 1,
+     "id": "ST/1244/2025",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.75,
+     "r": 7,
+     "side": null,
+     "why": "advocate reliable but litigant has low trust; likely seeks time"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/1115/2021",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.7,
+     "r": null,
+     "side": null,
+     "why": "advocate low diligence but no time seek; judgement stage; litigant trusts court"
+    },
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0001/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "fresh admission; advocate responsive; litigant low patience but short hearing"
+    },
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0002/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "fresh admission; advocate responsive; litigant moderate patience and trust"
+    },
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0004/2026",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.4,
+     "r": 7,
+     "side": null,
+     "why": "advocate low diligence; high cost sensitivity may prompt time request"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:8e78707a0be6a814db13ef76": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.1,
+     "attend": 0.85,
+     "c": 1,
+     "id": "WST/0010/2026",
+     "m": 25,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant 6.9km away, 1 prior adjournment, patience 0.67"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.42,
+     "c": 1,
+     "id": "WST/0017/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "Low trust 0.33; 11.6km travel; no prior hearings; likely absent"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.1,
+     "c": 1,
+     "id": "WST/0025/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.05,
+     "r": 5,
+     "side": "L",
+     "why": "Advocate reliability 0.85, responds 0.18; litigant 6km, low trust 0.39"
+    },
+    {
+     "ask_time": 0.35,
+     "attend": 0.25,
+     "c": 1,
+     "id": "WST/0026/2026",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant patience 0.14, trust 0.2, 14.6km travel; advocate unreliable"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "WST/0027/2026",
+     "m": 25,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "Advocate reliable 0.75, responds 0.8; litigant high trust 0.86, patient 0.813, 21.6km"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:90e74e13b8cd4026ab8ccee6": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.0,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/1343/2026",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel; litigant close and patient"
+    },
+    {
+     "ask_time": 0.04,
+     "attend": 0.72,
+     "c": 1,
+     "id": "ST/1269/2025",
+     "m": 10,
+     "o": "N",
+     "prepared": 0.5,
+     "r": null,
+     "side": "L",
+     "why": "litigant absent; low patience and trust"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/262/2025",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "patient litigant; diligent counsel; low cost sensitivity"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0020/2026",
+     "m": 10,
+     "o": "N",
+     "prepared": 0.55,
+     "r": null,
+     "side": null,
+     "why": "low patience; early stage; counsel not diligent"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0021/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "both present and prepared; first hearing"
+    },
+    {
+     "ask_time": 0.03,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0037/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel; litigant ready for admission"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:bb32be81676adbc102987adf": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.0,
+     "attend": 0.35,
+     "c": 0,
+     "id": "ST/697/2021",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant absent; 4.8y old case, low trust, 29km travel, 27 prior hearings"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.3,
+     "c": 0,
+     "id": "ST/977/2024",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant absent; low patience and trust, 12km travel, 1.9y case stage mismatch risk"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.3,
+     "c": 0,
+     "id": "ST/551/2023",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant absent; low patience and trust, 15km travel, 2.8y case"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.4,
+     "c": 0,
+     "id": "ST/481/2020",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 5,
+     "side": "L",
+     "why": "Litigant absent; 6.2y old case, high wage loss 860, 16.9km travel, 34 hearings"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.55,
+     "c": 1,
+     "id": "ST/940/2022",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 7,
+     "side": null,
+     "why": "Advocate seeks time; low diligence 0.049, high reliability 0.72, 4.1y case, accused present last time"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.65,
+     "c": 0,
+     "id": "WST/0003/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 4,
+     "side": "V",
+     "why": "Advocate absent; 1 adjournment, 52.9km travel, 1 wasted trip, 1 prior hearing"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.92,
+     "c": 1,
+     "id": "WST/0009/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.75,
+     "r": 7,
+     "side": null,
+     "why": "Advocate seeks time; 1 adjournment, low patience 0.064, 29.3km travel, first hearing"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.88,
+     "c": 0,
+     "id": "WST/0013/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.0,
+     "r": 4,
+     "side": "V",
+     "why": "Advocate absent; low reliability 0.26, low responds 0.129, 15km travel, first hearing"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:c06c63568b2f2e4a21659b0f": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.2,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/92/2026",
+     "m": 5,
+     "o": "N",
+     "prepared": 0.9,
+     "r": 6,
+     "side": "L",
+     "why": "Litigant has low patience and high wage loss; likely to skip despite counsel readiness"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.65,
+     "c": 0,
+     "id": "ST/617/2022",
+     "m": 30,
+     "o": "N",
+     "prepared": 0.6,
+     "r": 6,
+     "side": "L",
+     "why": "Advocate unreliable; litigant has low patience and distant; both likely unready"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.45,
+     "c": 0,
+     "id": "ST/262/2022",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.7,
+     "r": 6,
+     "side": "L",
+     "why": "Advocate unreliable; litigant has very low trust; likely absent or seeks time"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/1198/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "Counsel diligent and confirmed; litigant has low trust but nearby; likely present"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/950/2023",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "Counsel diligent; litigant has low patience but recent trip made; likely present"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.7,
+     "c": 1,
+     "id": "ST/1283/2022",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent and confirmed; litigant has high trust and honoured appointment; likely present"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.6,
+     "c": 1,
+     "id": "ST/293/2026",
+     "m": 5,
+     "o": "N",
+     "prepared": 0.6,
+     "r": 6,
+     "side": "L",
+     "why": "Litigant has very low patience and high wage loss; likely absent despite counsel readiness"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.65,
+     "c": 1,
+     "id": "ST/702/2026",
+     "m": 5,
+     "o": "N",
+     "prepared": 0.7,
+     "r": 6,
+     "side": "L",
+     "why": "Litigant has low patience and trust; likely absent despite counsel readiness"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/1109/2025",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "Counsel diligent and confirmed; litigant has moderate patience; likely present"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.75,
+     "c": 0,
+     "id": "ST/1113/2022",
+     "m": 30,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 6,
+     "side": "L",
+     "why": "Advocate unreliable; litigant has low patience and distant; likely seeks time or absent"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0006/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "Counsel diligent and confirmed; litigant has high patience and trust; likely present"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.75,
+     "c": 1,
+     "id": "WST/0007/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "Counsel diligent and confirmed; litigant has low patience but high travel; likely present"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:ca723ec831e94d022b365277": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.1,
+     "attend": 1.0,
+     "c": 0,
+     "id": "WST/0002/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate broke 2 of 4 confirmations; unreliable now"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0004/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "diligent counsel; high trust and patience, close to court"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.6,
+     "c": 0,
+     "id": "WST/0007/2026",
+     "m": 20,
+     "o": "S",
+     "prepared": 0.3,
+     "r": 5,
+     "side": "L",
+     "why": "litigant low patience, 3 wasted trips, 52.9km travel"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.5,
+     "c": 0,
+     "id": "WST/0008/2026",
+     "m": 20,
+     "o": "S",
+     "prepared": 0.4,
+     "r": 5,
+     "side": "L",
+     "why": "advocate low reliability, 4 broken confirmations, litigant low trust"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.3,
+     "c": 0,
+     "id": "WST/0013/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.1,
+     "r": 4,
+     "side": "B",
+     "why": "2 adjournments, 0 appointments honoured, advocate unreliable"
+    },
+    {
+     "ask_time": 0.4,
+     "attend": 0.35,
+     "c": 0,
+     "id": "WST/0016/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.1,
+     "r": 4,
+     "side": "B",
+     "why": "2 adjournments, 0 appointments honoured, advocate very unreliable"
+    },
+    {
+     "ask_time": 0.5,
+     "attend": 0.3,
+     "c": 0,
+     "id": "WST/0017/2026",
+     "m": 20,
+     "o": "S",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "1 adjournment, 0 appointments, litigant low patience, long travel"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.4,
+     "c": 0,
+     "id": "WST/0024/2026",
+     "m": 20,
+     "o": "S",
+     "prepared": 0.2,
+     "r": 5,
+     "side": "L",
+     "why": "0 appointments honoured, low patience, 8.4km but no trips made"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0025/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.8,
+     "r": null,
+     "side": null,
+     "why": "advocate reliable now, litigant high patience, no prior issues"
+    },
+    {
+     "ask_time": 0.3,
+     "attend": 0.2,
+     "c": 0,
+     "id": "WST/0026/2026",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.1,
+     "r": 5,
+     "side": "L",
+     "why": "advocate unreliable, litigant very low patience and trust, no trips"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.9,
+     "c": 1,
+     "id": "WST/0028/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent, litigant high trust and patience, no prior issues"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:cca94501d43501ada4187bd0": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/804/2023",
+     "m": 10,
+     "o": "R",
+     "prepared": 1.0,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant near court with low patience and zero wasted trips"
+    },
+    {
+     "ask_time": 0.047,
+     "attend": 0.875,
+     "c": 1,
+     "id": "ST/803/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.733,
+     "r": 4,
+     "side": "L",
+     "why": "Low litigant patience and high wage loss; advocate may seek time for admission prep"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/485/2021",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.931,
+     "r": null,
+     "side": null,
+     "why": "Advocate reliable; litigant patient and has high trust in court after 4.9 years"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "ST/789/2022",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.18,
+     "r": 7,
+     "side": null,
+     "why": "Advocate low diligence; litigant has low trust and long travel distance, not ready"
+    },
+    {
+     "ask_time": 0.047,
+     "attend": 0.875,
+     "c": 1,
+     "id": "ST/1178/2026",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.839,
+     "r": 4,
+     "side": "L",
+     "why": "High travel cost and low patience; litigant likely absent or seeks time for admission"
+    },
+    {
+     "ask_time": 0.501,
+     "attend": 0.9,
+     "c": 1,
+     "id": "ST/1284/2018",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.217,
+     "r": 4,
+     "side": "L",
+     "why": "Advocate low reliability; litigant low patience and accused absent last time, seeks time"
+    },
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0003/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.59,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant moderate patience and trust, long travel but first hearing"
+    },
+    {
+     "ask_time": 0.034,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0005/2026",
+     "m": 5,
+     "o": "R",
+     "prepared": 0.537,
+     "r": null,
+     "side": null,
+     "why": "Advocate diligent; litigant moderate patience and trust, first hearing despite long travel"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:dd7cd5c391f1821ff828c7b5": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.05,
+     "attend": 0.45,
+     "c": 1,
+     "id": "ST/465/2025",
+     "m": 35,
+     "o": "S",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent but litigant has low patience and wasted trip history; likely seeks brief time to align evidence"
+    },
+    {
+     "ask_time": 0.02,
+     "attend": 0.91,
+     "c": 1,
+     "id": "WST/0016/2026",
+     "m": 8,
+     "o": "R",
+     "prepared": 0.98,
+     "r": null,
+     "side": null,
+     "why": "advocate responsive and diligent; admission stage with high trust and low travel burden; ready to proceed"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:e871b70fedb652404935ebcc": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.02,
+     "attend": 0.94,
+     "c": 1,
+     "id": "ST/576/2024",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.92,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent and reliable; accused absent last time but warrant stage needs presence"
+    },
+    {
+     "ask_time": 0.18,
+     "attend": 0.72,
+     "c": 1,
+     "id": "ST/655/2025",
+     "m": 15,
+     "o": "S",
+     "prepared": 0.75,
+     "r": 4,
+     "side": "L",
+     "why": "advocate cost-sensitive and low diligence; litigant distant and impatient; high risk of absence"
+    },
+    {
+     "ask_time": 0.03,
+     "attend": 0.88,
+     "c": 1,
+     "id": "ST/934/2024",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "litigant high trust and patience; advocate diligent despite low reliability; low seek time risk"
+    },
+    {
+     "ask_time": 0.28,
+     "attend": 0.68,
+     "c": 1,
+     "id": "ST/92/2026",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.65,
+     "r": 7,
+     "side": "L",
+     "why": "litigant high patience but case is delay condonation; advocate low reliability; both may seek time"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.98,
+     "c": 1,
+     "id": "ST/1278/2018",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.95,
+     "r": null,
+     "side": null,
+     "why": "advocate moderate diligence; no accused absent last time; long case but judgement stage stable"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.91,
+     "c": 1,
+     "id": "ST/7/2025",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent and reliable; litigant low trust but close travel; warrant stage likely proceeds"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.99,
+     "c": 1,
+     "id": "ST/367/2023",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.96,
+     "r": null,
+     "side": null,
+     "why": "advocate moderate; no absent last time; long case but judgement stage; p_absent 0 so certain attendance"
+    },
+    {
+     "ask_time": 0.15,
+     "attend": 0.62,
+     "c": 1,
+     "id": "ST/652/2020",
+     "m": 10,
+     "o": "S",
+     "prepared": 0.72,
+     "r": 4,
+     "side": "L",
+     "why": "advocate low reliability; litigant moderate trust and high travel; reports stage vulnerable to absence"
+    },
+    {
+     "ask_time": 0.08,
+     "attend": 0.78,
+     "c": 1,
+     "id": "ST/572/2017",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.82,
+     "r": null,
+     "side": null,
+     "why": "advocate low diligence but high reliability; litigant high trust; long case but judgement stage stable"
+    },
+    {
+     "ask_time": 0.02,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/416/2024",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.88,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent and reliable; litigant patient and close; warrant stage likely proceeds"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.98,
+     "c": 1,
+     "id": "ST/1266/2023",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.94,
+     "r": null,
+     "side": null,
+     "why": "advocate moderate diligence; no absent last time; judgement stage with high litigant patience"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.95,
+     "c": 1,
+     "id": "ST/554/2021",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.92,
+     "r": null,
+     "side": null,
+     "why": "advocate moderate diligence; no absent last time; application review stage stable with p_absent 0"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:ec0bd6bfe66d2d5524c22384": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.15,
+     "attend": 0.65,
+     "c": 1,
+     "id": "ST/164/2023",
+     "m": 10,
+     "o": "N",
+     "prepared": 0.5,
+     "r": 5,
+     "side": "L",
+     "why": "accused absent last time, litigant low trust and 14km travel"
+    },
+    {
+     "ask_time": 0.5,
+     "attend": 0.4,
+     "c": 1,
+     "id": "ST/1109/2025",
+     "m": 5,
+     "o": "S",
+     "prepared": 0.3,
+     "r": 7,
+     "side": "B",
+     "why": "advocate low diligence, high cost sensitivity, litigant poor patience and trust"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.8,
+     "c": 1,
+     "id": "ST/679/2024",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "accused present last time, advocate diligent, litigant moderate patience and trust"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/514/2023",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "no reference absent rate, advocate reliable, litigant high patience, stage arguments"
+    },
+    {
+     "ask_time": 0.2,
+     "attend": 0.7,
+     "c": 1,
+     "id": "ST/1156/2024",
+     "m": 15,
+     "o": "N",
+     "prepared": 0.7,
+     "r": 6,
+     "side": "B",
+     "why": "accused absent last time, advocate moderate reliability, litigant high travel and patience"
+    },
+    {
+     "ask_time": 0.25,
+     "attend": 0.5,
+     "c": 1,
+     "id": "ST/459/2023",
+     "m": 10,
+     "o": "S",
+     "prepared": 0.5,
+     "r": 7,
+     "side": "B",
+     "why": "advocate low reliability, litigant very low patience and trust, 18km travel"
+    },
+    {
+     "ask_time": 0.1,
+     "attend": 0.7,
+     "c": 1,
+     "id": "ST/565/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.8,
+     "r": null,
+     "side": null,
+     "why": "young case, advocate high reliability, litigant very low trust but short travel"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.85,
+     "c": 1,
+     "id": "ST/990/2025",
+     "m": 15,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate diligent, litigant high trust and patience, accused absent last time"
+    },
+    {
+     "ask_time": 0.05,
+     "attend": 0.75,
+     "c": 1,
+     "id": "ST/1340/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "advocate high diligence, litigant very high patience and trust, accused present last time"
+    }
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:ed13b81924546469d56e79b7": {
+  "json": {
+   "d": [
+    {
+     "ask_time": 0.0,
+     "attend": 0.405,
+     "c": 1,
+     "id": "ST/947/2022",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.85,
+     "r": 4,
+     "side": "L",
+     "why": "accused habitually skips; low litigant patience and travel burden"
+    },
+    {
+     "ask_time": 0.412,
+     "attend": 0.918,
+     "c": 1,
+     "id": "ST/917/2021",
+     "m": 0,
+     "o": "S",
+     "prepared": 0.6,
+     "r": 7,
+     "side": null,
+     "why": "advocate seeks time due to high cost sensitivity and recent adjournment"
+    },
+    {
+     "ask_time": 0.042,
+     "attend": 0.583,
+     "c": 1,
+     "id": "ST/1012/2025",
+     "m": 0,
+     "o": "N",
+     "prepared": 0.75,
+     "r": 5,
+     "side": "L",
+     "why": "litigant has low patience and high wage loss, likely absent despite stage"
+    },
+    {
+     "ask_time": 0.042,
+     "attend": 0.583,
+     "c": 1,
+     "id": "ST/1244/2025",
+     "m": 0,
+     "o": "A",
+     "prepared": 0.5,
+     "r": 5,
+     "side": "L",
+     "why": "low trust in court and high wage loss make litigant likely absent"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 0,
+     "id": "ST/1115/2021",
+     "m": 30,
+     "o": "R",
+     "prepared": 0.5,
+     "r": null,
+     "side": null,
+     "why": "advocate broke confirmations, low reliability, but still confirms; ready to proceed"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0001/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.9,
+     "r": null,
+     "side": null,
+     "why": "cog stage, short travel, litigant honoured past appointment and is patient"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0002/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.85,
+     "r": null,
+     "side": null,
+     "why": "cog stage, litigant has high trust and multiple honoured appointments"
+    },
+    {
+     "ask_time": 0.0,
+     "attend": 1.0,
+     "c": 1,
+     "id": "WST/0004/2026",
+     "m": 10,
+     "o": "R",
+     "prepared": 0.75,
+     "r": null,
+     "side": null,
+     "why": "cog stage, litigant has high trust and low travel despite wasted trips"
+    }
+   ]
+  }
+ }
+}

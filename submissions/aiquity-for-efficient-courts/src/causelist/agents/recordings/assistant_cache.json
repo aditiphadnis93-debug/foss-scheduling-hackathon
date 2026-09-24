@@ -1,0 +1,150 @@
+{
+ "sarvam:sarvam-105b:0eb92d64645973bbd5ad37db": {
+  "json": {
+   "answer": "The delays were caused by the parties in cases ST/1244/2025, ST/465/2025, ST/176/2026, and ST/1012/2025, who sought time or were unready. ST/831/2022 was also adjourned due to the advocate's prior broken confirmation and low diligence. No judge emergency or held-back matters were listed.",
+   "cited_cases": [
+    "ST/1244/2025",
+    "ST/465/2025",
+    "ST/176/2026",
+    "ST/1012/2025",
+    "ST/831/2022"
+   ],
+   "suggestions": [
+    "Consider scheduling a pre-sitting readiness conference for cases with low preparedness scores to reduce future adjournments."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:13a7faf8fe547e1c7c88163c": {
+  "json": {
+   "answer": "The first matter on the list is ST/655/2025, an application review, because it was heard urgently from the reserve before the scheduled sitting began. It was placed at the top under the 'reserve' rule as an urgent mention. The next matter, ST/262/2022, was also heard urgently from the reserve under the same rule, and ST/330/2025 followed this procedure. These urgent matters were heard between 10:00 and 11:00, taking a total of 16.4 minutes.",
+   "cited_cases": [
+    "ST/655/2025",
+    "ST/262/2022",
+    "ST/330/2025"
+   ],
+   "suggestions": [
+    "Consider scheduling future urgent reserve matters for the 14:00-16:30 session to balance the morning docket.",
+    "Review the criteria for what qualifies as an urgent reserve matter to prevent list disruption."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:2819b00cb39be753acf8a12d": {
+  "json": {
+   "answer": "The court used 135.3 minutes of 360 capacity, leaving significant time unused. Four cases were adjourned: ST/1244/2025 due to both sides seeking time, ST/465/2025 because evidence was not ready, ST/176/2026 due to respondent absence, and ST/1012/2025 because both parties were unready. Urgent matters ST/1244/2025 and ST/1355/2023 were heard from reserve, consuming 17.9 minutes.",
+   "cited_cases": [
+    "ST/1244/2025",
+    "ST/465/2025",
+    "ST/176/2026",
+    "ST/1012/2025"
+   ],
+   "suggestions": [
+    "Reschedule adjourned cases to the next listing date of 2026-10-14 to avoid wasted slots.",
+    "Require advocates for ST/1244/2025 and ST/1012/2025 to confirm readiness before the next hearing.",
+    "Review ST/465/2025 to ensure evidence filings are completed prior to the next date."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:56756b9a5b24d89abef56ac5": {
+  "json": {
+   "answer": "The first matter on the list is ST/1115/2021, scheduled for the 10:00-11:00 window for a judgment. It was listed because the system confirmed the advocate is reliable, the litigant is patient, and there is high trust, making it ready for a substantive hearing with a 97% chance of going ahead.",
+   "cited_cases": [
+    "ST/1115/2021"
+   ],
+   "suggestions": [
+    "Consider confirming with ADV-004 that the judgment is finalized to avoid wasting the 10:00 slot."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:59c017ac94acd226c4384087": {
+  "json": {
+   "answer": "Today's delays were caused by urgent application reviews heard from the reserve (ST/655/2025, ST/262/2022, ST/330/2025) and several cases being held back due to unmet filing requirements (ST/522/2023, ST/1046/2023, ST/1227/2025, ST/645/2023). Additionally, ST/1283/2022, ST/181/2025, and ST/979/2022 were interrupted by filed reports, while ST/313/2023, ST/69/2022, ST/884/2023, ST/979/2022, ST/135/2022, ST/629/2022, and ST/1015/2023 were adjourned or not ready due to party absence or lack of preparation.",
+   "cited_cases": [
+    "ST/655/2025",
+    "ST/262/2022",
+    "ST/330/2025",
+    "ST/522/2023",
+    "ST/1046/2023",
+    "ST/1227/2025",
+    "ST/645/2023",
+    "ST/1283/2022",
+    "ST/181/2025",
+    "ST/979/2022",
+    "ST/313/2023",
+    "ST/69/2022",
+    "ST/884/2023",
+    "ST/135/2022",
+    "ST/629/2022",
+    "ST/1015/2023"
+   ],
+   "suggestions": [
+    "Ensure defence witness lists are filed before listing to avoid checklist holds.",
+    "Require advocates to confirm report filings before the hearing to prevent interruptions.",
+    "Review the readiness of cases with low P(moves forward) scores to minimize adjournments."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:5a75022cae16207e94bd718d": {
+  "json": {
+   "answer": "The court exceeded its 360-minute capacity by 6.1 minutes today, with ST/940/2022 taking 8.7 minutes from the reserve. The main issue is that 47 cases were held back under the checklist rule due to missing witness lists, agency reports, or warrants, and 3 cases were interrupted or rescheduled, creating significant delays. Several cases, like ST/1198/2026 and ST/7/2025, were held back because warrants had not yet been executed or returned by the police.",
+   "cited_cases": [
+    "ST/940/2022",
+    "ST/1187/2026",
+    "ST/7/2025",
+    "ST/1198/2026",
+    "ST/1156/2024"
+   ],
+   "suggestions": [
+    "Reduce the number of cases listed in the morning session to prevent the 360-minute capacity from being exceeded.",
+    "Instruct the court registry to verify that all warrants are executed and returned by the police before the next listing.",
+    "Require advocates to file written arguments and case summaries in advance to avoid last-minute adjournments."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:74a3c0b2626b90b0d4c34be6": {
+  "json": {
+   "answer": "The day ran nearly to capacity at 353.8 of 360 minutes, with significant delays from 11 cases adjourned or not ready, including ST/739/2022, ST/1355/2023, ST/29/2022, and ST/1166/2023, primarily due to party absence or unreadiness. Additionally, 4 cases (ST/522/2023, ST/1046/2023, ST/1227/2025, ST/645/2023) were held back due to incomplete filings like defence witness lists and written arguments.",
+   "cited_cases": [
+    "ST/739/2022",
+    "ST/1355/2023",
+    "ST/29/2022",
+    "ST/1166/2023",
+    "ST/522/2023",
+    "ST/1046/2023",
+    "ST/1227/2025",
+    "ST/645/2023"
+   ],
+   "suggestions": [
+    "Schedule adjournment-prone cases like ST/1355/2023 and ST/29/2022 in shorter, earlier time slots to minimize disruption.",
+    "Direct advocates in cases held back under the checklist rule to file missing documents before the next listing on 2026-10-06 to avoid repeated adjournments.",
+    "Reserve the 10-minute slots for low-risk application reviews like ST/954/2021 and ST/181/2025 to protect substantive hearing time."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:cd37b0b566dfdd0bef5852b1": {
+  "json": {
+   "answer": "The day's delays were caused by the court hearing an urgent application review, ST/940/2022, from the reserve at 10:00, which consumed 8.7 minutes. Additionally, several matters were held back because the checklist was not met, including ST/792/2024 due to a process report from the agency, ST/697/2021 because the defence witness list was not filed, and ST/387/2020 because witnesses were not summoned.",
+   "cited_cases": [
+    "ST/940/2022",
+    "ST/792/2024",
+    "ST/697/2021",
+    "ST/387/2020"
+   ],
+   "suggestions": [
+    "Consider reducing the time allocated for urgent matters from the reserve to prevent them from consuming the first slot.",
+    "Instruct the registry to follow up with state agencies to ensure reports and warrant returns are filed on time.",
+    "Direct counsel in ST/792/2024 to file the process report by the next hearing."
+   ]
+  }
+ },
+ "sarvam:sarvam-105b:e147a831ddaea9f4253ba9d6": {
+  "json": {
+   "answer": "The first matter on today's list is ST/940/2022, an application review, which was heard urgently before the main list at 10:00 AM. This was done under the reserve rule because it was an urgent matter pulled from the reserve. The record shows it was heard for 8.7 minutes before the regular list began.",
+   "cited_cases": [
+    "ST/940/2022"
+   ],
+   "suggestions": [
+    "Ensure the reserve list is checked early for any urgent matters requiring pre-list hearing."
+   ]
+  }
+ }
+}

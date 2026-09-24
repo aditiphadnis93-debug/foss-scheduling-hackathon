@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+out/*
+!out/.gitkeep
+.pytest_cache/
+web/node_modules/
+web/.next/
+web/.next*/
+web/tsconfig.tsbuildinfo

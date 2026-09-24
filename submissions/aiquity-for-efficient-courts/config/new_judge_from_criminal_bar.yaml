@@ -1,0 +1,10 @@
+# A judge newly elevated from the criminal bar: quick on trial stages, still learning the bench.
+name: new_judge_from_criminal_bar
+planner: milp
+judge: {background: criminal_bar, years_on_bench: 0.5, specialisations: [BAIL]}
+weights: {substantive: 1.0, age: 1.0, wait: 0.5, fresh: 0.0, cluster: 0.2}
+ageing_share: 0.25
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

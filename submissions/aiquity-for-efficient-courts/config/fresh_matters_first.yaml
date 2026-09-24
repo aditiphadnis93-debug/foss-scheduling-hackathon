@@ -1,0 +1,12 @@
+# New matters first. The age weight and ageing share are clamped to the non-configurable
+# floors, so old cases still get their minimum share -- the dashboard shows the cost.
+name: fresh_matters_first
+planner: milp
+weights: {substantive: 1.0, age: 0.0, wait: 0.2, fresh: 3.0, cluster: 0.2}
+ageing_share: 0.0
+carry_over: priority
+next_date_policy: procedural
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

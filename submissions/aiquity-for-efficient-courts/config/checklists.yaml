@@ -1,0 +1,12 @@
+# Prerequisite checklists per purpose of hearing. A case with an unmet item is not listed and
+# loses any reserved date; the item is named in the hold-back reason and the audit log.
+# A judge can copy this file, edit items, and point a preset at it (checklists: <key>).
+default:
+  APPEARANCE: [summons served on the accused]
+  WARRANT: [warrant executed or returned by police]
+  PLEA: [accused produced or present]
+  EVIDENCE_COMPLAINANT: [witness list filed, witnesses summoned]
+  EVIDENCE_ACCUSED: [defence witness list filed]
+  ARGUMENTS: [written arguments / case summary (front page) filed by both sides]
+  JUDGEMENT: [arguments closed, judgment reserved]
+  REPORTS: [report received from mediator / agency]
