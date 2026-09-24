@@ -370,7 +370,7 @@ const GENE_INFO = {
   rotationAll: "the rotation covers every case, not only old ones",
 };
 const geneVal = (v) => (typeof v === "number" ? (Math.abs(v) < 2 && v % 1 ? fmt(v, 2) : fmt(v, v % 1 ? 2 : 0)) : typeof v === "boolean" ? (v ? "on" : "off") : String(v));
-function halo(x, text, px, py, color) { const cw = x.canvas.getBoundingClientRect().width, tw = x.measureText(text).width; if (x.textAlign === "left" || x.textAlign === "start") { if (px + tw > cw - 4) px = cw - 4 - tw; if (px < 2) px = 2; } x.save(); x.lineWidth = 5; x.strokeStyle = "rgba(251,249,244,.92)"; x.lineJoin = "round"; x.strokeText(text, px, py); x.fillStyle = color; x.fillText(text, px, py); x.restore(); }
+function halo(x, text, px, py, color) { const cw = x.canvas.getBoundingClientRect().width, tw = x.measureText(text).width; if (x.textAlign === "left" || x.textAlign === "start") { if (px + tw > cw - 4) px = Math.max(2, px - tw - 20); if (px < 2) px = 2; } x.save(); x.lineWidth = 5; x.strokeStyle = "rgba(251,249,244,.92)"; x.lineJoin = "round"; x.strokeText(text, px, py); x.fillStyle = color; x.fillText(text, px, py); x.restore(); }
 const GENE_PALETTE = ["#1B3F8F", "#0E6B4D", "#A86B12", "#7A3E8F", "#B3261E", "#2F7F96", "#5B6B2E", "#8C5A3C"];
 hooks["s-tournament"] = {
   built: false, axis: "honoured", drawnGen: -1,
@@ -538,7 +538,7 @@ hooks["s-twist"] = {
   twistChart(k, instant) {
     const O = D.tournament.old, c = $("#twistcanvas"); const { x, w, h } = sizeCanvas(c);
     const t = O.todayValidation || O.today, wv = O.winner.validation || O.winner;
-    const chartW = w * 0.64, L = 70, T = 30, B = 64, Rm = 20;
+    const chartW = w * 0.64, L = 70, T = 40, B = 64, Rm = 20;
     const X = [12, 28], Y = [0.5, 1.0];
     const px = (v) => L + ((v - X[0]) / (X[1] - X[0])) * (chartW - L - Rm);
     const py = (v) => h - B - ((Math.max(Y[0], Math.min(Y[1], v)) - Y[0]) / (Y[1] - Y[0])) * (h - T - B);
@@ -562,9 +562,9 @@ hooks["s-twist"] = {
         if (q > 0) { x.strokeStyle = "rgba(240,122,110,.6)"; x.setLineDash([5, 5]); x.beginPath(); x.moveTo(wx, wyTop); x.lineTo(wx, wy); x.stroke(); x.setLineDash([]); }
         x.fillStyle = q > 0 ? "#F07A6E" : "#FFFFFF"; x.beginPath(); x.arc(wx, wy, 11, 0, Math.PI * 2); x.fill();
         x.font = "600 17px Literata"; x.textAlign = "right"; x.fillStyle = q > 0 ? "#F07A6E" : "#FFFFFF";
-        x.fillText("the first winner, g921", wx - 18, wy - 16);
+        x.fillText("the first winner, g921", wx - 20, wy + 6);
         x.font = "14px Public Sans"; x.fillStyle = "#9C988E";
-        x.fillText(q > 0 ? `${pct(wv.heldOnPromised * 1)} of its dates kept` : "the first rule never checked its dates", wx - 18, wy + 26);
+        x.fillText(q > 0 ? `${pct(wv.heldOnPromised * 1)} of its dates kept` : "the first rule never checked its dates", wx - 20, wy + 28);
       }
       // piles of unheard cases, one square per 10 cases
       if (q > 0) {
@@ -655,7 +655,7 @@ hooks["s-found"] = {
   built: false,
   build() {
     const rows = D.headline.rows, host = $("#headline-chart"); host.innerHTML = "";
-    const hr = el("div", "hrow head-row"); hr.append(el("span", null, "Measure"), el("span", "v", "Today"), el("span", "v", "Our pick"), el("span", null, "Change with its 95% interval: right is better, left is worse")); host.append(hr);
+    const hr = el("div", "hrow head-row"); hr.append(el("span", null, "Measure"), el("span", "v", "Today"), el("span", "v", "Our pick"), el("span", "axis-hdr", "<span>worse than today</span><span>today</span><span>better than today</span>")); host.append(hr);
     const rel = (r, v) => { const base = r.unit === "%" ? r.today[0] * 100 : Math.abs(r.today[0]); return v / base; };
     const maxRel = Math.max(...rows.map((r) => Math.abs(rel(r, r.diff[2])), ...rows.map((r) => Math.abs(rel(r, r.diff[1])))));
     this.bars = [];
