@@ -1,0 +1,1241 @@
+{
+ "version": 1,
+ "court": {
+  "name": "Kollam, Section 138 NI Act summary trials",
+  "bench": "One judge",
+  "rosterId": "roster_3000_seed42",
+  "cases": 3000,
+  "capacityMinutes": 420,
+  "sitting": {
+   "start": "10:00",
+   "end": "17:30",
+   "breaks": [
+    {
+     "start": "13:30",
+     "end": "14:00"
+    }
+   ]
+  }
+ },
+ "horizon": {
+  "start": "2026-10-01",
+  "end": "2026-12-15",
+  "workingDays": [
+   "2026-10-01",
+   "2026-10-05",
+   "2026-10-06",
+   "2026-10-07",
+   "2026-10-08",
+   "2026-10-09",
+   "2026-10-12",
+   "2026-10-13",
+   "2026-10-14",
+   "2026-10-15",
+   "2026-10-16",
+   "2026-10-19",
+   "2026-10-21",
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-26",
+   "2026-10-27",
+   "2026-10-28",
+   "2026-10-29",
+   "2026-10-30",
+   "2026-11-02",
+   "2026-11-03",
+   "2026-11-04",
+   "2026-11-05",
+   "2026-11-06",
+   "2026-11-10",
+   "2026-11-11",
+   "2026-11-12",
+   "2026-11-13",
+   "2026-11-16",
+   "2026-11-17",
+   "2026-11-18",
+   "2026-11-19",
+   "2026-11-20",
+   "2026-11-23",
+   "2026-11-24",
+   "2026-11-25",
+   "2026-11-26",
+   "2026-11-27",
+   "2026-11-30",
+   "2026-12-01",
+   "2026-12-02",
+   "2026-12-03",
+   "2026-12-04",
+   "2026-12-07",
+   "2026-12-08",
+   "2026-12-09",
+   "2026-12-10",
+   "2026-12-11",
+   "2026-12-14",
+   "2026-12-15"
+  ],
+  "holidays": [
+   {
+    "date": "2026-10-02",
+    "name": "Gandhi Jayanti"
+   },
+   {
+    "date": "2026-10-20",
+    "name": "Dussehra"
+   },
+   {
+    "date": "2026-11-08",
+    "name": "Diwali"
+   },
+   {
+    "date": "2026-11-09",
+    "name": "Diwali (New Year)"
+   }
+  ],
+  "judgeLeave": []
+ },
+ "defaultDate": "2026-10-01",
+ "hearingTypes": [
+  {
+   "type": "ADMISSION",
+   "label": "Admission",
+   "sequential": true,
+   "durationMin": 5,
+   "gapDays": 5,
+   "pSubstantive": 0.486,
+   "pSubstantiveSource": "real",
+   "medianHearings": 1,
+   "meanHearings": 2.12
+  },
+  {
+   "type": "COGNIZANCE",
+   "label": "Cognizance",
+   "sequential": true,
+   "durationMin": 10,
+   "gapDays": 14,
+   "pSubstantive": 0.9,
+   "pSubstantiveSource": "real",
+   "medianHearings": 1,
+   "meanHearings": 1.14
+  },
+  {
+   "type": "DELAY_CONDONATION_HEARING",
+   "label": "Delay condonation",
+   "sequential": true,
+   "durationMin": 5,
+   "gapDays": 5,
+   "pSubstantive": 0.293,
+   "pSubstantiveSource": "real",
+   "medianHearings": 3,
+   "meanHearings": 3.37
+  },
+  {
+   "type": "APPEARANCE",
+   "label": "Appearance",
+   "sequential": true,
+   "durationMin": 10,
+   "gapDays": 21,
+   "pSubstantive": 0.401,
+   "pSubstantiveSource": "real",
+   "medianHearings": 3,
+   "meanHearings": 3.26
+  },
+  {
+   "type": "WARRANT",
+   "label": "Warrant",
+   "sequential": true,
+   "durationMin": 10,
+   "gapDays": 21,
+   "pSubstantive": 0.135,
+   "pSubstantiveSource": "real",
+   "medianHearings": 3,
+   "meanHearings": 5.02
+  },
+  {
+   "type": "PLEA",
+   "label": "Plea",
+   "sequential": true,
+   "durationMin": 15,
+   "gapDays": 14,
+   "pSubstantive": 0.9,
+   "pSubstantiveSource": "real",
+   "medianHearings": 1,
+   "meanHearings": 1.57
+  },
+  {
+   "type": "EXAMINATION_UNDER_S351_BNSS",
+   "label": "Examination u/s 351",
+   "sequential": true,
+   "durationMin": 30,
+   "gapDays": 14,
+   "pSubstantive": 0.407,
+   "pSubstantiveSource": "real",
+   "medianHearings": 2,
+   "meanHearings": 2.96
+  },
+  {
+   "type": "EVIDENCE_COMPLAINANT",
+   "label": "Complainant evidence",
+   "sequential": true,
+   "durationMin": 30,
+   "gapDays": 14,
+   "pSubstantive": 0.294,
+   "pSubstantiveSource": "real",
+   "medianHearings": 5,
+   "meanHearings": 6.78
+  },
+  {
+   "type": "EVIDENCE_ACCUSED",
+   "label": "Defence evidence",
+   "sequential": true,
+   "durationMin": 30,
+   "gapDays": 14,
+   "pSubstantive": 0.167,
+   "pSubstantiveSource": "real",
+   "medianHearings": 4,
+   "meanHearings": 6.42
+  },
+  {
+   "type": "ARGUMENTS",
+   "label": "Arguments",
+   "sequential": true,
+   "durationMin": 30,
+   "gapDays": 14,
+   "pSubstantive": 0.13,
+   "pSubstantiveSource": "real",
+   "medianHearings": 3,
+   "meanHearings": 3.69
+  },
+  {
+   "type": "JUDGEMENT",
+   "label": "Judgement",
+   "sequential": true,
+   "durationMin": 30,
+   "gapDays": 21,
+   "pSubstantive": 1,
+   "pSubstantiveSource": "estimated",
+   "medianHearings": 2,
+   "meanHearings": 3.58
+  },
+  {
+   "type": "BAIL",
+   "label": "Bail",
+   "sequential": false,
+   "durationMin": 15,
+   "gapDays": 14,
+   "pSubstantive": 0.313,
+   "pSubstantiveSource": "real",
+   "medianHearings": 2,
+   "meanHearings": 2.53
+  },
+  {
+   "type": "REPORTS",
+   "label": "Reports",
+   "sequential": false,
+   "durationMin": 10,
+   "gapDays": 45,
+   "pSubstantive": 0.083,
+   "pSubstantiveSource": "real",
+   "medianHearings": 3,
+   "meanHearings": 4.26
+  },
+  {
+   "type": "APPLICATION_REVIEW",
+   "label": "Application review",
+   "sequential": false,
+   "durationMin": 10,
+   "gapDays": 5,
+   "pSubstantive": 0.85,
+   "pSubstantiveSource": "estimated",
+   "medianHearings": 1,
+   "meanHearings": 1
+  }
+ ],
+ "failureReasons": [
+  {
+   "id": "court_admin",
+   "label": "Court administrative issue",
+   "share": 0.022
+  },
+  {
+   "id": "court_holiday",
+   "label": "Court holiday or no sitting",
+   "share": 0.002
+  },
+  {
+   "id": "respondent_absent",
+   "label": "Accused absent or not complying",
+   "share": 0.099
+  },
+  {
+   "id": "petitioner_absent",
+   "label": "Complainant absent or not complying",
+   "share": 0.069
+  },
+  {
+   "id": "sought_time",
+   "label": "Party sought time",
+   "share": 0.053
+  },
+  {
+   "id": "not_ready",
+   "label": "Evidence or filing not ready",
+   "share": 0.083
+  },
+  {
+   "id": "awaiting_process",
+   "label": "Summons, notice or warrant not returned",
+   "share": 0.357
+  },
+  {
+   "id": "external_dependency",
+   "label": "Outside report not ready",
+   "share": 0.103
+  },
+  {
+   "id": "both_absent",
+   "label": "Both parties absent or unready",
+   "share": 0.053
+  },
+  {
+   "id": "unclear",
+   "label": "Unclear",
+   "share": 0.158
+  }
+ ],
+ "ageBands": [
+  "0-1",
+  "1-3",
+  "3-4",
+  "4-5",
+  "5+"
+ ],
+ "policies": [
+  {
+   "id": "status_quo_60",
+   "name": "Status quo, 60-day gap",
+   "kind": "baseline",
+   "description": "Lists every case whose date has come, flat 60-day next date, called in list order.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 99,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": false,
+    "checkin": false,
+    "standbyShare": 0,
+    "smartNextDate": false
+   }
+  },
+  {
+   "id": "status_quo_ref",
+   "name": "Status quo, PUCAR gaps",
+   "kind": "baseline",
+   "description": "As the status quo, with next dates at PUCAR's reference gap for the purpose.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 99,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": false,
+    "checkin": false,
+    "standbyShare": 0,
+    "smartNextDate": false
+   }
+  },
+  {
+   "id": "fifo_capped",
+   "name": "First in, first out, capped",
+   "kind": "baseline",
+   "description": "Oldest promise first, stops at 420 expected minutes.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 1,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": false,
+    "checkin": false,
+    "standbyShare": 0,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "bin_packing",
+   "name": "Bin packing",
+   "kind": "baseline",
+   "description": "Greedy chance of a substantive hearing per minute, to capacity. Ignores age.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 1,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": false,
+    "checkin": false,
+    "standbyShare": 0,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "oldest_first",
+   "name": "Oldest first",
+   "kind": "baseline",
+   "description": "Oldest cases first to capacity.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 1,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": false,
+    "checkin": false,
+    "standbyShare": 0,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "sehgal",
+   "name": "Justice Sehgal",
+   "kind": "judge",
+   "description": "Fresh matters in the morning, old matters in the afternoon oldest first, unheard cases return the same weekday next week, lists more than the day holds.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 0.8,
+     "fairness": 1.5,
+     "predictability": 1.2,
+     "trips": 0.5
+    },
+    "fillTarget": 1.25,
+    "ageingFloor": 0.3,
+    "clusterByAdvocate": false,
+    "blocks": [
+     {
+      "id": "morning",
+      "start": "10:00",
+      "end": "13:30",
+      "types": [
+       "ADMISSION",
+       "DELAY_CONDONATION_HEARING",
+       "COGNIZANCE",
+       "APPEARANCE",
+       "WARRANT",
+       "PLEA",
+       "BAIL",
+       "APPLICATION_REVIEW"
+      ]
+     },
+     {
+      "id": "afternoon",
+      "start": "14:00",
+      "end": "17:30",
+      "types": [
+       "EXAMINATION_UNDER_S351_BNSS",
+       "EVIDENCE_COMPLAINANT",
+       "EVIDENCE_ACCUSED",
+       "ARGUMENTS",
+       "JUDGEMENT",
+       "REPORTS"
+      ],
+      "oldestFirst": true
+     }
+    ],
+    "carryForward": true,
+    "processDesk": true,
+    "checkin": false,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "dimakar",
+   "name": "Justice Dimakar",
+   "kind": "judge",
+   "description": "Old matters first with a high ageing floor, hearings grouped by purpose and by advocate, a summary required before arguments.",
+   "config": {
+    "weights": {
+     "throughput": 0.8,
+     "substantiveness": 1,
+     "fairness": 2,
+     "predictability": 1,
+     "trips": 1.2
+    },
+    "fillTarget": 1,
+    "ageingFloor": 0.45,
+    "clusterByAdvocate": true,
+    "blocks": [
+     {
+      "id": "appearances",
+      "start": "10:00",
+      "end": "12:00",
+      "types": [
+       "APPEARANCE",
+       "WARRANT",
+       "PLEA",
+       "BAIL",
+       "ADMISSION",
+       "COGNIZANCE",
+       "DELAY_CONDONATION_HEARING",
+       "APPLICATION_REVIEW",
+       "REPORTS"
+      ]
+     },
+     {
+      "id": "evidence",
+      "start": "12:00",
+      "end": "15:30",
+      "types": [
+       "EXAMINATION_UNDER_S351_BNSS",
+       "EVIDENCE_COMPLAINANT",
+       "EVIDENCE_ACCUSED"
+      ],
+      "oldestFirst": true
+     },
+     {
+      "id": "arguments",
+      "start": "15:30",
+      "end": "17:30",
+      "types": [
+       "ARGUMENTS",
+       "JUDGEMENT"
+      ],
+      "oldestFirst": true
+     }
+    ],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": true,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "joshi",
+   "name": "Justice Joshi",
+   "kind": "judge",
+   "description": "Fresh matters first because they move faster, old files wait; the ageing floor stays at its 15% minimum.",
+   "config": {
+    "weights": {
+     "throughput": 2,
+     "substantiveness": 1.2,
+     "fairness": 0.2,
+     "predictability": 0.8,
+     "trips": 0.3
+    },
+    "fillTarget": 1.1,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": false,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "benchtime",
+   "name": "benchtime",
+   "kind": "ours",
+   "description": "Process desk, readiness check, exact daily selection with a fairness floor, calibrated chance of a substantive hearing, meaningful next dates.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 0.95,
+    "ageingFloor": 0.25,
+    "clusterByAdvocate": true,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": true,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  }
+ ],
+ "recommended": "benchtime",
+ "baseline": "status_quo_60",
+ "defaultConfig": {
+  "weights": {
+   "throughput": 1,
+   "substantiveness": 1,
+   "fairness": 1,
+   "predictability": 1,
+   "trips": 0.5
+  },
+  "fillTarget": 0.95,
+  "ageingFloor": 0.25,
+  "clusterByAdvocate": true,
+  "blocks": [],
+  "carryForward": false,
+  "processDesk": true,
+  "checkin": true,
+  "standbyShare": 0.15,
+  "smartNextDate": true
+ },
+ "presets": [
+  {
+   "id": "recommended",
+   "name": "Recommended",
+   "description": "Exact daily selection at 95% fill, a quarter of minutes offered first to 4+ year cases, process desk and readiness check on, advocates clustered.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 1,
+     "fairness": 1,
+     "predictability": 1,
+     "trips": 0.5
+    },
+    "fillTarget": 0.95,
+    "ageingFloor": 0.25,
+    "clusterByAdvocate": true,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": true,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "sehgal",
+   "name": "Justice Sehgal",
+   "description": "Fresh matters in the morning, old matters in the afternoon oldest first, unheard cases return the same weekday next week, lists more than the day holds.",
+   "config": {
+    "weights": {
+     "throughput": 1,
+     "substantiveness": 0.8,
+     "fairness": 1.5,
+     "predictability": 1.2,
+     "trips": 0.5
+    },
+    "fillTarget": 1.25,
+    "ageingFloor": 0.3,
+    "clusterByAdvocate": false,
+    "blocks": [
+     {
+      "id": "morning",
+      "start": "10:00",
+      "end": "13:30",
+      "types": [
+       "ADMISSION",
+       "DELAY_CONDONATION_HEARING",
+       "COGNIZANCE",
+       "APPEARANCE",
+       "WARRANT",
+       "PLEA",
+       "BAIL",
+       "APPLICATION_REVIEW"
+      ]
+     },
+     {
+      "id": "afternoon",
+      "start": "14:00",
+      "end": "17:30",
+      "types": [
+       "EXAMINATION_UNDER_S351_BNSS",
+       "EVIDENCE_COMPLAINANT",
+       "EVIDENCE_ACCUSED",
+       "ARGUMENTS",
+       "JUDGEMENT",
+       "REPORTS"
+      ],
+      "oldestFirst": true
+     }
+    ],
+    "carryForward": true,
+    "processDesk": true,
+    "checkin": false,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "dimakar",
+   "name": "Justice Dimakar",
+   "description": "Old matters first with a high ageing floor, hearings grouped by purpose and by advocate, a summary required before arguments.",
+   "config": {
+    "weights": {
+     "throughput": 0.8,
+     "substantiveness": 1,
+     "fairness": 2,
+     "predictability": 1,
+     "trips": 1.2
+    },
+    "fillTarget": 1,
+    "ageingFloor": 0.45,
+    "clusterByAdvocate": true,
+    "blocks": [
+     {
+      "id": "appearances",
+      "start": "10:00",
+      "end": "12:00",
+      "types": [
+       "APPEARANCE",
+       "WARRANT",
+       "PLEA",
+       "BAIL",
+       "ADMISSION",
+       "COGNIZANCE",
+       "DELAY_CONDONATION_HEARING",
+       "APPLICATION_REVIEW",
+       "REPORTS"
+      ]
+     },
+     {
+      "id": "evidence",
+      "start": "12:00",
+      "end": "15:30",
+      "types": [
+       "EXAMINATION_UNDER_S351_BNSS",
+       "EVIDENCE_COMPLAINANT",
+       "EVIDENCE_ACCUSED"
+      ],
+      "oldestFirst": true
+     },
+     {
+      "id": "arguments",
+      "start": "15:30",
+      "end": "17:30",
+      "types": [
+       "ARGUMENTS",
+       "JUDGEMENT"
+      ],
+      "oldestFirst": true
+     }
+    ],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": true,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  },
+  {
+   "id": "joshi",
+   "name": "Justice Joshi",
+   "description": "Fresh matters first because they move faster, old files wait; the ageing floor stays at its 15% minimum.",
+   "config": {
+    "weights": {
+     "throughput": 2,
+     "substantiveness": 1.2,
+     "fairness": 0.2,
+     "predictability": 0.8,
+     "trips": 0.3
+    },
+    "fillTarget": 1.1,
+    "ageingFloor": 0.15,
+    "clusterByAdvocate": false,
+    "blocks": [],
+    "carryForward": false,
+    "processDesk": true,
+    "checkin": false,
+    "standbyShare": 0.15,
+    "smartNextDate": true
+   }
+  }
+ ],
+ "limits": {
+  "ageingFloorMin": 0.15,
+  "ageingFloorReason": "Ageing cases may never be deprioritised (case study, section 4, goal 6), so at least 15% of minutes are offered first to cases 4 years or older.",
+  "fillTarget": {
+   "min": 0.6,
+   "max": 1.5,
+   "step": 0.05
+  },
+  "standbyShare": {
+   "min": 0,
+   "max": 0.3,
+   "step": 0.05
+  }
+ },
+ "seeds": {
+  "tuning": [
+   1,
+   20
+  ],
+  "validation": [
+   21,
+   30
+  ],
+  "test": [
+   31,
+   60
+  ],
+  "interactiveDefault": [
+   31,
+   40
+  ]
+ },
+ "cards": [
+  {
+   "id": "readme",
+   "label": "Repo README, the five printed scores"
+  },
+  {
+   "id": "caseStudy",
+   "label": "Case study, section 6"
+  },
+  {
+   "id": "siddarth",
+   "label": "Organisers' six"
+  },
+  {
+   "id": "backlog",
+   "label": "Backlog by age"
+  },
+  {
+   "id": "extra",
+   "label": "Trips, listings and disposals"
+  }
+ ],
+ "measures": [
+  {
+   "id": "readme.utilisation",
+   "card": "readme",
+   "label": "Utilisation",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Minutes spent on hearings that were reached, divided by 420 minutes times sitting days."
+  },
+  {
+   "id": "readme.reachRate",
+   "card": "readme",
+   "label": "Reach rate",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Hearings reached divided by hearings scheduled for the day (vacated in advance excluded)."
+  },
+  {
+   "id": "readme.substantiveness",
+   "card": "readme",
+   "label": "Substantiveness",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Substantive hearings divided by hearings reached."
+  },
+  {
+   "id": "readme.backlog4yHeardShare",
+   "card": "readme",
+   "label": "4+ year cases heard at all",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Share of cases aged 4 years or more at the start that were reached and taken up at least once in the horizon."
+  },
+  {
+   "id": "readme.backlog4ySubstantiveShare",
+   "card": "readme",
+   "label": "4+ year cases moved at least once",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Share of cases aged 4 years or more at the start with at least one substantive hearing in the horizon."
+  },
+  {
+   "id": "readme.predictabilityGapDays",
+   "card": "readme",
+   "label": "Wait from first listing to first hearing",
+   "unit": "days",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Mean over cases of first date actually heard minus first date scheduled."
+  },
+  {
+   "id": "caseStudy.utilisation",
+   "card": "caseStudy",
+   "label": "Utilisation",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "As the README defines it; read together with overrun days and idle minutes."
+  },
+  {
+   "id": "caseStudy.overrunDays",
+   "card": "caseStudy",
+   "label": "Days the list overran",
+   "unit": "days",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Sitting days on which listed matters were left not reached for want of time."
+  },
+  {
+   "id": "caseStudy.idleMinutesShare",
+   "card": "caseStudy",
+   "label": "Idle bench minutes",
+   "unit": "share",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Share of the 420 daily minutes with nothing to hear."
+  },
+  {
+   "id": "caseStudy.heldAsScheduled",
+   "card": "caseStudy",
+   "label": "Held as scheduled",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Hearings heard on their listed date divided by hearings listed (desk and vacated matters not in the denominator)."
+  },
+  {
+   "id": "caseStudy.heldAsScheduledAllDue",
+   "card": "caseStudy",
+   "label": "Held as scheduled, all due matters",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "As above with desk and vacated matters counted in the denominator."
+  },
+  {
+   "id": "caseStudy.substantiveness",
+   "card": "caseStudy",
+   "label": "Substantiveness",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Substantive hearings divided by hearings reached."
+  },
+  {
+   "id": "caseStudy.nextDateExcessDays",
+   "card": "caseStudy",
+   "label": "Next date beyond the procedural minimum",
+   "unit": "days",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Mean days between the next date given and the earliest date the procedure allows."
+  },
+  {
+   "id": "caseStudy.wastedRelistShare",
+   "card": "caseStudy",
+   "label": "Next dates on which the case was not ready",
+   "unit": "share",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Share of next dates on which the case turned out not ready to proceed."
+  },
+  {
+   "id": "siddarth.throughputPerMonth",
+   "card": "siddarth",
+   "label": "Throughput",
+   "unit": "perMonth",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Disposals per month."
+  },
+  {
+   "id": "siddarth.judgeTimeUsed",
+   "card": "siddarth",
+   "label": "Judge time used",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Minutes used divided by minutes available."
+  },
+  {
+   "id": "siddarth.wastedListings",
+   "card": "siddarth",
+   "label": "Wasted listings",
+   "unit": "share",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Listings not reached plus listings adjourned, divided by listings."
+  },
+  {
+   "id": "siddarth.heldOnPromisedDate",
+   "card": "siddarth",
+   "label": "Held on the promised date",
+   "unit": "share",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Hearings held on the date promised at the previous hearing."
+  },
+  {
+   "id": "siddarth.oldestPendingAgeYears",
+   "card": "siddarth",
+   "label": "Oldest pending case at the end",
+   "unit": "years",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Age of the oldest case still pending at the end of the horizon."
+  },
+  {
+   "id": "siddarth.p95PendingAgeYears",
+   "card": "siddarth",
+   "label": "95th percentile pending age",
+   "unit": "years",
+   "better": "lower",
+   "digits": 2,
+   "definition": "95th percentile of the age of pending cases at the end of the horizon."
+  },
+  {
+   "id": "siddarth.neverHeard",
+   "card": "siddarth",
+   "label": "Cases never heard",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases not reached even once in the horizon."
+  },
+  {
+   "id": "siddarth.loadBalanceCv",
+   "card": "siddarth",
+   "label": "Load balance across days",
+   "unit": "ratio",
+   "better": "lower",
+   "digits": 3,
+   "definition": "Coefficient of variation of minutes used across sitting days."
+  },
+  {
+   "id": "backlog.plus3Start",
+   "card": "backlog",
+   "label": "3+ year cases at the start",
+   "unit": "cases",
+   "better": "neither",
+   "digits": 0,
+   "definition": "Pending cases aged 3 years or more on 1 October."
+  },
+  {
+   "id": "backlog.plus3End",
+   "card": "backlog",
+   "label": "3+ year cases at the end",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 3 years or more on 15 December."
+  },
+  {
+   "id": "backlog.plus3Change",
+   "card": "backlog",
+   "label": "Change in 3+ year cases",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "End minus start. Positive means the band grew."
+  },
+  {
+   "id": "backlog.plus4Start",
+   "card": "backlog",
+   "label": "4+ year cases at the start",
+   "unit": "cases",
+   "better": "neither",
+   "digits": 0,
+   "definition": "Pending cases aged 4 years or more on 1 October."
+  },
+  {
+   "id": "backlog.plus4End",
+   "card": "backlog",
+   "label": "4+ year cases at the end",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 4 years or more on 15 December."
+  },
+  {
+   "id": "backlog.plus4Change",
+   "card": "backlog",
+   "label": "Change in 4+ year cases",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "End minus start."
+  },
+  {
+   "id": "backlog.plus5Start",
+   "card": "backlog",
+   "label": "5+ year cases at the start",
+   "unit": "cases",
+   "better": "neither",
+   "digits": 0,
+   "definition": "Pending cases aged 5 years or more on 1 October."
+  },
+  {
+   "id": "backlog.plus5End",
+   "card": "backlog",
+   "label": "5+ year cases at the end",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 5 years or more on 15 December."
+  },
+  {
+   "id": "backlog.plus5Change",
+   "card": "backlog",
+   "label": "Change in 5+ year cases",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "End minus start."
+  },
+  {
+   "id": "caseStudy.ageBandsEnd.0-1",
+   "card": "caseStudy",
+   "label": "Pending at the end, 0-1 years",
+   "unit": "cases",
+   "better": "neither",
+   "digits": 0,
+   "definition": "Pending cases aged 0-1 years on 15 December."
+  },
+  {
+   "id": "caseStudy.ageBandsEnd.1-3",
+   "card": "caseStudy",
+   "label": "Pending at the end, 1-3 years",
+   "unit": "cases",
+   "better": "neither",
+   "digits": 0,
+   "definition": "Pending cases aged 1-3 years on 15 December."
+  },
+  {
+   "id": "caseStudy.ageBandsEnd.3-4",
+   "card": "caseStudy",
+   "label": "Pending at the end, 3-4 years",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 3-4 years on 15 December."
+  },
+  {
+   "id": "caseStudy.ageBandsEnd.4-5",
+   "card": "caseStudy",
+   "label": "Pending at the end, 4-5 years",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 4-5 years on 15 December."
+  },
+  {
+   "id": "caseStudy.ageBandsEnd.5+",
+   "card": "caseStudy",
+   "label": "Pending at the end, 5+ years",
+   "unit": "cases",
+   "better": "lower",
+   "digits": 0,
+   "definition": "Pending cases aged 5+ years on 15 December."
+  },
+  {
+   "id": "extra.listedPerDay",
+   "card": "extra",
+   "label": "Listed a day",
+   "unit": "perDay",
+   "better": "neither",
+   "digits": 1,
+   "definition": "Matters listed for the bench per sitting day (standby included, desk excluded)."
+  },
+  {
+   "id": "extra.reachedPerDay",
+   "card": "extra",
+   "label": "Reached a day",
+   "unit": "perDay",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Matters called per sitting day."
+  },
+  {
+   "id": "extra.substantivePerDay",
+   "card": "extra",
+   "label": "Substantive hearings a day",
+   "unit": "perDay",
+   "better": "higher",
+   "digits": 1,
+   "definition": "Hearings that moved the case to its next purpose, per sitting day."
+  },
+  {
+   "id": "extra.disposed",
+   "card": "extra",
+   "label": "Disposed in the horizon",
+   "unit": "cases",
+   "better": "higher",
+   "digits": 0,
+   "definition": "Cases disposed between 1 October and 15 December."
+  },
+  {
+   "id": "extra.disposed4yPlus",
+   "card": "extra",
+   "label": "4+ year cases disposed",
+   "unit": "cases",
+   "better": "higher",
+   "digits": 0,
+   "definition": "Disposed cases that were 4 years or older at the start."
+  },
+  {
+   "id": "extra.tripsPerSubstantive",
+   "card": "extra",
+   "label": "Trips per substantive hearing",
+   "unit": "trips",
+   "better": "lower",
+   "digits": 2,
+   "definition": "Litigant and advocate trips to court per hearing that moved a case."
+  },
+  {
+   "id": "extra.wastedTripShare",
+   "card": "extra",
+   "label": "Wasted trips",
+   "unit": "share",
+   "better": "lower",
+   "digits": 1,
+   "definition": "Share of trips on which the matter did not move."
+  },
+  {
+   "id": "extra.deskPerDay",
+   "card": "extra",
+   "label": "Handled at the desk a day",
+   "unit": "perDay",
+   "better": "neither",
+   "digits": 1,
+   "definition": "Matters whose process was out, handled at the desk without bench time."
+  },
+  {
+   "id": "extra.vacatedPerDay",
+   "card": "extra",
+   "label": "Released at check-in a day",
+   "unit": "perDay",
+   "better": "neither",
+   "digits": 1,
+   "definition": "Slots released the day before because a side said not ready."
+  }
+ ]
+}

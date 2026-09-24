@@ -1,0 +1,3563 @@
+{
+ "meta": {
+  "generated": "2026-09-24T09:47:49.359Z",
+  "seeds": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "winner": "g237",
+  "note": "src/planner/settlement.ts taken from /tmp/variants/settlement/settlement-component.diff into a temp copy (/tmp/heldout-settle); its index.ts hunks target an older registry and were not used; the winner is wrapped with withSettlementDays in the worker"
+ },
+ "setups": [
+  {
+   "id": "settle_daily",
+   "label": "winner + settlement_daily (daily tail)",
+   "guardrails": [
+    {
+     "label": "every case given a date inside the quarter",
+     "measure": "extra.casesScheduled",
+     "op": ">=",
+     "vs": "absolute",
+     "margin": ">= 2985",
+     "candMean": 3000,
+     "todayMean": 3000,
+     "diff": 3000,
+     "lo": 3000,
+     "hi": 3000,
+     "bound": 3000,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "dates honoured (heard or desk order on the day)",
+     "measure": "extra.promisesHonouredInclDesk",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.02",
+     "candMean": 0.8617563317013031,
+     "todayMean": 0.9198910675381261,
+     "diff": -0.05813473583682346,
+     "lo": -0.06245570126848642,
+     "hi": -0.05381377040516049,
+     "bound": -0.06245570126848642,
+     "pass": false,
+     "shortfall": 0.8491140253697285,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "cases never acted on",
+     "measure": "extra.neverActedOn",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+100",
+     "candMean": 159.36666666666667,
+     "todayMean": 239.53333333333333,
+     "diff": -80.16666666666667,
+     "lo": -89.56368846524467,
+     "hi": -70.76964486808868,
+     "bound": -70.76964486808868,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "cases never heard",
+     "measure": "siddarth.neverHeard",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+150",
+     "candMean": 408.23333333333335,
+     "todayMean": 239.53333333333333,
+     "diff": 168.7,
+     "lo": 158.11777085998233,
+     "hi": 179.28222914001765,
+     "bound": 179.28222914001765,
+     "pass": false,
+     "shortfall": 0.29282229140017646,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "4y+ heard at all (README)",
+     "measure": "readme.backlog4yHeardShare",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 1,
+     "todayMean": 0.999405425492382,
+     "diff": 0.0005945745076179843,
+     "lo": -0.0006213303604607935,
+     "hi": 0.0018104793756967621,
+     "bound": -0.0006213303604607935,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "every 4y+ case heard at least once (README score)",
+     "measure": "extra.neverHeard4yPlus",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.5",
+     "candMean": 0,
+     "todayMean": 0.5333333333333333,
+     "diff": -0.5333333333333333,
+     "lo": -1.6239999999999997,
+     "hi": 0.5573333333333331,
+     "bound": 0.5573333333333331,
+     "pass": false,
+     "shortfall": 0.028666666666666563,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "4y+ moved on",
+     "measure": "readme.backlog4ySubstantiveShare",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.33158677071720544,
+     "todayMean": 0.29230769230769227,
+     "diff": 0.03927907840951319,
+     "lo": 0.03679440983492115,
+     "hi": 0.041763746984105225,
+     "bound": 0.03679440983492115,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "4y+ still pending at the end",
+     "measure": "extra.pending4yPlusEnd",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+5",
+     "candMean": 944.0666666666667,
+     "todayMean": 960.4,
+     "diff": -16.333333333333332,
+     "lo": -17.90621737691677,
+     "hi": -14.760449289749895,
+     "bound": -14.760449289749895,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "disposals on the merits (verdict + settlement + compounded)",
+     "measure": "derived.meritsDisposals",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-5",
+     "candMean": 110.16666666666667,
+     "todayMean": 84.9,
+     "diff": 25.266666666666666,
+     "lo": 23.488376500324623,
+     "hi": 27.04495683300871,
+     "bound": 23.488376500324623,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "next-date excess over PUCAR's gap",
+     "measure": "caseStudy.nextDateExcessDays",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+2",
+     "candMean": 41.12220839932998,
+     "todayMean": 50.66475687311424,
+     "diff": -9.542548473784269,
+     "lo": -9.690409261158212,
+     "hi": -9.394687686410325,
+     "bound": -9.394687686410325,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "days that ran late",
+     "measure": "caseStudy.overrunDays",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+2",
+     "candMean": 22.566666666666666,
+     "todayMean": 20.633333333333333,
+     "diff": 1.9333333333333333,
+     "lo": 0.9052853578736553,
+     "hi": 2.9613813087930114,
+     "bound": 2.9613813087930114,
+     "pass": false,
+     "shortfall": 0.1922762617586023,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "court time used",
+     "measure": "caseStudy.utilisation",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.05",
+     "candMean": 0.9157574786198438,
+     "todayMean": 0.9069011500286738,
+     "diff": 0.0088563285911703,
+     "lo": 0.006011990073789816,
+     "hi": 0.011700667108550784,
+     "bound": 0.006011990073789816,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "reach rate",
+     "measure": "readme.reachRate",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.9416934022754772,
+     "todayMean": 0.9198910675381261,
+     "diff": 0.021802334737350732,
+     "lo": 0.018077687489902797,
+     "hi": 0.025526981984798667,
+     "bound": 0.018077687489902797,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "substantiveness",
+     "measure": "readme.substantiveness",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.32330370604465847,
+     "todayMean": 0.3094326051277536,
+     "diff": 0.013871100916904914,
+     "lo": 0.011999165812806543,
+     "hi": 0.015743036021003284,
+     "bound": 0.011999165812806543,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "trips per useful hearing",
+     "measure": "extra.tripsPerSubstantive",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.25",
+     "candMean": 10.806330849605486,
+     "todayMean": 11.715542053547058,
+     "diff": -0.90921120394157,
+     "lo": -0.9726102538354675,
+     "hi": -0.8458121540476724,
+     "bound": -0.8458121540476724,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "wasted listings",
+     "measure": "siddarth.wastedListings",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.01",
+     "candMean": 0.6955964591662833,
+     "todayMean": 0.7153921568627449,
+     "diff": -0.019795697696461906,
+     "lo": -0.021476628947783072,
+     "hi": -0.01811476644514074,
+     "bound": -0.01811476644514074,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "minutes waited",
+     "measure": "extra.minutesWaited",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+5",
+     "candMean": 127.53059091243829,
+     "todayMean": 155.38131382518662,
+     "diff": -27.85072291274834,
+     "lo": -28.98636187047274,
+     "hi": -26.715083955023935,
+     "bound": -26.715083955023935,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "load balance across days",
+     "measure": "siddarth.loadBalanceCv",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.05",
+     "candMean": 0.13019248191907487,
+     "todayMean": 0.1315727634299933,
+     "diff": -0.0013802815109184236,
+     "lo": -0.005878434179285426,
+     "hi": 0.003117871157448579,
+     "bound": 0.003117871157448579,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "useful hearings a day at least today's",
+     "measure": "extra.substantivePerDay",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0",
+     "candMean": 18.90700653594771,
+     "todayMean": 17.08729411764706,
+     "diff": 1.8197124183006537,
+     "lo": 1.7269471665862186,
+     "hi": 1.9124776700150887,
+     "bound": 1.7269471665862186,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    }
+   ],
+   "measures": {
+    "readme.utilisation": {
+     "mean": 0.9294689413876955,
+     "lo": 0.9252685214716689,
+     "hi": 0.9336693613037221,
+     "sd": 0.011250194322746725,
+     "n": 30
+    },
+    "readme.reachRate": {
+     "mean": 0.9416934022754772,
+     "lo": 0.9360131623703787,
+     "hi": 0.9473736421805756,
+     "sd": 0.015213670063879999,
+     "n": 30
+    },
+    "readme.substantiveness": {
+     "mean": 0.32330370604465847,
+     "lo": 0.3207077712945065,
+     "hi": 0.32589964079481043,
+     "sd": 0.006952821615989022,
+     "n": 30
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": 1,
+     "lo": 1,
+     "hi": 1,
+     "sd": 0,
+     "n": 30
+    },
+    "readme.backlog4ySubstantiveShare": {
+     "mean": 0.33158677071720544,
+     "lo": 0.3274349198242825,
+     "hi": 0.33573862161012835,
+     "sd": 0.011120109483872168,
+     "n": 30
+    },
+    "readme.predictabilityGapDays": {
+     "mean": 0.5750889932070878,
+     "lo": 0.5214948883739522,
+     "hi": 0.6286830980402235,
+     "sd": 0.14354376609489014,
+     "n": 30
+    },
+    "caseStudy.utilisation": {
+     "mean": 0.9157574786198438,
+     "lo": 0.9119381127810223,
+     "hi": 0.9195768444586653,
+     "sd": 0.01022959816766338,
+     "n": 30
+    },
+    "caseStudy.overrunDays": {
+     "mean": 22.566666666666666,
+     "lo": 21.539788301326805,
+     "hi": 23.593545032006528,
+     "sd": 2.750339581959281,
+     "n": 30
+    },
+    "caseStudy.idleMinutesShare": {
+     "mean": 0.08424252138015609,
+     "lo": 0.08042315554133461,
+     "hi": 0.08806188721897756,
+     "sd": 0.010229598167663402,
+     "n": 30
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": 0.8496606453127593,
+     "lo": 0.8437702807696296,
+     "hi": 0.855551009855889,
+     "sd": 0.015776457370175037,
+     "n": 30
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+     "mean": 0.780748218353046,
+     "lo": 0.7756134397109503,
+     "hi": 0.7858829969951416,
+     "sd": 0.013752733936780236,
+     "n": 30
+    },
+    "caseStudy.substantiveness": {
+     "mean": 0.32330370604465847,
+     "lo": 0.3207077712945065,
+     "hi": 0.32589964079481043,
+     "sd": 0.006952821615989022,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.0-1": {
+     "mean": 389,
+     "lo": 389,
+     "hi": 389,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.1-3": {
+     "mean": 1014,
+     "lo": 1014,
+     "hi": 1014,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.3-4": {
+     "mean": 700,
+     "lo": 700,
+     "hi": 700,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.4-5": {
+     "mean": 461,
+     "lo": 461,
+     "hi": 461,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.5+": {
+     "mean": 436,
+     "lo": 436,
+     "hi": 436,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.3+": {
+     "mean": 1597,
+     "lo": 1597,
+     "hi": 1597,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.4+": {
+     "mean": 897,
+     "lo": 897,
+     "hi": 897,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+     "mean": 383.2,
+     "lo": 382.34859860621833,
+     "hi": 384.05140139378165,
+     "sd": 2.280350850198275,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+     "mean": 810.6333333333333,
+     "lo": 809.6652474899333,
+     "hi": 811.6014191767333,
+     "sd": 2.5928726358514274,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+     "mean": 557.9666666666667,
+     "lo": 555.4640153888051,
+     "hi": 560.4693179445283,
+     "sd": 6.702975835960568,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+     "mean": 519.1333333333333,
+     "lo": 517.1534627969103,
+     "hi": 521.1132038697564,
+     "sd": 5.302786081852166,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.5+": {
+     "mean": 424.93333333333334,
+     "lo": 422.0647421863446,
+     "hi": 427.8019244803221,
+     "sd": 7.683090853131392,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.3+": {
+     "mean": 1502.0333333333333,
+     "lo": 1497.5513716484213,
+     "hi": 1506.5152950182453,
+     "sd": 12.004261695355309,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.4+": {
+     "mean": 944.0666666666667,
+     "lo": 940.5003683915678,
+     "hi": 947.6329649417656,
+     "sd": 9.551794680016704,
+     "n": 30
+    },
+    "caseStudy.nextDateExcessDays": {
+     "mean": 41.12220839932998,
+     "lo": 40.97732414794528,
+     "hi": 41.26709265071467,
+     "sd": 0.3880507223014558,
+     "n": 30
+    },
+    "caseStudy.wastedRelistShare": {
+     "mean": 0.22262607147079547,
+     "lo": 0.21478693950262084,
+     "hi": 0.2304652034389701,
+     "sd": 0.020995938436328153,
+     "n": 30
+    },
+    "siddarth.throughputPerMonth": {
+     "mean": 50.04832785087719,
+     "lo": 48.54866095280521,
+     "hi": 51.54799474894918,
+     "sd": 4.016632708155631,
+     "n": 30
+    },
+    "siddarth.judgeTimeUsed": {
+     "mean": 0.9294689413876955,
+     "lo": 0.9252685214716689,
+     "hi": 0.9336693613037221,
+     "sd": 0.01125019432274696,
+     "n": 30
+    },
+    "siddarth.wastedListings": {
+     "mean": 0.6955964591662833,
+     "lo": 0.6933554432441171,
+     "hi": 0.6978374750884495,
+     "sd": 0.0060022248034165265,
+     "n": 30
+    },
+    "siddarth.heldOnPromisedDate": {
+     "mean": 0.780748218353046,
+     "lo": 0.7756134397109503,
+     "hi": 0.7858829969951416,
+     "sd": 0.013752733936780236,
+     "n": 30
+    },
+    "siddarth.oldestPendingAgeYears": {
+     "mean": 10.102669404517451,
+     "lo": 10.102669404517451,
+     "hi": 10.102669404517451,
+     "sd": 1.8067241133067846e-15,
+     "n": 30
+    },
+    "siddarth.p95PendingAgeYears": {
+     "mean": 9.3388090349076,
+     "lo": 9.3388090349076,
+     "hi": 9.3388090349076,
+     "sd": 1.8067241133067846e-15,
+     "n": 30
+    },
+    "siddarth.neverHeard": {
+     "mean": 408.23333333333335,
+     "lo": 395.0914239899884,
+     "hi": 421.3752426766783,
+     "sd": 35.19863176546668,
+     "n": 30
+    },
+    "siddarth.loadBalanceCv": {
+     "mean": 0.13019248191907487,
+     "lo": 0.12556097049178877,
+     "hi": 0.13482399334636097,
+     "sd": 0.012404808235049124,
+     "n": 30
+    },
+    "extra.listedPerDay": {
+     "mean": 62.118928104575154,
+     "lo": 61.862837174468844,
+     "hi": 62.375019034681465,
+     "sd": 0.6859011207418276,
+     "n": 30
+    },
+    "extra.reachedPerDay": {
+     "mean": 58.49250980392157,
+     "lo": 58.16454377625269,
+     "hi": 58.82047583159045,
+     "sd": 0.8784077821496729,
+     "n": 30
+    },
+    "extra.substantivePerDay": {
+     "mean": 18.90700653594771,
+     "lo": 18.791260398400674,
+     "hi": 19.022752673494743,
+     "sd": 0.310008657597103,
+     "n": 30
+    },
+    "extra.disposed": {
+     "mean": 124.96666666666667,
+     "lo": 121.2221185187087,
+     "hi": 128.71121481462464,
+     "sd": 10.029210211739723,
+     "n": 30
+    },
+    "extra.disposed4yPlus": {
+     "mean": 81.56666666666666,
+     "lo": 78.73051636299459,
+     "hi": 84.40281697033873,
+     "sd": 7.596202923209377,
+     "n": 30
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": 10.806330849605486,
+     "lo": 10.726913366987064,
+     "hi": 10.885748332223907,
+     "sd": 0.2127078077769355,
+     "n": 30
+    },
+    "extra.wastedTripShare": {
+     "mean": 0.6733861531343096,
+     "lo": 0.6710944915853286,
+     "hi": 0.6756778146832906,
+     "sd": 0.0061378715136629885,
+     "n": 30
+    },
+    "extra.deskPerDay": {
+     "mean": 5.549372549019608,
+     "lo": 5.462376171764917,
+     "hi": 5.6363689262743,
+     "sd": 0.23300673957762377,
+     "n": 30
+    },
+    "extra.vacatedPerDay": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.deferredPerDay": {
+     "mean": 0.8411895424836603,
+     "lo": 0.78407538349914,
+     "hi": 0.8983037014681806,
+     "sd": 0.15297170283011313,
+     "n": 30
+    },
+    "extra.sittingDays": {
+     "mean": 50.96666666666667,
+     "lo": 50.8985,
+     "hi": 51.03483333333334,
+     "sd": 0.18257418583505533,
+     "n": 30
+    },
+    "extra.overrunMinutes": {
+     "mean": 293.37950496330757,
+     "lo": 268.0819964529198,
+     "hi": 318.67701347369535,
+     "sd": 67.75557975461267,
+     "n": 30
+    },
+    "extra.reachRateExclStandby": {
+     "mean": 0.9828580347917695,
+     "lo": 0.9793300667820879,
+     "hi": 0.9863860028014511,
+     "sd": 0.009449132816915494,
+     "n": 30
+    },
+    "extra.reachRateSittingDays": {
+     "mean": 0.9422668366250091,
+     "lo": 0.9368568032941245,
+     "hi": 0.9476768699558937,
+     "sd": 0.014489962308950308,
+     "n": 30
+    },
+    "extra.predictabilityGapDaysCensored": {
+     "mean": 5.812055555555554,
+     "lo": 5.625174022977668,
+     "hi": 5.998937088133441,
+     "sd": 0.5005341367923953,
+     "n": 30
+    },
+    "extra.casesScheduled": {
+     "mean": 3000,
+     "lo": 3000,
+     "hi": 3000,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.promisesHonouredInclDesk": {
+     "mean": 0.8617563317013031,
+     "lo": 0.856219400067697,
+     "hi": 0.8672932633349091,
+     "sd": 0.014829840367188056,
+     "n": 30
+    },
+    "extra.promisesBroken": {
+     "mean": 483.06666666666666,
+     "lo": 462.52919298217967,
+     "hi": 503.60414035115366,
+     "sd": 55.006540885879076,
+     "n": 30
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+     "mean": 0.9144685525827128,
+     "lo": 0.9117605503368514,
+     "hi": 0.9171765548285741,
+     "sd": 0.007252977583534884,
+     "n": 30
+    },
+    "extra.nextDateGapDays": {
+     "mean": 59.66897778221354,
+     "lo": 59.56771654159395,
+     "hi": 59.770239022833124,
+     "sd": 0.27121303515063927,
+     "n": 30
+    },
+    "extra.nextDateShortShare": {
+     "mean": 0.01625671264068632,
+     "lo": 0.01559072764106253,
+     "hi": 0.016922697640310107,
+     "sd": 0.0017837408667678194,
+     "n": 30
+    },
+    "extra.wastedRelistShareInclAbsence": {
+     "mean": 0.5032786762496316,
+     "lo": 0.4951007554493807,
+     "hi": 0.5114565970498826,
+     "sd": 0.02190333347573657,
+     "n": 30
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+     "mean": 0.22303176184932375,
+     "lo": 0.21524994859401567,
+     "hi": 0.23081357510463182,
+     "sd": 0.02084241886662562,
+     "n": 30
+    },
+    "extra.neverHeard4yPlus": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.pending4yPlusEnd": {
+     "mean": 944.0666666666667,
+     "lo": 940.5003683915678,
+     "hi": 947.6329649417656,
+     "sd": 9.551794680016704,
+     "n": 30
+    },
+    "extra.disposalsInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.heldSubstantiveAllDue": {
+     "mean": 0.26017462247368306,
+     "lo": 0.2583477988724788,
+     "hi": 0.26200144607488735,
+     "sd": 0.004892872836002037,
+     "n": 30
+    },
+    "extra.firstPromiseKept": {
+     "mean": 0.8475535979822133,
+     "lo": 0.8426151659843699,
+     "hi": 0.8524920299800567,
+     "sd": 0.013226848918944252,
+     "n": 30
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+     "mean": 40.92841489825249,
+     "lo": 40.78641747231375,
+     "hi": 41.07041232419123,
+     "sd": 0.3803187936152342,
+     "n": 30
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+     "mean": 0.8474251241994898,
+     "lo": 0.8440114870401152,
+     "hi": 0.8508387613588644,
+     "sd": 0.009142914793776673,
+     "n": 30
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+     "mean": 0.9172627692956858,
+     "lo": 0.9162276265436206,
+     "hi": 0.9182979120477511,
+     "sd": 0.002772474501438216,
+     "n": 30
+    },
+    "extra.predictabilityGapFromStartDays": {
+     "mean": 43.11975555555555,
+     "lo": 42.923171663440684,
+     "hi": 43.316339447670416,
+     "sd": 0.5265204506282333,
+     "n": 30
+    },
+    "extra.minutesWaited": {
+     "mean": 127.53059091243829,
+     "lo": 126.35096592603992,
+     "hi": 128.71021589883665,
+     "sd": 3.1594484814039436,
+     "n": 30
+    },
+    "extra.minutesWaitedInclNotReached": {
+     "mean": 139.8058601582494,
+     "lo": 138.4342461029834,
+     "hi": 141.1774742135154,
+     "sd": 3.673662387581083,
+     "n": 30
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+     "mean": 9.781803331051778,
+     "lo": 9.774969634932752,
+     "hi": 9.788637027170804,
+     "sd": 0.018303029415773265,
+     "n": 30
+    },
+    "extra.neverActedOn": {
+     "mean": 159.36666666666667,
+     "lo": 145.90001488958234,
+     "hi": 172.833318443751,
+     "sd": 36.068405635091096,
+     "n": 30
+    },
+    "extra.backlog4yActedOnShare": {
+     "mean": 1,
+     "lo": 1,
+     "hi": 1,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.disposedVerdict": {
+     "mean": 71.83333333333333,
+     "lo": 69.0271714037747,
+     "hi": 74.63949526289196,
+     "sd": 7.515883563968141,
+     "n": 30
+    },
+    "extra.disposedSettlement": {
+     "mean": 23.266666666666666,
+     "lo": 21.52939634887265,
+     "hi": 25.003936984460683,
+     "sd": 4.653017807041327,
+     "n": 30
+    },
+    "extra.disposedCompounded": {
+     "mean": 15.066666666666666,
+     "lo": 13.599403361951394,
+     "hi": 16.53392997138194,
+     "sd": 3.9298445466607888,
+     "n": 30
+    },
+    "extra.disposedAcquittedDefault": {
+     "mean": 8.866666666666667,
+     "lo": 7.741293580807813,
+     "hi": 9.992039752525521,
+     "sd": 3.01414290823517,
+     "n": 30
+    },
+    "extra.disposedDismissedSteps": {
+     "mean": 5.933333333333334,
+     "lo": 5.107535254240781,
+     "hi": 6.759131412425886,
+     "sd": 2.211776214491083,
+     "n": 30
+    },
+    "extra.disposedPostJudgment": {
+     "mean": 179.06666666666666,
+     "lo": 176.01616401416,
+     "hi": 182.1171693191733,
+     "sd": 8.170313518372824,
+     "n": 30
+    },
+    "extra.disposedLpSplit": {
+     "mean": 0.1,
+     "lo": -0.013924089971621298,
+     "hi": 0.21392408997162132,
+     "sd": 0.30512857662936466,
+     "n": 30
+    },
+    "extra.disposedAllRoutes": {
+     "mean": 304.1333333333333,
+     "lo": 299.26552294536833,
+     "hi": 309.0011437212983,
+     "sd": 13.037699536168269,
+     "n": 30
+    },
+    "extra.disposedRouteInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.throughputPerMonthAllRoutes": {
+     "mean": 121.80339912280702,
+     "lo": 119.85387308749537,
+     "hi": 123.75292515811867,
+     "sd": 5.221512889896338,
+     "n": 30
+    },
+    "derived.meritsDisposals": {
+     "mean": 110.16666666666667,
+     "lo": 106.6123171045967,
+     "hi": 113.72101622873664,
+     "sd": 9.519791845497947,
+     "n": 30
+    }
+   },
+   "pairedVsWinner": {
+    "readme.utilisation": {
+     "mean": 0.015879264845001406,
+     "lo": 0.01340124979036212,
+     "hi": 0.018357279899640692,
+     "sd": 0.006636991409600654,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8371104988344883
+    },
+    "readme.reachRate": {
+     "mean": -0.010465944973203285,
+     "lo": -0.01294985486777666,
+     "hi": -0.00798203507862991,
+     "sd": 0.006652779853633823,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.9038545131274964
+    },
+    "readme.substantiveness": {
+     "mean": -0.0059572006692734675,
+     "lo": -0.007617422237958514,
+     "hi": -0.004296979100588421,
+     "sd": 0.004446654296456787,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.7784193801055233
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "readme.backlog4ySubstantiveShare": {
+     "mean": 0.023262727610553695,
+     "lo": 0.02082649981989243,
+     "hi": 0.02569895540121496,
+     "sd": 0.006525070494699989,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8446122455129006
+    },
+    "readme.predictabilityGapDays": {
+     "mean": 0.03405899980526394,
+     "lo": 0.007782944068967668,
+     "hi": 0.06033505554156021,
+     "sd": 0.07037647163341068,
+     "n": 30,
+     "wins": 21,
+     "losses": 9,
+     "corr": 0.8715683649077103
+    },
+    "caseStudy.utilisation": {
+     "mean": 0.016056966669266183,
+     "lo": 0.013962246714551263,
+     "hi": 0.018151686623981103,
+     "sd": 0.00561039301150886,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8416013739589123
+    },
+    "caseStudy.overrunDays": {
+     "mean": 2.8333333333333335,
+     "lo": 1.8873474678666051,
+     "hi": 3.779319198800062,
+     "sd": 2.5336811618443744,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.5485245880240259
+    },
+    "caseStudy.idleMinutesShare": {
+     "mean": -0.016056966669266162,
+     "lo": -0.01815168662398109,
+     "hi": -0.013962246714551235,
+     "sd": 0.00561039301150888,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8416013739589122
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": -0.09479817085808603,
+     "lo": -0.09735509730686802,
+     "hi": -0.09224124440930405,
+     "sd": 0.0068483437353519345,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9038297760569108
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+     "mean": -0.08172254489599592,
+     "lo": -0.08394619994289293,
+     "hi": -0.07949888984909892,
+     "sd": 0.005955726304624441,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9054346765528393
+    },
+    "caseStudy.substantiveness": {
+     "mean": -0.0059572006692734675,
+     "lo": -0.007617422237958514,
+     "hi": -0.004296979100588421,
+     "sd": 0.004446654296456787,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.7784193801055233
+    },
+    "caseStudy.ageBandsStart.0-1": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.1-3": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.3-4": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.4-5": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.5+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.3+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.4+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+     "mean": -0.06666666666666667,
+     "lo": -0.20299999999999996,
+     "hi": 0.06966666666666664,
+     "sd": 0.36514837167011066,
+     "n": 30,
+     "wins": 1,
+     "losses": 3,
+     "corr": 0.9877318924419979
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+     "mean": -0.06666666666666667,
+     "lo": -0.45804970899700925,
+     "hi": 0.32471637566367595,
+     "sd": 1.048260737942924,
+     "n": 30,
+     "wins": 9,
+     "losses": 11,
+     "corr": 0.9147454692787316
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+     "mean": -13.666666666666666,
+     "lo": -14.79032989118974,
+     "hi": -12.543003442143592,
+     "sd": 3.009563301272764,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8969509200319947
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+     "mean": -0.3,
+     "lo": -0.7717633313480369,
+     "hi": 0.1717633313480369,
+     "sd": 1.2635472781569872,
+     "n": 30,
+     "wins": 6,
+     "losses": 14,
+     "corr": 0.9712790957331927
+    },
+    "caseStudy.ageBandsEnd.5+": {
+     "mean": -8.033333333333333,
+     "lo": -9.475983124024884,
+     "hi": -6.5906835426417825,
+     "sd": 3.8639209434810216,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.8643385298961512
+    },
+    "caseStudy.ageBandsEnd.3+": {
+     "mean": -22,
+     "lo": -23.85260482973904,
+     "hi": -20.14739517026096,
+     "sd": 4.96192398724249,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9118183247150502
+    },
+    "caseStudy.ageBandsEnd.4+": {
+     "mean": -8.333333333333334,
+     "lo": -9.878467489122718,
+     "hi": -6.78819917754395,
+     "sd": 4.138409933973336,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.9013419617402012
+    },
+    "caseStudy.nextDateExcessDays": {
+     "mean": -1.5871174382903988,
+     "lo": -1.6844939278744258,
+     "hi": -1.4897409487063717,
+     "sd": 0.2608083125468872,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.7404927214234565
+    },
+    "caseStudy.wastedRelistShare": {
+     "mean": -0.11843922019696139,
+     "lo": -0.12863316071993566,
+     "hi": -0.10824527967398712,
+     "sd": 0.027302939727623585,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.3374278393275523
+    },
+    "siddarth.throughputPerMonth": {
+     "mean": 8.86425438596491,
+     "lo": 8.116364252957032,
+     "hi": 9.612144518972789,
+     "sd": 2.0031114737601645,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8738945482453446
+    },
+    "siddarth.judgeTimeUsed": {
+     "mean": 0.01587926484500148,
+     "lo": 0.01340124979036216,
+     "hi": 0.0183572798996408,
+     "sd": 0.006636991409600744,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8371104988344865
+    },
+    "siddarth.wastedListings": {
+     "mean": 0.009065150617288647,
+     "lo": 0.007602543866207782,
+     "hi": 0.01052775736836951,
+     "sd": 0.003917372666632436,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.7629501789149914
+    },
+    "siddarth.heldOnPromisedDate": {
+     "mean": -0.08172254489599592,
+     "lo": -0.08394619994289293,
+     "hi": -0.07949888984909892,
+     "sd": 0.005955726304624441,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9054346765528393
+    },
+    "siddarth.oldestPendingAgeYears": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "siddarth.p95PendingAgeYears": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "siddarth.neverHeard": {
+     "mean": 28.733333333333334,
+     "lo": 22.79911950740822,
+     "hi": 34.66754715925845,
+     "sd": 15.893901092998629,
+     "n": 30,
+     "wins": 28,
+     "losses": 1,
+     "corr": 0.8934881153813407
+    },
+    "siddarth.loadBalanceCv": {
+     "mean": -0.012654560927159879,
+     "lo": -0.015602637883655996,
+     "hi": -0.009706483970663761,
+     "sd": 0.007895981664225426,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.7713157514505452
+    },
+    "extra.listedPerDay": {
+     "mean": 4.146078431372548,
+     "lo": 3.94132340256816,
+     "hi": 4.350833460176935,
+     "sd": 0.5484056138815807,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.6012709585201429
+    },
+    "extra.reachedPerDay": {
+     "mean": 3.295856209150327,
+     "lo": 3.0440091436652854,
+     "hi": 3.5477032746353685,
+     "sd": 0.6745345662965183,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.6410864549853078
+    },
+    "extra.substantivePerDay": {
+     "mean": 0.7350326797385626,
+     "lo": 0.6707656611571636,
+     "hi": 0.7992996983199615,
+     "sd": 0.1721295637194907,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8337731693703311
+    },
+    "extra.disposed": {
+     "mean": 22.133333333333333,
+     "lo": 20.26591156385165,
+     "hi": 24.000755102815017,
+     "sd": 5.001608936534622,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8738945482453447
+    },
+    "extra.disposed4yPlus": {
+     "mean": 8.233333333333333,
+     "lo": 6.770170904843045,
+     "hi": 9.69649576182362,
+     "sd": 3.918860965174424,
+     "n": 30,
+     "wins": 29,
+     "losses": 0,
+     "corr": 0.8566998300764976
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": 0.3139008261199614,
+     "lo": 0.2660535912152722,
+     "hi": 0.36174806102465057,
+     "sd": 0.12815163751367628,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.798149579790643
+    },
+    "extra.wastedTripShare": {
+     "mean": 0.008536280137541189,
+     "lo": 0.006960609410864637,
+     "hi": 0.01011195086421774,
+     "sd": 0.004220197555996598,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.7319917092553493
+    },
+    "extra.deskPerDay": {
+     "mean": -1.1842378929335003e-16,
+     "lo": -0.013863732802890346,
+     "hi": 0.01386373280289011,
+     "sd": 0.03713192756658827,
+     "n": 30,
+     "wins": 12,
+     "losses": 11,
+     "corr": 0.9872258272934453
+    },
+    "extra.vacatedPerDay": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.deferredPerDay": {
+     "mean": 0.3677254901960785,
+     "lo": 0.3210377258158147,
+     "hi": 0.41441325457634226,
+     "sd": 0.12504616973377353,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.6074207834452966
+    },
+    "extra.sittingDays": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "extra.overrunMinutes": {
+     "mean": -3.8349110900390313,
+     "lo": -29.58432080880121,
+     "hi": 21.914498628723145,
+     "sd": 68.96592931740244,
+     "n": 30,
+     "wins": 15,
+     "losses": 15,
+     "corr": 0.6102346719166993
+    },
+    "extra.reachRateExclStandby": {
+     "mean": -0.0029713301185982995,
+     "lo": -0.004493203241857813,
+     "hi": -0.0014494569953387862,
+     "sd": 0.0040761087494869215,
+     "n": 30,
+     "wins": 7,
+     "losses": 23,
+     "corr": 0.9063419613290201
+    },
+    "extra.reachRateSittingDays": {
+     "mean": -0.010483146116081235,
+     "lo": -0.012964555511012487,
+     "hi": -0.008001736721149984,
+     "sd": 0.006646082640631257,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.8960734279585886
+    },
+    "extra.predictabilityGapDaysCensored": {
+     "mean": 0.2548888888888889,
+     "lo": 0.18535700435779556,
+     "hi": 0.3244207734199822,
+     "sd": 0.1862307169854491,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.9310643998523835
+    },
+    "extra.casesScheduled": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.promisesHonouredInclDesk": {
+     "mean": -0.08742597965706693,
+     "lo": -0.08980084166076799,
+     "hi": -0.08505111765336587,
+     "sd": 0.006360711444444906,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9071189475207903
+    },
+    "extra.promisesBroken": {
+     "mean": 317.23333333333335,
+     "lo": 307.59160679336884,
+     "hi": 326.87505987329786,
+     "sd": 25.823917453470884,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8987225156515535
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+     "mean": -0.0855314474172874,
+     "lo": -0.0882394496631487,
+     "hi": -0.08282344517142609,
+     "sd": 0.007252977583534884,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": null
+    },
+    "extra.nextDateGapDays": {
+     "mean": 0.31598905355976326,
+     "lo": 0.2590658281736745,
+     "hi": 0.372912278945852,
+     "sd": 0.15246031584308808,
+     "n": 30,
+     "wins": 29,
+     "losses": 1,
+     "corr": 0.8466131035206882
+    },
+    "extra.nextDateShortShare": {
+     "mean": 0.0020863451757850244,
+     "lo": 0.0014889340318660904,
+     "hi": 0.0026837563197039584,
+     "sd": 0.0016000760862071662,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.5243375752115862
+    },
+    "extra.wastedRelistShareInclAbsence": {
+     "mean": -0.05088188085988102,
+     "lo": -0.06086772627178301,
+     "hi": -0.040896035447979026,
+     "sd": 0.026745588204685516,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.6066179151260153
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+     "mean": -0.11907359080161059,
+     "lo": -0.12921181585098546,
+     "hi": -0.10893536575223574,
+     "sd": 0.027153714193674985,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.33539652830066924
+    },
+    "extra.neverHeard4yPlus": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.pending4yPlusEnd": {
+     "mean": -8.333333333333334,
+     "lo": -9.878467489122718,
+     "hi": -6.78819917754395,
+     "sd": 4.138409933973336,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.9013419617402012
+    },
+    "extra.disposalsInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.heldSubstantiveAllDue": {
+     "mean": -0.02376601255072146,
+     "lo": -0.024983281980148132,
+     "hi": -0.02254874312129479,
+     "sd": 0.003260273472168366,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.7651682362941761
+    },
+    "extra.firstPromiseKept": {
+     "mean": -0.014801957573342314,
+     "lo": -0.016892598219434812,
+     "hi": -0.012711316927249817,
+     "sd": 0.005599467195608974,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9089456215027127
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+     "mean": -1.5750489077268268,
+     "lo": -1.6722600905834644,
+     "hi": -1.4778377248701893,
+     "sd": 0.2603655632877254,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.7289208223159793
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+     "mean": -0.07077328549552837,
+     "lo": -0.07393394663962569,
+     "hi": -0.06761262435143106,
+     "sd": 0.008465356504900675,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.3805786409780361
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+     "mean": -0.0009356403993320791,
+     "lo": -0.001466713846201816,
+     "hi": -0.00040456695246234215,
+     "sd": 0.001422400520990593,
+     "n": 30,
+     "wins": 9,
+     "losses": 21,
+     "corr": 0.8855543648671177
+    },
+    "extra.predictabilityGapFromStartDays": {
+     "mean": -0.2574111111111108,
+     "lo": -0.33372304071685005,
+     "hi": -0.18109918150537158,
+     "sd": 0.20439005013109882,
+     "n": 30,
+     "wins": 3,
+     "losses": 27,
+     "corr": 0.9284340788032299
+    },
+    "extra.minutesWaited": {
+     "mean": -13.384063060483772,
+     "lo": -13.910770745379667,
+     "hi": -12.857355375587877,
+     "sd": 1.4107074827814416,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9053565882924307
+    },
+    "extra.minutesWaitedInclNotReached": {
+     "mean": -12.605973439763936,
+     "lo": -13.309912851332605,
+     "hi": -11.902034028195267,
+     "sd": 1.8853960627534128,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8904971902972664
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+     "mean": -0.0011909650924026257,
+     "lo": -0.0035623496857344877,
+     "hi": 0.001180419500929236,
+     "sd": 0.006351397722680076,
+     "n": 30,
+     "wins": 7,
+     "losses": 10,
+     "corr": 0.9401410973747739
+    },
+    "extra.neverActedOn": {
+     "mean": 34.666666666666664,
+     "lo": 28.726461600673268,
+     "hi": 40.60687173266006,
+     "sd": 15.909947730322973,
+     "n": 30,
+     "wins": 29,
+     "losses": 1,
+     "corr": 0.8982151074796051
+    },
+    "extra.backlog4yActedOnShare": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.disposedVerdict": {
+     "mean": -0.4,
+     "lo": -1.3486076184561788,
+     "hi": 0.5486076184561788,
+     "sd": 2.5407031337393793,
+     "n": 30,
+     "wins": 12,
+     "losses": 13,
+     "corr": 0.9416304377744464
+    },
+    "extra.disposedSettlement": {
+     "mean": 19.966666666666665,
+     "lo": 18.396382475327123,
+     "hi": 21.536950858006207,
+     "sd": 4.205770529537535,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.43292417457729093
+    },
+    "extra.disposedCompounded": {
+     "mean": 1.3,
+     "lo": 0.6943859319456925,
+     "hi": 1.9056140680543074,
+     "sd": 1.6220463873633888,
+     "n": 30,
+     "wins": 22,
+     "losses": 3,
+     "corr": 0.9114528299480554
+    },
+    "extra.disposedAcquittedDefault": {
+     "mean": 0.5,
+     "lo": 0.032330137196427244,
+     "hi": 0.9676698628035727,
+     "sd": 1.2525835370311151,
+     "n": 30,
+     "wins": 15,
+     "losses": 7,
+     "corr": 0.9102031233742577
+    },
+    "extra.disposedDismissedSteps": {
+     "mean": 0.7666666666666667,
+     "lo": 0.4039691039085868,
+     "hi": 1.1293642294247466,
+     "sd": 0.9714309861845772,
+     "n": 30,
+     "wins": 17,
+     "losses": 2,
+     "corr": 0.9017600783972365
+    },
+    "extra.disposedPostJudgment": {
+     "mean": -0.06666666666666667,
+     "lo": -0.565985394105245,
+     "hi": 0.43265206077191165,
+     "sd": 1.3373502709187437,
+     "n": 30,
+     "wins": 11,
+     "losses": 14,
+     "corr": 0.9865183023334728
+    },
+    "extra.disposedLpSplit": {
+     "mean": 0.06666666666666667,
+     "lo": -0.06966666666666667,
+     "hi": 0.203,
+     "sd": 0.36514837167011077,
+     "n": 30,
+     "wins": 3,
+     "losses": 1,
+     "corr": -0.0618984460590173
+    },
+    "extra.disposedAllRoutes": {
+     "mean": 22.133333333333333,
+     "lo": 20.114990213298594,
+     "hi": 24.151676453368072,
+     "sd": 5.4058291228771855,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.9115421425546252
+    },
+    "extra.disposedRouteInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.throughputPerMonthAllRoutes": {
+     "mean": 8.864254385964909,
+     "lo": 8.055921244964154,
+     "hi": 9.672587526965664,
+     "sd": 2.1649989990470297,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.9115421425546254
+    },
+    "derived.meritsDisposals": {
+     "mean": 20.866666666666667,
+     "lo": 19.15223539584375,
+     "hi": 22.581097937489584,
+     "sd": 4.591846847540145,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8903621288546886
+    }
+   }
+  },
+  {
+   "id": "settle_friday_reports",
+   "label": "winner + friday_reports",
+   "guardrails": [
+    {
+     "label": "every case given a date inside the quarter",
+     "measure": "extra.casesScheduled",
+     "op": ">=",
+     "vs": "absolute",
+     "margin": ">= 2985",
+     "candMean": 3000,
+     "todayMean": 3000,
+     "diff": 3000,
+     "lo": 3000,
+     "hi": 3000,
+     "bound": 3000,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "dates honoured (heard or desk order on the day)",
+     "measure": "extra.promisesHonouredInclDesk",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.02",
+     "candMean": 0.9251879722676569,
+     "todayMean": 0.9198910675381261,
+     "diff": 0.0052969047295304455,
+     "lo": 0.0012518676254477277,
+     "hi": 0.009341941833613164,
+     "bound": 0.0012518676254477277,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "cases never acted on",
+     "measure": "extra.neverActedOn",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+100",
+     "candMean": 148.1,
+     "todayMean": 239.53333333333333,
+     "diff": -91.43333333333334,
+     "lo": -102.12786164931535,
+     "hi": -80.73880501735132,
+     "bound": -80.73880501735132,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "cases never heard",
+     "measure": "siddarth.neverHeard",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+150",
+     "candMean": 402.1333333333333,
+     "todayMean": 239.53333333333333,
+     "diff": 162.6,
+     "lo": 150.53001880411716,
+     "hi": 174.66998119588283,
+     "bound": 174.66998119588283,
+     "pass": false,
+     "shortfall": 0.24669981195882826,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "4y+ heard at all (README)",
+     "measure": "readme.backlog4yHeardShare",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.9998513563730956,
+     "todayMean": 0.999405425492382,
+     "diff": 0.0004459308807134891,
+     "lo": -0.0007139821731307473,
+     "hi": 0.0016058439345577255,
+     "bound": -0.0007139821731307473,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "every 4y+ case heard at least once (README score)",
+     "measure": "extra.neverHeard4yPlus",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.5",
+     "candMean": 0.13333333333333333,
+     "todayMean": 0.5333333333333333,
+     "diff": -0.4,
+     "lo": -1.4404420092982804,
+     "hi": 0.6404420092982804,
+     "bound": 0.6404420092982804,
+     "pass": false,
+     "shortfall": 0.07022100464914022,
+     "passTournamentT": false,
+     "n": 30
+    },
+    {
+     "label": "4y+ moved on",
+     "measure": "readme.backlog4ySubstantiveShare",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.31441843180973617,
+     "todayMean": 0.29230769230769227,
+     "diff": 0.022110739502043845,
+     "lo": 0.019822852313971615,
+     "hi": 0.024398626690116075,
+     "bound": 0.019822852313971615,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "4y+ still pending at the end",
+     "measure": "extra.pending4yPlusEnd",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+5",
+     "candMean": 949.4666666666667,
+     "todayMean": 960.4,
+     "diff": -10.933333333333334,
+     "lo": -12.35737039320668,
+     "hi": -9.509296273459988,
+     "bound": -9.509296273459988,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "disposals on the merits (verdict + settlement + compounded)",
+     "measure": "derived.meritsDisposals",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-5",
+     "candMean": 96.26666666666667,
+     "todayMean": 84.9,
+     "diff": 11.366666666666667,
+     "lo": 9.718712614966982,
+     "hi": 13.014620718366352,
+     "bound": 9.718712614966982,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "next-date excess over PUCAR's gap",
+     "measure": "caseStudy.nextDateExcessDays",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+2",
+     "candMean": 42.21930929573678,
+     "todayMean": 50.66475687311424,
+     "diff": -8.445447577377466,
+     "lo": -8.582111484573268,
+     "hi": -8.308783670181665,
+     "bound": -8.308783670181665,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "days that ran late",
+     "measure": "caseStudy.overrunDays",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+2",
+     "candMean": 19.4,
+     "todayMean": 20.633333333333333,
+     "diff": -1.2333333333333334,
+     "lo": -2.246071021720078,
+     "hi": -0.2205956449465889,
+     "bound": -0.2205956449465889,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "court time used",
+     "measure": "caseStudy.utilisation",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.05",
+     "candMean": 0.9015310601952261,
+     "todayMean": 0.9069011500286738,
+     "diff": -0.005370089833447678,
+     "lo": -0.008378346238505105,
+     "hi": -0.002361833428390251,
+     "bound": -0.008378346238505105,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "reach rate",
+     "measure": "readme.reachRate",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.9558761452403098,
+     "todayMean": 0.9198910675381261,
+     "diff": 0.03598507770218348,
+     "lo": 0.03214165801915951,
+     "hi": 0.039828497385207454,
+     "bound": 0.03214165801915951,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "substantiveness",
+     "measure": "readme.substantiveness",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0.01",
+     "candMean": 0.3294006844759878,
+     "todayMean": 0.3094326051277536,
+     "diff": 0.01996807934823414,
+     "lo": 0.018187885485018464,
+     "hi": 0.021748273211449815,
+     "bound": 0.018187885485018464,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "trips per useful hearing",
+     "measure": "extra.tripsPerSubstantive",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.25",
+     "candMean": 10.463162784276282,
+     "todayMean": 11.715542053547058,
+     "diff": -1.2523792692707736,
+     "lo": -1.3255927977409774,
+     "hi": -1.1791657408005698,
+     "bound": -1.1791657408005698,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "wasted listings",
+     "measure": "siddarth.wastedListings",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.01",
+     "candMean": 0.6851902465017405,
+     "todayMean": 0.7153921568627449,
+     "diff": -0.030201910361004718,
+     "lo": -0.03199646272082949,
+     "hi": -0.028407358001179946,
+     "bound": -0.028407358001179946,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "minutes waited",
+     "measure": "extra.minutesWaited",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+5",
+     "candMean": 135.1229259251406,
+     "todayMean": 155.38131382518662,
+     "diff": -20.258387900046024,
+     "lo": -21.442538412771793,
+     "hi": -19.074237387320256,
+     "bound": -19.074237387320256,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "load balance across days",
+     "measure": "siddarth.loadBalanceCv",
+     "op": "<=",
+     "vs": "status_quo_60",
+     "margin": "+0.05",
+     "candMean": 0.1410398545389319,
+     "todayMean": 0.1315727634299933,
+     "diff": 0.00946709110893864,
+     "lo": 0.005184191586962518,
+     "hi": 0.013749990630914762,
+     "bound": 0.013749990630914762,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    },
+    {
+     "label": "useful hearings a day at least today's",
+     "measure": "extra.substantivePerDay",
+     "op": ">=",
+     "vs": "status_quo_60",
+     "margin": "-0",
+     "candMean": 18.433633986928108,
+     "todayMean": 17.08729411764706,
+     "diff": 1.346339869281046,
+     "lo": 1.2362242694779835,
+     "hi": 1.4564554690841085,
+     "bound": 1.2362242694779835,
+     "pass": true,
+     "shortfall": 0,
+     "passTournamentT": true,
+     "n": 30
+    }
+   ],
+   "measures": {
+    "readme.utilisation": {
+     "mean": 0.9150383890089511,
+     "lo": 0.9103398458208621,
+     "hi": 0.91973693219704,
+     "sd": 0.01258434274586094,
+     "n": 30
+    },
+    "readme.reachRate": {
+     "mean": 0.9558761452403098,
+     "lo": 0.9511208622418031,
+     "hi": 0.9606314282388165,
+     "sd": 0.012736311812239207,
+     "n": 30
+    },
+    "readme.substantiveness": {
+     "mean": 0.3294006844759878,
+     "lo": 0.32682345044792627,
+     "hi": 0.33197791850404934,
+     "sd": 0.006902734538577995,
+     "n": 30
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": 0.9998513563730956,
+     "lo": 0.9996706379036977,
+     "hi": 1.0000320748424936,
+     "sd": 0.0004840272970516218,
+     "n": 30
+    },
+    "readme.backlog4ySubstantiveShare": {
+     "mean": 0.31441843180973617,
+     "lo": 0.3100783198525453,
+     "hi": 0.318758543766927,
+     "sd": 0.011624338489248603,
+     "n": 30
+    },
+    "readme.predictabilityGapDays": {
+     "mean": 0.5240900893886218,
+     "lo": 0.4698167711652922,
+     "hi": 0.5783634076119514,
+     "sd": 0.1453629372204099,
+     "n": 30
+    },
+    "caseStudy.utilisation": {
+     "mean": 0.9015310601952261,
+     "lo": 0.8976498197695075,
+     "hi": 0.9054123006209447,
+     "sd": 0.010395319962185973,
+     "n": 30
+    },
+    "caseStudy.overrunDays": {
+     "mean": 19.4,
+     "lo": 18.13063742125355,
+     "hi": 20.669362578746448,
+     "sd": 3.3997971541924636,
+     "n": 30
+    },
+    "caseStudy.idleMinutesShare": {
+     "mean": 0.09846893980477404,
+     "lo": 0.09458769937905544,
+     "hi": 0.10235018023049265,
+     "sd": 0.010395319962185987,
+     "n": 30
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": 0.9183532729813061,
+     "lo": 0.9130066678846142,
+     "hi": 0.923699878077998,
+     "sd": 0.014320079303326383,
+     "n": 30
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+     "mean": 0.8403469435852664,
+     "lo": 0.8355592748592483,
+     "hi": 0.8451346123112845,
+     "sd": 0.012823052122748816,
+     "n": 30
+    },
+    "caseStudy.substantiveness": {
+     "mean": 0.3294006844759878,
+     "lo": 0.32682345044792627,
+     "hi": 0.33197791850404934,
+     "sd": 0.006902734538577995,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.0-1": {
+     "mean": 389,
+     "lo": 389,
+     "hi": 389,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.1-3": {
+     "mean": 1014,
+     "lo": 1014,
+     "hi": 1014,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.3-4": {
+     "mean": 700,
+     "lo": 700,
+     "hi": 700,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.4-5": {
+     "mean": 461,
+     "lo": 461,
+     "hi": 461,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.5+": {
+     "mean": 436,
+     "lo": 436,
+     "hi": 436,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.3+": {
+     "mean": 1597,
+     "lo": 1597,
+     "hi": 1597,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsStart.4+": {
+     "mean": 897,
+     "lo": 897,
+     "hi": 897,
+     "sd": 0,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+     "mean": 383.3,
+     "lo": 382.45001125261,
+     "hi": 384.14998874739,
+     "sd": 2.2765672888561084,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+     "mean": 810.8333333333334,
+     "lo": 809.9951136448456,
+     "hi": 811.6715530218212,
+     "sd": 2.2450456309521805,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+     "mean": 567.5666666666667,
+     "lo": 565.1876934422503,
+     "hi": 569.9456398910831,
+     "sd": 6.37172273209629,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+     "mean": 519.2666666666667,
+     "lo": 517.2814619386196,
+     "hi": 521.2518713947137,
+     "sd": 5.31707291353204,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.5+": {
+     "mean": 430.2,
+     "lo": 427.3491142997549,
+     "hi": 433.0508857002451,
+     "sd": 7.635669471360195,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.3+": {
+     "mean": 1517.0333333333333,
+     "lo": 1512.7330913227463,
+     "hi": 1521.3335753439203,
+     "sd": 11.51755282117281,
+     "n": 30
+    },
+    "caseStudy.ageBandsEnd.4+": {
+     "mean": 949.4666666666667,
+     "lo": 946.1594021987814,
+     "hi": 952.773931134552,
+     "sd": 8.858011504626306,
+     "n": 30
+    },
+    "caseStudy.nextDateExcessDays": {
+     "mean": 42.21930929573678,
+     "lo": 42.08641587129856,
+     "hi": 42.35220272017499,
+     "sd": 0.3559350919751469,
+     "n": 30
+    },
+    "caseStudy.wastedRelistShare": {
+     "mean": 0.2828546541831583,
+     "lo": 0.2700506452137946,
+     "hi": 0.295658663152522,
+     "sd": 0.03429361632772111,
+     "n": 30
+    },
+    "siddarth.throughputPerMonth": {
+     "mean": 43.974177631578954,
+     "lo": 42.56521062800053,
+     "hi": 45.38314463515738,
+     "sd": 3.7737066534981167,
+     "n": 30
+    },
+    "siddarth.judgeTimeUsed": {
+     "mean": 0.915038389008951,
+     "lo": 0.910339845820862,
+     "hi": 0.9197369321970399,
+     "sd": 0.012584342745860864,
+     "n": 30
+    },
+    "siddarth.wastedListings": {
+     "mean": 0.6851902465017405,
+     "lo": 0.6833469860534288,
+     "hi": 0.6870335069500523,
+     "sd": 0.00493689646404593,
+     "n": 30
+    },
+    "siddarth.heldOnPromisedDate": {
+     "mean": 0.8403469435852664,
+     "lo": 0.8355592748592483,
+     "hi": 0.8451346123112845,
+     "sd": 0.012823052122748816,
+     "n": 30
+    },
+    "siddarth.oldestPendingAgeYears": {
+     "mean": 10.102669404517451,
+     "lo": 10.102669404517451,
+     "hi": 10.102669404517451,
+     "sd": 1.8067241133067846e-15,
+     "n": 30
+    },
+    "siddarth.p95PendingAgeYears": {
+     "mean": 9.3388090349076,
+     "lo": 9.3388090349076,
+     "hi": 9.3388090349076,
+     "sd": 1.8067241133067846e-15,
+     "n": 30
+    },
+    "siddarth.neverHeard": {
+     "mean": 402.1333333333333,
+     "lo": 389.27688089739485,
+     "hi": 414.9897857692718,
+     "sd": 34.43407828193513,
+     "n": 30
+    },
+    "siddarth.loadBalanceCv": {
+     "mean": 0.1410398545389319,
+     "lo": 0.13739666130598094,
+     "hi": 0.14468304777188284,
+     "sd": 0.009757746283801504,
+     "n": 30
+    },
+    "extra.listedPerDay": {
+     "mean": 58.556875816993475,
+     "lo": 58.408314617891165,
+     "hi": 58.705437016095786,
+     "sd": 0.39789887490636117,
+     "n": 30
+    },
+    "extra.reachedPerDay": {
+     "mean": 55.971032679738556,
+     "lo": 55.71741267921035,
+     "hi": 56.224652680266765,
+     "sd": 0.6792831067177094,
+     "n": 30
+    },
+    "extra.substantivePerDay": {
+     "mean": 18.433633986928108,
+     "lo": 18.331722923472878,
+     "hi": 18.535545050383337,
+     "sd": 0.2729534880868914,
+     "n": 30
+    },
+    "extra.disposed": {
+     "mean": 109.8,
+     "lo": 106.2819222251512,
+     "hi": 113.31807777484879,
+     "sd": 9.422643307297148,
+     "n": 30
+    },
+    "extra.disposed4yPlus": {
+     "mean": 76.43333333333334,
+     "lo": 73.64676790644086,
+     "hi": 79.21989876022582,
+     "sd": 7.463397272728734,
+     "n": 30
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": 10.463162784276282,
+     "lo": 10.406672190680613,
+     "hi": 10.51965337787195,
+     "sd": 0.15130157652422782,
+     "n": 30
+    },
+    "extra.wastedTripShare": {
+     "mean": 0.6636789839357431,
+     "lo": 0.6620416016615871,
+     "hi": 0.6653163662098991,
+     "sd": 0.0043854826739087175,
+     "n": 30
+    },
+    "extra.deskPerDay": {
+     "mean": 5.541503267973856,
+     "lo": 5.4578905017170865,
+     "hi": 5.625116034230626,
+     "sd": 0.22394424535080526,
+     "n": 30
+    },
+    "extra.vacatedPerDay": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.deferredPerDay": {
+     "mean": 1.2146013071895427,
+     "lo": 1.1507490173942316,
+     "hi": 1.2784535969848538,
+     "sd": 0.17101877491075218,
+     "n": 30
+    },
+    "extra.sittingDays": {
+     "mean": 50.96666666666667,
+     "lo": 50.8985,
+     "hi": 51.03483333333334,
+     "sd": 0.18257418583505533,
+     "n": 30
+    },
+    "extra.overrunMinutes": {
+     "mean": 289.1379317547316,
+     "lo": 258.85869156505873,
+     "hi": 319.41717194440446,
+     "sd": 81.0984003716422,
+     "n": 30
+    },
+    "extra.reachRateExclStandby": {
+     "mean": 0.9869757774695164,
+     "lo": 0.9840751154359568,
+     "hi": 0.9898764395030759,
+     "sd": 0.007768987909434531,
+     "n": 30
+    },
+    "extra.reachRateSittingDays": {
+     "mean": 0.9564855694632697,
+     "lo": 0.9521024380038423,
+     "hi": 0.960868700922697,
+     "sd": 0.01173955976938337,
+     "n": 30
+    },
+    "extra.predictabilityGapDaysCensored": {
+     "mean": 5.713777777777778,
+     "lo": 5.537913048934518,
+     "hi": 5.889642506621037,
+     "sd": 0.4710272814522382,
+     "n": 30
+    },
+    "extra.casesScheduled": {
+     "mean": 3000,
+     "lo": 3000,
+     "hi": 3000,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.promisesHonouredInclDesk": {
+     "mean": 0.9251879722676569,
+     "lo": 0.9201935440820597,
+     "hi": 0.9301824004532542,
+     "sd": 0.013376826303624509,
+     "n": 30
+    },
+    "extra.promisesBroken": {
+     "mean": 249.16666666666666,
+     "lo": 232.28120642276252,
+     "hi": 266.0521269105708,
+     "sd": 45.22517099972119,
+     "n": 30
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+     "mean": 0.9806442472610768,
+     "lo": 0.9791331496174064,
+     "hi": 0.9821553449047472,
+     "sd": 0.004047248244651369,
+     "n": 30
+    },
+    "extra.nextDateGapDays": {
+     "mean": 59.347587567718016,
+     "lo": 59.23082060457249,
+     "hi": 59.46435453086354,
+     "sd": 0.3127427857514842,
+     "n": 30
+    },
+    "extra.nextDateShortShare": {
+     "mean": 0.017647269327383527,
+     "lo": 0.016838504031486807,
+     "hi": 0.018456034623280246,
+     "sd": 0.002166156461075667,
+     "n": 30
+    },
+    "extra.wastedRelistShareInclAbsence": {
+     "mean": 0.5189363178663432,
+     "lo": 0.5054113595919818,
+     "hi": 0.5324612761407046,
+     "sd": 0.03622457083708493,
+     "n": 30
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+     "mean": 0.2833473683647523,
+     "lo": 0.27055753144868566,
+     "hi": 0.2961372052808189,
+     "sd": 0.034255658609985314,
+     "n": 30
+    },
+    "extra.neverHeard4yPlus": {
+     "mean": 0.13333333333333333,
+     "lo": -0.028771133716615355,
+     "hi": 0.29543780038328205,
+     "sd": 0.43417248545530474,
+     "n": 30
+    },
+    "extra.pending4yPlusEnd": {
+     "mean": 949.4666666666667,
+     "lo": 946.1594021987814,
+     "hi": 952.773931134552,
+     "sd": 8.858011504626306,
+     "n": 30
+    },
+    "extra.disposalsInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.heldSubstantiveAllDue": {
+     "mean": 0.27765335249230066,
+     "lo": 0.2760900603356981,
+     "hi": 0.2792166446489032,
+     "sd": 0.004187043413897837,
+     "n": 30
+    },
+    "extra.firstPromiseKept": {
+     "mean": 0.8541666666666667,
+     "lo": 0.8494531391525054,
+     "hi": 0.8588801941808281,
+     "sd": 0.012624476014315022,
+     "n": 30
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+     "mean": 42.00632650922888,
+     "lo": 41.87742589476454,
+     "hi": 42.13522712369321,
+     "sd": 0.3452409497231859,
+     "n": 30
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+     "mean": 0.8944738710345319,
+     "lo": 0.8925232957781323,
+     "hi": 0.8964244462909315,
+     "sd": 0.005224323071107689,
+     "n": 30
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+     "mean": 0.9156186513847925,
+     "lo": 0.9143956171617704,
+     "hi": 0.9168416856078145,
+     "sd": 0.0032757136066013668,
+     "n": 30
+    },
+    "extra.predictabilityGapFromStartDays": {
+     "mean": 43.611777777777775,
+     "lo": 43.435913048934516,
+     "hi": 43.78764250662103,
+     "sd": 0.4710272814522378,
+     "n": 30
+    },
+    "extra.minutesWaited": {
+     "mean": 135.1229259251406,
+     "lo": 133.9875643286915,
+     "hi": 136.25828752158972,
+     "sd": 3.0408956347200706,
+     "n": 30
+    },
+    "extra.minutesWaitedInclNotReached": {
+     "mean": 145.91888041169247,
+     "lo": 144.35070901119389,
+     "hi": 147.48705181219105,
+     "sd": 4.200111736369441,
+     "n": 30
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+     "mean": 9.782716860597754,
+     "lo": 9.77610418473905,
+     "hi": 9.789329536456457,
+     "sd": 0.017711059820445133,
+     "n": 30
+    },
+    "extra.neverActedOn": {
+     "mean": 148.1,
+     "lo": 135.42556927903368,
+     "hi": 160.7744307209663,
+     "sd": 33.94656043721133,
+     "n": 30
+    },
+    "extra.backlog4yActedOnShare": {
+     "mean": 0.9998513563730956,
+     "lo": 0.9996706379036977,
+     "hi": 1.0000320748424936,
+     "sd": 0.0004840272970516218,
+     "n": 30
+    },
+    "extra.disposedVerdict": {
+     "mean": 71.9,
+     "lo": 69.29778639379877,
+     "hi": 74.50221360620124,
+     "sd": 6.969638589551507,
+     "n": 30
+    },
+    "extra.disposedSettlement": {
+     "mean": 10.166666666666666,
+     "lo": 8.73539054843219,
+     "hi": 11.597942784901143,
+     "sd": 3.833458268828627,
+     "n": 30
+    },
+    "extra.disposedCompounded": {
+     "mean": 14.2,
+     "lo": 12.854173321606432,
+     "hi": 15.545826678393567,
+     "sd": 3.604594768940867,
+     "n": 30
+    },
+    "extra.disposedAcquittedDefault": {
+     "mean": 8.4,
+     "lo": 7.196735317333828,
+     "hi": 9.603264682666172,
+     "sd": 3.2227638598804793,
+     "n": 30
+    },
+    "extra.disposedDismissedSteps": {
+     "mean": 5.133333333333334,
+     "lo": 4.257808146665114,
+     "hi": 6.008858520001554,
+     "sd": 2.344962808812251,
+     "n": 30
+    },
+    "extra.disposedPostJudgment": {
+     "mean": 178.83333333333334,
+     "lo": 175.88516066645056,
+     "hi": 181.78150600021613,
+     "sd": 7.896238010131388,
+     "n": 30
+    },
+    "extra.disposedLpSplit": {
+     "mean": 0.2,
+     "lo": 0.019204281151286695,
+     "hi": 0.3807957188487133,
+     "sd": 0.4842341981115023,
+     "n": 30
+    },
+    "extra.disposedAllRoutes": {
+     "mean": 288.8333333333333,
+     "lo": 284.200956444848,
+     "hi": 293.46571022181865,
+     "sd": 12.40712624297808,
+     "n": 30
+    },
+    "extra.disposedRouteInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30
+    },
+    "extra.throughputPerMonthAllRoutes": {
+     "mean": 115.67584978070175,
+     "lo": 113.82061331302711,
+     "hi": 117.5310862483764,
+     "sd": 4.968972434482175,
+     "n": 30
+    },
+    "derived.meritsDisposals": {
+     "mean": 96.26666666666667,
+     "lo": 93.07749546011874,
+     "hi": 99.45583787321459,
+     "sd": 8.541716428226232,
+     "n": 30
+    }
+   },
+   "pairedVsWinner": {
+    "readme.utilisation": {
+     "mean": 0.001448712466256863,
+     "lo": -0.0012347245802555363,
+     "hi": 0.004132149512769263,
+     "sd": 0.007187183383960297,
+     "n": 30,
+     "wins": 19,
+     "losses": 11,
+     "corr": 0.8291207078839913
+    },
+    "readme.reachRate": {
+     "mean": 0.0037167979916294613,
+     "lo": 0.0013952212065946983,
+     "hi": 0.006038374776664224,
+     "sd": 0.006217994983588566,
+     "n": 30,
+     "wins": 22,
+     "losses": 8,
+     "corr": 0.8777629392361511
+    },
+    "readme.substantiveness": {
+     "mean": 0.0001397777620557557,
+     "lo": -0.001355885273442213,
+     "hi": 0.0016354407975537244,
+     "sd": 0.004005908963173044,
+     "n": 30,
+     "wins": 16,
+     "losses": 14,
+     "corr": 0.8191306626049923
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": -0.00014864362690449515,
+     "lo": -0.00032936209630243123,
+     "hi": 0.000032074842493440915,
+     "sd": 0.00048402729705162174,
+     "n": 30,
+     "wins": 0,
+     "losses": 3,
+     "corr": null
+    },
+    "readme.backlog4ySubstantiveShare": {
+     "mean": 0.00609438870308435,
+     "lo": 0.0033188562932898627,
+     "hi": 0.008869921112878838,
+     "sd": 0.007433846992328184,
+     "n": 30,
+     "wins": 22,
+     "losses": 7,
+     "corr": 0.8036355388313811
+    },
+    "readme.predictabilityGapDays": {
+     "mean": -0.01693990401320223,
+     "lo": -0.049742469427895106,
+     "hi": 0.015862661401490646,
+     "sd": 0.08785674827220584,
+     "n": 30,
+     "wins": 11,
+     "losses": 19,
+     "corr": 0.7989101763089206
+    },
+    "caseStudy.utilisation": {
+     "mean": 0.0018305482446482038,
+     "lo": -0.0007631709038937405,
+     "hi": 0.004424267393190148,
+     "sd": 0.006946887459606433,
+     "n": 30,
+     "wins": 20,
+     "losses": 10,
+     "corr": 0.7611146347319818
+    },
+    "caseStudy.overrunDays": {
+     "mean": -0.3333333333333333,
+     "lo": -1.2066596253116157,
+     "hi": 0.5399929586449492,
+     "sd": 2.3390733994075714,
+     "n": 30,
+     "wins": 10,
+     "losses": 11,
+     "corr": 0.7263364776736868
+    },
+    "caseStudy.idleMinutesShare": {
+     "mean": -0.0018305482446482045,
+     "lo": -0.004424267393190157,
+     "hi": 0.0007631709038937481,
+     "sd": 0.006946887459606456,
+     "n": 30,
+     "wins": 10,
+     "losses": 20,
+     "corr": 0.7611146347319815
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": -0.02610554318953941,
+     "lo": -0.02922871400465101,
+     "hi": -0.02298237237442781,
+     "sd": 0.008364944285469049,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8175154057435474
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+     "mean": -0.022123819663775784,
+     "lo": -0.024853338228605817,
+     "hi": -0.01939430109894575,
+     "sd": 0.007310605814604094,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8234497668869621
+    },
+    "caseStudy.substantiveness": {
+     "mean": 0.0001397777620557557,
+     "lo": -0.001355885273442213,
+     "hi": 0.0016354407975537244,
+     "sd": 0.004005908963173044,
+     "n": 30,
+     "wins": 16,
+     "losses": 14,
+     "corr": 0.8191306626049923
+    },
+    "caseStudy.ageBandsStart.0-1": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.1-3": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.3-4": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.4-5": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.5+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.3+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsStart.4+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+     "mean": 0.03333333333333333,
+     "lo": -0.12118008224560514,
+     "hi": 0.1878467489122718,
+     "sd": 0.41384099339733377,
+     "n": 30,
+     "wins": 3,
+     "losses": 2,
+     "corr": 0.9841799008021919
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+     "mean": 0.13333333333333333,
+     "lo": -0.40131779006845036,
+     "hi": 0.667984456735117,
+     "sd": 1.4319827906241327,
+     "n": 30,
+     "wins": 11,
+     "losses": 6,
+     "corr": 0.8129127875521791
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+     "mean": -4.066666666666666,
+     "lo": -5.238903719831367,
+     "hi": -2.8944296135019663,
+     "sd": 3.139661011059604,
+     "n": 30,
+     "wins": 1,
+     "losses": 27,
+     "corr": 0.8819806737530378
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+     "mean": -0.16666666666666666,
+     "lo": -0.8943774167753583,
+     "hi": 0.561044083442025,
+     "sd": 1.949064025298462,
+     "n": 30,
+     "wins": 13,
+     "losses": 11,
+     "corr": 0.9307356304189849
+    },
+    "caseStudy.ageBandsEnd.5+": {
+     "mean": -2.7666666666666666,
+     "lo": -4.287815443903931,
+     "hi": -1.245517889429403,
+     "sd": 4.0741686973801965,
+     "n": 30,
+     "wins": 7,
+     "losses": 21,
+     "corr": 0.8461238578718157
+    },
+    "caseStudy.ageBandsEnd.3+": {
+     "mean": -7,
+     "lo": -9.282697310528546,
+     "hi": -4.717302689471454,
+     "sd": 6.113862146370949,
+     "n": 30,
+     "wins": 2,
+     "losses": 24,
+     "corr": 0.8490513776788545
+    },
+    "caseStudy.ageBandsEnd.4+": {
+     "mean": -2.933333333333333,
+     "lo": -4.767510745084381,
+     "hi": -1.0991559215822846,
+     "sd": 4.9125689138508095,
+     "n": 30,
+     "wins": 8,
+     "losses": 18,
+     "corr": 0.8405871480994058
+    },
+    "caseStudy.nextDateExcessDays": {
+     "mean": -0.4900165418835977,
+     "lo": -0.5386355351025596,
+     "hi": -0.4413975486646359,
+     "sd": 0.1302186763286851,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9413601190279529
+    },
+    "caseStudy.wastedRelistShare": {
+     "mean": -0.058210637484598544,
+     "lo": -0.07134550515556301,
+     "hi": -0.04507576981363408,
+     "sd": 0.035179771702848806,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.34330045011542387
+    },
+    "siddarth.throughputPerMonth": {
+     "mean": 2.7901041666666657,
+     "lo": 2.0131405024316233,
+     "hi": 3.567067830901708,
+     "sd": 2.0809805636352205,
+     "n": 30,
+     "wins": 28,
+     "losses": 1,
+     "corr": 0.8345271461240137
+    },
+    "siddarth.judgeTimeUsed": {
+     "mean": 0.0014487124662568222,
+     "lo": -0.001234724580255581,
+     "hi": 0.004132149512769225,
+     "sd": 0.007187183383960308,
+     "n": 30,
+     "wins": 19,
+     "losses": 11,
+     "corr": 0.8291207078839894
+    },
+    "siddarth.wastedListings": {
+     "mean": -0.0013410620472541638,
+     "lo": -0.002584580110111428,
+     "hi": -0.00009754398439689935,
+     "sd": 0.003330576497271642,
+     "n": 30,
+     "wins": 11,
+     "losses": 19,
+     "corr": 0.7811345194666027
+    },
+    "siddarth.heldOnPromisedDate": {
+     "mean": -0.022123819663775784,
+     "lo": -0.024853338228605817,
+     "hi": -0.01939430109894575,
+     "sd": 0.007310605814604094,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8234497668869621
+    },
+    "siddarth.oldestPendingAgeYears": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "siddarth.p95PendingAgeYears": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "siddarth.neverHeard": {
+     "mean": 22.633333333333333,
+     "lo": 16.386152675052106,
+     "hi": 28.88051399161456,
+     "sd": 16.73213578166553,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.8740493243430184
+    },
+    "siddarth.loadBalanceCv": {
+     "mean": -0.0018071883073028205,
+     "lo": -0.005369618197429861,
+     "hi": 0.0017552415828242204,
+     "sd": 0.009541433791458342,
+     "n": 30,
+     "wins": 15,
+     "losses": 15,
+     "corr": 0.5184958466601884
+    },
+    "extra.listedPerDay": {
+     "mean": 0.5840261437908488,
+     "lo": 0.5151663531856576,
+     "hi": 0.65288593439604,
+     "sd": 0.1844306142765064,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.891344659584599
+    },
+    "extra.reachedPerDay": {
+     "mean": 0.7743790849673197,
+     "lo": 0.6486101257318897,
+     "hi": 0.9001480442027496,
+     "sd": 0.33685328120876606,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.868402248991359
+    },
+    "extra.substantivePerDay": {
+     "mean": 0.2616601307189549,
+     "lo": 0.1991952984830766,
+     "hi": 0.3241249629548332,
+     "sd": 0.16730267807514132,
+     "n": 30,
+     "wins": 27,
+     "losses": 3,
+     "corr": 0.8148203282040205
+    },
+    "extra.disposed": {
+     "mean": 6.966666666666667,
+     "lo": 5.026650617981222,
+     "hi": 8.906682715352112,
+     "sd": 5.196041818029628,
+     "n": 30,
+     "wins": 28,
+     "losses": 1,
+     "corr": 0.834527146124013
+    },
+    "extra.disposed4yPlus": {
+     "mean": 3.1,
+     "lo": 1.517923517295565,
+     "hi": 4.682076482704435,
+     "sd": 4.237354412105873,
+     "n": 30,
+     "wins": 20,
+     "losses": 6,
+     "corr": 0.8251158059366542
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": -0.029267239209242034,
+     "lo": -0.069707622250222,
+     "hi": 0.011173143831737932,
+     "sd": 0.10831349645816184,
+     "n": 30,
+     "wins": 12,
+     "losses": 18,
+     "corr": 0.7762792308312408
+    },
+    "extra.wastedTripShare": {
+     "mean": -0.0011708890610255928,
+     "lo": -0.002505838706593025,
+     "hi": 0.00016406058454183914,
+     "sd": 0.003575462269001511,
+     "n": 30,
+     "wins": 11,
+     "losses": 19,
+     "corr": 0.7222667642299987
+    },
+    "extra.deskPerDay": {
+     "mean": -0.007869281045751611,
+     "lo": -0.022966504305472625,
+     "hi": 0.007227942213969402,
+     "sd": 0.04043564662611675,
+     "n": 30,
+     "wins": 6,
+     "losses": 14,
+     "corr": 0.9843551748056629
+    },
+    "extra.vacatedPerDay": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.deferredPerDay": {
+     "mean": 0.7411372549019611,
+     "lo": 0.6758329450485727,
+     "hi": 0.8064415647553496,
+     "sd": 0.17490779270908408,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.3257652438626565
+    },
+    "extra.sittingDays": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": 1
+    },
+    "extra.overrunMinutes": {
+     "mean": -8.076484298614963,
+     "lo": -34.344036831668966,
+     "hi": 18.191068234439044,
+     "sd": 70.3536970797342,
+     "n": 30,
+     "wins": 12,
+     "losses": 18,
+     "corr": 0.6404122336572844
+    },
+    "extra.reachRateExclStandby": {
+     "mean": 0.001146412559149068,
+     "lo": -0.00034216323017747553,
+     "hi": 0.0026349883484756116,
+     "sd": 0.003986926837996116,
+     "n": 30,
+     "wins": 18,
+     "losses": 12,
+     "corr": 0.8678958589280253
+    },
+    "extra.reachRateSittingDays": {
+     "mean": 0.0037355867221792183,
+     "lo": 0.0014125247335860886,
+     "hi": 0.006058648710772348,
+     "sd": 0.006221972878412059,
+     "n": 30,
+     "wins": 22,
+     "losses": 8,
+     "corr": 0.8549246249968796
+    },
+    "extra.predictabilityGapDaysCensored": {
+     "mean": 0.15661111111111112,
+     "lo": 0.08301963488779283,
+     "hi": 0.2302025873344294,
+     "sd": 0.1971037240470245,
+     "n": 30,
+     "wins": 23,
+     "losses": 7,
+     "corr": 0.9082450310870497
+    },
+    "extra.casesScheduled": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.promisesHonouredInclDesk": {
+     "mean": -0.02399433909071302,
+     "lo": -0.026856936822944558,
+     "hi": -0.021131741358481483,
+     "sd": 0.0076670383912290805,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8243379642843511
+    },
+    "extra.promisesBroken": {
+     "mean": 83.33333333333333,
+     "lo": 73.608383322135,
+     "hi": 93.05828334453166,
+     "sd": 26.046819030530294,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.8203856136706859
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+     "mean": -0.019355752738923235,
+     "lo": -0.020866850382593678,
+     "hi": -0.017844655095252793,
+     "sd": 0.00404724824465137,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": null
+    },
+    "extra.nextDateGapDays": {
+     "mean": -0.005401160935765858,
+     "lo": -0.05693253011490292,
+     "hi": 0.04613020824337121,
+     "sd": 0.1380190382324687,
+     "n": 30,
+     "wins": 14,
+     "losses": 16,
+     "corr": 0.8973723510554003
+    },
+    "extra.nextDateShortShare": {
+     "mean": 0.0034769018624822286,
+     "lo": 0.002792552784835865,
+     "hi": 0.004161250940128592,
+     "sd": 0.001832926293568547,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.5458758990015712
+    },
+    "extra.wastedRelistShareInclAbsence": {
+     "mean": -0.03522423924316952,
+     "lo": -0.04881351529645625,
+     "hi": -0.021634963189882787,
+     "sd": 0.03639683635476733,
+     "n": 30,
+     "wins": 4,
+     "losses": 26,
+     "corr": 0.45846053199298364
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+     "mean": -0.05875798428618204,
+     "lo": -0.07203863698068891,
+     "hi": -0.04547733159167518,
+     "sd": 0.035570235008181794,
+     "n": 30,
+     "wins": 1,
+     "losses": 29,
+     "corr": 0.3237593230037827
+    },
+    "extra.neverHeard4yPlus": {
+     "mean": 0.13333333333333333,
+     "lo": -0.028771133716615355,
+     "hi": 0.29543780038328205,
+     "sd": 0.43417248545530474,
+     "n": 30,
+     "wins": 3,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.pending4yPlusEnd": {
+     "mean": -2.933333333333333,
+     "lo": -4.767510745084381,
+     "hi": -1.0991559215822846,
+     "sd": 4.9125689138508095,
+     "n": 30,
+     "wins": 8,
+     "losses": 18,
+     "corr": 0.8405871480994058
+    },
+    "extra.disposalsInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.heldSubstantiveAllDue": {
+     "mean": -0.006287282532103903,
+     "lo": -0.007367105496529034,
+     "hi": -0.005207459567678773,
+     "sd": 0.0028921437443899375,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.7862019121300318
+    },
+    "extra.firstPromiseKept": {
+     "mean": -0.008188888888888893,
+     "lo": -0.010439702294695949,
+     "hi": -0.005938075483081838,
+     "sd": 0.0060284658928877926,
+     "n": 30,
+     "wins": 2,
+     "losses": 28,
+     "corr": 0.8786259501282251
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+     "mean": -0.4971372967504448,
+     "lo": -0.5451919267578693,
+     "hi": -0.4490826667430204,
+     "sd": 0.12870711416934486,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.9377241104693751
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+     "mean": -0.023724538660486225,
+     "lo": -0.02516077071228136,
+     "hi": -0.022288306608691088,
+     "sd": 0.003846731993056848,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.683733542258222
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+     "mean": -0.0025797583102259067,
+     "lo": -0.0033415438570083313,
+     "hi": -0.0018179727634434824,
+     "sd": 0.002040328254054478,
+     "n": 30,
+     "wins": 4,
+     "losses": 26,
+     "corr": 0.7946166246781485
+    },
+    "extra.predictabilityGapFromStartDays": {
+     "mean": 0.23461111111111138,
+     "lo": 0.16101963488779308,
+     "hi": 0.3082025873344297,
+     "sd": 0.19710372404702456,
+     "n": 30,
+     "wins": 27,
+     "losses": 3,
+     "corr": 0.9082450310870498
+    },
+    "extra.minutesWaited": {
+     "mean": -5.791728047781452,
+     "lo": -6.406003432226652,
+     "hi": -5.177452663336251,
+     "sd": 1.6452444233779662,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8682355724009426
+    },
+    "extra.minutesWaitedInclNotReached": {
+     "mean": -6.492953186320842,
+     "lo": -7.204551752080747,
+     "hi": -5.781354620560937,
+     "sd": 1.9059099577262764,
+     "n": 30,
+     "wins": 0,
+     "losses": 30,
+     "corr": 0.8957329272785456
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+     "mean": -0.0002774355464294942,
+     "lo": -0.002726150997832478,
+     "hi": 0.00217127990497349,
+     "sd": 0.006558516819779266,
+     "n": 30,
+     "wins": 8,
+     "losses": 9,
+     "corr": 0.93476237906499
+    },
+    "extra.neverActedOn": {
+     "mean": 23.4,
+     "lo": 17.545160496717656,
+     "hi": 29.25483950328234,
+     "sd": 15.681308882738778,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.8873454276746955
+    },
+    "extra.backlog4yActedOnShare": {
+     "mean": -0.00014864362690449515,
+     "lo": -0.00032936209630243123,
+     "hi": 0.000032074842493440915,
+     "sd": 0.00048402729705162174,
+     "n": 30,
+     "wins": 0,
+     "losses": 3,
+     "corr": null
+    },
+    "extra.disposedVerdict": {
+     "mean": -0.3333333333333333,
+     "lo": -1.4948597847402771,
+     "hi": 0.8281931180736106,
+     "sd": 3.1109742717580016,
+     "n": 30,
+     "wins": 12,
+     "losses": 15,
+     "corr": 0.8987482730341351
+    },
+    "extra.disposedSettlement": {
+     "mean": 6.866666666666666,
+     "lo": 5.505450494476168,
+     "hi": 8.227882838857164,
+     "sd": 3.645813218335315,
+     "n": 30,
+     "wins": 30,
+     "losses": 0,
+     "corr": 0.3297436881809882
+    },
+    "extra.disposedCompounded": {
+     "mean": 0.43333333333333335,
+     "lo": -0.4636165327464473,
+     "hi": 1.3302831994131141,
+     "sd": 2.4023455970813385,
+     "n": 30,
+     "wins": 12,
+     "losses": 12,
+     "corr": 0.7689724846812765
+    },
+    "extra.disposedAcquittedDefault": {
+     "mean": 0.03333333333333333,
+     "lo": -0.4806906543965057,
+     "hi": 0.5473573210631724,
+     "sd": 1.376736103561817,
+     "n": 30,
+     "wins": 13,
+     "losses": 12,
+     "corr": 0.904409282899835
+    },
+    "extra.disposedDismissedSteps": {
+     "mean": -0.03333333333333333,
+     "lo": -0.2409437780207214,
+     "hi": 0.17427711135405474,
+     "sd": 0.5560534167675356,
+     "n": 30,
+     "wins": 4,
+     "losses": 5,
+     "corr": 0.9726953498496232
+    },
+    "extra.disposedPostJudgment": {
+     "mean": -0.3,
+     "lo": -1.0791756309030096,
+     "hi": 0.4791756309030097,
+     "sd": 2.0869049843711385,
+     "n": 30,
+     "wins": 9,
+     "losses": 15,
+     "corr": 0.9658188488882209
+    },
+    "extra.disposedLpSplit": {
+     "mean": 0.16666666666666666,
+     "lo": -0.0055039055537255965,
+     "hi": 0.3388372388870589,
+     "sd": 0.46113303737741396,
+     "n": 30,
+     "wins": 4,
+     "losses": 0,
+     "corr": 0.31203058049540633
+    },
+    "extra.disposedAllRoutes": {
+     "mean": 6.833333333333333,
+     "lo": 4.510797795041539,
+     "hi": 9.155868871625128,
+     "sd": 6.220562860292513,
+     "n": 30,
+     "wins": 23,
+     "losses": 5,
+     "corr": 0.8659819247692663
+    },
+    "extra.disposedRouteInferred": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0,
+     "sd": 0,
+     "n": 30,
+     "wins": 0,
+     "losses": 0,
+     "corr": null
+    },
+    "extra.throughputPerMonthAllRoutes": {
+     "mean": 2.73670504385965,
+     "lo": 1.8065448406128546,
+     "hi": 3.666865247106445,
+     "sd": 2.491294500791491,
+     "n": 30,
+     "wins": 23,
+     "losses": 5,
+     "corr": 0.8659819247692664
+    },
+    "derived.meritsDisposals": {
+     "mean": 6.966666666666667,
+     "lo": 5.02912997834761,
+     "hi": 8.904203354985723,
+     "sd": 5.189401223404418,
+     "n": 30,
+     "wins": 28,
+     "losses": 2,
+     "corr": 0.7945471076157158
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "benchtime",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Scheduling layer for one judge's docket, built on PUCAR's Kollam data: plan only what is known before the day, face the same court on shared seeds, report every measure.",
+  "scripts": {
+    "arena": "bun run src/cli.ts arena",
+    "day": "bun run src/cli.ts day",
+    "calibrate": "bun run src/cli.ts calibrate",
+    "profile": "bun run src/cli.ts profile",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0"
+  }
+}

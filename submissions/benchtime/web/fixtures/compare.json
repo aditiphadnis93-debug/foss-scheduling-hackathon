@@ -1,0 +1,4012 @@
+{
+ "seeds": [
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40
+ ],
+ "weeks": 12,
+ "a": {
+  "policy": "benchtime",
+  "policyName": "benchtime",
+  "config": {
+   "weights": {
+    "throughput": 1,
+    "substantiveness": 1,
+    "fairness": 1,
+    "predictability": 1,
+    "trips": 0.5
+   },
+   "fillTarget": 0.95,
+   "ageingFloor": 0.25,
+   "clusterByAdvocate": true,
+   "blocks": [],
+   "carryForward": false,
+   "processDesk": true,
+   "checkin": true,
+   "standbyShare": 0.15,
+   "smartNextDate": true
+  },
+  "summary": {
+   "readme": {
+    "utilisation": {
+     "mean": 0.88,
+     "lo": 0.872,
+     "hi": 0.888
+    },
+    "reachRate": {
+     "mean": 0.95,
+     "lo": 0.94,
+     "hi": 0.96
+    },
+    "substantiveness": {
+     "mean": 0.6,
+     "lo": 0.588,
+     "hi": 0.612
+    },
+    "backlog4yHeardShare": {
+     "mean": 0.93,
+     "lo": 0.916,
+     "hi": 0.944
+    },
+    "backlog4ySubstantiveShare": {
+     "mean": 0.41,
+     "lo": 0.394,
+     "hi": 0.426
+    },
+    "predictabilityGapDays": {
+     "mean": 3.4,
+     "lo": 3.162,
+     "hi": 3.638
+    }
+   },
+   "caseStudy": {
+    "utilisation": {
+     "mean": 0.88,
+     "lo": 0.872,
+     "hi": 0.888
+    },
+    "overrunDays": {
+     "mean": 5.2,
+     "lo": 4.6,
+     "hi": 5.8
+    },
+    "idleMinutesShare": {
+     "mean": 0.1,
+     "lo": 0.094,
+     "hi": 0.106
+    },
+    "heldAsScheduled": {
+     "mean": 0.89,
+     "lo": 0.879,
+     "hi": 0.901
+    },
+    "heldAsScheduledAllDue": {
+     "mean": 0.71,
+     "lo": 0.698,
+     "hi": 0.722
+    },
+    "substantiveness": {
+     "mean": 0.6,
+     "lo": 0.588,
+     "hi": 0.612
+    },
+    "ageBandsStart": {
+     "0-1": {
+      "mean": 389,
+      "lo": 389,
+      "hi": 389
+     },
+     "1-3": {
+      "mean": 1014,
+      "lo": 1014,
+      "hi": 1014
+     },
+     "3-4": {
+      "mean": 700,
+      "lo": 700,
+      "hi": 700
+     },
+     "4-5": {
+      "mean": 461,
+      "lo": 461,
+      "hi": 461
+     },
+     "5+": {
+      "mean": 436,
+      "lo": 436,
+      "hi": 436
+     }
+    },
+    "ageBandsEnd": {
+     "0-1": {
+      "mean": 383,
+      "lo": 378.399,
+      "hi": 387.601
+     },
+     "1-3": {
+      "mean": 756,
+      "lo": 746.931,
+      "hi": 765.069
+     },
+     "3-4": {
+      "mean": 641,
+      "lo": 633.3056,
+      "hi": 648.6944
+     },
+     "4-5": {
+      "mean": 542,
+      "lo": 535.4995,
+      "hi": 548.5005
+     },
+     "5+": {
+      "mean": 502,
+      "lo": 495.9769,
+      "hi": 508.0231
+     }
+    },
+    "nextDateExcessDays": {
+     "mean": 4.1,
+     "lo": 3.895,
+     "hi": 4.305
+    },
+    "wastedRelistShare": {
+     "mean": 0.14,
+     "lo": 0.127,
+     "hi": 0.153
+    }
+   },
+   "siddarth": {
+    "throughputPerMonth": {
+     "mean": 70.4,
+     "lo": 66.88,
+     "hi": 73.92
+    },
+    "judgeTimeUsed": {
+     "mean": 0.905,
+     "lo": 0.897,
+     "hi": 0.913
+    },
+    "wastedListings": {
+     "mean": 0.43,
+     "lo": 0.419,
+     "hi": 0.441
+    },
+    "heldOnPromisedDate": {
+     "mean": 0.8633,
+     "lo": 0.8513,
+     "hi": 0.8753
+    },
+    "oldestPendingAgeYears": {
+     "mean": 8.51,
+     "lo": 8.4249,
+     "hi": 8.5951
+    },
+    "p95PendingAgeYears": {
+     "mean": 8.99,
+     "lo": 8.9181,
+     "hi": 9.0619
+    },
+    "neverHeard": {
+     "mean": 420,
+     "lo": 403.2,
+     "hi": 436.8
+    },
+    "loadBalanceCv": {
+     "mean": 0.05,
+     "lo": 0.044,
+     "hi": 0.056
+    }
+   },
+   "backlog": {
+    "plus3Start": {
+     "mean": 1597,
+     "lo": 1597,
+     "hi": 1597
+    },
+    "plus3End": {
+     "mean": 1685,
+     "lo": 1674.89,
+     "hi": 1695.11
+    },
+    "plus3Change": {
+     "mean": 88,
+     "lo": 77.89,
+     "hi": 98.11
+    },
+    "plus4Start": {
+     "mean": 897,
+     "lo": 897,
+     "hi": 897
+    },
+    "plus4End": {
+     "mean": 1044,
+     "lo": 1035.648,
+     "hi": 1052.352
+    },
+    "plus4Change": {
+     "mean": 147,
+     "lo": 138.648,
+     "hi": 155.352
+    },
+    "plus5Start": {
+     "mean": 436,
+     "lo": 436,
+     "hi": 436
+    },
+    "plus5End": {
+     "mean": 502,
+     "lo": 496.98,
+     "hi": 507.02
+    },
+    "plus5Change": {
+     "mean": 66,
+     "lo": 60.98,
+     "hi": 71.02
+    }
+   },
+   "extra": {
+    "listedPerDay": {
+     "mean": 37,
+     "lo": 36.63,
+     "hi": 37.37
+    },
+    "reachedPerDay": {
+     "mean": 35.15,
+     "lo": 34.447,
+     "hi": 35.853
+    },
+    "substantivePerDay": {
+     "mean": 21.09,
+     "lo": 20.5628,
+     "hi": 21.6172
+    },
+    "disposed": {
+     "mean": 176,
+     "lo": 167.2,
+     "hi": 184.8
+    },
+    "disposed4yPlus": {
+     "mean": 63,
+     "lo": 58.59,
+     "hi": 67.41
+    },
+    "tripsPerSubstantive": {
+     "mean": 2.9,
+     "lo": 2.813,
+     "hi": 2.987
+    },
+    "wastedTripShare": {
+     "mean": 0.27,
+     "lo": 0.258,
+     "hi": 0.282
+    },
+    "deskPerDay": {
+     "mean": 21,
+     "lo": 20.16,
+     "hi": 21.84
+    },
+    "vacatedPerDay": {
+     "mean": 3.1,
+     "lo": 2.852,
+     "hi": 3.348
+    }
+   }
+  },
+  "weekly": [
+   {
+    "week": 1,
+    "start": "2026-10-01",
+    "end": "2026-10-04",
+    "sittingDays": 1,
+    "listed": {
+     "mean": 36.7,
+     "lo": 36.1496,
+     "hi": 37.2504
+    },
+    "reached": {
+     "mean": 34.9,
+     "lo": 34.0286,
+     "hi": 35.7714
+    },
+    "substantive": {
+     "mean": 20.9,
+     "lo": 19.9589,
+     "hi": 21.8411
+    },
+    "disposed": {
+     "mean": 3.4,
+     "lo": 2.9,
+     "hi": 3.9
+    },
+    "desk": {
+     "mean": 26,
+     "lo": 24.4381,
+     "hi": 27.5619
+    },
+    "vacated": {
+     "mean": 3.1,
+     "lo": 2.6,
+     "hi": 3.6
+    },
+    "minutesUsed": {
+     "mean": 366.5,
+     "lo": 361.0022,
+     "hi": 371.9978
+    },
+    "overrunDays": {
+     "mean": 0.1,
+     "lo": 0,
+     "hi": 0.4
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 389,
+      "lo": 388,
+      "hi": 390
+     },
+     "1-3": {
+      "mean": 1013,
+      "lo": 1011.9873,
+      "hi": 1014.0127
+     },
+     "3-4": {
+      "mean": 699,
+      "lo": 698,
+      "hi": 700
+     },
+     "4-5": {
+      "mean": 460,
+      "lo": 459,
+      "hi": 461
+     },
+     "5+": {
+      "mean": 435,
+      "lo": 434,
+      "hi": 436
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 55,
+      "lo": 54,
+      "hi": 56
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 199,
+      "lo": 198,
+      "hi": 200
+     },
+     "COGNIZANCE": {
+      "mean": 27,
+      "lo": 26,
+      "hi": 28
+     },
+     "APPEARANCE": {
+      "mean": 222,
+      "lo": 221,
+      "hi": 223
+     },
+     "WARRANT": {
+      "mean": 386,
+      "lo": 385,
+      "hi": 387
+     },
+     "PLEA": {
+      "mean": 105,
+      "lo": 104,
+      "hi": 106
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 91,
+      "lo": 90,
+      "hi": 92
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 456,
+      "lo": 455,
+      "hi": 457
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 557,
+      "lo": 556,
+      "hi": 558
+     },
+     "ARGUMENTS": {
+      "mean": 236,
+      "lo": 235,
+      "hi": 237
+     },
+     "JUDGEMENT": {
+      "mean": 663,
+      "lo": 662,
+      "hi": 664
+     }
+    }
+   },
+   {
+    "week": 2,
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 189.6,
+     "lo": 186.7556,
+     "hi": 192.4444
+    },
+    "reached": {
+     "mean": 180.1,
+     "lo": 175.5964,
+     "hi": 184.6036
+    },
+    "substantive": {
+     "mean": 108.1,
+     "lo": 103.2361,
+     "hi": 112.9639
+    },
+    "disposed": {
+     "mean": 17.7,
+     "lo": 15.5776,
+     "hi": 19.8224
+    },
+    "desk": {
+     "mean": 130.2,
+     "lo": 122.3864,
+     "hi": 138.0136
+    },
+    "vacated": {
+     "mean": 15.9,
+     "lo": 13.5169,
+     "hi": 18.2831
+    },
+    "minutesUsed": {
+     "mean": 1894.2,
+     "lo": 1865.787,
+     "hi": 1922.613
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 388,
+      "lo": 387,
+      "hi": 389
+     },
+     "1-3": {
+      "mean": 1006,
+      "lo": 1003.9871,
+      "hi": 1008.0129
+     },
+     "3-4": {
+      "mean": 657,
+      "lo": 655.6861,
+      "hi": 658.3139
+     },
+     "4-5": {
+      "mean": 495,
+      "lo": 494,
+      "hi": 496
+     },
+     "5+": {
+      "mean": 432,
+      "lo": 431,
+      "hi": 433
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 53,
+      "lo": 52,
+      "hi": 54
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 197,
+      "lo": 196,
+      "hi": 198
+     },
+     "COGNIZANCE": {
+      "mean": 30,
+      "lo": 29,
+      "hi": 31
+     },
+     "APPEARANCE": {
+      "mean": 218,
+      "lo": 217,
+      "hi": 219
+     },
+     "WARRANT": {
+      "mean": 389,
+      "lo": 387.8335,
+      "hi": 390.1665
+     },
+     "PLEA": {
+      "mean": 103,
+      "lo": 102,
+      "hi": 104
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 94,
+      "lo": 93,
+      "hi": 95
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 450,
+      "lo": 448.6513,
+      "hi": 451.3487
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 559,
+      "lo": 557.3226,
+      "hi": 560.6774
+     },
+     "ARGUMENTS": {
+      "mean": 240,
+      "lo": 239,
+      "hi": 241
+     },
+     "JUDGEMENT": {
+      "mean": 648,
+      "lo": 646.0571,
+      "hi": 649.9429
+     }
+    }
+   },
+   {
+    "week": 3,
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 178.8,
+     "lo": 176.1175,
+     "hi": 181.4825
+    },
+    "reached": {
+     "mean": 169.9,
+     "lo": 165.6527,
+     "hi": 174.1473
+    },
+    "substantive": {
+     "mean": 101.9,
+     "lo": 97.3129,
+     "hi": 106.4871
+    },
+    "disposed": {
+     "mean": 16.7,
+     "lo": 14.6984,
+     "hi": 18.7016
+    },
+    "desk": {
+     "mean": 118.8,
+     "lo": 111.6747,
+     "hi": 125.9253
+    },
+    "vacated": {
+     "mean": 15,
+     "lo": 12.7525,
+     "hi": 17.2475
+    },
+    "minutesUsed": {
+     "mean": 1786.4,
+     "lo": 1759.604,
+     "hi": 1813.196
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 388,
+      "lo": 386.8366,
+      "hi": 389.1634
+     },
+     "1-3": {
+      "mean": 926,
+      "lo": 923.2216,
+      "hi": 928.7784
+     },
+     "3-4": {
+      "mean": 692,
+      "lo": 689.9247,
+      "hi": 694.0753
+     },
+     "4-5": {
+      "mean": 527,
+      "lo": 525.4201,
+      "hi": 528.5799
+     },
+     "5+": {
+      "mean": 430,
+      "lo": 428.7109,
+      "hi": 431.2891
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 51,
+      "lo": 50,
+      "hi": 52
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 195,
+      "lo": 194,
+      "hi": 196
+     },
+     "COGNIZANCE": {
+      "mean": 32,
+      "lo": 31,
+      "hi": 33
+     },
+     "APPEARANCE": {
+      "mean": 214,
+      "lo": 213,
+      "hi": 215
+     },
+     "WARRANT": {
+      "mean": 391,
+      "lo": 389.2402,
+      "hi": 392.7598
+     },
+     "PLEA": {
+      "mean": 100,
+      "lo": 99,
+      "hi": 101
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 98,
+      "lo": 97,
+      "hi": 99
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 444,
+      "lo": 442.0039,
+      "hi": 445.9961
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 562,
+      "lo": 559.4727,
+      "hi": 564.5273
+     },
+     "ARGUMENTS": {
+      "mean": 244,
+      "lo": 242.9032,
+      "hi": 245.0968
+     },
+     "JUDGEMENT": {
+      "mean": 632,
+      "lo": 629.1543,
+      "hi": 634.8457
+     }
+    }
+   },
+   {
+    "week": 4,
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "sittingDays": 4,
+    "listed": {
+     "mean": 148,
+     "lo": 145.78,
+     "hi": 150.22
+    },
+    "reached": {
+     "mean": 140.6,
+     "lo": 137.085,
+     "hi": 144.115
+    },
+    "substantive": {
+     "mean": 84.4,
+     "lo": 80.6038,
+     "hi": 88.1962
+    },
+    "disposed": {
+     "mean": 13.8,
+     "lo": 12.1435,
+     "hi": 15.4565
+    },
+    "desk": {
+     "mean": 94.9,
+     "lo": 89.2048,
+     "hi": 100.5952
+    },
+    "vacated": {
+     "mean": 12.4,
+     "lo": 10.54,
+     "hi": 14.26
+    },
+    "minutesUsed": {
+     "mean": 1478.4,
+     "lo": 1456.224,
+     "hi": 1500.576
+    },
+    "overrunDays": {
+     "mean": 0.4,
+     "lo": 0.1,
+     "hi": 0.7
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 387,
+      "lo": 385.4506,
+      "hi": 388.5494
+     },
+     "1-3": {
+      "mean": 896,
+      "lo": 892.4156,
+      "hi": 899.5844
+     },
+     "3-4": {
+      "mean": 674,
+      "lo": 671.3024,
+      "hi": 676.6976
+     },
+     "4-5": {
+      "mean": 563,
+      "lo": 560.7488,
+      "hi": 565.2512
+     },
+     "5+": {
+      "mean": 428,
+      "lo": 426.2897,
+      "hi": 429.7103
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 50,
+      "lo": 49,
+      "hi": 51
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 193,
+      "lo": 191.8426,
+      "hi": 194.1574
+     },
+     "COGNIZANCE": {
+      "mean": 33,
+      "lo": 32,
+      "hi": 34
+     },
+     "APPEARANCE": {
+      "mean": 211,
+      "lo": 209.7326,
+      "hi": 212.2674
+     },
+     "WARRANT": {
+      "mean": 393,
+      "lo": 390.6435,
+      "hi": 395.3565
+     },
+     "PLEA": {
+      "mean": 98,
+      "lo": 97,
+      "hi": 99
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 100,
+      "lo": 99,
+      "hi": 101
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 439,
+      "lo": 436.3664,
+      "hi": 441.6336
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 564,
+      "lo": 560.619,
+      "hi": 567.381
+     },
+     "ARGUMENTS": {
+      "mean": 247,
+      "lo": 245.5185,
+      "hi": 248.4815
+     },
+     "JUDGEMENT": {
+      "mean": 620,
+      "lo": 616.2788,
+      "hi": 623.7212
+     }
+    }
+   },
+   {
+    "week": 5,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 191.2,
+     "lo": 188.3325,
+     "hi": 194.0675
+    },
+    "reached": {
+     "mean": 181.6,
+     "lo": 177.0598,
+     "hi": 186.1402
+    },
+    "substantive": {
+     "mean": 109,
+     "lo": 104.0966,
+     "hi": 113.9034
+    },
+    "disposed": {
+     "mean": 17.8,
+     "lo": 15.6604,
+     "hi": 19.9396
+    },
+    "desk": {
+     "mean": 118.3,
+     "lo": 111.2041,
+     "hi": 125.3959
+    },
+    "vacated": {
+     "mean": 16,
+     "lo": 13.5975,
+     "hi": 18.4025
+    },
+    "minutesUsed": {
+     "mean": 1909.6,
+     "lo": 1880.956,
+     "hi": 1938.244
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 387,
+      "lo": 385.066,
+      "hi": 388.934
+     },
+     "1-3": {
+      "mean": 890,
+      "lo": 885.551,
+      "hi": 894.449
+     },
+     "3-4": {
+      "mean": 670,
+      "lo": 666.6489,
+      "hi": 673.3511
+     },
+     "4-5": {
+      "mean": 559,
+      "lo": 556.2036,
+      "hi": 561.7964
+     },
+     "5+": {
+      "mean": 425,
+      "lo": 422.8756,
+      "hi": 427.1244
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 48,
+      "lo": 47,
+      "hi": 49
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 191,
+      "lo": 189.5688,
+      "hi": 192.4312
+     },
+     "COGNIZANCE": {
+      "mean": 35,
+      "lo": 34,
+      "hi": 36
+     },
+     "APPEARANCE": {
+      "mean": 208,
+      "lo": 206.4423,
+      "hi": 209.5577
+     },
+     "WARRANT": {
+      "mean": 395,
+      "lo": 392.039,
+      "hi": 397.961
+     },
+     "PLEA": {
+      "mean": 96,
+      "lo": 95,
+      "hi": 97
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 104,
+      "lo": 103,
+      "hi": 105
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 433,
+      "lo": 429.7505,
+      "hi": 436.2495
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 566,
+      "lo": 561.7569,
+      "hi": 570.2431
+     },
+     "ARGUMENTS": {
+      "mean": 251,
+      "lo": 249.1182,
+      "hi": 252.8818
+     },
+     "JUDGEMENT": {
+      "mean": 605,
+      "lo": 600.4625,
+      "hi": 609.5375
+     }
+    }
+   },
+   {
+    "week": 6,
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 180.4,
+     "lo": 177.6944,
+     "hi": 183.1056
+    },
+    "reached": {
+     "mean": 171.4,
+     "lo": 167.1161,
+     "hi": 175.6839
+    },
+    "substantive": {
+     "mean": 102.8,
+     "lo": 98.1734,
+     "hi": 107.4266
+    },
+    "disposed": {
+     "mean": 16.8,
+     "lo": 14.7812,
+     "hi": 18.8188
+    },
+    "desk": {
+     "mean": 107.5,
+     "lo": 101.0504,
+     "hi": 113.9496
+    },
+    "vacated": {
+     "mean": 15.1,
+     "lo": 12.8331,
+     "hi": 17.3669
+    },
+    "minutesUsed": {
+     "mean": 1801.8,
+     "lo": 1774.773,
+     "hi": 1828.827
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 386,
+      "lo": 383.6824,
+      "hi": 388.3176
+     },
+     "1-3": {
+      "mean": 884,
+      "lo": 878.699,
+      "hi": 889.301
+     },
+     "3-4": {
+      "mean": 632,
+      "lo": 628.2079,
+      "hi": 635.7921
+     },
+     "4-5": {
+      "mean": 560,
+      "lo": 556.641,
+      "hi": 563.359
+     },
+     "5+": {
+      "mean": 452,
+      "lo": 449.2874,
+      "hi": 454.7126
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 47,
+      "lo": 46,
+      "hi": 48
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 189,
+      "lo": 187.3013,
+      "hi": 190.6987
+     },
+     "COGNIZANCE": {
+      "mean": 36,
+      "lo": 35,
+      "hi": 37
+     },
+     "APPEARANCE": {
+      "mean": 204,
+      "lo": 202.161,
+      "hi": 205.839
+     },
+     "WARRANT": {
+      "mean": 397,
+      "lo": 393.4294,
+      "hi": 400.5706
+     },
+     "PLEA": {
+      "mean": 94,
+      "lo": 93,
+      "hi": 95
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 106,
+      "lo": 105,
+      "hi": 107
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 428,
+      "lo": 424.1502,
+      "hi": 431.8498
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 568,
+      "lo": 562.8891,
+      "hi": 573.1109
+     },
+     "ARGUMENTS": {
+      "mean": 255,
+      "lo": 252.7058,
+      "hi": 257.2942
+     },
+     "JUDGEMENT": {
+      "mean": 590,
+      "lo": 584.6913,
+      "hi": 595.3087
+     }
+    }
+   },
+   {
+    "week": 7,
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "sittingDays": 4,
+    "listed": {
+     "mean": 149.2,
+     "lo": 146.9615,
+     "hi": 151.4385
+    },
+    "reached": {
+     "mean": 141.8,
+     "lo": 138.2557,
+     "hi": 145.3443
+    },
+    "substantive": {
+     "mean": 85.1,
+     "lo": 81.2722,
+     "hi": 88.9278
+    },
+    "disposed": {
+     "mean": 13.9,
+     "lo": 12.2297,
+     "hi": 15.5703
+    },
+    "desk": {
+     "mean": 85.5,
+     "lo": 80.3672,
+     "hi": 90.6328
+    },
+    "vacated": {
+     "mean": 12.5,
+     "lo": 10.6245,
+     "hi": 14.3755
+    },
+    "minutesUsed": {
+     "mean": 1490.7,
+     "lo": 1468.3392,
+     "hi": 1513.0608
+    },
+    "overrunDays": {
+     "mean": 0.4,
+     "lo": 0.1,
+     "hi": 0.7
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 386,
+      "lo": 383.2992,
+      "hi": 388.7008
+     },
+     "1-3": {
+      "mean": 878,
+      "lo": 871.8507,
+      "hi": 884.1493
+     },
+     "3-4": {
+      "mean": 629,
+      "lo": 624.5994,
+      "hi": 633.4006
+     },
+     "4-5": {
+      "mean": 557,
+      "lo": 553.1004,
+      "hi": 560.8996
+     },
+     "5+": {
+      "mean": 450,
+      "lo": 446.8508,
+      "hi": 453.1492
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 46,
+      "lo": 45,
+      "hi": 47
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 187,
+      "lo": 185.0359,
+      "hi": 188.9641
+     },
+     "COGNIZANCE": {
+      "mean": 38,
+      "lo": 37,
+      "hi": 39
+     },
+     "APPEARANCE": {
+      "mean": 202,
+      "lo": 199.8814,
+      "hi": 204.1186
+     },
+     "WARRANT": {
+      "mean": 398,
+      "lo": 393.8188,
+      "hi": 402.1812
+     },
+     "PLEA": {
+      "mean": 92,
+      "lo": 91,
+      "hi": 93
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 109,
+      "lo": 107.8604,
+      "hi": 110.1396
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 423,
+      "lo": 418.5535,
+      "hi": 427.4465
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 569,
+      "lo": 563.0204,
+      "hi": 574.9796
+     },
+     "ARGUMENTS": {
+      "mean": 258,
+      "lo": 255.2898,
+      "hi": 260.7102
+     },
+     "JUDGEMENT": {
+      "mean": 578,
+      "lo": 571.9334,
+      "hi": 584.0666
+     }
+    }
+   },
+   {
+    "week": 8,
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 192.7,
+     "lo": 189.8094,
+     "hi": 195.5906
+    },
+    "reached": {
+     "mean": 183.1,
+     "lo": 178.5232,
+     "hi": 187.6768
+    },
+    "substantive": {
+     "mean": 109.8,
+     "lo": 104.857,
+     "hi": 114.743
+    },
+    "disposed": {
+     "mean": 18,
+     "lo": 15.8431,
+     "hi": 20.1569
+    },
+    "desk": {
+     "mean": 106.1,
+     "lo": 99.7344,
+     "hi": 112.4656
+    },
+    "vacated": {
+     "mean": 16.1,
+     "lo": 13.6781,
+     "hi": 18.5219
+    },
+    "minutesUsed": {
+     "mean": 1925,
+     "lo": 1896.125,
+     "hi": 1953.875
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 385,
+      "lo": 381.9178,
+      "hi": 388.0822
+     },
+     "1-3": {
+      "mean": 851,
+      "lo": 844.1907,
+      "hi": 857.8093
+     },
+     "3-4": {
+      "mean": 645,
+      "lo": 639.8363,
+      "hi": 650.1637
+     },
+     "4-5": {
+      "mean": 525,
+      "lo": 520.8014,
+      "hi": 529.1986
+     },
+     "5+": {
+      "mean": 476,
+      "lo": 472.1925,
+      "hi": 479.8075
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 44,
+      "lo": 43,
+      "hi": 45
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 185,
+      "lo": 182.7808,
+      "hi": 187.2192
+     },
+     "COGNIZANCE": {
+      "mean": 39,
+      "lo": 38,
+      "hi": 40
+     },
+     "APPEARANCE": {
+      "mean": 199,
+      "lo": 196.6156,
+      "hi": 201.3844
+     },
+     "WARRANT": {
+      "mean": 400,
+      "lo": 395.2003,
+      "hi": 404.7997
+     },
+     "PLEA": {
+      "mean": 90,
+      "lo": 88.916,
+      "hi": 91.084
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 111,
+      "lo": 109.6673,
+      "hi": 112.3327
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 418,
+      "lo": 412.9811,
+      "hi": 423.0189
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 571,
+      "lo": 564.1432,
+      "hi": 577.8568
+     },
+     "ARGUMENTS": {
+      "mean": 262,
+      "lo": 258.8545,
+      "hi": 265.1455
+     },
+     "JUDGEMENT": {
+      "mean": 563,
+      "lo": 556.2475,
+      "hi": 569.7525
+     }
+    }
+   },
+   {
+    "week": 9,
+    "start": "2026-11-23",
+    "end": "2026-11-29",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 181.9,
+     "lo": 179.1713,
+     "hi": 184.6288
+    },
+    "reached": {
+     "mean": 172.8,
+     "lo": 168.4795,
+     "hi": 177.1205
+    },
+    "substantive": {
+     "mean": 103.7,
+     "lo": 99.0338,
+     "hi": 108.3662
+    },
+    "disposed": {
+     "mean": 17,
+     "lo": 14.9639,
+     "hi": 19.0361
+    },
+    "desk": {
+     "mean": 96,
+     "lo": 90.2387,
+     "hi": 101.7613
+    },
+    "vacated": {
+     "mean": 15.2,
+     "lo": 12.9138,
+     "hi": 17.4862
+    },
+    "minutesUsed": {
+     "mean": 1817.2,
+     "lo": 1789.942,
+     "hi": 1844.458
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 385,
+      "lo": 381.5375,
+      "hi": 388.4625
+     },
+     "1-3": {
+      "mean": 817,
+      "lo": 809.6482,
+      "hi": 824.3518
+     },
+     "3-4": {
+      "mean": 669,
+      "lo": 662.9766,
+      "hi": 675.0234
+     },
+     "4-5": {
+      "mean": 522,
+      "lo": 517.3059,
+      "hi": 526.6941
+     },
+     "5+": {
+      "mean": 473,
+      "lo": 468.7432,
+      "hi": 477.2568
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 43,
+      "lo": 42,
+      "hi": 44
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 183,
+      "lo": 180.5322,
+      "hi": 185.4678
+     },
+     "COGNIZANCE": {
+      "mean": 40,
+      "lo": 39,
+      "hi": 41
+     },
+     "APPEARANCE": {
+      "mean": 196,
+      "lo": 193.3569,
+      "hi": 198.6431
+     },
+     "WARRANT": {
+      "mean": 402,
+      "lo": 396.5777,
+      "hi": 407.4223
+     },
+     "PLEA": {
+      "mean": 89,
+      "lo": 87.8046,
+      "hi": 90.1954
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 113,
+      "lo": 111.4689,
+      "hi": 114.5311
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 413,
+      "lo": 407.4223,
+      "hi": 418.5777
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 573,
+      "lo": 565.2619,
+      "hi": 580.7381
+     },
+     "ARGUMENTS": {
+      "mean": 266,
+      "lo": 262.4072,
+      "hi": 269.5928
+     },
+     "JUDGEMENT": {
+      "mean": 548,
+      "lo": 540.6064,
+      "hi": 555.3936
+     }
+    }
+   },
+   {
+    "week": 10,
+    "start": "2026-11-30",
+    "end": "2026-12-06",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 188.1,
+     "lo": 185.2788,
+     "hi": 190.9212
+    },
+    "reached": {
+     "mean": 178.7,
+     "lo": 174.233,
+     "hi": 183.167
+    },
+    "substantive": {
+     "mean": 107.2,
+     "lo": 102.3757,
+     "hi": 112.0243
+    },
+    "disposed": {
+     "mean": 17.5,
+     "lo": 15.3949,
+     "hi": 19.6051
+    },
+    "desk": {
+     "mean": 95,
+     "lo": 89.2996,
+     "hi": 100.7005
+    },
+    "vacated": {
+     "mean": 15.8,
+     "lo": 13.4363,
+     "hi": 18.1638
+    },
+    "minutesUsed": {
+     "mean": 1878.8,
+     "lo": 1850.618,
+     "hi": 1906.982
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 384,
+      "lo": 380.1582,
+      "hi": 387.8418
+     },
+     "1-3": {
+      "mean": 765,
+      "lo": 757.3543,
+      "hi": 772.6457
+     },
+     "3-4": {
+      "mean": 681,
+      "lo": 674.1893,
+      "hi": 687.8107
+     },
+     "4-5": {
+      "mean": 548,
+      "lo": 542.5177,
+      "hi": 553.4823
+     },
+     "5+": {
+      "mean": 470,
+      "lo": 465.2989,
+      "hi": 474.7011
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 42,
+      "lo": 41,
+      "hi": 43
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 181,
+      "lo": 178.2902,
+      "hi": 183.7098
+     },
+     "COGNIZANCE": {
+      "mean": 41,
+      "lo": 40,
+      "hi": 42
+     },
+     "APPEARANCE": {
+      "mean": 193,
+      "lo": 190.105,
+      "hi": 195.895
+     },
+     "WARRANT": {
+      "mean": 403,
+      "lo": 396.9513,
+      "hi": 409.0487
+     },
+     "PLEA": {
+      "mean": 87,
+      "lo": 85.6969,
+      "hi": 88.3031
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 116,
+      "lo": 114.2657,
+      "hi": 117.7343
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 408,
+      "lo": 401.8767,
+      "hi": 414.1233
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 575,
+      "lo": 566.3767,
+      "hi": 583.6233
+     },
+     "ARGUMENTS": {
+      "mean": 270,
+      "lo": 265.9479,
+      "hi": 274.0521
+     },
+     "JUDGEMENT": {
+      "mean": 533,
+      "lo": 525.0096,
+      "hi": 540.9904
+     }
+    }
+   },
+   {
+    "week": 11,
+    "start": "2026-12-07",
+    "end": "2026-12-13",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 177.3,
+     "lo": 174.6406,
+     "hi": 179.9594
+    },
+    "reached": {
+     "mean": 168.4,
+     "lo": 164.1893,
+     "hi": 172.6107
+    },
+    "substantive": {
+     "mean": 101.1,
+     "lo": 96.5525,
+     "hi": 105.6475
+    },
+    "disposed": {
+     "mean": 16.5,
+     "lo": 14.5157,
+     "hi": 18.4843
+    },
+    "desk": {
+     "mean": 85.5,
+     "lo": 80.3681,
+     "hi": 90.6319
+    },
+    "vacated": {
+     "mean": 14.9,
+     "lo": 12.6719,
+     "hi": 17.1281
+    },
+    "minutesUsed": {
+     "mean": 1771,
+     "lo": 1744.435,
+     "hi": 1797.565
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.2,
+     "hi": 0.8
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 384,
+      "lo": 379.78,
+      "hi": 388.22
+     },
+     "1-3": {
+      "mean": 758,
+      "lo": 749.659,
+      "hi": 766.341
+     },
+     "3-4": {
+      "mean": 643,
+      "lo": 635.9284,
+      "hi": 650.0716
+     },
+     "4-5": {
+      "mean": 543,
+      "lo": 537.027,
+      "hi": 548.973
+     },
+     "5+": {
+      "mean": 503,
+      "lo": 497.4657,
+      "hi": 508.5343
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 40,
+      "lo": 39,
+      "hi": 41
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 178,
+      "lo": 175.0548,
+      "hi": 180.9452
+     },
+     "COGNIZANCE": {
+      "mean": 42,
+      "lo": 41,
+      "hi": 43
+     },
+     "APPEARANCE": {
+      "mean": 190,
+      "lo": 186.8592,
+      "hi": 193.1408
+     },
+     "WARRANT": {
+      "mean": 405,
+      "lo": 398.3214,
+      "hi": 411.6786
+     },
+     "PLEA": {
+      "mean": 85,
+      "lo": 83.5924,
+      "hi": 86.4076
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 118,
+      "lo": 116.0585,
+      "hi": 119.9415
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 403,
+      "lo": 396.3437,
+      "hi": 409.6563
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 576,
+      "lo": 566.4883,
+      "hi": 585.5117
+     },
+     "ARGUMENTS": {
+      "mean": 274,
+      "lo": 269.4765,
+      "hi": 278.5235
+     },
+     "JUDGEMENT": {
+      "mean": 518,
+      "lo": 509.4571,
+      "hi": 526.5429
+     }
+    }
+   },
+   {
+    "week": 12,
+    "start": "2026-12-14",
+    "end": "2026-12-15",
+    "sittingDays": 2,
+    "listed": {
+     "mean": 73.4,
+     "lo": 72.2993,
+     "hi": 74.5008
+    },
+    "reached": {
+     "mean": 69.7,
+     "lo": 67.9571,
+     "hi": 71.4429
+    },
+    "substantive": {
+     "mean": 41.8,
+     "lo": 39.9177,
+     "hi": 43.6823
+    },
+    "disposed": {
+     "mean": 6.8,
+     "lo": 5.9787,
+     "hi": 7.6213
+    },
+    "desk": {
+     "mean": 33.7,
+     "lo": 31.6758,
+     "hi": 35.7242
+    },
+    "vacated": {
+     "mean": 6.1,
+     "lo": 5.1777,
+     "hi": 7.0223
+    },
+    "minutesUsed": {
+     "mean": 733,
+     "lo": 722.0044,
+     "hi": 743.9956
+    },
+    "overrunDays": {
+     "mean": 0.2,
+     "lo": 0,
+     "hi": 0.5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 383,
+      "lo": 378.399,
+      "hi": 387.601
+     },
+     "1-3": {
+      "mean": 756,
+      "lo": 746.931,
+      "hi": 765.069
+     },
+     "3-4": {
+      "mean": 641,
+      "lo": 633.3056,
+      "hi": 648.6944
+     },
+     "4-5": {
+      "mean": 542,
+      "lo": 535.4995,
+      "hi": 548.5005
+     },
+     "5+": {
+      "mean": 502,
+      "lo": 495.9769,
+      "hi": 508.0231
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 40,
+      "lo": 39,
+      "hi": 41
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 178,
+      "lo": 174.8027,
+      "hi": 181.1973
+     },
+     "COGNIZANCE": {
+      "mean": 43,
+      "lo": 42,
+      "hi": 44
+     },
+     "APPEARANCE": {
+      "mean": 189,
+      "lo": 185.5919,
+      "hi": 192.4081
+     },
+     "WARRANT": {
+      "mean": 405,
+      "lo": 397.704,
+      "hi": 412.296
+     },
+     "PLEA": {
+      "mean": 85,
+      "lo": 83.4749,
+      "hi": 86.5251
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 118,
+      "lo": 115.8682,
+      "hi": 120.1318
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 402,
+      "lo": 394.7722,
+      "hi": 409.2278
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 577,
+      "lo": 566.613,
+      "hi": 587.387
+     },
+     "ARGUMENTS": {
+      "mean": 276,
+      "lo": 271.0364,
+      "hi": 280.9636
+     },
+     "JUDGEMENT": {
+      "mean": 512,
+      "lo": 502.7878,
+      "hi": 521.2122
+     }
+    }
+   }
+  ]
+ },
+ "b": {
+  "policy": "benchtime",
+  "policyName": "benchtime",
+  "config": {
+   "weights": {
+    "throughput": 1,
+    "substantiveness": 0.8,
+    "fairness": 1.5,
+    "predictability": 1.2,
+    "trips": 0.5
+   },
+   "fillTarget": 1.25,
+   "ageingFloor": 0.3,
+   "clusterByAdvocate": false,
+   "blocks": [
+    {
+     "id": "morning",
+     "start": "10:00",
+     "end": "13:30",
+     "types": [
+      "ADMISSION",
+      "DELAY_CONDONATION_HEARING",
+      "COGNIZANCE",
+      "APPEARANCE",
+      "WARRANT",
+      "PLEA",
+      "BAIL",
+      "APPLICATION_REVIEW"
+     ]
+    },
+    {
+     "id": "afternoon",
+     "start": "14:00",
+     "end": "17:30",
+     "types": [
+      "EXAMINATION_UNDER_S351_BNSS",
+      "EVIDENCE_COMPLAINANT",
+      "EVIDENCE_ACCUSED",
+      "ARGUMENTS",
+      "JUDGEMENT",
+      "REPORTS"
+     ],
+     "oldestFirst": true
+    }
+   ],
+   "carryForward": true,
+   "processDesk": true,
+   "checkin": false,
+   "standbyShare": 0.15,
+   "smartNextDate": true
+  },
+  "summary": {
+   "readme": {
+    "utilisation": {
+     "mean": 0.965,
+     "lo": 0.957,
+     "hi": 0.973
+    },
+    "reachRate": {
+     "mean": 0.785,
+     "lo": 0.775,
+     "hi": 0.795
+    },
+    "substantiveness": {
+     "mean": 0.5324,
+     "lo": 0.5204,
+     "hi": 0.5444
+    },
+    "backlog4yHeardShare": {
+     "mean": 0.9518,
+     "lo": 0.9378,
+     "hi": 0.9658
+    },
+    "backlog4ySubstantiveShare": {
+     "mean": 0.43,
+     "lo": 0.414,
+     "hi": 0.446
+    },
+    "predictabilityGapDays": {
+     "mean": 7.85,
+     "lo": 7.3007,
+     "hi": 8.3993
+    }
+   },
+   "caseStudy": {
+    "utilisation": {
+     "mean": 0.965,
+     "lo": 0.957,
+     "hi": 0.973
+    },
+    "overrunDays": {
+     "mean": 47.2,
+     "lo": 43.4266,
+     "hi": 50.9734
+    },
+    "idleMinutesShare": {
+     "mean": 0.024,
+     "lo": 0.018,
+     "hi": 0.03
+    },
+    "heldAsScheduled": {
+     "mean": 0.7218,
+     "lo": 0.7108,
+     "hi": 0.7328
+    },
+    "heldAsScheduledAllDue": {
+     "mean": 0.575,
+     "lo": 0.563,
+     "hi": 0.587
+    },
+    "substantiveness": {
+     "mean": 0.5324,
+     "lo": 0.5204,
+     "hi": 0.5444
+    },
+    "ageBandsStart": {
+     "0-1": {
+      "mean": 389,
+      "lo": 389,
+      "hi": 389
+     },
+     "1-3": {
+      "mean": 1014,
+      "lo": 1014,
+      "hi": 1014
+     },
+     "3-4": {
+      "mean": 700,
+      "lo": 700,
+      "hi": 700
+     },
+     "4-5": {
+      "mean": 461,
+      "lo": 461,
+      "hi": 461
+     },
+     "5+": {
+      "mean": 436,
+      "lo": 436,
+      "hi": 436
+     }
+    },
+    "ageBandsEnd": {
+     "0-1": {
+      "mean": 384,
+      "lo": 379.3893,
+      "hi": 388.6107
+     },
+     "1-3": {
+      "mean": 765,
+      "lo": 755.8187,
+      "hi": 774.1813
+     },
+     "3-4": {
+      "mean": 647,
+      "lo": 639.2308,
+      "hi": 654.7692
+     },
+     "4-5": {
+      "mean": 538,
+      "lo": 531.5467,
+      "hi": 544.4533
+     },
+     "5+": {
+      "mean": 499,
+      "lo": 493.017,
+      "hi": 504.983
+     }
+    },
+    "nextDateExcessDays": {
+     "mean": 6.1,
+     "lo": 5.795,
+     "hi": 6.405
+    },
+    "wastedRelistShare": {
+     "mean": 0.19,
+     "lo": 0.177,
+     "hi": 0.203
+    }
+   },
+   "siddarth": {
+    "throughputPerMonth": {
+     "mean": 66.75,
+     "lo": 63.4125,
+     "hi": 70.0875
+    },
+    "judgeTimeUsed": {
+     "mean": 0.99,
+     "lo": 0.982,
+     "hi": 0.998
+    },
+    "wastedListings": {
+     "mean": 0.5821,
+     "lo": 0.5711,
+     "hi": 0.5931
+    },
+    "heldOnPromisedDate": {
+     "mean": 0.7001,
+     "lo": 0.6881,
+     "hi": 0.7121
+    },
+    "oldestPendingAgeYears": {
+     "mean": 8.41,
+     "lo": 8.3259,
+     "hi": 8.4941
+    },
+    "p95PendingAgeYears": {
+     "mean": 8.99,
+     "lo": 8.9181,
+     "hi": 9.0619
+    },
+    "neverHeard": {
+     "mean": 435,
+     "lo": 417.6,
+     "hi": 452.4
+    },
+    "loadBalanceCv": {
+     "mean": 0.05,
+     "lo": 0.044,
+     "hi": 0.056
+    }
+   },
+   "backlog": {
+    "plus3Start": {
+     "mean": 1597,
+     "lo": 1597,
+     "hi": 1597
+    },
+    "plus3End": {
+     "mean": 1684,
+     "lo": 1673.896,
+     "hi": 1694.104
+    },
+    "plus3Change": {
+     "mean": 87,
+     "lo": 76.896,
+     "hi": 97.104
+    },
+    "plus4Start": {
+     "mean": 897,
+     "lo": 897,
+     "hi": 897
+    },
+    "plus4End": {
+     "mean": 1036,
+     "lo": 1027.712,
+     "hi": 1044.288
+    },
+    "plus4Change": {
+     "mean": 139,
+     "lo": 130.712,
+     "hi": 147.288
+    },
+    "plus5Start": {
+     "mean": 436,
+     "lo": 436,
+     "hi": 436
+    },
+    "plus5End": {
+     "mean": 499,
+     "lo": 494.01,
+     "hi": 503.99
+    },
+    "plus5Change": {
+     "mean": 63,
+     "lo": 58.01,
+     "hi": 67.99
+    }
+   },
+   "extra": {
+    "listedPerDay": {
+     "mean": 48.68,
+     "lo": 48.1932,
+     "hi": 49.1668
+    },
+    "reachedPerDay": {
+     "mean": 38.22,
+     "lo": 37.4557,
+     "hi": 38.9843
+    },
+    "substantivePerDay": {
+     "mean": 20.35,
+     "lo": 19.8413,
+     "hi": 20.8587
+    },
+    "disposed": {
+     "mean": 167,
+     "lo": 158.65,
+     "hi": 175.35
+    },
+    "disposed4yPlus": {
+     "mean": 71,
+     "lo": 66.03,
+     "hi": 75.97
+    },
+    "tripsPerSubstantive": {
+     "mean": 4.6,
+     "lo": 4.462,
+     "hi": 4.738
+    },
+    "wastedTripShare": {
+     "mean": 0.5,
+     "lo": 0.488,
+     "hi": 0.512
+    },
+    "deskPerDay": {
+     "mean": 21,
+     "lo": 20.16,
+     "hi": 21.84
+    },
+    "vacatedPerDay": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   }
+  },
+  "weekly": [
+   {
+    "week": 1,
+    "start": "2026-10-01",
+    "end": "2026-10-04",
+    "sittingDays": 1,
+    "listed": {
+     "mean": 48.3,
+     "lo": 47.5758,
+     "hi": 49.0242
+    },
+    "reached": {
+     "mean": 37.9,
+     "lo": 36.9525,
+     "hi": 38.8475
+    },
+    "substantive": {
+     "mean": 20.2,
+     "lo": 19.292,
+     "hi": 21.108
+    },
+    "disposed": {
+     "mean": 3.2,
+     "lo": 2.7,
+     "hi": 3.7
+    },
+    "desk": {
+     "mean": 26,
+     "lo": 24.4381,
+     "hi": 27.5619
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 401.9,
+     "lo": 395.8712,
+     "hi": 407.9288
+    },
+    "overrunDays": {
+     "mean": 0.9,
+     "lo": 0.6,
+     "hi": 1
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 389,
+      "lo": 388,
+      "hi": 390
+     },
+     "1-3": {
+      "mean": 1013,
+      "lo": 1011.9871,
+      "hi": 1014.0129
+     },
+     "3-4": {
+      "mean": 699,
+      "lo": 698,
+      "hi": 700
+     },
+     "4-5": {
+      "mean": 460,
+      "lo": 459,
+      "hi": 461
+     },
+     "5+": {
+      "mean": 435,
+      "lo": 434,
+      "hi": 436
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 55,
+      "lo": 54,
+      "hi": 56
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 199,
+      "lo": 198,
+      "hi": 200
+     },
+     "COGNIZANCE": {
+      "mean": 27,
+      "lo": 26,
+      "hi": 28
+     },
+     "APPEARANCE": {
+      "mean": 222,
+      "lo": 221,
+      "hi": 223
+     },
+     "WARRANT": {
+      "mean": 386,
+      "lo": 385,
+      "hi": 387
+     },
+     "PLEA": {
+      "mean": 105,
+      "lo": 104,
+      "hi": 106
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 91,
+      "lo": 90,
+      "hi": 92
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 456,
+      "lo": 455,
+      "hi": 457
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 557,
+      "lo": 556,
+      "hi": 558
+     },
+     "ARGUMENTS": {
+      "mean": 236,
+      "lo": 235,
+      "hi": 237
+     },
+     "JUDGEMENT": {
+      "mean": 663,
+      "lo": 662,
+      "hi": 664
+     }
+    }
+   },
+   {
+    "week": 2,
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 249.5,
+     "lo": 245.7574,
+     "hi": 253.2426
+    },
+    "reached": {
+     "mean": 195.9,
+     "lo": 191.0034,
+     "hi": 200.7966
+    },
+    "substantive": {
+     "mean": 104.3,
+     "lo": 99.6075,
+     "hi": 108.9925
+    },
+    "disposed": {
+     "mean": 16.8,
+     "lo": 14.7877,
+     "hi": 18.8123
+    },
+    "desk": {
+     "mean": 130.2,
+     "lo": 122.3864,
+     "hi": 138.0136
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 2077.2,
+     "lo": 2046.0426,
+     "hi": 2108.3574
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 388,
+      "lo": 387,
+      "hi": 389
+     },
+     "1-3": {
+      "mean": 1008,
+      "lo": 1005.9849,
+      "hi": 1010.0151
+     },
+     "3-4": {
+      "mean": 658,
+      "lo": 656.6846,
+      "hi": 659.3154
+     },
+     "4-5": {
+      "mean": 495,
+      "lo": 494,
+      "hi": 496
+     },
+     "5+": {
+      "mean": 432,
+      "lo": 431,
+      "hi": 433
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 53,
+      "lo": 52,
+      "hi": 54
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 197,
+      "lo": 196,
+      "hi": 198
+     },
+     "COGNIZANCE": {
+      "mean": 29,
+      "lo": 28,
+      "hi": 30
+     },
+     "APPEARANCE": {
+      "mean": 218,
+      "lo": 217,
+      "hi": 219
+     },
+     "WARRANT": {
+      "mean": 389,
+      "lo": 387.8338,
+      "hi": 390.1662
+     },
+     "PLEA": {
+      "mean": 103,
+      "lo": 102,
+      "hi": 104
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 94,
+      "lo": 93,
+      "hi": 95
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 450,
+      "lo": 448.6506,
+      "hi": 451.3494
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 559,
+      "lo": 557.3228,
+      "hi": 560.6772
+     },
+     "ARGUMENTS": {
+      "mean": 240,
+      "lo": 239,
+      "hi": 241
+     },
+     "JUDGEMENT": {
+      "mean": 649,
+      "lo": 647.0541,
+      "hi": 650.9459
+     }
+    }
+   },
+   {
+    "week": 3,
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 235.3,
+     "lo": 231.7704,
+     "hi": 238.8296
+    },
+    "reached": {
+     "mean": 184.7,
+     "lo": 180.0821,
+     "hi": 189.3179
+    },
+    "substantive": {
+     "mean": 98.3,
+     "lo": 93.8746,
+     "hi": 102.7254
+    },
+    "disposed": {
+     "mean": 15.8,
+     "lo": 13.9022,
+     "hi": 17.6978
+    },
+    "desk": {
+     "mean": 118.8,
+     "lo": 111.6747,
+     "hi": 125.9253
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1959,
+     "lo": 1929.6158,
+     "hi": 1988.3843
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 388,
+      "lo": 386.8361,
+      "hi": 389.1639
+     },
+     "1-3": {
+      "mean": 928,
+      "lo": 925.2155,
+      "hi": 930.7845
+     },
+     "3-4": {
+      "mean": 693,
+      "lo": 690.9207,
+      "hi": 695.0793
+     },
+     "4-5": {
+      "mean": 526,
+      "lo": 524.4227,
+      "hi": 527.5773
+     },
+     "5+": {
+      "mean": 429,
+      "lo": 427.713,
+      "hi": 430.287
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 51,
+      "lo": 50,
+      "hi": 52
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 195,
+      "lo": 194,
+      "hi": 196
+     },
+     "COGNIZANCE": {
+      "mean": 31,
+      "lo": 30,
+      "hi": 32
+     },
+     "APPEARANCE": {
+      "mean": 214,
+      "lo": 213,
+      "hi": 215
+     },
+     "WARRANT": {
+      "mean": 391,
+      "lo": 389.2409,
+      "hi": 392.7591
+     },
+     "PLEA": {
+      "mean": 100,
+      "lo": 99,
+      "hi": 101
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 98,
+      "lo": 97,
+      "hi": 99
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 444,
+      "lo": 442.0022,
+      "hi": 445.9978
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 561,
+      "lo": 558.4734,
+      "hi": 563.5266
+     },
+     "ARGUMENTS": {
+      "mean": 243,
+      "lo": 241.9043,
+      "hi": 244.0957
+     },
+     "JUDGEMENT": {
+      "mean": 634,
+      "lo": 631.146,
+      "hi": 636.854
+     }
+    }
+   },
+   {
+    "week": 4,
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "sittingDays": 4,
+    "listed": {
+     "mean": 194.7,
+     "lo": 191.7789,
+     "hi": 197.6211
+    },
+    "reached": {
+     "mean": 152.9,
+     "lo": 149.0783,
+     "hi": 156.7217
+    },
+    "substantive": {
+     "mean": 81.4,
+     "lo": 77.7376,
+     "hi": 85.0624
+    },
+    "disposed": {
+     "mean": 13.1,
+     "lo": 11.5294,
+     "hi": 14.6706
+    },
+    "desk": {
+     "mean": 94.9,
+     "lo": 89.2048,
+     "hi": 100.5952
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1621.2,
+     "lo": 1596.882,
+     "hi": 1645.518
+    },
+    "overrunDays": {
+     "mean": 3.7,
+     "lo": 2.9601,
+     "hi": 4
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 388,
+      "lo": 386.4496,
+      "hi": 389.5504
+     },
+     "1-3": {
+      "mean": 899,
+      "lo": 895.4046,
+      "hi": 902.5954
+     },
+     "3-4": {
+      "mean": 676,
+      "lo": 673.295,
+      "hi": 678.705
+     },
+     "4-5": {
+      "mean": 562,
+      "lo": 559.7535,
+      "hi": 564.2465
+     },
+     "5+": {
+      "mean": 427,
+      "lo": 425.2936,
+      "hi": 428.7064
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 50,
+      "lo": 49,
+      "hi": 51
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 193,
+      "lo": 191.8415,
+      "hi": 194.1585
+     },
+     "COGNIZANCE": {
+      "mean": 33,
+      "lo": 32,
+      "hi": 34
+     },
+     "APPEARANCE": {
+      "mean": 212,
+      "lo": 210.7307,
+      "hi": 213.2693
+     },
+     "WARRANT": {
+      "mean": 393,
+      "lo": 390.6445,
+      "hi": 395.3555
+     },
+     "PLEA": {
+      "mean": 98,
+      "lo": 97,
+      "hi": 99
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 100,
+      "lo": 99,
+      "hi": 101
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 439,
+      "lo": 436.3634,
+      "hi": 441.6366
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 563,
+      "lo": 559.6202,
+      "hi": 566.3798
+     },
+     "ARGUMENTS": {
+      "mean": 247,
+      "lo": 245.5205,
+      "hi": 248.4795
+     },
+     "JUDGEMENT": {
+      "mean": 623,
+      "lo": 619.2638,
+      "hi": 626.7362
+     }
+    }
+   },
+   {
+    "week": 5,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 251.5,
+     "lo": 247.727,
+     "hi": 255.273
+    },
+    "reached": {
+     "mean": 197.5,
+     "lo": 192.5636,
+     "hi": 202.4364
+    },
+    "substantive": {
+     "mean": 105.1,
+     "lo": 100.3694,
+     "hi": 109.8306
+    },
+    "disposed": {
+     "mean": 16.9,
+     "lo": 14.8713,
+     "hi": 18.9287
+    },
+    "desk": {
+     "mean": 118.3,
+     "lo": 111.2041,
+     "hi": 125.3959
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 2094.1,
+     "lo": 2062.6893,
+     "hi": 2125.5108
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 387,
+      "lo": 385.0644,
+      "hi": 388.9356
+     },
+     "1-3": {
+      "mean": 893,
+      "lo": 888.5326,
+      "hi": 897.4674
+     },
+     "3-4": {
+      "mean": 673,
+      "lo": 669.6367,
+      "hi": 676.3633
+     },
+     "4-5": {
+      "mean": 558,
+      "lo": 555.2115,
+      "hi": 560.7885
+     },
+     "5+": {
+      "mean": 424,
+      "lo": 421.882,
+      "hi": 426.118
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 49,
+      "lo": 48,
+      "hi": 50
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 191,
+      "lo": 189.567,
+      "hi": 192.433
+     },
+     "COGNIZANCE": {
+      "mean": 35,
+      "lo": 34,
+      "hi": 36
+     },
+     "APPEARANCE": {
+      "mean": 208,
+      "lo": 206.4393,
+      "hi": 209.5607
+     },
+     "WARRANT": {
+      "mean": 395,
+      "lo": 392.0407,
+      "hi": 397.9593
+     },
+     "PLEA": {
+      "mean": 96,
+      "lo": 95,
+      "hi": 97
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 103,
+      "lo": 102,
+      "hi": 104
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 434,
+      "lo": 430.7457,
+      "hi": 437.2543
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 565,
+      "lo": 560.7588,
+      "hi": 569.2412
+     },
+     "ARGUMENTS": {
+      "mean": 250,
+      "lo": 248.1215,
+      "hi": 251.8785
+     },
+     "JUDGEMENT": {
+      "mean": 608,
+      "lo": 603.4374,
+      "hi": 612.5626
+     }
+    }
+   },
+   {
+    "week": 6,
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 237.3,
+     "lo": 233.74,
+     "hi": 240.86
+    },
+    "reached": {
+     "mean": 186.3,
+     "lo": 181.6423,
+     "hi": 190.9577
+    },
+    "substantive": {
+     "mean": 99.2,
+     "lo": 94.7364,
+     "hi": 103.6636
+    },
+    "disposed": {
+     "mean": 16,
+     "lo": 14.0858,
+     "hi": 17.9142
+    },
+    "desk": {
+     "mean": 107.5,
+     "lo": 101.0504,
+     "hi": 113.9496
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1975.8,
+     "lo": 1946.1624,
+     "hi": 2005.4376
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 387,
+      "lo": 384.68,
+      "hi": 389.32
+     },
+     "1-3": {
+      "mean": 888,
+      "lo": 882.6714,
+      "hi": 893.3286
+     },
+     "3-4": {
+      "mean": 635,
+      "lo": 631.1896,
+      "hi": 638.8104
+     },
+     "4-5": {
+      "mean": 558,
+      "lo": 554.6528,
+      "hi": 561.3472
+     },
+     "5+": {
+      "mean": 451,
+      "lo": 448.2969,
+      "hi": 453.7031
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 47,
+      "lo": 46,
+      "hi": 48
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 189,
+      "lo": 187.2987,
+      "hi": 190.7013
+     },
+     "COGNIZANCE": {
+      "mean": 36,
+      "lo": 35,
+      "hi": 37
+     },
+     "APPEARANCE": {
+      "mean": 205,
+      "lo": 203.1568,
+      "hi": 206.8432
+     },
+     "WARRANT": {
+      "mean": 396,
+      "lo": 392.4318,
+      "hi": 399.5682
+     },
+     "PLEA": {
+      "mean": 94,
+      "lo": 93,
+      "hi": 95
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 106,
+      "lo": 105,
+      "hi": 107
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 429,
+      "lo": 425.1432,
+      "hi": 432.8568
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 568,
+      "lo": 562.8918,
+      "hi": 573.1082
+     },
+     "ARGUMENTS": {
+      "mean": 254,
+      "lo": 251.7109,
+      "hi": 256.2891
+     },
+     "JUDGEMENT": {
+      "mean": 594,
+      "lo": 588.6537,
+      "hi": 599.3463
+     }
+    }
+   },
+   {
+    "week": 7,
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "sittingDays": 4,
+    "listed": {
+     "mean": 196.4,
+     "lo": 193.4546,
+     "hi": 199.3454
+    },
+    "reached": {
+     "mean": 154.1,
+     "lo": 150.2464,
+     "hi": 157.9536
+    },
+    "substantive": {
+     "mean": 82.1,
+     "lo": 78.4071,
+     "hi": 85.7929
+    },
+    "disposed": {
+     "mean": 13.2,
+     "lo": 11.6163,
+     "hi": 14.7837
+    },
+    "desk": {
+     "mean": 85.5,
+     "lo": 80.3672,
+     "hi": 90.6328
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1634.7,
+     "lo": 1610.1794,
+     "hi": 1659.2207
+    },
+    "overrunDays": {
+     "mean": 3.7,
+     "lo": 2.9601,
+     "hi": 4
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 386,
+      "lo": 383.296,
+      "hi": 388.704
+     },
+     "1-3": {
+      "mean": 884,
+      "lo": 877.8135,
+      "hi": 890.1865
+     },
+     "3-4": {
+      "mean": 632,
+      "lo": 627.5746,
+      "hi": 636.4254
+     },
+     "4-5": {
+      "mean": 555,
+      "lo": 551.1164,
+      "hi": 558.8836
+     },
+     "5+": {
+      "mean": 448,
+      "lo": 444.8638,
+      "hi": 451.1362
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 46,
+      "lo": 45,
+      "hi": 47
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 187,
+      "lo": 185.0323,
+      "hi": 188.9677
+     },
+     "COGNIZANCE": {
+      "mean": 37,
+      "lo": 36,
+      "hi": 38
+     },
+     "APPEARANCE": {
+      "mean": 202,
+      "lo": 199.8758,
+      "hi": 204.1242
+     },
+     "WARRANT": {
+      "mean": 398,
+      "lo": 393.822,
+      "hi": 402.178
+     },
+     "PLEA": {
+      "mean": 93,
+      "lo": 92,
+      "hi": 94
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 108,
+      "lo": 106.8651,
+      "hi": 109.1349
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 424,
+      "lo": 419.5443,
+      "hi": 428.4557
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 569,
+      "lo": 563.0239,
+      "hi": 574.9761
+     },
+     "ARGUMENTS": {
+      "mean": 257,
+      "lo": 254.2967,
+      "hi": 259.7033
+     },
+     "JUDGEMENT": {
+      "mean": 583,
+      "lo": 576.8826,
+      "hi": 589.1174
+     }
+    }
+   },
+   {
+    "week": 8,
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 253.6,
+     "lo": 249.7965,
+     "hi": 257.4035
+    },
+    "reached": {
+     "mean": 199,
+     "lo": 194.0238,
+     "hi": 203.9762
+    },
+    "substantive": {
+     "mean": 106,
+     "lo": 101.2312,
+     "hi": 110.7688
+    },
+    "disposed": {
+     "mean": 17,
+     "lo": 14.955,
+     "hi": 19.045
+    },
+    "desk": {
+     "mean": 106.1,
+     "lo": 99.7344,
+     "hi": 112.4656
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 2110.9,
+     "lo": 2079.2359,
+     "hi": 2142.5641
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 386,
+      "lo": 382.9135,
+      "hi": 389.0865
+     },
+     "1-3": {
+      "mean": 857,
+      "lo": 850.1407,
+      "hi": 863.8593
+     },
+     "3-4": {
+      "mean": 650,
+      "lo": 644.803,
+      "hi": 655.197
+     },
+     "4-5": {
+      "mean": 522,
+      "lo": 517.8227,
+      "hi": 526.1773
+     },
+     "5+": {
+      "mean": 474,
+      "lo": 470.2101,
+      "hi": 477.7899
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 45,
+      "lo": 44,
+      "hi": 46
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 185,
+      "lo": 182.7759,
+      "hi": 187.2241
+     },
+     "COGNIZANCE": {
+      "mean": 39,
+      "lo": 38,
+      "hi": 40
+     },
+     "APPEARANCE": {
+      "mean": 199,
+      "lo": 196.6085,
+      "hi": 201.3915
+     },
+     "WARRANT": {
+      "mean": 400,
+      "lo": 395.2044,
+      "hi": 404.7956
+     },
+     "PLEA": {
+      "mean": 91,
+      "lo": 89.9116,
+      "hi": 92.0884
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 111,
+      "lo": 109.6731,
+      "hi": 112.3269
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 419,
+      "lo": 413.969,
+      "hi": 424.031
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 571,
+      "lo": 564.1477,
+      "hi": 577.8523
+     },
+     "ARGUMENTS": {
+      "mean": 261,
+      "lo": 257.8638,
+      "hi": 264.1362
+     },
+     "JUDGEMENT": {
+      "mean": 568,
+      "lo": 561.1796,
+      "hi": 574.8204
+     }
+    }
+   },
+   {
+    "week": 9,
+    "start": "2026-11-23",
+    "end": "2026-11-29",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 239.4,
+     "lo": 235.8095,
+     "hi": 242.9905
+    },
+    "reached": {
+     "mean": 187.9,
+     "lo": 183.2025,
+     "hi": 192.5975
+    },
+    "substantive": {
+     "mean": 100,
+     "lo": 95.4983,
+     "hi": 104.5017
+    },
+    "disposed": {
+     "mean": 16.1,
+     "lo": 14.1695,
+     "hi": 18.0305
+    },
+    "desk": {
+     "mean": 96,
+     "lo": 90.2387,
+     "hi": 101.7613
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1992.7,
+     "lo": 1962.8091,
+     "hi": 2022.5909
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 385,
+      "lo": 381.5318,
+      "hi": 388.4682
+     },
+     "1-3": {
+      "mean": 824,
+      "lo": 816.5838,
+      "hi": 831.4162
+     },
+     "3-4": {
+      "mean": 674,
+      "lo": 667.9337,
+      "hi": 680.0663
+     },
+     "4-5": {
+      "mean": 519,
+      "lo": 514.3332,
+      "hi": 523.6668
+     },
+     "5+": {
+      "mean": 470,
+      "lo": 465.766,
+      "hi": 474.234
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 43,
+      "lo": 42,
+      "hi": 44
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 183,
+      "lo": 180.5259,
+      "hi": 185.4741
+     },
+     "COGNIZANCE": {
+      "mean": 40,
+      "lo": 39,
+      "hi": 41
+     },
+     "APPEARANCE": {
+      "mean": 196,
+      "lo": 193.3482,
+      "hi": 198.6518
+     },
+     "WARRANT": {
+      "mean": 401,
+      "lo": 395.5827,
+      "hi": 406.4173
+     },
+     "PLEA": {
+      "mean": 89,
+      "lo": 87.7993,
+      "hi": 90.2007
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 113,
+      "lo": 111.4759,
+      "hi": 114.5241
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 414,
+      "lo": 408.4072,
+      "hi": 419.5928
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 573,
+      "lo": 565.2672,
+      "hi": 580.7328
+     },
+     "ARGUMENTS": {
+      "mean": 265,
+      "lo": 261.4191,
+      "hi": 268.5809
+     },
+     "JUDGEMENT": {
+      "mean": 554,
+      "lo": 546.5188,
+      "hi": 561.4812
+     }
+    }
+   },
+   {
+    "week": 10,
+    "start": "2026-11-30",
+    "end": "2026-12-06",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 247.5,
+     "lo": 243.7878,
+     "hi": 251.2122
+    },
+    "reached": {
+     "mean": 194.3,
+     "lo": 189.4432,
+     "hi": 199.1568
+    },
+    "substantive": {
+     "mean": 103.4,
+     "lo": 98.7457,
+     "hi": 108.0543
+    },
+    "disposed": {
+     "mean": 16.6,
+     "lo": 14.604,
+     "hi": 18.596
+    },
+    "desk": {
+     "mean": 95,
+     "lo": 89.2996,
+     "hi": 100.7005
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 2060.3,
+     "lo": 2029.3959,
+     "hi": 2091.2041
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 385,
+      "lo": 381.1512,
+      "hi": 388.8488
+     },
+     "1-3": {
+      "mean": 773,
+      "lo": 765.2736,
+      "hi": 780.7264
+     },
+     "3-4": {
+      "mean": 686,
+      "lo": 679.1355,
+      "hi": 692.8645
+     },
+     "4-5": {
+      "mean": 545,
+      "lo": 539.552,
+      "hi": 550.448
+     },
+     "5+": {
+      "mean": 467,
+      "lo": 462.3275,
+      "hi": 471.6725
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 42,
+      "lo": 41,
+      "hi": 43
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 181,
+      "lo": 178.2822,
+      "hi": 183.7178
+     },
+     "COGNIZANCE": {
+      "mean": 41,
+      "lo": 40,
+      "hi": 42
+     },
+     "APPEARANCE": {
+      "mean": 194,
+      "lo": 191.0946,
+      "hi": 196.9054
+     },
+     "WARRANT": {
+      "mean": 403,
+      "lo": 396.9572,
+      "hi": 409.0428
+     },
+     "PLEA": {
+      "mean": 87,
+      "lo": 85.6906,
+      "hi": 88.3094
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 115,
+      "lo": 113.274,
+      "hi": 116.726
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 409,
+      "lo": 402.8583,
+      "hi": 415.1417
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 574,
+      "lo": 565.383,
+      "hi": 582.617
+     },
+     "ARGUMENTS": {
+      "mean": 269,
+      "lo": 264.9628,
+      "hi": 273.0372
+     },
+     "JUDGEMENT": {
+      "mean": 540,
+      "lo": 531.9,
+      "hi": 548.1
+     }
+    }
+   },
+   {
+    "week": 11,
+    "start": "2026-12-07",
+    "end": "2026-12-13",
+    "sittingDays": 5,
+    "listed": {
+     "mean": 233.3,
+     "lo": 229.8008,
+     "hi": 236.7992
+    },
+    "reached": {
+     "mean": 183.1,
+     "lo": 178.5219,
+     "hi": 187.6781
+    },
+    "substantive": {
+     "mean": 97.5,
+     "lo": 93.1127,
+     "hi": 101.8873
+    },
+    "disposed": {
+     "mean": 15.7,
+     "lo": 13.8186,
+     "hi": 17.5814
+    },
+    "desk": {
+     "mean": 85.5,
+     "lo": 80.3681,
+     "hi": 90.6319
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 1942.1,
+     "lo": 1912.9691,
+     "hi": 1971.2309
+    },
+    "overrunDays": {
+     "mean": 4.6,
+     "lo": 3.6752,
+     "hi": 5
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 384,
+      "lo": 379.7714,
+      "hi": 388.2286
+     },
+     "1-3": {
+      "mean": 767,
+      "lo": 758.5601,
+      "hi": 775.4399
+     },
+     "3-4": {
+      "mean": 649,
+      "lo": 641.8625,
+      "hi": 656.1375
+     },
+     "4-5": {
+      "mean": 539,
+      "lo": 533.0687,
+      "hi": 544.9313
+     },
+     "5+": {
+      "mean": 500,
+      "lo": 494.5009,
+      "hi": 505.4991
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 41,
+      "lo": 40,
+      "hi": 42
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 179,
+      "lo": 176.045,
+      "hi": 181.955
+     },
+     "COGNIZANCE": {
+      "mean": 42,
+      "lo": 41,
+      "hi": 43
+     },
+     "APPEARANCE": {
+      "mean": 191,
+      "lo": 187.8471,
+      "hi": 194.1529
+     },
+     "WARRANT": {
+      "mean": 404,
+      "lo": 397.3284,
+      "hi": 410.6716
+     },
+     "PLEA": {
+      "mean": 86,
+      "lo": 84.5852,
+      "hi": 87.4148
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 117,
+      "lo": 115.0679,
+      "hi": 118.9321
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 405,
+      "lo": 398.3217,
+      "hi": 411.6783
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 576,
+      "lo": 566.4955,
+      "hi": 585.5045
+     },
+     "ARGUMENTS": {
+      "mean": 273,
+      "lo": 268.4948,
+      "hi": 277.5052
+     },
+     "JUDGEMENT": {
+      "mean": 526,
+      "lo": 517.323,
+      "hi": 534.677
+     }
+    }
+   },
+   {
+    "week": 12,
+    "start": "2026-12-14",
+    "end": "2026-12-15",
+    "sittingDays": 2,
+    "listed": {
+     "mean": 96.6,
+     "lo": 95.1516,
+     "hi": 98.0484
+    },
+    "reached": {
+     "mean": 75.8,
+     "lo": 73.9051,
+     "hi": 77.6949
+    },
+    "substantive": {
+     "mean": 40.4,
+     "lo": 38.584,
+     "hi": 42.216
+    },
+    "disposed": {
+     "mean": 6.5,
+     "lo": 5.7213,
+     "hi": 7.2787
+    },
+    "desk": {
+     "mean": 33.7,
+     "lo": 31.6758,
+     "hi": 35.7242
+    },
+    "vacated": {
+     "mean": 0,
+     "lo": -0.5,
+     "hi": 0.5
+    },
+    "minutesUsed": {
+     "mean": 803.8,
+     "lo": 791.7423,
+     "hi": 815.8577
+    },
+    "overrunDays": {
+     "mean": 1.8,
+     "lo": 1.4301,
+     "hi": 2
+    },
+    "pendingByAge": {
+     "0-1": {
+      "mean": 384,
+      "lo": 379.3893,
+      "hi": 388.6107
+     },
+     "1-3": {
+      "mean": 765,
+      "lo": 755.8187,
+      "hi": 774.1813
+     },
+     "3-4": {
+      "mean": 647,
+      "lo": 639.2308,
+      "hi": 654.7692
+     },
+     "4-5": {
+      "mean": 538,
+      "lo": 531.5467,
+      "hi": 544.4533
+     },
+     "5+": {
+      "mean": 499,
+      "lo": 493.017,
+      "hi": 504.983
+     }
+    },
+    "pendingByStage": {
+     "ADMISSION": {
+      "mean": 40,
+      "lo": 39,
+      "hi": 41
+     },
+     "DELAY_CONDONATION_HEARING": {
+      "mean": 178,
+      "lo": 174.7915,
+      "hi": 181.2085
+     },
+     "COGNIZANCE": {
+      "mean": 42,
+      "lo": 41,
+      "hi": 43
+     },
+     "APPEARANCE": {
+      "mean": 190,
+      "lo": 186.5784,
+      "hi": 193.4216
+     },
+     "WARRANT": {
+      "mean": 405,
+      "lo": 397.7117,
+      "hi": 412.2883
+     },
+     "PLEA": {
+      "mean": 85,
+      "lo": 83.467,
+      "hi": 86.533
+     },
+     "EXAMINATION_UNDER_S351_BNSS": {
+      "mean": 118,
+      "lo": 115.8786,
+      "hi": 120.1214
+     },
+     "EVIDENCE_COMPLAINANT": {
+      "mean": 403,
+      "lo": 395.7476,
+      "hi": 410.2524
+     },
+     "EVIDENCE_ACCUSED": {
+      "mean": 577,
+      "lo": 566.621,
+      "hi": 587.379
+     },
+     "ARGUMENTS": {
+      "mean": 275,
+      "lo": 270.0571,
+      "hi": 279.9429
+     },
+     "JUDGEMENT": {
+      "mean": 520,
+      "lo": 510.6356,
+      "hi": 529.3644
+     }
+    }
+   }
+  ]
+ },
+ "diff": {
+  "readme": {
+   "utilisation": {
+    "mean": 0.085,
+    "lo": 0.0799,
+    "hi": 0.0901
+   },
+   "reachRate": {
+    "mean": -0.165,
+    "lo": -0.1714,
+    "hi": -0.1586
+   },
+   "substantiveness": {
+    "mean": -0.0676,
+    "lo": -0.0752,
+    "hi": -0.06
+   },
+   "backlog4yHeardShare": {
+    "mean": 0.0218,
+    "lo": 0.0129,
+    "hi": 0.0307
+   },
+   "backlog4ySubstantiveShare": {
+    "mean": 0.02,
+    "lo": 0.0098,
+    "hi": 0.0302
+   },
+   "predictabilityGapDays": {
+    "mean": 4.45,
+    "lo": 4.1806,
+    "hi": 4.7194
+   }
+  },
+  "caseStudy": {
+   "utilisation": {
+    "mean": 0.085,
+    "lo": 0.0799,
+    "hi": 0.0901
+   },
+   "overrunDays": {
+    "mean": 42,
+    "lo": 40.2806,
+    "hi": 43.7194
+   },
+   "idleMinutesShare": {
+    "mean": -0.076,
+    "lo": -0.0798,
+    "hi": -0.0722
+   },
+   "heldAsScheduled": {
+    "mean": -0.1682,
+    "lo": -0.1752,
+    "hi": -0.1612
+   },
+   "heldAsScheduledAllDue": {
+    "mean": -0.135,
+    "lo": -0.1426,
+    "hi": -0.1274
+   },
+   "substantiveness": {
+    "mean": -0.0676,
+    "lo": -0.0752,
+    "hi": -0.06
+   },
+   "ageBandsStart": {
+    "0-1": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    },
+    "1-3": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    },
+    "3-4": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    },
+    "4-5": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    },
+    "5+": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   "ageBandsEnd": {
+    "0-1": {
+     "mean": 1,
+     "lo": -1.9311,
+     "hi": 3.9311
+    },
+    "1-3": {
+     "mean": 9,
+     "lo": 3.1927,
+     "hi": 14.8073
+    },
+    "3-4": {
+     "mean": 6,
+     "lo": 1.0795,
+     "hi": 10.9205
+    },
+    "4-5": {
+     "mean": -4,
+     "lo": -8.1219,
+     "hi": 0.1219
+    },
+    "5+": {
+     "mean": -3,
+     "lo": -6.8203,
+     "hi": 0.8203
+    }
+   },
+   "nextDateExcessDays": {
+    "mean": 2,
+    "lo": 1.8346,
+    "hi": 2.1654
+   },
+   "wastedRelistShare": {
+    "mean": 0.05,
+    "lo": 0.0417,
+    "hi": 0.0583
+   }
+  },
+  "siddarth": {
+   "throughputPerMonth": {
+    "mean": -3.65,
+    "lo": -5.8328,
+    "hi": -1.4672
+   },
+   "judgeTimeUsed": {
+    "mean": 0.085,
+    "lo": 0.0799,
+    "hi": 0.0901
+   },
+   "wastedListings": {
+    "mean": 0.1521,
+    "lo": 0.1451,
+    "hi": 0.1591
+   },
+   "heldOnPromisedDate": {
+    "mean": -0.1632,
+    "lo": -0.1708,
+    "hi": -0.1556
+   },
+   "oldestPendingAgeYears": {
+    "mean": -0.1,
+    "lo": -0.1538,
+    "hi": -0.0462
+   },
+   "p95PendingAgeYears": {
+    "mean": 0,
+    "lo": -0.0458,
+    "hi": 0.0458
+   },
+   "neverHeard": {
+    "mean": 15,
+    "lo": 4.116,
+    "hi": 25.884
+   },
+   "loadBalanceCv": {
+    "mean": 0,
+    "lo": -0.0038,
+    "hi": 0.0038
+   }
+  },
+  "backlog": {
+   "plus3Start": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "plus3End": {
+    "mean": -1,
+    "lo": -7.4321,
+    "hi": 5.4321
+   },
+   "plus3Change": {
+    "mean": -1,
+    "lo": -7.4321,
+    "hi": 5.4321
+   },
+   "plus4Start": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "plus4End": {
+    "mean": -8,
+    "lo": -13.2949,
+    "hi": -2.7051
+   },
+   "plus4Change": {
+    "mean": -8,
+    "lo": -13.2949,
+    "hi": -2.7051
+   },
+   "plus5Start": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "plus5End": {
+    "mean": -3,
+    "lo": -6.1852,
+    "hi": 0.1852
+   },
+   "plus5Change": {
+    "mean": -3,
+    "lo": -6.1852,
+    "hi": 0.1852
+   }
+  },
+  "extra": {
+   "listedPerDay": {
+    "mean": 11.68,
+    "lo": 11.4048,
+    "hi": 11.9552
+   },
+   "reachedPerDay": {
+    "mean": 3.07,
+    "lo": 2.6027,
+    "hi": 3.5373
+   },
+   "substantivePerDay": {
+    "mean": -0.74,
+    "lo": -1.0697,
+    "hi": -0.4103
+   },
+   "disposed": {
+    "mean": -9,
+    "lo": -14.459,
+    "hi": -3.541
+   },
+   "disposed4yPlus": {
+    "mean": 8,
+    "lo": 5.01,
+    "hi": 10.99
+   },
+   "tripsPerSubstantive": {
+    "mean": 1.7,
+    "lo": 1.6266,
+    "hi": 1.7734
+   },
+   "wastedTripShare": {
+    "mean": 0.23,
+    "lo": 0.2224,
+    "hi": 0.2376
+   },
+   "deskPerDay": {
+    "mean": 0,
+    "lo": -0.5346,
+    "hi": 0.5346
+   },
+   "vacatedPerDay": {
+    "mean": -3.1,
+    "lo": -3.2116,
+    "hi": -2.9884
+   }
+  }
+ },
+ "elapsedMs": 800
+}

@@ -1,0 +1,6 @@
+[0.0 min] final mode: 260 archived genomes; search until 14:52
+[5.1 min] final gen 1: leader g157 fails 0 (worst 0.00), 18.15 useful/day; 1158 runs
+[6.1 min] final gen 2: leader g157 fails 0 (worst 0.00), 18.15 useful/day; 1398 runs
+[7.2 min] final gen 3: leader g157 fails 0 (worst 0.00), 18.15 useful/day; 1638 runs
+[7.2 min] search done after 3 generations; 13 finalists to seeds 7-20
+[10.9 min] wrote summary.md and winner.json: g237 fails 0 on 7-20, 1 on 21-30

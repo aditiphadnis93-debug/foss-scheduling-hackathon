@@ -1,0 +1,9 @@
+$ bun run scripts/rules-check.ts --genome /Users/rohan/Downloads/pucar-hackathon/submission/submissions/benchtime/out/tournament/winner.json --seeds 31,32 --end 2026-12-15
+
+sehgal_way: 102 day plans, 5482 listings, 5478 next dates, 0 violations
+
+dimakar_way: 102 day plans, 6102 listings, 6062 next dates, 0 violations
+
+joshi_way: 102 day plans, 6121 listings, 6138 next dates, 0 violations
+
+kitchen_sink: 102 day plans, 3679 listings, 3873 next dates, 0 violations

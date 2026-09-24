@@ -1,0 +1,207 @@
+{
+ "name": "final rule, 14:15 (after adversarial review)",
+ "note": "Replaces the original rule (maximise useful hearings/day behind 7 guardrails) and the 14:00 amendment. Four independent reviews (/tmp/review/judge.md, scorecards.md, gaming.md, statistics.md) found: (1) guardrails compared with bin_packing's best numbers instead of today's way; (2) a policy could keep promises by parking cases past 15 Dec, since a case with no date in the horizon produces no row; (3) held-on-promised and held-all-due are the same number; (4) a desk order on the fixed date was counted as a broken date, which a magistrate would not; (5) utilisation, reach, substantiveness, waiting and load balance were unguarded; (6) the coverage cap relaxed itself to whatever the search found; (7) tolerances sat inside seed noise. Decided on tuning seeds; validation seeds 21-30 were already used once under the original rule; only 31-60 are untouched and give the headline. Added 14:36 on tuning seeds: every 4y+ case heard at least once (extra.neverHeard4yPlus <= today + 0.5), because the leader left about 5 old cases unheard and the README prints 4y+ heard at all as a score.",
+ "method": "paired non-inferiority against status_quo_60 on the same seeds: a guardrail passes when the 95% t-bound of (candidate - today) clears -margin (higher-is-better) or +margin (lower-is-better). Absolute limits are compared on the mean. Nothing is relaxed automatically: if nothing passes, publish the frontier and the owner chooses.",
+ "guardrails": [
+  {
+   "label": "every case given a date inside the quarter",
+   "measure": "extra.casesScheduled",
+   "vs": "absolute",
+   "op": ">=",
+   "value": 2985,
+   "scale": 50
+  },
+  {
+   "label": "dates honoured (heard or desk order on the day)",
+   "measure": "extra.promisesHonouredInclDesk",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.02,
+   "scale": 0.05
+  },
+  {
+   "label": "cases never acted on",
+   "measure": "extra.neverActedOn",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 100,
+   "scale": 100
+  },
+  {
+   "label": "cases never heard",
+   "measure": "siddarth.neverHeard",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 150,
+   "scale": 100
+  },
+  {
+   "label": "4y+ heard at all (README)",
+   "measure": "readme.backlog4yHeardShare",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.01,
+   "scale": 0.05
+  },
+  {
+   "label": "every 4y+ case heard at least once (README score)",
+   "measure": "extra.neverHeard4yPlus",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 0.5,
+   "scale": 2,
+   "on": "mean"
+  },
+  {
+   "label": "4y+ moved on",
+   "measure": "readme.backlog4ySubstantiveShare",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.01,
+   "scale": 0.05
+  },
+  {
+   "label": "4y+ still pending at the end",
+   "measure": "extra.pending4yPlusEnd",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 5,
+   "scale": 20
+  },
+  {
+   "label": "disposals on the merits (verdict + settlement + compounded)",
+   "measure": "derived.meritsDisposals",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 5,
+   "scale": 20
+  },
+  {
+   "label": "next-date excess over PUCAR's gap",
+   "measure": "caseStudy.nextDateExcessDays",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 2,
+   "scale": 10
+  },
+  {
+   "label": "days that ran late",
+   "measure": "caseStudy.overrunDays",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 2,
+   "scale": 5
+  },
+  {
+   "label": "court time used",
+   "measure": "caseStudy.utilisation",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.05,
+   "scale": 0.05
+  },
+  {
+   "label": "reach rate",
+   "measure": "readme.reachRate",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.01,
+   "scale": 0.05
+  },
+  {
+   "label": "substantiveness",
+   "measure": "readme.substantiveness",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0.01,
+   "scale": 0.05
+  },
+  {
+   "label": "trips per useful hearing",
+   "measure": "extra.tripsPerSubstantive",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 0.25,
+   "scale": 1
+  },
+  {
+   "label": "wasted listings",
+   "measure": "siddarth.wastedListings",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 0.01,
+   "scale": 0.05
+  },
+  {
+   "label": "minutes waited",
+   "measure": "extra.minutesWaited",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 5,
+   "scale": 30
+  },
+  {
+   "label": "load balance across days",
+   "measure": "siddarth.loadBalanceCv",
+   "vs": "status_quo_60",
+   "op": "<=",
+   "tol": 0.05,
+   "scale": 0.05
+  },
+  {
+   "label": "useful hearings a day at least today's",
+   "measure": "extra.substantivePerDay",
+   "vs": "status_quo_60",
+   "op": ">=",
+   "tol": 0,
+   "scale": 1
+  }
+ ],
+ "derived": {
+  "derived.meritsDisposals": "extra.disposedVerdict + extra.disposedSettlement + extra.disposedCompounded"
+ },
+ "dominance": "no single rival (the 8 baselines and benchtime_original) may be better than the pick on every guarded measure; report any rival that beats it on a measure, as context",
+ "objectives": [
+  {
+   "measure": "extra.substantivePerDay",
+   "dir": "max"
+  },
+  {
+   "measure": "derived.meritsDisposals",
+   "dir": "max"
+  },
+  {
+   "measure": "extra.promisesBroken",
+   "dir": "min"
+  },
+  {
+   "measure": "siddarth.neverHeard",
+   "dir": "min"
+  },
+  {
+   "measure": "extra.pending4yPlusEnd",
+   "dir": "min"
+  },
+  {
+   "measure": "extra.tripsPerSubstantive",
+   "dir": "min"
+  },
+  {
+   "measure": "caseStudy.overrunDays",
+   "dir": "min"
+  }
+ ],
+ "primary": "extra.substantivePerDay",
+ "ranking": "one ranking everywhere (search, stage-3 entry, final pick): guardrails failed, then worst shortfall relative to its margin, then primary",
+ "ties": "candidates within the 95% paired interval of the leader on the primary are tied; prefer more merits disposals, then fewer promises broken, then fewer never heard, then paired wins across every measure",
+ "frontier": "carry the best point at neverHeard <= today+150, +300, +600, +1000 and promisesBroken levels, so the owner can see the trade-off; never relax a guardrail automatically",
+ "seeds": {
+  "search": "1-6",
+  "decide": "7-20 (fresh runs, current code)",
+  "confirm": "21-30 (already used once under the original rule; say so)",
+  "headline": "31-60 only"
+ },
+ "reported": [
+  "siddarth.heldOnPromisedDate (strict: a desk order counts as broken) is reported next to the honoured reading, not guarded: the world only records a desk row when the court's record shows process or a report still out, so desk orders cannot be used to fake kept dates"
+ ]
+}

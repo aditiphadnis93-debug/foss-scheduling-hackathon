@@ -1,0 +1,133 @@
+{
+ "note": "Measured on tuning seeds 1-6 (fresh runs on the shared court, 1 Oct to 15 Dec 2026, synthetic cases); balanced also has held-out numbers in out/HEADLINE.md. Each aim is the best genome found for it among genomes that honour at least 85% of dates and leave at most 5 old cases unheard.",
+ "today": {
+  "usefulPerDay": 16.751633986928102,
+  "meritsDisposals": 82.16666666666666,
+  "datesHonoured": 0.9133442265795209,
+  "datesBroken": 265.1666666666667,
+  "casesGivenADate": 3000,
+  "neverHeard": 261.8333333333333,
+  "oldNeverHeard": 0,
+  "oldMovedOn": 0.27833519137866963,
+  "oldPendingAtEnd": 966.8333333333334,
+  "minutesWaited": 152.95299707665893,
+  "tripsPerUseful": 11.966421138941863,
+  "daysRanLate": 21.833333333333332
+ },
+ "aims": [
+  {
+   "id": "balanced",
+   "name": "Balanced (recommended)",
+   "description": "No worse than today on 19 measures, then the most useful hearings: the tournament winner.",
+   "measured": {
+    "usefulPerDay": 17.90849673202614,
+    "meritsDisposals": 86.50000000000001,
+    "datesHonoured": 0.9512219799585955,
+    "datesBroken": 159.33333333333334,
+    "casesGivenADate": 3000,
+    "neverHeard": 365.1666666666667,
+    "oldNeverHeard": 0,
+    "oldMovedOn": 0.2939427722036418,
+    "oldPendingAtEnd": 959.3333333333334,
+    "minutesWaited": 137.8957827313925,
+    "tripsPerUseful": 10.697749409062368,
+    "daysRanLate": 20
+   }
+  },
+  {
+   "id": "focus_hearings",
+   "name": "Most useful hearings",
+   "description": "Focus the quarter on the cases that can move: far more hearings that move a case, fewer trips and little waiting; about a third of cases get their first date after 15 December.",
+   "measured": {
+    "usefulPerDay": 22.382352941176467,
+    "meritsDisposals": 144.33333333333331,
+    "datesHonoured": 0.8855462257331869,
+    "datesBroken": 1492.1666666666667,
+    "casesGivenADate": 1991,
+    "neverHeard": 1224.6666666666667,
+    "oldNeverHeard": 3.8333333333333335,
+    "oldMovedOn": 0.4444444444444445,
+    "oldPendingAtEnd": 865.1666666666666,
+    "minutesWaited": 10.429925749480264,
+    "tripsPerUseful": 8.901490936486452,
+    "daysRanLate": 21.333333333333332
+   }
+  },
+  {
+   "id": "focus_finish",
+   "name": "Finish the most cases",
+   "description": "Concentrate on taking cases to judgment, day to day as s.143 NI Act intends: more than twice the cases decided on the merits; most cases get their first date after 15 December.",
+   "measured": {
+    "usefulPerDay": 12.140522875816993,
+    "meritsDisposals": 183.16666666666666,
+    "datesHonoured": 0.9232234611241737,
+    "datesBroken": 1998.3333333333333,
+    "casesGivenADate": 1223.1666666666667,
+    "neverHeard": 1808.8333333333333,
+    "oldNeverHeard": 2.1666666666666665,
+    "oldMovedOn": 0.4732441471571906,
+    "oldPendingAtEnd": 825.3333333333334,
+    "minutesWaited": 159.04798043551756,
+    "tripsPerUseful": 15.888547892120812,
+    "daysRanLate": 16.333333333333332
+   }
+  },
+  {
+   "id": "keep_dates",
+   "name": "Keep every date",
+   "description": "Give fewer dates you cannot keep: the fewest dates broken or never given, with everyone dated this quarter.",
+   "measured": {
+    "usefulPerDay": 17.604575163398692,
+    "meritsDisposals": 81.0,
+    "datesHonoured": 0.9736690450835707,
+    "datesBroken": 81.5,
+    "casesGivenADate": 3000,
+    "neverHeard": 340.1666666666667,
+    "oldNeverHeard": 0.5,
+    "oldMovedOn": 0.27833519137866963,
+    "oldPendingAtEnd": 966.5,
+    "minutesWaited": 128.82656686320237,
+    "tripsPerUseful": 10.332804651076954,
+    "daysRanLate": 16
+   }
+  },
+  {
+   "id": "reach_everyone",
+   "name": "Reach every case",
+   "description": "Every case heard at least once this quarter where possible: the fewest never heard; days run late more often.",
+   "measured": {
+    "usefulPerDay": 18.781045751633986,
+    "meritsDisposals": 83.66666666666667,
+    "datesHonoured": 0.9058133262942557,
+    "datesBroken": 317.3333333333333,
+    "casesGivenADate": 3000,
+    "neverHeard": 56.166666666666664,
+    "oldNeverHeard": 0.5,
+    "oldMovedOn": 0.28130806391675955,
+    "oldPendingAtEnd": 964.6666666666666,
+    "minutesWaited": 150.95353166092036,
+    "tripsPerUseful": 11.67589003343164,
+    "daysRanLate": 30.5
+   }
+  },
+  {
+   "id": "least_waiting",
+   "name": "Least waiting",
+   "description": "Call times for every matter: people wait minutes, not hours; days run late more often.",
+   "measured": {
+    "usefulPerDay": 18.55228758169935,
+    "meritsDisposals": 91.66666666666666,
+    "datesHonoured": 0.8815418954007966,
+    "datesBroken": 372.8333333333333,
+    "casesGivenADate": 3000,
+    "neverHeard": 341.3333333333333,
+    "oldNeverHeard": 0.5,
+    "oldMovedOn": 0.3000743218134522,
+    "oldPendingAtEnd": 956.5,
+    "minutesWaited": 2.532844002842897,
+    "tripsPerUseful": 11.726733500075506,
+    "daysRanLate": 29.5
+   }
+  }
+ ]
+}
