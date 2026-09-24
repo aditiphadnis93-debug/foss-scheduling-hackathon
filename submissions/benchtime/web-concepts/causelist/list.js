@@ -72,7 +72,9 @@ function header(P) {
   <div class="sure">
     <button type="button" class="linkish" id="sure" aria-expanded="${S.sure}">How sure are we?</button>
     <div id="sure-body" ${S.sure ? "" : "hidden"}>
-      <p>The day will most likely end between ${clock(Math.min(lo, end ?? lo))} and ${clock(hi)}. ${past}</p>
+      ${lateCount(P)
+        ? `<p>The list holds more hearings than one day on purpose. Many listed matters fail in the first minutes, so the next matter is called in their place. About ${Math.round(e.reached)} will be reached before the court rises at ${clockOf(P.sitting.end)}. Matters not reached get an early new date. Over the quarter, the court sits a little past ${clockOf(P.sitting.end)} on about 4 days in 10, for about 15 minutes on those days.</p>`
+        : `<p>The day will most likely end between ${clock(Math.min(lo, end ?? lo))} and ${clock(hi)}. ${past}</p>`}
       <p>Between ${Math.round(e.substantiveLo)} and ${Math.round(e.substantiveHi)} cases will likely go ahead.</p>
     </div>
   </div>

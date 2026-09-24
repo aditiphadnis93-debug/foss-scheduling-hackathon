@@ -736,6 +736,34 @@ hooks["s-found"] = {
   },
 };
 
+
+// ---------- why not higher ----------
+hooks["s-why"] = {
+  built: false,
+  build() {
+    const host = $("#wf"); host.innerHTML = ""; const MAX = 25;
+    for (const v of [0, 5, 10, 15, 20, 25]) { const t = el("div", "tick", `<span>${v}</span>`); t.style.bottom = (v / MAX) * 100 + "%"; if (v) host.append(t); }
+    const cols = [
+      { base: 0, h: 17.3, cls: "ink", val: "17.3", lab: "Today's list", later: false },
+      { base: 17.3, h: 1.0, cls: "blue", val: "+1.0", lab: "Failures known the evening before, avoided. Our pick measures 18.3.", later: false },
+      { base: 18.3, h: 3.3, cls: "grey", val: "+3.3", lab: "Failures that arise in court, avoided", later: true },
+      { base: 21.6, h: 2.1, cls: "grey", val: "+2.1", lab: "Idle minutes filled", later: true },
+      { base: 0, h: 23.7, cls: "outline", val: "23.7", lab: "Arithmetic ceiling", later: true },
+    ];
+    this.cols = cols.map((c) => {
+      const col = el("div", "wfcol" + (c.later ? " later" : "")); const bar = el("div", "wfbar " + c.cls); const val = el("div", "wfval", c.val); const lab = el("div", "wflab", c.lab);
+      col.append(bar, val, lab); host.append(col); return { c, bar, val, MAX };
+    });
+    this.built = true;
+  },
+  enter() { if (!this.built) this.build(); },
+  step(k) {
+    $(".why").classList.toggle("lit", k >= 1);
+    for (const o of this.cols) { const { c, bar, val, MAX } = o; bar.style.bottom = (c.base / MAX) * 100 + "%"; bar.style.height = "0%"; val.style.bottom = (c.base / MAX) * 100 + "%"; }
+    later(() => { for (const o of this.cols) { const { c, bar, val, MAX } = o; if (c.later && k < 1) continue; bar.style.height = (c.h / MAX) * 100 + "%"; val.style.bottom = `calc(${((c.base + c.h) / MAX) * 100}% + 6px)`; } }, 250);
+  },
+};
+
 // ---------- scene 6: the dial ----------
 const AIM_MEASURES = [
   { k: "usefulPerDay", label: "Useful hearings a day", dir: 1, f: (v) => fmt(v, 1) },
