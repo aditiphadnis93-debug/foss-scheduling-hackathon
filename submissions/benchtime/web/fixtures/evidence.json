@@ -1,0 +1,8617 @@
+{
+ "generatedAt": "2026-09-24T07:22:10.936Z",
+ "rosterId": "roster_3000_seed42",
+ "seeds": {
+  "tuning": [
+   1,
+   20
+  ],
+  "validation": [
+   21,
+   30
+  ],
+  "test": [
+   31,
+   60
+  ]
+ },
+ "baseline": "status_quo_60",
+ "recommended": "benchtime",
+ "arena": {
+  "rows": [
+   {
+    "policyId": "status_quo_60",
+    "policyName": "Status quo, 60-day gap",
+    "kind": "baseline",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.985,
+       "lo": 0.9804,
+       "hi": 0.9896
+      },
+      "reachRate": {
+       "mean": 0.62,
+       "lo": 0.6142,
+       "hi": 0.6258
+      },
+      "substantiveness": {
+       "mean": 0.32,
+       "lo": 0.3131,
+       "hi": 0.3269
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.61,
+       "lo": 0.6019,
+       "hi": 0.6181
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.24,
+       "lo": 0.2308,
+       "hi": 0.2492
+      },
+      "predictabilityGapDays": {
+       "mean": 13.8,
+       "lo": 13.2423,
+       "hi": 14.3577
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.985,
+       "lo": 0.9804,
+       "hi": 0.9896
+      },
+      "overrunDays": {
+       "mean": 46,
+       "lo": 43.8754,
+       "hi": 48.1246
+      },
+      "idleMinutesShare": {
+       "mean": 0.006,
+       "lo": 0.0025,
+       "hi": 0.0095
+      },
+      "heldAsScheduled": {
+       "mean": 0.54,
+       "lo": 0.5336,
+       "hi": 0.5464
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.54,
+       "lo": 0.5331,
+       "hi": 0.5469
+      },
+      "substantiveness": {
+       "mean": 0.32,
+       "lo": 0.3131,
+       "hi": 0.3269
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 384,
+        "lo": 381.3362,
+        "hi": 386.6638
+       },
+       "1-3": {
+        "mean": 768,
+        "lo": 762.6788,
+        "hi": 773.3212
+       },
+       "3-4": {
+        "mean": 649,
+        "lo": 644.5009,
+        "hi": 653.4991
+       },
+       "4-5": {
+        "mean": 554,
+        "lo": 550.1628,
+        "hi": 557.8372
+       },
+       "5+": {
+        "mean": 512,
+        "lo": 508.4512,
+        "hi": 515.5488
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 41.5,
+       "lo": 40.302,
+       "hi": 42.698
+      },
+      "wastedRelistShare": {
+       "mean": 0.46,
+       "lo": 0.4525,
+       "hi": 0.4675
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 52.8,
+       "lo": 51.2758,
+       "hi": 54.3242
+      },
+      "judgeTimeUsed": {
+       "mean": 0.985,
+       "lo": 0.9804,
+       "hi": 0.9896
+      },
+      "wastedListings": {
+       "mean": 0.8016,
+       "lo": 0.7952,
+       "hi": 0.808
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.5238,
+       "lo": 0.5169,
+       "hi": 0.5307
+      },
+      "oldestPendingAgeYears": {
+       "mean": 10.11,
+       "lo": 10.0516,
+       "hi": 10.1684
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.29,
+       "lo": 9.2471,
+       "hi": 9.3329
+      },
+      "neverHeard": {
+       "mean": 610,
+       "lo": 595.9127,
+       "hi": 624.0873
+      },
+      "loadBalanceCv": {
+       "mean": 0.04,
+       "lo": 0.0372,
+       "hi": 0.0428
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1715,
+       "lo": 1709.0591,
+       "hi": 1720.9409
+      },
+      "plus3Change": {
+       "mean": 118,
+       "lo": 112.0591,
+       "hi": 123.9409
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1066,
+       "lo": 1061.0764,
+       "hi": 1070.9236
+      },
+      "plus4Change": {
+       "mean": 169,
+       "lo": 164.0764,
+       "hi": 173.9236
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 512,
+       "lo": 509.044,
+       "hi": 514.956
+      },
+      "plus5Change": {
+       "mean": 76,
+       "lo": 73.044,
+       "hi": 78.956
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 88,
+       "lo": 87.4919,
+       "hi": 88.5081
+      },
+      "reachedPerDay": {
+       "mean": 54.56,
+       "lo": 53.93,
+       "hi": 55.19
+      },
+      "substantivePerDay": {
+       "mean": 17.46,
+       "lo": 17.208,
+       "hi": 17.712
+      },
+      "disposed": {
+       "mean": 132,
+       "lo": 128.1895,
+       "hi": 135.8105
+      },
+      "disposed4yPlus": {
+       "mean": 41,
+       "lo": 39.343,
+       "hi": 42.657
+      },
+      "tripsPerSubstantive": {
+       "mean": 8.1,
+       "lo": 7.9597,
+       "hi": 8.2403
+      },
+      "wastedTripShare": {
+       "mean": 0.74,
+       "lo": 0.7331,
+       "hi": 0.7469
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": 0,
+       "lo": -0.0029,
+       "hi": 0.0029
+      },
+      "reachRate": {
+       "mean": 0,
+       "lo": -0.0037,
+       "hi": 0.0037
+      },
+      "substantiveness": {
+       "mean": 0,
+       "lo": -0.0044,
+       "hi": 0.0044
+      },
+      "backlog4yHeardShare": {
+       "mean": 0,
+       "lo": -0.0052,
+       "hi": 0.0052
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0,
+       "lo": -0.0059,
+       "hi": 0.0059
+      },
+      "predictabilityGapDays": {
+       "mean": 0,
+       "lo": -0.3549,
+       "hi": 0.3549
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0,
+       "lo": -0.0029,
+       "hi": 0.0029
+      },
+      "overrunDays": {
+       "mean": 0,
+       "lo": -1.3521,
+       "hi": 1.3521
+      },
+      "idleMinutesShare": {
+       "mean": 0,
+       "lo": -0.0022,
+       "hi": 0.0022
+      },
+      "heldAsScheduled": {
+       "mean": 0,
+       "lo": -0.0041,
+       "hi": 0.0041
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0,
+       "lo": -0.0044,
+       "hi": 0.0044
+      },
+      "substantiveness": {
+       "mean": 0,
+       "lo": -0.0044,
+       "hi": 0.0044
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 0,
+        "lo": -1.6952,
+        "hi": 1.6952
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": -3.3864,
+        "hi": 3.3864
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": -2.8632,
+        "hi": 2.8632
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": -2.442,
+        "hi": 2.442
+       },
+       "5+": {
+        "mean": 0,
+        "lo": -2.2584,
+        "hi": 2.2584
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 0,
+       "lo": -0.7624,
+       "hi": 0.7624
+      },
+      "wastedRelistShare": {
+       "mean": 0,
+       "lo": -0.0048,
+       "hi": 0.0048
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 0,
+       "lo": -0.97,
+       "hi": 0.97
+      },
+      "judgeTimeUsed": {
+       "mean": 0,
+       "lo": -0.0029,
+       "hi": 0.0029
+      },
+      "wastedListings": {
+       "mean": 0,
+       "lo": -0.0041,
+       "hi": 0.0041
+      },
+      "heldOnPromisedDate": {
+       "mean": 0,
+       "lo": -0.0044,
+       "hi": 0.0044
+      },
+      "oldestPendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0372,
+       "hi": 0.0372
+      },
+      "p95PendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0273,
+       "hi": 0.0273
+      },
+      "neverHeard": {
+       "mean": 0,
+       "lo": -8.9651,
+       "hi": 8.9651
+      },
+      "loadBalanceCv": {
+       "mean": 0,
+       "lo": -0.0018,
+       "hi": 0.0018
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": 0,
+       "lo": -3.7808,
+       "hi": 3.7808
+      },
+      "plus3Change": {
+       "mean": 0,
+       "lo": -3.7808,
+       "hi": 3.7808
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": 0,
+       "lo": -3.1334,
+       "hi": 3.1334
+      },
+      "plus4Change": {
+       "mean": 0,
+       "lo": -3.1334,
+       "hi": 3.1334
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": 0,
+       "lo": -1.8812,
+       "hi": 1.8812
+      },
+      "plus5Change": {
+       "mean": 0,
+       "lo": -1.8812,
+       "hi": 1.8812
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 0,
+       "lo": -0.3234,
+       "hi": 0.3234
+      },
+      "reachedPerDay": {
+       "mean": 0,
+       "lo": -0.4009,
+       "hi": 0.4009
+      },
+      "substantivePerDay": {
+       "mean": 0,
+       "lo": -0.1604,
+       "hi": 0.1604
+      },
+      "disposed": {
+       "mean": 0,
+       "lo": -2.425,
+       "hi": 2.425
+      },
+      "disposed4yPlus": {
+       "mean": 0,
+       "lo": -1.0545,
+       "hi": 1.0545
+      },
+      "tripsPerSubstantive": {
+       "mean": 0,
+       "lo": -0.0893,
+       "hi": 0.0893
+      },
+      "wastedTripShare": {
+       "mean": 0,
+       "lo": -0.0044,
+       "hi": 0.0044
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "policyName": "Status quo, PUCAR gaps",
+    "kind": "baseline",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.99,
+       "lo": 0.9854,
+       "hi": 0.9946
+      },
+      "reachRate": {
+       "mean": 0.53,
+       "lo": 0.5242,
+       "hi": 0.5358
+      },
+      "substantiveness": {
+       "mean": 0.31,
+       "lo": 0.3031,
+       "hi": 0.3169
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.66,
+       "lo": 0.6519,
+       "hi": 0.6681
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.25,
+       "lo": 0.2408,
+       "hi": 0.2592
+      },
+      "predictabilityGapDays": {
+       "mean": 17.2,
+       "lo": 16.5049,
+       "hi": 17.8951
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.99,
+       "lo": 0.9854,
+       "hi": 0.9946
+      },
+      "overrunDays": {
+       "mean": 50,
+       "lo": 47.6906,
+       "hi": 51
+      },
+      "idleMinutesShare": {
+       "mean": 0.004,
+       "lo": 0.0005,
+       "hi": 0.0075
+      },
+      "heldAsScheduled": {
+       "mean": 0.46,
+       "lo": 0.4536,
+       "hi": 0.4664
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.46,
+       "lo": 0.4531,
+       "hi": 0.4669
+      },
+      "substantiveness": {
+       "mean": 0.31,
+       "lo": 0.3031,
+       "hi": 0.3169
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 385,
+        "lo": 382.3353,
+        "hi": 387.6647
+       },
+       "1-3": {
+        "mean": 770,
+        "lo": 764.6679,
+        "hi": 775.3321
+       },
+       "3-4": {
+        "mean": 650,
+        "lo": 645.4936,
+        "hi": 654.5064
+       },
+       "4-5": {
+        "mean": 555,
+        "lo": 551.1582,
+        "hi": 558.8418
+       },
+       "5+": {
+        "mean": 513,
+        "lo": 509.4472,
+        "hi": 516.5528
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 6.2,
+       "lo": 6.021,
+       "hi": 6.379
+      },
+      "wastedRelistShare": {
+       "mean": 0.52,
+       "lo": 0.5125,
+       "hi": 0.5275
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 51.2,
+       "lo": 49.722,
+       "hi": 52.678
+      },
+      "judgeTimeUsed": {
+       "mean": 0.99,
+       "lo": 0.9854,
+       "hi": 0.9946
+      },
+      "wastedListings": {
+       "mean": 0.8357,
+       "lo": 0.8293,
+       "hi": 0.8421
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.4462,
+       "lo": 0.4393,
+       "hi": 0.4531
+      },
+      "oldestPendingAgeYears": {
+       "mean": 10.11,
+       "lo": 10.0516,
+       "hi": 10.1684
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.29,
+       "lo": 9.2471,
+       "hi": 9.3329
+      },
+      "neverHeard": {
+       "mean": 520,
+       "lo": 507.9911,
+       "hi": 532.0089
+      },
+      "loadBalanceCv": {
+       "mean": 0.03,
+       "lo": 0.0279,
+       "hi": 0.0321
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1718,
+       "lo": 1712.0487,
+       "hi": 1723.9513
+      },
+      "plus3Change": {
+       "mean": 121,
+       "lo": 115.0487,
+       "hi": 126.9513
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1067,
+       "lo": 1062.0717,
+       "hi": 1071.9283
+      },
+      "plus4Change": {
+       "mean": 170,
+       "lo": 165.0717,
+       "hi": 174.9283
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 513,
+       "lo": 510.0382,
+       "hi": 515.9618
+      },
+      "plus5Change": {
+       "mean": 77,
+       "lo": 74.0382,
+       "hi": 79.9618
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 104,
+       "lo": 103.3996,
+       "hi": 104.6004
+      },
+      "reachedPerDay": {
+       "mean": 55.12,
+       "lo": 54.4835,
+       "hi": 55.7565
+      },
+      "substantivePerDay": {
+       "mean": 17.09,
+       "lo": 16.8434,
+       "hi": 17.3366
+      },
+      "disposed": {
+       "mean": 128,
+       "lo": 124.305,
+       "hi": 131.695
+      },
+      "disposed4yPlus": {
+       "mean": 40,
+       "lo": 38.3834,
+       "hi": 41.6166
+      },
+      "tripsPerSubstantive": {
+       "mean": 8.9,
+       "lo": 8.7458,
+       "hi": 9.0542
+      },
+      "wastedTripShare": {
+       "mean": 0.77,
+       "lo": 0.7631,
+       "hi": 0.7769
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.005,
+       "lo": 0.0021,
+       "hi": 0.0079
+      },
+      "reachRate": {
+       "mean": -0.09,
+       "lo": -0.0937,
+       "hi": -0.0863
+      },
+      "substantiveness": {
+       "mean": -0.01,
+       "lo": -0.0144,
+       "hi": -0.0056
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.05,
+       "lo": 0.0448,
+       "hi": 0.0552
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.01,
+       "lo": 0.0041,
+       "hi": 0.0159
+      },
+      "predictabilityGapDays": {
+       "mean": 3.4,
+       "lo": 2.999,
+       "hi": 3.801
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.005,
+       "lo": 0.0021,
+       "hi": 0.0079
+      },
+      "overrunDays": {
+       "mean": 4,
+       "lo": 2.7882,
+       "hi": 5.2118
+      },
+      "idleMinutesShare": {
+       "mean": -0.002,
+       "lo": -0.0042,
+       "hi": 0.0002
+      },
+      "heldAsScheduled": {
+       "mean": -0.08,
+       "lo": -0.0841,
+       "hi": -0.0759
+      },
+      "heldAsScheduledAllDue": {
+       "mean": -0.08,
+       "lo": -0.0844,
+       "hi": -0.0756
+      },
+      "substantiveness": {
+       "mean": -0.01,
+       "lo": -0.0144,
+       "hi": -0.0056
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 1,
+        "lo": -0.6955,
+        "hi": 2.6955
+       },
+       "1-3": {
+        "mean": 2,
+        "lo": -1.3899,
+        "hi": 5.3899
+       },
+       "3-4": {
+        "mean": 1,
+        "lo": -1.8655,
+        "hi": 3.8655
+       },
+       "4-5": {
+        "mean": 1,
+        "lo": -1.4434,
+        "hi": 3.4434
+       },
+       "5+": {
+        "mean": 1,
+        "lo": -1.2597,
+        "hi": 3.2597
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -35.3,
+       "lo": -35.8451,
+       "hi": -34.7549
+      },
+      "wastedRelistShare": {
+       "mean": 0.06,
+       "lo": 0.0552,
+       "hi": 0.0648
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": -1.6,
+       "lo": -2.5554,
+       "hi": -0.6446
+      },
+      "judgeTimeUsed": {
+       "mean": 0.005,
+       "lo": 0.0021,
+       "hi": 0.0079
+      },
+      "wastedListings": {
+       "mean": 0.0341,
+       "lo": 0.03,
+       "hi": 0.0382
+      },
+      "heldOnPromisedDate": {
+       "mean": -0.0776,
+       "lo": -0.082,
+       "hi": -0.0732
+      },
+      "oldestPendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0372,
+       "hi": 0.0372
+      },
+      "p95PendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0273,
+       "hi": 0.0273
+      },
+      "neverHeard": {
+       "mean": -90,
+       "lo": -98.3301,
+       "hi": -81.6699
+      },
+      "loadBalanceCv": {
+       "mean": -0.01,
+       "lo": -0.0116,
+       "hi": -0.0084
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": 3,
+       "lo": -0.7841,
+       "hi": 6.7841
+      },
+      "plus3Change": {
+       "mean": 3,
+       "lo": -0.7841,
+       "hi": 6.7841
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": 1,
+       "lo": -2.1349,
+       "hi": 4.1349
+      },
+      "plus4Change": {
+       "mean": 1,
+       "lo": -2.1349,
+       "hi": 4.1349
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": 1,
+       "lo": -0.883,
+       "hi": 2.883
+      },
+      "plus5Change": {
+       "mean": 1,
+       "lo": -0.883,
+       "hi": 2.883
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 16,
+       "lo": 15.6461,
+       "hi": 16.3539
+      },
+      "reachedPerDay": {
+       "mean": 0.56,
+       "lo": 0.157,
+       "hi": 0.963
+      },
+      "substantivePerDay": {
+       "mean": -0.37,
+       "lo": -0.5287,
+       "hi": -0.2113
+      },
+      "disposed": {
+       "mean": -4,
+       "lo": -6.3885,
+       "hi": -1.6115
+      },
+      "disposed4yPlus": {
+       "mean": -1,
+       "lo": -2.0417,
+       "hi": 0.0417
+      },
+      "tripsPerSubstantive": {
+       "mean": 0.8,
+       "lo": 0.7062,
+       "hi": 0.8938
+      },
+      "wastedTripShare": {
+       "mean": 0.03,
+       "lo": 0.0256,
+       "hi": 0.0344
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "policyName": "First in, first out, capped",
+    "kind": "baseline",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.83,
+       "lo": 0.8254,
+       "hi": 0.8346
+      },
+      "reachRate": {
+       "mean": 0.91,
+       "lo": 0.9042,
+       "hi": 0.9158
+      },
+      "substantiveness": {
+       "mean": 0.33,
+       "lo": 0.3231,
+       "hi": 0.3369
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.57,
+       "lo": 0.5619,
+       "hi": 0.5781
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.22,
+       "lo": 0.2108,
+       "hi": 0.2292
+      },
+      "predictabilityGapDays": {
+       "mean": 9.5,
+       "lo": 9.1161,
+       "hi": 9.8839
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.83,
+       "lo": 0.8254,
+       "hi": 0.8346
+      },
+      "overrunDays": {
+       "mean": 9,
+       "lo": 8.5843,
+       "hi": 9.4157
+      },
+      "idleMinutesShare": {
+       "mean": 0.14,
+       "lo": 0.1365,
+       "hi": 0.1435
+      },
+      "heldAsScheduled": {
+       "mean": 0.83,
+       "lo": 0.8236,
+       "hi": 0.8364
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.41,
+       "lo": 0.4031,
+       "hi": 0.4169
+      },
+      "substantiveness": {
+       "mean": 0.33,
+       "lo": 0.3231,
+       "hi": 0.3369
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 385,
+        "lo": 382.3303,
+        "hi": 387.6697
+       },
+       "1-3": {
+        "mean": 778,
+        "lo": 772.6107,
+        "hi": 783.3893
+       },
+       "3-4": {
+        "mean": 656,
+        "lo": 651.4555,
+        "hi": 660.5445
+       },
+       "4-5": {
+        "mean": 560,
+        "lo": 556.1225,
+        "hi": 563.8775
+       },
+       "5+": {
+        "mean": 517,
+        "lo": 513.417,
+        "hi": 520.583
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 24,
+       "lo": 23.3072,
+       "hi": 24.6928
+      },
+      "wastedRelistShare": {
+       "mean": 0.43,
+       "lo": 0.4225,
+       "hi": 0.4375
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 41.6,
+       "lo": 40.3991,
+       "hi": 42.8009
+      },
+      "judgeTimeUsed": {
+       "mean": 0.83,
+       "lo": 0.8254,
+       "hi": 0.8346
+      },
+      "wastedListings": {
+       "mean": 0.6997,
+       "lo": 0.6933,
+       "hi": 0.7061
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.8051,
+       "lo": 0.7982,
+       "hi": 0.812
+      },
+      "oldestPendingAgeYears": {
+       "mean": 10.11,
+       "lo": 10.0516,
+       "hi": 10.1684
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.3,
+       "lo": 9.257,
+       "hi": 9.343
+      },
+      "neverHeard": {
+       "mean": 1140,
+       "lo": 1113.6728,
+       "hi": 1166.3272
+      },
+      "loadBalanceCv": {
+       "mean": 0.09,
+       "lo": 0.0838,
+       "hi": 0.0962
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1733,
+       "lo": 1726.9967,
+       "hi": 1739.0033
+      },
+      "plus3Change": {
+       "mean": 136,
+       "lo": 129.9967,
+       "hi": 142.0033
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1077,
+       "lo": 1072.0256,
+       "hi": 1081.9744
+      },
+      "plus4Change": {
+       "mean": 180,
+       "lo": 175.0256,
+       "hi": 184.9744
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 517,
+       "lo": 514.0151,
+       "hi": 519.9849
+      },
+      "plus5Change": {
+       "mean": 81,
+       "lo": 78.0151,
+       "hi": 83.9849
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 44,
+       "lo": 43.746,
+       "hi": 44.254
+      },
+      "reachedPerDay": {
+       "mean": 40.04,
+       "lo": 39.5777,
+       "hi": 40.5023
+      },
+      "substantivePerDay": {
+       "mean": 13.21,
+       "lo": 13.0193,
+       "hi": 13.4007
+      },
+      "disposed": {
+       "mean": 104,
+       "lo": 100.9978,
+       "hi": 107.0022
+      },
+      "disposed4yPlus": {
+       "mean": 30,
+       "lo": 28.7876,
+       "hi": 31.2124
+      },
+      "tripsPerSubstantive": {
+       "mean": 6.3,
+       "lo": 6.1909,
+       "hi": 6.4091
+      },
+      "wastedTripShare": {
+       "mean": 0.66,
+       "lo": 0.6531,
+       "hi": 0.6669
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.155,
+       "lo": -0.1579,
+       "hi": -0.1521
+      },
+      "reachRate": {
+       "mean": 0.29,
+       "lo": 0.2863,
+       "hi": 0.2937
+      },
+      "substantiveness": {
+       "mean": 0.01,
+       "lo": 0.0056,
+       "hi": 0.0144
+      },
+      "backlog4yHeardShare": {
+       "mean": -0.04,
+       "lo": -0.0452,
+       "hi": -0.0348
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": -0.02,
+       "lo": -0.0259,
+       "hi": -0.0141
+      },
+      "predictabilityGapDays": {
+       "mean": -4.3,
+       "lo": -4.6047,
+       "hi": -3.9953
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.155,
+       "lo": -0.1579,
+       "hi": -0.1521
+      },
+      "overrunDays": {
+       "mean": -37,
+       "lo": -37.9742,
+       "hi": -36.0258
+      },
+      "idleMinutesShare": {
+       "mean": 0.134,
+       "lo": 0.1318,
+       "hi": 0.1362
+      },
+      "heldAsScheduled": {
+       "mean": 0.29,
+       "lo": 0.2859,
+       "hi": 0.2941
+      },
+      "heldAsScheduledAllDue": {
+       "mean": -0.13,
+       "lo": -0.1344,
+       "hi": -0.1256
+      },
+      "substantiveness": {
+       "mean": 0.01,
+       "lo": 0.0056,
+       "hi": 0.0144
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 1,
+        "lo": -0.6971,
+        "hi": 2.6971
+       },
+       "1-3": {
+        "mean": 10,
+        "lo": 6.5919,
+        "hi": 13.4081
+       },
+       "3-4": {
+        "mean": 7,
+        "lo": 4.1223,
+        "hi": 9.8777
+       },
+       "4-5": {
+        "mean": 6,
+        "lo": 3.5452,
+        "hi": 8.4548
+       },
+       "5+": {
+        "mean": 5,
+        "lo": 2.7306,
+        "hi": 7.2694
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -17.5,
+       "lo": -18.1228,
+       "hi": -16.8772
+      },
+      "wastedRelistShare": {
+       "mean": -0.03,
+       "lo": -0.0348,
+       "hi": -0.0252
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": -11.2,
+       "lo": -12.0732,
+       "hi": -10.3268
+      },
+      "judgeTimeUsed": {
+       "mean": -0.155,
+       "lo": -0.1579,
+       "hi": -0.1521
+      },
+      "wastedListings": {
+       "mean": -0.1019,
+       "lo": -0.106,
+       "hi": -0.0978
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.2813,
+       "lo": 0.2769,
+       "hi": 0.2857
+      },
+      "oldestPendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0372,
+       "hi": 0.0372
+      },
+      "p95PendingAgeYears": {
+       "mean": 0.01,
+       "lo": -0.0173,
+       "hi": 0.0373
+      },
+      "neverHeard": {
+       "mean": 530,
+       "lo": 516.5633,
+       "hi": 543.4367
+      },
+      "loadBalanceCv": {
+       "mean": 0.05,
+       "lo": 0.0469,
+       "hi": 0.0531
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": 18,
+       "lo": 14.1993,
+       "hi": 21.8007
+      },
+      "plus3Change": {
+       "mean": 18,
+       "lo": 14.1993,
+       "hi": 21.8007
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": 11,
+       "lo": 7.8504,
+       "hi": 14.1496
+      },
+      "plus4Change": {
+       "mean": 11,
+       "lo": 7.8504,
+       "hi": 14.1496
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": 5,
+       "lo": 3.1096,
+       "hi": 6.8904
+      },
+      "plus5Change": {
+       "mean": 5,
+       "lo": 3.1096,
+       "hi": 6.8904
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -44,
+       "lo": -44.2556,
+       "hi": -43.7444
+      },
+      "reachedPerDay": {
+       "mean": -14.52,
+       "lo": -14.8716,
+       "hi": -14.1684
+      },
+      "substantivePerDay": {
+       "mean": -4.25,
+       "lo": -4.3922,
+       "hi": -4.1078
+      },
+      "disposed": {
+       "mean": -28,
+       "lo": -30.183,
+       "hi": -25.817
+      },
+      "disposed4yPlus": {
+       "mean": -11,
+       "lo": -11.9239,
+       "hi": -10.0761
+      },
+      "tripsPerSubstantive": {
+       "mean": -1.8,
+       "lo": -1.88,
+       "hi": -1.72
+      },
+      "wastedTripShare": {
+       "mean": -0.08,
+       "lo": -0.0844,
+       "hi": -0.0756
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "policyName": "Bin packing",
+    "kind": "baseline",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.9,
+       "lo": 0.8954,
+       "hi": 0.9046
+      },
+      "reachRate": {
+       "mean": 0.92,
+       "lo": 0.9142,
+       "hi": 0.9258
+      },
+      "substantiveness": {
+       "mean": 0.55,
+       "lo": 0.5431,
+       "hi": 0.5569
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.29,
+       "lo": 0.2819,
+       "hi": 0.2981
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.14,
+       "lo": 0.1308,
+       "hi": 0.1492
+      },
+      "predictabilityGapDays": {
+       "mean": 21.4,
+       "lo": 20.5351,
+       "hi": 22.2649
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.9,
+       "lo": 0.8954,
+       "hi": 0.9046
+      },
+      "overrunDays": {
+       "mean": 11,
+       "lo": 10.4919,
+       "hi": 11.5081
+      },
+      "idleMinutesShare": {
+       "mean": 0.08,
+       "lo": 0.0765,
+       "hi": 0.0835
+      },
+      "heldAsScheduled": {
+       "mean": 0.85,
+       "lo": 0.8436,
+       "hi": 0.8564
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.44,
+       "lo": 0.4331,
+       "hi": 0.4469
+      },
+      "substantiveness": {
+       "mean": 0.55,
+       "lo": 0.5431,
+       "hi": 0.5569
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 382,
+        "lo": 379.3561,
+        "hi": 384.6439
+       },
+       "1-3": {
+        "mean": 735,
+        "lo": 729.9068,
+        "hi": 740.0932
+       },
+       "3-4": {
+        "mean": 627,
+        "lo": 622.6528,
+        "hi": 631.3472
+       },
+       "4-5": {
+        "mean": 564,
+        "lo": 560.0927,
+        "hi": 567.9073
+       },
+       "5+": {
+        "mean": 521,
+        "lo": 517.3918,
+        "hi": 524.6082
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 19,
+       "lo": 18.4515,
+       "hi": 19.5485
+      },
+      "wastedRelistShare": {
+       "mean": 0.3,
+       "lo": 0.2925,
+       "hi": 0.3075
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 68.4,
+       "lo": 66.4255,
+       "hi": 70.3745
+      },
+      "judgeTimeUsed": {
+       "mean": 0.9,
+       "lo": 0.8954,
+       "hi": 0.9046
+      },
+      "wastedListings": {
+       "mean": 0.494,
+       "lo": 0.4876,
+       "hi": 0.5004
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.8245,
+       "lo": 0.8176,
+       "hi": 0.8314
+      },
+      "oldestPendingAgeYears": {
+       "mean": 10.11,
+       "lo": 10.0516,
+       "hi": 10.1684
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.36,
+       "lo": 9.3168,
+       "hi": 9.4032
+      },
+      "neverHeard": {
+       "mean": 1380,
+       "lo": 1348.1303,
+       "hi": 1411.8697
+      },
+      "loadBalanceCv": {
+       "mean": 0.08,
+       "lo": 0.0745,
+       "hi": 0.0855
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1712,
+       "lo": 1706.0695,
+       "hi": 1717.9305
+      },
+      "plus3Change": {
+       "mean": 115,
+       "lo": 109.0695,
+       "hi": 120.9305
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1085,
+       "lo": 1079.9886,
+       "hi": 1090.0114
+      },
+      "plus4Change": {
+       "mean": 188,
+       "lo": 182.9886,
+       "hi": 193.0114
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 521,
+       "lo": 517.992,
+       "hi": 524.008
+      },
+      "plus5Change": {
+       "mean": 85,
+       "lo": 81.992,
+       "hi": 88.008
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 41,
+       "lo": 40.7633,
+       "hi": 41.2367
+      },
+      "reachedPerDay": {
+       "mean": 37.72,
+       "lo": 37.2844,
+       "hi": 38.1556
+      },
+      "substantivePerDay": {
+       "mean": 20.75,
+       "lo": 20.4506,
+       "hi": 21.0494
+      },
+      "disposed": {
+       "mean": 171,
+       "lo": 166.0637,
+       "hi": 175.9363
+      },
+      "disposed4yPlus": {
+       "mean": 22,
+       "lo": 21.1109,
+       "hi": 22.8891
+      },
+      "tripsPerSubstantive": {
+       "mean": 3.6,
+       "lo": 3.5376,
+       "hi": 3.6624
+      },
+      "wastedTripShare": {
+       "mean": 0.44,
+       "lo": 0.4331,
+       "hi": 0.4469
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.085,
+       "lo": -0.0879,
+       "hi": -0.0821
+      },
+      "reachRate": {
+       "mean": 0.3,
+       "lo": 0.2963,
+       "hi": 0.3037
+      },
+      "substantiveness": {
+       "mean": 0.23,
+       "lo": 0.2256,
+       "hi": 0.2344
+      },
+      "backlog4yHeardShare": {
+       "mean": -0.32,
+       "lo": -0.3252,
+       "hi": -0.3148
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": -0.1,
+       "lo": -0.1059,
+       "hi": -0.0941
+      },
+      "predictabilityGapDays": {
+       "mean": 7.6,
+       "lo": 7.1369,
+       "hi": 8.0631
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.085,
+       "lo": -0.0879,
+       "hi": -0.0821
+      },
+      "overrunDays": {
+       "mean": -35,
+       "lo": -35.983,
+       "hi": -34.017
+      },
+      "idleMinutesShare": {
+       "mean": 0.074,
+       "lo": 0.0718,
+       "hi": 0.0762
+      },
+      "heldAsScheduled": {
+       "mean": 0.31,
+       "lo": 0.3059,
+       "hi": 0.3141
+      },
+      "heldAsScheduledAllDue": {
+       "mean": -0.1,
+       "lo": -0.1044,
+       "hi": -0.0956
+      },
+      "substantiveness": {
+       "mean": 0.23,
+       "lo": 0.2256,
+       "hi": 0.2344
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": -2,
+        "lo": -3.6889,
+        "hi": -0.3111
+       },
+       "1-3": {
+        "mean": -33,
+        "lo": -36.3146,
+        "hi": -29.6854
+       },
+       "3-4": {
+        "mean": -22,
+        "lo": -24.8153,
+        "hi": -19.1847
+       },
+       "4-5": {
+        "mean": 10,
+        "lo": 7.5356,
+        "hi": 12.4644
+       },
+       "5+": {
+        "mean": 9,
+        "lo": 6.7226,
+        "hi": 11.2774
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -22.5,
+       "lo": -23.0929,
+       "hi": -21.9071
+      },
+      "wastedRelistShare": {
+       "mean": -0.16,
+       "lo": -0.1648,
+       "hi": -0.1552
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 15.6,
+       "lo": 14.4775,
+       "hi": 16.7225
+      },
+      "judgeTimeUsed": {
+       "mean": -0.085,
+       "lo": -0.0879,
+       "hi": -0.0821
+      },
+      "wastedListings": {
+       "mean": -0.3076,
+       "lo": -0.3117,
+       "hi": -0.3035
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.3007,
+       "lo": 0.2963,
+       "hi": 0.3051
+      },
+      "oldestPendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0372,
+       "hi": 0.0372
+      },
+      "p95PendingAgeYears": {
+       "mean": 0.07,
+       "lo": 0.0426,
+       "hi": 0.0974
+      },
+      "neverHeard": {
+       "mean": 770,
+       "lo": 754.32,
+       "hi": 785.68
+      },
+      "loadBalanceCv": {
+       "mean": 0.04,
+       "lo": 0.0372,
+       "hi": 0.0428
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": -3,
+       "lo": -6.7775,
+       "hi": 0.7775
+      },
+      "plus3Change": {
+       "mean": -3,
+       "lo": -6.7775,
+       "hi": 0.7775
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": 19,
+       "lo": 15.8386,
+       "hi": 22.1614
+      },
+      "plus4Change": {
+       "mean": 19,
+       "lo": 15.8386,
+       "hi": 22.1614
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": 9,
+       "lo": 7.1022,
+       "hi": 10.8978
+      },
+      "plus5Change": {
+       "mean": 9,
+       "lo": 7.1022,
+       "hi": 10.8978
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -47,
+       "lo": -47.2522,
+       "hi": -46.7478
+      },
+      "reachedPerDay": {
+       "mean": -16.84,
+       "lo": -17.1847,
+       "hi": -16.4953
+      },
+      "substantivePerDay": {
+       "mean": 3.29,
+       "lo": 3.1139,
+       "hi": 3.4661
+      },
+      "disposed": {
+       "mean": 39,
+       "lo": 36.1938,
+       "hi": 41.8062
+      },
+      "disposed4yPlus": {
+       "mean": -19,
+       "lo": -19.8462,
+       "hi": -18.1538
+      },
+      "tripsPerSubstantive": {
+       "mean": -4.5,
+       "lo": -4.5691,
+       "hi": -4.4309
+      },
+      "wastedTripShare": {
+       "mean": -0.3,
+       "lo": -0.3044,
+       "hi": -0.2956
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "policyName": "Oldest first",
+    "kind": "baseline",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.84,
+       "lo": 0.8354,
+       "hi": 0.8446
+      },
+      "reachRate": {
+       "mean": 0.9,
+       "lo": 0.8942,
+       "hi": 0.9058
+      },
+      "substantiveness": {
+       "mean": 0.28,
+       "lo": 0.2731,
+       "hi": 0.2869
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.98,
+       "lo": 0.9719,
+       "hi": 0.9881
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.37,
+       "lo": 0.3608,
+       "hi": 0.3792
+      },
+      "predictabilityGapDays": {
+       "mean": 7.9,
+       "lo": 7.5807,
+       "hi": 8.2193
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.84,
+       "lo": 0.8354,
+       "hi": 0.8446
+      },
+      "overrunDays": {
+       "mean": 10,
+       "lo": 9.5381,
+       "hi": 10.4619
+      },
+      "idleMinutesShare": {
+       "mean": 0.13,
+       "lo": 0.1265,
+       "hi": 0.1335
+      },
+      "heldAsScheduled": {
+       "mean": 0.82,
+       "lo": 0.8136,
+       "hi": 0.8264
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.4,
+       "lo": 0.3931,
+       "hi": 0.4069
+      },
+      "substantiveness": {
+       "mean": 0.28,
+       "lo": 0.2731,
+       "hi": 0.2869
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 386,
+        "lo": 383.3236,
+        "hi": 388.6764
+       },
+       "1-3": {
+        "mean": 789,
+        "lo": 783.5334,
+        "hi": 794.4666
+       },
+       "3-4": {
+        "mean": 663,
+        "lo": 658.404,
+        "hi": 667.596
+       },
+       "4-5": {
+        "mean": 542,
+        "lo": 538.2483,
+        "hi": 545.7517
+       },
+       "5+": {
+        "mean": 502,
+        "lo": 498.5237,
+        "hi": 505.4763
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 23,
+       "lo": 22.336,
+       "hi": 23.664
+      },
+      "wastedRelistShare": {
+       "mean": 0.5,
+       "lo": 0.4925,
+       "hi": 0.5075
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 47.2,
+       "lo": 45.8375,
+       "hi": 48.5625
+      },
+      "judgeTimeUsed": {
+       "mean": 0.84,
+       "lo": 0.8354,
+       "hi": 0.8446
+      },
+      "wastedListings": {
+       "mean": 0.748,
+       "lo": 0.7416,
+       "hi": 0.7544
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.7954,
+       "lo": 0.7885,
+       "hi": 0.8023
+      },
+      "oldestPendingAgeYears": {
+       "mean": 7.51,
+       "lo": 7.4667,
+       "hi": 7.5533
+      },
+      "p95PendingAgeYears": {
+       "mean": 8.84,
+       "lo": 8.7992,
+       "hi": 8.8808
+      },
+      "neverHeard": {
+       "mean": 1250,
+       "lo": 1221.1325,
+       "hi": 1278.8675
+      },
+      "loadBalanceCv": {
+       "mean": 0.09,
+       "lo": 0.0838,
+       "hi": 0.0962
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1707,
+       "lo": 1701.0868,
+       "hi": 1712.9132
+      },
+      "plus3Change": {
+       "mean": 110,
+       "lo": 104.0868,
+       "hi": 115.9132
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1043,
+       "lo": 1038.1826,
+       "hi": 1047.8174
+      },
+      "plus4Change": {
+       "mean": 146,
+       "lo": 141.1826,
+       "hi": 150.8174
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 502,
+       "lo": 499.1017,
+       "hi": 504.8983
+      },
+      "plus5Change": {
+       "mean": 66,
+       "lo": 63.1017,
+       "hi": 68.8983
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 40,
+       "lo": 39.7691,
+       "hi": 40.2309
+      },
+      "reachedPerDay": {
+       "mean": 36,
+       "lo": 35.5843,
+       "hi": 36.4157
+      },
+      "substantivePerDay": {
+       "mean": 10.08,
+       "lo": 9.9345,
+       "hi": 10.2255
+      },
+      "disposed": {
+       "mean": 118,
+       "lo": 114.5936,
+       "hi": 121.4064
+      },
+      "disposed4yPlus": {
+       "mean": 64,
+       "lo": 61.4135,
+       "hi": 66.5865
+      },
+      "tripsPerSubstantive": {
+       "mean": 7.2,
+       "lo": 7.0753,
+       "hi": 7.3247
+      },
+      "wastedTripShare": {
+       "mean": 0.71,
+       "lo": 0.7031,
+       "hi": 0.7169
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.145,
+       "lo": -0.1479,
+       "hi": -0.1421
+      },
+      "reachRate": {
+       "mean": 0.28,
+       "lo": 0.2763,
+       "hi": 0.2837
+      },
+      "substantiveness": {
+       "mean": -0.04,
+       "lo": -0.0444,
+       "hi": -0.0356
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.37,
+       "lo": 0.3648,
+       "hi": 0.3752
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.13,
+       "lo": 0.1241,
+       "hi": 0.1359
+      },
+      "predictabilityGapDays": {
+       "mean": -5.9,
+       "lo": -6.1892,
+       "hi": -5.6108
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.145,
+       "lo": -0.1479,
+       "hi": -0.1421
+      },
+      "overrunDays": {
+       "mean": -36,
+       "lo": -36.9784,
+       "hi": -35.0216
+      },
+      "idleMinutesShare": {
+       "mean": 0.124,
+       "lo": 0.1218,
+       "hi": 0.1262
+      },
+      "heldAsScheduled": {
+       "mean": 0.28,
+       "lo": 0.2759,
+       "hi": 0.2841
+      },
+      "heldAsScheduledAllDue": {
+       "mean": -0.14,
+       "lo": -0.1444,
+       "hi": -0.1356
+      },
+      "substantiveness": {
+       "mean": -0.04,
+       "lo": -0.0444,
+       "hi": -0.0356
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 2,
+        "lo": 0.3008,
+        "hi": 3.6992
+       },
+       "1-3": {
+        "mean": 21,
+        "lo": 17.567,
+        "hi": 24.433
+       },
+       "3-4": {
+        "mean": 14,
+        "lo": 11.1058,
+        "hi": 16.8942
+       },
+       "4-5": {
+        "mean": -12,
+        "lo": -14.4149,
+        "hi": -9.5851
+       },
+       "5+": {
+        "mean": -10,
+        "lo": -12.2355,
+        "hi": -7.7645
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -18.5,
+       "lo": -19.1164,
+       "hi": -17.8836
+      },
+      "wastedRelistShare": {
+       "mean": 0.04,
+       "lo": 0.0352,
+       "hi": 0.0448
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": -5.6,
+       "lo": -6.52,
+       "hi": -4.68
+      },
+      "judgeTimeUsed": {
+       "mean": -0.145,
+       "lo": -0.1479,
+       "hi": -0.1421
+      },
+      "wastedListings": {
+       "mean": -0.0536,
+       "lo": -0.0577,
+       "hi": -0.0495
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.2716,
+       "lo": 0.2672,
+       "hi": 0.276
+      },
+      "oldestPendingAgeYears": {
+       "mean": -2.6,
+       "lo": -2.6327,
+       "hi": -2.5673
+      },
+      "p95PendingAgeYears": {
+       "mean": -0.45,
+       "lo": -0.4766,
+       "hi": -0.4234
+      },
+      "neverHeard": {
+       "mean": 640,
+       "lo": 625.5454,
+       "hi": 654.4546
+      },
+      "loadBalanceCv": {
+       "mean": 0.05,
+       "lo": 0.0469,
+       "hi": 0.0531
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": -8,
+       "lo": -11.772,
+       "hi": -4.228
+      },
+      "plus3Change": {
+       "mean": -8,
+       "lo": -11.772,
+       "hi": -4.228
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": -23,
+       "lo": -26.0998,
+       "hi": -19.9002
+      },
+      "plus4Change": {
+       "mean": -23,
+       "lo": -26.0998,
+       "hi": -19.9002
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": -10,
+       "lo": -11.8629,
+       "hi": -8.1371
+      },
+      "plus5Change": {
+       "mean": -10,
+       "lo": -11.8629,
+       "hi": -8.1371
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -48,
+       "lo": -48.2511,
+       "hi": -47.7489
+      },
+      "reachedPerDay": {
+       "mean": -18.56,
+       "lo": -18.8997,
+       "hi": -18.2203
+      },
+      "substantivePerDay": {
+       "mean": -7.38,
+       "lo": -7.5109,
+       "hi": -7.2491
+      },
+      "disposed": {
+       "mean": -14,
+       "lo": -16.3,
+       "hi": -11.7
+      },
+      "disposed4yPlus": {
+       "mean": 23,
+       "lo": 21.6177,
+       "hi": 24.3823
+      },
+      "tripsPerSubstantive": {
+       "mean": -0.9,
+       "lo": -0.9845,
+       "hi": -0.8155
+      },
+      "wastedTripShare": {
+       "mean": -0.03,
+       "lo": -0.0344,
+       "hi": -0.0256
+      },
+      "deskPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "policyName": "Justice Sehgal",
+    "kind": "judge",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.95,
+       "lo": 0.9454,
+       "hi": 0.9546
+      },
+      "reachRate": {
+       "mean": 0.73,
+       "lo": 0.7242,
+       "hi": 0.7358
+      },
+      "substantiveness": {
+       "mean": 0.35,
+       "lo": 0.3431,
+       "hi": 0.3569
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.81,
+       "lo": 0.8019,
+       "hi": 0.8181
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.3,
+       "lo": 0.2908,
+       "hi": 0.3092
+      },
+      "predictabilityGapDays": {
+       "mean": 8.8,
+       "lo": 8.4444,
+       "hi": 9.1556
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.95,
+       "lo": 0.9454,
+       "hi": 0.9546
+      },
+      "overrunDays": {
+       "mean": 34,
+       "lo": 32.4296,
+       "hi": 35.5704
+      },
+      "idleMinutesShare": {
+       "mean": 0.03,
+       "lo": 0.0265,
+       "hi": 0.0335
+      },
+      "heldAsScheduled": {
+       "mean": 0.66,
+       "lo": 0.6536,
+       "hi": 0.6664
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.6,
+       "lo": 0.5931,
+       "hi": 0.6069
+      },
+      "substantiveness": {
+       "mean": 0.35,
+       "lo": 0.3431,
+       "hi": 0.3569
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 385,
+        "lo": 382.3353,
+        "hi": 387.6647
+       },
+       "1-3": {
+        "mean": 770,
+        "lo": 764.6679,
+        "hi": 775.3321
+       },
+       "3-4": {
+        "mean": 650,
+        "lo": 645.4936,
+        "hi": 654.5064
+       },
+       "4-5": {
+        "mean": 549,
+        "lo": 545.1956,
+        "hi": 552.8044
+       },
+       "5+": {
+        "mean": 508,
+        "lo": 504.479,
+        "hi": 511.521
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 12,
+       "lo": 11.6536,
+       "hi": 12.3464
+      },
+      "wastedRelistShare": {
+       "mean": 0.47,
+       "lo": 0.4625,
+       "hi": 0.4775
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 55.2,
+       "lo": 53.6065,
+       "hi": 56.7935
+      },
+      "judgeTimeUsed": {
+       "mean": 0.9571,
+       "lo": 0.9525,
+       "hi": 0.9618
+      },
+      "wastedListings": {
+       "mean": 0.7445,
+       "lo": 0.7381,
+       "hi": 0.7509
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.6402,
+       "lo": 0.6333,
+       "hi": 0.6471
+      },
+      "oldestPendingAgeYears": {
+       "mean": 8.91,
+       "lo": 8.8586,
+       "hi": 8.9614
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.14,
+       "lo": 9.0978,
+       "hi": 9.1822
+      },
+      "neverHeard": {
+       "mean": 700,
+       "lo": 683.8342,
+       "hi": 716.1658
+      },
+      "loadBalanceCv": {
+       "mean": 0.06,
+       "lo": 0.0558,
+       "hi": 0.0642
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1708,
+       "lo": 1702.0833,
+       "hi": 1713.9167
+      },
+      "plus3Change": {
+       "mean": 111,
+       "lo": 105.0833,
+       "hi": 116.9167
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1057,
+       "lo": 1052.1179,
+       "hi": 1061.8821
+      },
+      "plus4Change": {
+       "mean": 160,
+       "lo": 155.1179,
+       "hi": 164.8821
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 508,
+       "lo": 505.0671,
+       "hi": 510.9329
+      },
+      "plus5Change": {
+       "mean": 72,
+       "lo": 69.0671,
+       "hi": 74.9329
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 66,
+       "lo": 65.6189,
+       "hi": 66.3811
+      },
+      "reachedPerDay": {
+       "mean": 48.18,
+       "lo": 47.6237,
+       "hi": 48.7363
+      },
+      "substantivePerDay": {
+       "mean": 16.86,
+       "lo": 16.6166,
+       "hi": 17.1034
+      },
+      "disposed": {
+       "mean": 138,
+       "lo": 134.0163,
+       "hi": 141.9837
+      },
+      "disposed4yPlus": {
+       "mean": 50,
+       "lo": 47.9793,
+       "hi": 52.0207
+      },
+      "tripsPerSubstantive": {
+       "mean": 6.4,
+       "lo": 6.2891,
+       "hi": 6.5109
+      },
+      "wastedTripShare": {
+       "mean": 0.64,
+       "lo": 0.6331,
+       "hi": 0.6469
+      },
+      "deskPerDay": {
+       "mean": 6,
+       "lo": 5.8614,
+       "hi": 6.1386
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.035,
+       "lo": -0.0379,
+       "hi": -0.0321
+      },
+      "reachRate": {
+       "mean": 0.11,
+       "lo": 0.1063,
+       "hi": 0.1137
+      },
+      "substantiveness": {
+       "mean": 0.03,
+       "lo": 0.0256,
+       "hi": 0.0344
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.2,
+       "lo": 0.1948,
+       "hi": 0.2052
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.06,
+       "lo": 0.0541,
+       "hi": 0.0659
+      },
+      "predictabilityGapDays": {
+       "mean": -5,
+       "lo": -5.2976,
+       "hi": -4.7024
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.035,
+       "lo": -0.0379,
+       "hi": -0.0321
+      },
+      "overrunDays": {
+       "mean": -12,
+       "lo": -13.1889,
+       "hi": -10.8111
+      },
+      "idleMinutesShare": {
+       "mean": 0.024,
+       "lo": 0.0218,
+       "hi": 0.0262
+      },
+      "heldAsScheduled": {
+       "mean": 0.12,
+       "lo": 0.1159,
+       "hi": 0.1241
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.06,
+       "lo": 0.0556,
+       "hi": 0.0644
+      },
+      "substantiveness": {
+       "mean": 0.03,
+       "lo": 0.0256,
+       "hi": 0.0344
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 1,
+        "lo": -0.6955,
+        "hi": 2.6955
+       },
+       "1-3": {
+        "mean": 2,
+        "lo": -1.3899,
+        "hi": 5.3899
+       },
+       "3-4": {
+        "mean": 1,
+        "lo": -1.8655,
+        "hi": 3.8655
+       },
+       "4-5": {
+        "mean": -5,
+        "lo": -7.4316,
+        "hi": -2.5684
+       },
+       "5+": {
+        "mean": -4,
+        "lo": -6.2496,
+        "hi": -1.7504
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -29.5,
+       "lo": -30.0612,
+       "hi": -28.9388
+      },
+      "wastedRelistShare": {
+       "mean": 0.01,
+       "lo": 0.0052,
+       "hi": 0.0148
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 2.4,
+       "lo": 1.4077,
+       "hi": 3.3923
+      },
+      "judgeTimeUsed": {
+       "mean": -0.0279,
+       "lo": -0.0308,
+       "hi": -0.025
+      },
+      "wastedListings": {
+       "mean": -0.0571,
+       "lo": -0.0612,
+       "hi": -0.053
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.1164,
+       "lo": 0.112,
+       "hi": 0.1208
+      },
+      "oldestPendingAgeYears": {
+       "mean": -1.2,
+       "lo": -1.235,
+       "hi": -1.165
+      },
+      "p95PendingAgeYears": {
+       "mean": -0.15,
+       "lo": -0.1771,
+       "hi": -0.1229
+      },
+      "neverHeard": {
+       "mean": 90,
+       "lo": 80.3508,
+       "hi": 99.6492
+      },
+      "loadBalanceCv": {
+       "mean": 0.02,
+       "lo": 0.0177,
+       "hi": 0.0223
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": -7,
+       "lo": -10.7731,
+       "hi": -3.2269
+      },
+      "plus3Change": {
+       "mean": -7,
+       "lo": -10.7731,
+       "hi": -3.2269
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": -9,
+       "lo": -12.1202,
+       "hi": -5.8798
+      },
+      "plus4Change": {
+       "mean": -9,
+       "lo": -12.1202,
+       "hi": -5.8798
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": -4,
+       "lo": -5.8739,
+       "hi": -2.1261
+      },
+      "plus5Change": {
+       "mean": -4,
+       "lo": -5.8739,
+       "hi": -2.1261
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -22,
+       "lo": -22.2858,
+       "hi": -21.7142
+      },
+      "reachedPerDay": {
+       "mean": -6.38,
+       "lo": -6.7582,
+       "hi": -6.0018
+      },
+      "substantivePerDay": {
+       "mean": -0.6,
+       "lo": -0.7577,
+       "hi": -0.4423
+      },
+      "disposed": {
+       "mean": 6,
+       "lo": 3.5193,
+       "hi": 8.4807
+      },
+      "disposed4yPlus": {
+       "mean": 9,
+       "lo": 7.8241,
+       "hi": 10.1759
+      },
+      "tripsPerSubstantive": {
+       "mean": -1.7,
+       "lo": -1.7805,
+       "hi": -1.6195
+      },
+      "wastedTripShare": {
+       "mean": -0.1,
+       "lo": -0.1044,
+       "hi": -0.0956
+      },
+      "deskPerDay": {
+       "mean": 6,
+       "lo": 5.9376,
+       "hi": 6.0624
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "policyName": "Justice Dimakar",
+    "kind": "judge",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.92,
+       "lo": 0.9154,
+       "hi": 0.9246
+      },
+      "reachRate": {
+       "mean": 0.82,
+       "lo": 0.8142,
+       "hi": 0.8258
+      },
+      "substantiveness": {
+       "mean": 0.4,
+       "lo": 0.3931,
+       "hi": 0.4069
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.88,
+       "lo": 0.8719,
+       "hi": 0.8881
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.33,
+       "lo": 0.3208,
+       "hi": 0.3392
+      },
+      "predictabilityGapDays": {
+       "mean": 9.6,
+       "lo": 9.212,
+       "hi": 9.988
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.92,
+       "lo": 0.9154,
+       "hi": 0.9246
+      },
+      "overrunDays": {
+       "mean": 22,
+       "lo": 20.9839,
+       "hi": 23.0161
+      },
+      "idleMinutesShare": {
+       "mean": 0.05,
+       "lo": 0.0465,
+       "hi": 0.0535
+      },
+      "heldAsScheduled": {
+       "mean": 0.74,
+       "lo": 0.7336,
+       "hi": 0.7464
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.55,
+       "lo": 0.5431,
+       "hi": 0.5569
+      },
+      "substantiveness": {
+       "mean": 0.4,
+       "lo": 0.3931,
+       "hi": 0.4069
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 385,
+        "lo": 382.334,
+        "hi": 387.666
+       },
+       "1-3": {
+        "mean": 772,
+        "lo": 766.6532,
+        "hi": 777.3468
+       },
+       "3-4": {
+        "mean": 652,
+        "lo": 647.4838,
+        "hi": 656.5162
+       },
+       "4-5": {
+        "mean": 545,
+        "lo": 541.2208,
+        "hi": 548.7792
+       },
+       "5+": {
+        "mean": 505,
+        "lo": 501.5004,
+        "hi": 508.4996
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 16,
+       "lo": 15.5381,
+       "hi": 16.4619
+      },
+      "wastedRelistShare": {
+       "mean": 0.39,
+       "lo": 0.3825,
+       "hi": 0.3975
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 56.4,
+       "lo": 54.7719,
+       "hi": 58.0281
+      },
+      "judgeTimeUsed": {
+       "mean": 0.9343,
+       "lo": 0.9297,
+       "hi": 0.9389
+      },
+      "wastedListings": {
+       "mean": 0.672,
+       "lo": 0.6656,
+       "hi": 0.6784
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.7178,
+       "lo": 0.7109,
+       "hi": 0.7247
+      },
+      "oldestPendingAgeYears": {
+       "mean": 8.21,
+       "lo": 8.1626,
+       "hi": 8.2574
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.04,
+       "lo": 8.9982,
+       "hi": 9.0818
+      },
+      "neverHeard": {
+       "mean": 820,
+       "lo": 801.0629,
+       "hi": 838.9371
+      },
+      "loadBalanceCv": {
+       "mean": 0.07,
+       "lo": 0.0652,
+       "hi": 0.0748
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1702,
+       "lo": 1696.1041,
+       "hi": 1707.8959
+      },
+      "plus3Change": {
+       "mean": 105,
+       "lo": 99.1041,
+       "hi": 110.8959
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1051,
+       "lo": 1046.1456,
+       "hi": 1055.8544
+      },
+      "plus4Change": {
+       "mean": 154,
+       "lo": 149.1456,
+       "hi": 158.8544
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 505,
+       "lo": 502.0844,
+       "hi": 507.9156
+      },
+      "plus5Change": {
+       "mean": 69,
+       "lo": 66.0844,
+       "hi": 71.9156
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 52,
+       "lo": 51.6998,
+       "hi": 52.3002
+      },
+      "reachedPerDay": {
+       "mean": 42.64,
+       "lo": 42.1476,
+       "hi": 43.1324
+      },
+      "substantivePerDay": {
+       "mean": 17.06,
+       "lo": 16.8138,
+       "hi": 17.3062
+      },
+      "disposed": {
+       "mean": 141,
+       "lo": 136.9297,
+       "hi": 145.0703
+      },
+      "disposed4yPlus": {
+       "mean": 56,
+       "lo": 53.7368,
+       "hi": 58.2632
+      },
+      "tripsPerSubstantive": {
+       "mean": 4.9,
+       "lo": 4.8151,
+       "hi": 4.9849
+      },
+      "wastedTripShare": {
+       "mean": 0.55,
+       "lo": 0.5431,
+       "hi": 0.5569
+      },
+      "deskPerDay": {
+       "mean": 12,
+       "lo": 11.7229,
+       "hi": 12.2771
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.065,
+       "lo": -0.0679,
+       "hi": -0.0621
+      },
+      "reachRate": {
+       "mean": 0.2,
+       "lo": 0.1963,
+       "hi": 0.2037
+      },
+      "substantiveness": {
+       "mean": 0.08,
+       "lo": 0.0756,
+       "hi": 0.0844
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.27,
+       "lo": 0.2648,
+       "hi": 0.2752
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.09,
+       "lo": 0.0841,
+       "hi": 0.0959
+      },
+      "predictabilityGapDays": {
+       "mean": -4.2,
+       "lo": -4.5057,
+       "hi": -3.8943
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.065,
+       "lo": -0.0679,
+       "hi": -0.0621
+      },
+      "overrunDays": {
+       "mean": -24,
+       "lo": -25.0598,
+       "hi": -22.9402
+      },
+      "idleMinutesShare": {
+       "mean": 0.044,
+       "lo": 0.0418,
+       "hi": 0.0462
+      },
+      "heldAsScheduled": {
+       "mean": 0.2,
+       "lo": 0.1959,
+       "hi": 0.2041
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.01,
+       "lo": 0.0056,
+       "hi": 0.0144
+      },
+      "substantiveness": {
+       "mean": 0.08,
+       "lo": 0.0756,
+       "hi": 0.0844
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 1,
+        "lo": -0.6959,
+        "hi": 2.6959
+       },
+       "1-3": {
+        "mean": 4,
+        "lo": 0.6055,
+        "hi": 7.3945
+       },
+       "3-4": {
+        "mean": 3,
+        "lo": 0.1313,
+        "hi": 5.8687
+       },
+       "4-5": {
+        "mean": -9,
+        "lo": -11.4236,
+        "hi": -6.5764
+       },
+       "5+": {
+        "mean": -7,
+        "lo": -9.2428,
+        "hi": -4.7572
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -25.5,
+       "lo": -26.0778,
+       "hi": -24.9222
+      },
+      "wastedRelistShare": {
+       "mean": -0.07,
+       "lo": -0.0748,
+       "hi": -0.0652
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 3.6,
+       "lo": 2.5964,
+       "hi": 4.6036
+      },
+      "judgeTimeUsed": {
+       "mean": -0.0507,
+       "lo": -0.0536,
+       "hi": -0.0478
+      },
+      "wastedListings": {
+       "mean": -0.1296,
+       "lo": -0.1337,
+       "hi": -0.1255
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.194,
+       "lo": 0.1896,
+       "hi": 0.1984
+      },
+      "oldestPendingAgeYears": {
+       "mean": -1.9,
+       "lo": -1.9338,
+       "hi": -1.8662
+      },
+      "p95PendingAgeYears": {
+       "mean": -0.25,
+       "lo": -0.277,
+       "hi": -0.223
+      },
+      "neverHeard": {
+       "mean": 210,
+       "lo": 199.379,
+       "hi": 220.621
+      },
+      "loadBalanceCv": {
+       "mean": 0.03,
+       "lo": 0.0275,
+       "hi": 0.0325
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": -13,
+       "lo": -16.7665,
+       "hi": -9.2335
+      },
+      "plus3Change": {
+       "mean": -13,
+       "lo": -16.7665,
+       "hi": -9.2335
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": -15,
+       "lo": -18.1114,
+       "hi": -11.8886
+      },
+      "plus4Change": {
+       "mean": -15,
+       "lo": -18.1114,
+       "hi": -11.8886
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": -7,
+       "lo": -8.8684,
+       "hi": -5.1316
+      },
+      "plus5Change": {
+       "mean": -7,
+       "lo": -8.8684,
+       "hi": -5.1316
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -36,
+       "lo": -36.2656,
+       "hi": -35.7344
+      },
+      "reachedPerDay": {
+       "mean": -11.92,
+       "lo": -12.2798,
+       "hi": -11.5602
+      },
+      "substantivePerDay": {
+       "mean": -0.4,
+       "lo": -0.5585,
+       "hi": -0.2415
+      },
+      "disposed": {
+       "mean": 9,
+       "lo": 6.491,
+       "hi": 11.509
+      },
+      "disposed4yPlus": {
+       "mean": 15,
+       "lo": 13.7378,
+       "hi": 16.2622
+      },
+      "tripsPerSubstantive": {
+       "mean": -3.2,
+       "lo": -3.2738,
+       "hi": -3.1262
+      },
+      "wastedTripShare": {
+       "mean": -0.19,
+       "lo": -0.1944,
+       "hi": -0.1856
+      },
+      "deskPerDay": {
+       "mean": 12,
+       "lo": 11.8753,
+       "hi": 12.1247
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "joshi",
+    "policyName": "Justice Joshi",
+    "kind": "judge",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.93,
+       "lo": 0.9254,
+       "hi": 0.9346
+      },
+      "reachRate": {
+       "mean": 0.79,
+       "lo": 0.7842,
+       "hi": 0.7958
+      },
+      "substantiveness": {
+       "mean": 0.43,
+       "lo": 0.4231,
+       "hi": 0.4369
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.38,
+       "lo": 0.3719,
+       "hi": 0.3881
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.15,
+       "lo": 0.1408,
+       "hi": 0.1592
+      },
+      "predictabilityGapDays": {
+       "mean": 14.9,
+       "lo": 14.2978,
+       "hi": 15.5022
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.93,
+       "lo": 0.9254,
+       "hi": 0.9346
+      },
+      "overrunDays": {
+       "mean": 26,
+       "lo": 24.7991,
+       "hi": 27.2009
+      },
+      "idleMinutesShare": {
+       "mean": 0.04,
+       "lo": 0.0365,
+       "hi": 0.0435
+      },
+      "heldAsScheduled": {
+       "mean": 0.71,
+       "lo": 0.7036,
+       "hi": 0.7164
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.57,
+       "lo": 0.5631,
+       "hi": 0.5769
+      },
+      "substantiveness": {
+       "mean": 0.43,
+       "lo": 0.4231,
+       "hi": 0.4369
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 382,
+        "lo": 379.3505,
+        "hi": 384.6495
+       },
+       "1-3": {
+        "mean": 744,
+        "lo": 738.8434,
+        "hi": 749.1566
+       },
+       "3-4": {
+        "mean": 634,
+        "lo": 629.6105,
+        "hi": 638.3895
+       },
+       "4-5": {
+        "mean": 562,
+        "lo": 558.1042,
+        "hi": 565.8958
+       },
+       "5+": {
+        "mean": 519,
+        "lo": 515.4015,
+        "hi": 522.5985
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 17,
+       "lo": 16.5093,
+       "hi": 17.4907
+      },
+      "wastedRelistShare": {
+       "mean": 0.37,
+       "lo": 0.3625,
+       "hi": 0.3775
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 63.2,
+       "lo": 61.3756,
+       "hi": 65.0244
+      },
+      "judgeTimeUsed": {
+       "mean": 0.9514,
+       "lo": 0.9468,
+       "hi": 0.956
+      },
+      "wastedListings": {
+       "mean": 0.6603,
+       "lo": 0.6539,
+       "hi": 0.6667
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.6887,
+       "lo": 0.6818,
+       "hi": 0.6956
+      },
+      "oldestPendingAgeYears": {
+       "mean": 10.11,
+       "lo": 10.0516,
+       "hi": 10.1684
+      },
+      "p95PendingAgeYears": {
+       "mean": 9.35,
+       "lo": 9.3068,
+       "hi": 9.3932
+      },
+      "neverHeard": {
+       "mean": 900,
+       "lo": 879.2154,
+       "hi": 920.7846
+      },
+      "loadBalanceCv": {
+       "mean": 0.07,
+       "lo": 0.0652,
+       "hi": 0.0748
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1715,
+       "lo": 1709.0591,
+       "hi": 1720.9409
+      },
+      "plus3Change": {
+       "mean": 118,
+       "lo": 112.0591,
+       "hi": 123.9409
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1082,
+       "lo": 1077.0025,
+       "hi": 1086.9975
+      },
+      "plus4Change": {
+       "mean": 185,
+       "lo": 180.0025,
+       "hi": 189.9975
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 519,
+       "lo": 516.0036,
+       "hi": 521.9964
+      },
+      "plus5Change": {
+       "mean": 83,
+       "lo": 80.0036,
+       "hi": 85.9964
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 58,
+       "lo": 57.6651,
+       "hi": 58.3349
+      },
+      "reachedPerDay": {
+       "mean": 45.82,
+       "lo": 45.2909,
+       "hi": 46.3491
+      },
+      "substantivePerDay": {
+       "mean": 19.7,
+       "lo": 19.4156,
+       "hi": 19.9844
+      },
+      "disposed": {
+       "mean": 158,
+       "lo": 153.4389,
+       "hi": 162.5611
+      },
+      "disposed4yPlus": {
+       "mean": 25,
+       "lo": 23.9896,
+       "hi": 26.0104
+      },
+      "tripsPerSubstantive": {
+       "mean": 5.6,
+       "lo": 5.503,
+       "hi": 5.697
+      },
+      "wastedTripShare": {
+       "mean": 0.52,
+       "lo": 0.5131,
+       "hi": 0.5269
+      },
+      "deskPerDay": {
+       "mean": 18,
+       "lo": 17.5843,
+       "hi": 18.4157
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.055,
+       "lo": -0.0579,
+       "hi": -0.0521
+      },
+      "reachRate": {
+       "mean": 0.17,
+       "lo": 0.1663,
+       "hi": 0.1737
+      },
+      "substantiveness": {
+       "mean": 0.11,
+       "lo": 0.1056,
+       "hi": 0.1144
+      },
+      "backlog4yHeardShare": {
+       "mean": -0.23,
+       "lo": -0.2352,
+       "hi": -0.2248
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": -0.09,
+       "lo": -0.0959,
+       "hi": -0.0841
+      },
+      "predictabilityGapDays": {
+       "mean": 1.1,
+       "lo": 0.7307,
+       "hi": 1.4693
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.055,
+       "lo": -0.0579,
+       "hi": -0.0521
+      },
+      "overrunDays": {
+       "mean": -20,
+       "lo": -21.0982,
+       "hi": -18.9018
+      },
+      "idleMinutesShare": {
+       "mean": 0.034,
+       "lo": 0.0318,
+       "hi": 0.0362
+      },
+      "heldAsScheduled": {
+       "mean": 0.17,
+       "lo": 0.1659,
+       "hi": 0.1741
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.03,
+       "lo": 0.0256,
+       "hi": 0.0344
+      },
+      "substantiveness": {
+       "mean": 0.11,
+       "lo": 0.1056,
+       "hi": 0.1144
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": -2,
+        "lo": -3.6907,
+        "hi": -0.3093
+       },
+       "1-3": {
+        "mean": -24,
+        "lo": -27.3344,
+        "hi": -20.6656
+       },
+       "3-4": {
+        "mean": -15,
+        "lo": -17.8286,
+        "hi": -12.1714
+       },
+       "4-5": {
+        "mean": 8,
+        "lo": 5.5393,
+        "hi": 10.4607
+       },
+       "5+": {
+        "mean": 7,
+        "lo": 4.7257,
+        "hi": 9.2743
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -24.5,
+       "lo": -25.0826,
+       "hi": -23.9174
+      },
+      "wastedRelistShare": {
+       "mean": -0.09,
+       "lo": -0.0948,
+       "hi": -0.0852
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 10.4,
+       "lo": 9.3302,
+       "hi": 11.4698
+      },
+      "judgeTimeUsed": {
+       "mean": -0.0336,
+       "lo": -0.0365,
+       "hi": -0.0307
+      },
+      "wastedListings": {
+       "mean": -0.1413,
+       "lo": -0.1454,
+       "hi": -0.1372
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.1649,
+       "lo": 0.1605,
+       "hi": 0.1693
+      },
+      "oldestPendingAgeYears": {
+       "mean": 0,
+       "lo": -0.0372,
+       "hi": 0.0372
+      },
+      "p95PendingAgeYears": {
+       "mean": 0.06,
+       "lo": 0.0326,
+       "hi": 0.0874
+      },
+      "neverHeard": {
+       "mean": 290,
+       "lo": 278.701,
+       "hi": 301.299
+      },
+      "loadBalanceCv": {
+       "mean": 0.03,
+       "lo": 0.0275,
+       "hi": 0.0325
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": 0,
+       "lo": -3.7808,
+       "hi": 3.7808
+      },
+      "plus3Change": {
+       "mean": 0,
+       "lo": -3.7808,
+       "hi": 3.7808
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": 16,
+       "lo": 12.843,
+       "hi": 19.157
+      },
+      "plus4Change": {
+       "mean": 16,
+       "lo": 12.843,
+       "hi": 19.157
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": 7,
+       "lo": 5.1059,
+       "hi": 8.8941
+      },
+      "plus5Change": {
+       "mean": 7,
+       "lo": 5.1059,
+       "hi": 8.8941
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -30,
+       "lo": -30.2738,
+       "hi": -29.7262
+      },
+      "reachedPerDay": {
+       "mean": -8.74,
+       "lo": -9.1102,
+       "hi": -8.3698
+      },
+      "substantivePerDay": {
+       "mean": 2.24,
+       "lo": 2.069,
+       "hi": 2.411
+      },
+      "disposed": {
+       "mean": 26,
+       "lo": 23.3255,
+       "hi": 28.6745
+      },
+      "disposed4yPlus": {
+       "mean": -16,
+       "lo": -16.8733,
+       "hi": -15.1267
+      },
+      "tripsPerSubstantive": {
+       "mean": -2.5,
+       "lo": -2.5768,
+       "hi": -2.4232
+      },
+      "wastedTripShare": {
+       "mean": -0.22,
+       "lo": -0.2244,
+       "hi": -0.2156
+      },
+      "deskPerDay": {
+       "mean": 18,
+       "lo": 17.8129,
+       "hi": 18.1871
+      },
+      "vacatedPerDay": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      }
+     }
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "policyName": "benchtime",
+    "kind": "ours",
+    "summary": {
+     "readme": {
+      "utilisation": {
+       "mean": 0.88,
+       "lo": 0.8754,
+       "hi": 0.8846
+      },
+      "reachRate": {
+       "mean": 0.95,
+       "lo": 0.9442,
+       "hi": 0.9558
+      },
+      "substantiveness": {
+       "mean": 0.6,
+       "lo": 0.5931,
+       "hi": 0.6069
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.93,
+       "lo": 0.9219,
+       "hi": 0.9381
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.41,
+       "lo": 0.4008,
+       "hi": 0.4192
+      },
+      "predictabilityGapDays": {
+       "mean": 3.4,
+       "lo": 3.2626,
+       "hi": 3.5374
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": 0.88,
+       "lo": 0.8754,
+       "hi": 0.8846
+      },
+      "overrunDays": {
+       "mean": 5.2,
+       "lo": 4.8536,
+       "hi": 5.5464
+      },
+      "idleMinutesShare": {
+       "mean": 0.1,
+       "lo": 0.0965,
+       "hi": 0.1035
+      },
+      "heldAsScheduled": {
+       "mean": 0.89,
+       "lo": 0.8836,
+       "hi": 0.8964
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.71,
+       "lo": 0.7031,
+       "hi": 0.7169
+      },
+      "substantiveness": {
+       "mean": 0.6,
+       "lo": 0.5931,
+       "hi": 0.6069
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 389,
+        "lo": 389,
+        "hi": 389
+       },
+       "1-3": {
+        "mean": 1014,
+        "lo": 1014,
+        "hi": 1014
+       },
+       "3-4": {
+        "mean": 700,
+        "lo": 700,
+        "hi": 700
+       },
+       "4-5": {
+        "mean": 461,
+        "lo": 461,
+        "hi": 461
+       },
+       "5+": {
+        "mean": 436,
+        "lo": 436,
+        "hi": 436
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": 383,
+        "lo": 380.3436,
+        "hi": 385.6564
+       },
+       "1-3": {
+        "mean": 756,
+        "lo": 750.764,
+        "hi": 761.236
+       },
+       "3-4": {
+        "mean": 641,
+        "lo": 636.5577,
+        "hi": 645.4423
+       },
+       "4-5": {
+        "mean": 542,
+        "lo": 538.2469,
+        "hi": 545.7531
+       },
+       "5+": {
+        "mean": 502,
+        "lo": 498.5225,
+        "hi": 505.4775
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": 4.1,
+       "lo": 3.9816,
+       "hi": 4.2184
+      },
+      "wastedRelistShare": {
+       "mean": 0.14,
+       "lo": 0.1325,
+       "hi": 0.1475
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 70.4,
+       "lo": 68.3677,
+       "hi": 72.4323
+      },
+      "judgeTimeUsed": {
+       "mean": 0.905,
+       "lo": 0.9004,
+       "hi": 0.9096
+      },
+      "wastedListings": {
+       "mean": 0.43,
+       "lo": 0.4236,
+       "hi": 0.4364
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.8633,
+       "lo": 0.8564,
+       "hi": 0.8702
+      },
+      "oldestPendingAgeYears": {
+       "mean": 8.51,
+       "lo": 8.4609,
+       "hi": 8.5591
+      },
+      "p95PendingAgeYears": {
+       "mean": 8.99,
+       "lo": 8.9485,
+       "hi": 9.0315
+      },
+      "neverHeard": {
+       "mean": 420,
+       "lo": 410.3005,
+       "hi": 429.6995
+      },
+      "loadBalanceCv": {
+       "mean": 0.05,
+       "lo": 0.0465,
+       "hi": 0.0535
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 1597,
+       "lo": 1597,
+       "hi": 1597
+      },
+      "plus3End": {
+       "mean": 1685,
+       "lo": 1679.163,
+       "hi": 1690.837
+      },
+      "plus3Change": {
+       "mean": 88,
+       "lo": 82.163,
+       "hi": 93.837
+      },
+      "plus4Start": {
+       "mean": 897,
+       "lo": 897,
+       "hi": 897
+      },
+      "plus4End": {
+       "mean": 1044,
+       "lo": 1039.178,
+       "hi": 1048.822
+      },
+      "plus4Change": {
+       "mean": 147,
+       "lo": 142.178,
+       "hi": 151.822
+      },
+      "plus5Start": {
+       "mean": 436,
+       "lo": 436,
+       "hi": 436
+      },
+      "plus5End": {
+       "mean": 502,
+       "lo": 499.1017,
+       "hi": 504.8983
+      },
+      "plus5Change": {
+       "mean": 66,
+       "lo": 63.1017,
+       "hi": 68.8983
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": 37,
+       "lo": 36.7864,
+       "hi": 37.2136
+      },
+      "reachedPerDay": {
+       "mean": 35.15,
+       "lo": 34.7441,
+       "hi": 35.5559
+      },
+      "substantivePerDay": {
+       "mean": 21.09,
+       "lo": 20.7856,
+       "hi": 21.3944
+      },
+      "disposed": {
+       "mean": 176,
+       "lo": 170.9193,
+       "hi": 181.0807
+      },
+      "disposed4yPlus": {
+       "mean": 63,
+       "lo": 60.4539,
+       "hi": 65.5461
+      },
+      "tripsPerSubstantive": {
+       "mean": 2.9,
+       "lo": 2.8498,
+       "hi": 2.9502
+      },
+      "wastedTripShare": {
+       "mean": 0.27,
+       "lo": 0.2631,
+       "hi": 0.2769
+      },
+      "deskPerDay": {
+       "mean": 21,
+       "lo": 20.515,
+       "hi": 21.485
+      },
+      "vacatedPerDay": {
+       "mean": 3.1,
+       "lo": 2.9568,
+       "hi": 3.2432
+      }
+     }
+    },
+    "vsBaseline": {
+     "readme": {
+      "utilisation": {
+       "mean": -0.105,
+       "lo": -0.1079,
+       "hi": -0.1021
+      },
+      "reachRate": {
+       "mean": 0.33,
+       "lo": 0.3263,
+       "hi": 0.3337
+      },
+      "substantiveness": {
+       "mean": 0.28,
+       "lo": 0.2756,
+       "hi": 0.2844
+      },
+      "backlog4yHeardShare": {
+       "mean": 0.32,
+       "lo": 0.3148,
+       "hi": 0.3252
+      },
+      "backlog4ySubstantiveShare": {
+       "mean": 0.17,
+       "lo": 0.1641,
+       "hi": 0.1759
+      },
+      "predictabilityGapDays": {
+       "mean": -10.4,
+       "lo": -10.6585,
+       "hi": -10.1415
+      }
+     },
+     "caseStudy": {
+      "utilisation": {
+       "mean": -0.105,
+       "lo": -0.1079,
+       "hi": -0.1021
+      },
+      "overrunDays": {
+       "mean": -40.8,
+       "lo": -41.7687,
+       "hi": -39.8313
+      },
+      "idleMinutesShare": {
+       "mean": 0.094,
+       "lo": 0.0918,
+       "hi": 0.0962
+      },
+      "heldAsScheduled": {
+       "mean": 0.35,
+       "lo": 0.3459,
+       "hi": 0.3541
+      },
+      "heldAsScheduledAllDue": {
+       "mean": 0.17,
+       "lo": 0.1656,
+       "hi": 0.1744
+      },
+      "substantiveness": {
+       "mean": 0.28,
+       "lo": 0.2756,
+       "hi": 0.2844
+      },
+      "ageBandsStart": {
+       "0-1": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "1-3": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "3-4": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "4-5": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       },
+       "5+": {
+        "mean": 0,
+        "lo": 0,
+        "hi": 0
+       }
+      },
+      "ageBandsEnd": {
+       "0-1": {
+        "mean": -1,
+        "lo": -2.6929,
+        "hi": 0.6929
+       },
+       "1-3": {
+        "mean": -12,
+        "lo": -15.3594,
+        "hi": -8.6406
+       },
+       "3-4": {
+        "mean": -8,
+        "lo": -10.8452,
+        "hi": -5.1548
+       },
+       "4-5": {
+        "mean": -12,
+        "lo": -14.4154,
+        "hi": -9.5846
+       },
+       "5+": {
+        "mean": -10,
+        "lo": -12.2359,
+        "hi": -7.7641
+       }
+      },
+      "nextDateExcessDays": {
+       "mean": -37.4,
+       "lo": -37.9417,
+       "hi": -36.8583
+      },
+      "wastedRelistShare": {
+       "mean": -0.32,
+       "lo": -0.3248,
+       "hi": -0.3152
+      }
+     },
+     "siddarth": {
+      "throughputPerMonth": {
+       "mean": 17.6,
+       "lo": 16.4568,
+       "hi": 18.7432
+      },
+      "judgeTimeUsed": {
+       "mean": -0.08,
+       "lo": -0.0829,
+       "hi": -0.0771
+      },
+      "wastedListings": {
+       "mean": -0.3716,
+       "lo": -0.3757,
+       "hi": -0.3675
+      },
+      "heldOnPromisedDate": {
+       "mean": 0.3395,
+       "lo": 0.3351,
+       "hi": 0.3439
+      },
+      "oldestPendingAgeYears": {
+       "mean": -1.6,
+       "lo": -1.6343,
+       "hi": -1.5657
+      },
+      "p95PendingAgeYears": {
+       "mean": -0.3,
+       "lo": -0.3269,
+       "hi": -0.2731
+      },
+      "neverHeard": {
+       "mean": -190,
+       "lo": -197.6966,
+       "hi": -182.3034
+      },
+      "loadBalanceCv": {
+       "mean": 0.01,
+       "lo": 0.008,
+       "hi": 0.012
+      }
+     },
+     "backlog": {
+      "plus3Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus3End": {
+       "mean": -30,
+       "lo": -33.7479,
+       "hi": -26.2521
+      },
+      "plus3Change": {
+       "mean": -30,
+       "lo": -33.7479,
+       "hi": -26.2521
+      },
+      "plus4Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus4End": {
+       "mean": -22,
+       "lo": -25.1012,
+       "hi": -18.8988
+      },
+      "plus4Change": {
+       "mean": -22,
+       "lo": -25.1012,
+       "hi": -18.8988
+      },
+      "plus5Start": {
+       "mean": 0,
+       "lo": 0,
+       "hi": 0
+      },
+      "plus5End": {
+       "mean": -10,
+       "lo": -11.8629,
+       "hi": -8.1371
+      },
+      "plus5Change": {
+       "mean": -10,
+       "lo": -11.8629,
+       "hi": -8.1371
+      }
+     },
+     "extra": {
+      "listedPerDay": {
+       "mean": -51,
+       "lo": -51.248,
+       "hi": -50.752
+      },
+      "reachedPerDay": {
+       "mean": -19.41,
+       "lo": -19.7472,
+       "hi": -19.0728
+      },
+      "substantivePerDay": {
+       "mean": 3.63,
+       "lo": 3.4522,
+       "hi": 3.8078
+      },
+      "disposed": {
+       "mean": 44,
+       "lo": 41.1421,
+       "hi": 46.8579
+      },
+      "disposed4yPlus": {
+       "mean": 22,
+       "lo": 20.633,
+       "hi": 23.367
+      },
+      "tripsPerSubstantive": {
+       "mean": -5.2,
+       "lo": -5.2671,
+       "hi": -5.1329
+      },
+      "wastedTripShare": {
+       "mean": -0.47,
+       "lo": -0.4744,
+       "hi": -0.4656
+      },
+      "deskPerDay": {
+       "mean": 21,
+       "lo": 20.7818,
+       "hi": 21.2183
+      },
+      "vacatedPerDay": {
+       "mean": 3.1,
+       "lo": 3.0356,
+       "hi": 3.1644
+      }
+     }
+    }
+   }
+  ]
+ },
+ "ablation": {
+  "measures": [
+   "extra.substantivePerDay",
+   "readme.reachRate",
+   "caseStudy.heldAsScheduled",
+   "readme.utilisation",
+   "readme.backlog4yHeardShare",
+   "extra.disposed",
+   "extra.tripsPerSubstantive",
+   "readme.predictabilityGapDays"
+  ],
+  "base": {
+   "policyId": "benchtime",
+   "values": {
+    "extra.substantivePerDay": {
+     "mean": 21.09,
+     "lo": 20.7856,
+     "hi": 21.3944
+    },
+    "readme.reachRate": {
+     "mean": 0.95,
+     "lo": 0.9442,
+     "hi": 0.9558
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": 0.89,
+     "lo": 0.8836,
+     "hi": 0.8964
+    },
+    "readme.utilisation": {
+     "mean": 0.88,
+     "lo": 0.8754,
+     "hi": 0.8846
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": 0.93,
+     "lo": 0.9219,
+     "hi": 0.9381
+    },
+    "extra.disposed": {
+     "mean": 176,
+     "lo": 170.9193,
+     "hi": 181.0807
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": 2.9,
+     "lo": 2.8498,
+     "hi": 2.9502
+    },
+    "readme.predictabilityGapDays": {
+     "mean": 3.4,
+     "lo": 3.2626,
+     "hi": 3.5374
+    }
+   }
+  },
+  "statusQuo": {
+   "policyId": "status_quo_60",
+   "values": {
+    "extra.substantivePerDay": {
+     "mean": 17.46,
+     "lo": 17.208,
+     "hi": 17.712
+    },
+    "readme.reachRate": {
+     "mean": 0.62,
+     "lo": 0.6142,
+     "hi": 0.6258
+    },
+    "caseStudy.heldAsScheduled": {
+     "mean": 0.54,
+     "lo": 0.5336,
+     "hi": 0.5464
+    },
+    "readme.utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "readme.backlog4yHeardShare": {
+     "mean": 0.61,
+     "lo": 0.6019,
+     "hi": 0.6181
+    },
+    "extra.disposed": {
+     "mean": 132,
+     "lo": 128.1895,
+     "hi": 135.8105
+    },
+    "extra.tripsPerSubstantive": {
+     "mean": 8.1,
+     "lo": 7.9597,
+     "hi": 8.2403
+    },
+    "readme.predictabilityGapDays": {
+     "mean": 13.8,
+     "lo": 13.2423,
+     "hi": 14.3577
+    }
+   }
+  },
+  "rows": [
+   {
+    "component": "processDesk",
+    "label": "Process desk",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": 0.61,
+      "lo": 0.4135,
+      "hi": 0.8065
+     },
+     "readme.reachRate": {
+      "mean": -0.08,
+      "lo": -0.0837,
+      "hi": -0.0763
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": -0.12,
+      "lo": -0.1241,
+      "hi": -0.1159
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.0029,
+      "hi": 0.0029
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.0052,
+      "hi": 0.0052
+     },
+     "extra.disposed": {
+      "mean": 5,
+      "lo": 1.7204,
+      "hi": 8.2796
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 2.1,
+      "lo": 2.055,
+      "hi": 2.145
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.0874,
+      "hi": 0.0874
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 1.4,
+      "lo": 0.83,
+      "hi": 1.97
+     },
+     "readme.reachRate": {
+      "mean": 0.09,
+      "lo": 0.0525,
+      "hi": 0.1275
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0.1,
+      "lo": 0.059,
+      "hi": 0.141
+     },
+     "readme.utilisation": {
+      "mean": -0.01,
+      "lo": -0.0195,
+      "hi": -0.0005
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0.03,
+      "lo": 0.0135,
+      "hi": 0.0465
+     },
+     "extra.disposed": {
+      "mean": 9,
+      "lo": 2.85,
+      "hi": 15.15
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": -1.6,
+      "lo": -2.24,
+      "hi": -0.96
+     },
+     "readme.predictabilityGapDays": {
+      "mean": -2.1,
+      "lo": -2.915,
+      "hi": -1.285
+     }
+    }
+   },
+   {
+    "component": "checkin",
+    "label": "Readiness check the day before",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": -1.05,
+      "lo": -1.2389,
+      "hi": -0.8611
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.0037,
+      "hi": 0.0037
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": -0.02,
+      "lo": -0.0241,
+      "hi": -0.0159
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.0029,
+      "hi": 0.0029
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.0052,
+      "hi": 0.0052
+     },
+     "extra.disposed": {
+      "mean": -8,
+      "lo": -11.1607,
+      "hi": -4.8393
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.4,
+      "lo": 0.3658,
+      "hi": 0.4342
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.0874,
+      "hi": 0.0874
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0.6,
+      "lo": 0.31,
+      "hi": 0.89
+     },
+     "readme.reachRate": {
+      "mean": 0.02,
+      "lo": 0.007,
+      "hi": 0.033
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0.03,
+      "lo": 0.0135,
+      "hi": 0.0465
+     },
+     "readme.utilisation": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0.01,
+      "lo": 0.0005,
+      "hi": 0.0195
+     },
+     "extra.disposed": {
+      "mean": 4,
+      "lo": -0.4,
+      "hi": 8.4
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": -0.5,
+      "lo": -0.755,
+      "hi": -0.245
+     },
+     "readme.predictabilityGapDays": {
+      "mean": -0.6,
+      "lo": -0.89,
+      "hi": -0.31
+     }
+    }
+   },
+   {
+    "component": "exact",
+    "label": "Exact selection instead of greedy",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": -0.28,
+      "lo": -0.458,
+      "hi": -0.102
+     },
+     "readme.reachRate": {
+      "mean": -0.004,
+      "lo": -0.0114,
+      "hi": 0.0034
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": -0.004,
+      "lo": -0.0114,
+      "hi": 0.0034
+     },
+     "readme.utilisation": {
+      "mean": -0.006,
+      "lo": -0.0141,
+      "hi": 0.0021
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": -0.006,
+      "lo": -0.0141,
+      "hi": 0.0021
+     },
+     "extra.disposed": {
+      "mean": -2,
+      "lo": -5.7,
+      "hi": 1.7
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.04,
+      "lo": -0.054,
+      "hi": 0.134
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0.1,
+      "lo": -0.015,
+      "hi": 0.215
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "extra.disposed": {
+      "mean": 0,
+      "lo": -3,
+      "hi": 3
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     }
+    }
+   },
+   {
+    "component": "fairnessFloor",
+    "label": "Fairness floor above the 15% minimum",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": 0.21,
+      "lo": 0.0153,
+      "hi": 0.4047
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.0037,
+      "hi": 0.0037
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.0041,
+      "hi": 0.0041
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.0029,
+      "hi": 0.0029
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": -0.025,
+      "lo": -0.0302,
+      "hi": -0.0198
+     },
+     "extra.disposed": {
+      "mean": 4,
+      "lo": 0.7297,
+      "hi": 7.2703
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0,
+      "lo": -0.0319,
+      "hi": 0.0319
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.0874,
+      "hi": 0.0874
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": -0.2,
+      "lo": -0.35,
+      "hi": -0.05
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0.12,
+      "lo": 0.072,
+      "hi": 0.168
+     },
+     "extra.disposed": {
+      "mean": -3,
+      "lo": -7.05,
+      "hi": 1.05
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.1,
+      "lo": -0.015,
+      "hi": 0.215
+     },
+     "readme.predictabilityGapDays": {
+      "mean": -1.4,
+      "lo": -1.97,
+      "hi": -0.83
+     }
+    }
+   },
+   {
+    "component": "learnedPrediction",
+    "label": "Chance of moving learned from the record",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": -1.1,
+      "lo": -1.565,
+      "hi": -0.635
+     },
+     "readme.reachRate": {
+      "mean": -0.01,
+      "lo": -0.0195,
+      "hi": -0.0005
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": -0.02,
+      "lo": -0.033,
+      "hi": -0.007
+     },
+     "readme.utilisation": {
+      "mean": -0.01,
+      "lo": -0.0195,
+      "hi": -0.0005
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": -0.01,
+      "lo": -0.0195,
+      "hi": -0.0005
+     },
+     "extra.disposed": {
+      "mean": -9,
+      "lo": -15.15,
+      "hi": -2.85
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.35,
+      "lo": 0.1475,
+      "hi": 0.5525
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0.4,
+      "lo": 0.18,
+      "hi": 0.62
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0.4,
+      "lo": 0.18,
+      "hi": 0.62
+     },
+     "readme.reachRate": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "extra.disposed": {
+      "mean": 3,
+      "lo": -1.05,
+      "hi": 7.05
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": -0.2,
+      "lo": -0.35,
+      "hi": -0.05
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     }
+    }
+   },
+   {
+    "component": "smartNextDate",
+    "label": "Next date at the procedural minimum when ready",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": 0,
+      "lo": -0.1937,
+      "hi": 0.1937
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.0037,
+      "hi": 0.0037
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.0041,
+      "hi": 0.0041
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.0029,
+      "hi": 0.0029
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.0052,
+      "hi": 0.0052
+     },
+     "extra.disposed": {
+      "mean": 0,
+      "lo": -3.2333,
+      "hi": 3.2333
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0,
+      "lo": -0.0319,
+      "hi": 0.0319
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 3,
+      "lo": 2.8682,
+      "hi": 3.1318
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0.9,
+      "lo": 0.505,
+      "hi": 1.295
+     },
+     "readme.reachRate": {
+      "mean": 0.01,
+      "lo": 0.0005,
+      "hi": 0.0195
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0.04,
+      "lo": 0.02,
+      "hi": 0.06
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0.06,
+      "lo": 0.033,
+      "hi": 0.087
+     },
+     "extra.disposed": {
+      "mean": 11,
+      "lo": 4.15,
+      "hi": 17.85
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": -0.6,
+      "lo": -0.89,
+      "hi": -0.31
+     },
+     "readme.predictabilityGapDays": {
+      "mean": -3.3,
+      "lo": -4.535,
+      "hi": -2.065
+     }
+    }
+   },
+   {
+    "component": "clusterByAdvocate",
+    "label": "Advocate clustering",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": 0.18,
+      "lo": -0.0145,
+      "hi": 0.3745
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.0037,
+      "hi": 0.0037
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.0041,
+      "hi": 0.0041
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.0029,
+      "hi": 0.0029
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.0052,
+      "hi": 0.0052
+     },
+     "extra.disposed": {
+      "mean": 1,
+      "lo": -2.2425,
+      "hi": 4.2425
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.5,
+      "lo": 0.4652,
+      "hi": 0.5348
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.0874,
+      "hi": 0.0874
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0.05,
+      "lo": -0.0475,
+      "hi": 0.1475
+     },
+     "readme.reachRate": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "readme.utilisation": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "extra.disposed": {
+      "mean": 1,
+      "lo": -2.35,
+      "hi": 4.35
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": -0.7,
+      "lo": -1.025,
+      "hi": -0.375
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     }
+    }
+   },
+   {
+    "component": "standby",
+    "label": "Standby list",
+    "removed": {
+     "extra.substantivePerDay": {
+      "mean": 0,
+      "lo": -0.1937,
+      "hi": 0.1937
+     },
+     "readme.reachRate": {
+      "mean": 0,
+      "lo": -0.0037,
+      "hi": 0.0037
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.0041,
+      "hi": 0.0041
+     },
+     "readme.utilisation": {
+      "mean": -0.015,
+      "lo": -0.0179,
+      "hi": -0.0121
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0,
+      "lo": -0.0052,
+      "hi": 0.0052
+     },
+     "extra.disposed": {
+      "mean": 0,
+      "lo": -3.2333,
+      "hi": 3.2333
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0,
+      "lo": -0.0319,
+      "hi": 0.0319
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.0874,
+      "hi": 0.0874
+     }
+    },
+    "added": {
+     "extra.substantivePerDay": {
+      "mean": 0.3,
+      "lo": 0.115,
+      "hi": 0.485
+     },
+     "readme.reachRate": {
+      "mean": -0.01,
+      "lo": -0.0195,
+      "hi": -0.0005
+     },
+     "caseStudy.heldAsScheduled": {
+      "mean": 0,
+      "lo": -0.006,
+      "hi": 0.006
+     },
+     "readme.utilisation": {
+      "mean": 0.015,
+      "lo": 0.0038,
+      "hi": 0.0263
+     },
+     "readme.backlog4yHeardShare": {
+      "mean": 0.004,
+      "lo": -0.0034,
+      "hi": 0.0114
+     },
+     "extra.disposed": {
+      "mean": 2,
+      "lo": -1.7,
+      "hi": 5.7
+     },
+     "extra.tripsPerSubstantive": {
+      "mean": 0.1,
+      "lo": -0.015,
+      "hi": 0.215
+     },
+     "readme.predictabilityGapDays": {
+      "mean": 0,
+      "lo": -0.08,
+      "hi": 0.08
+     }
+    }
+   }
+  ]
+ },
+ "sensitivity": {
+  "measure": "extra.substantivePerDay",
+  "compared": {
+   "a": "status_quo_60",
+   "b": "benchtime"
+  },
+  "rows": [
+   {
+    "assumption": "plannerNoise",
+    "label": "Planner's estimates noisy (logit sd)",
+    "unit": "",
+    "low": 0,
+    "base": 0.3,
+    "high": 0.8,
+    "atLow": {
+     "mean": 3.83,
+     "lo": 3.48,
+     "hi": 4.18
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 2.88,
+     "lo": 2.48,
+     "hi": 3.28
+    }
+   },
+   {
+    "assumption": "durationCv",
+    "label": "Hearing duration spread (CV)",
+    "unit": "",
+    "low": 0.25,
+    "base": 0.5,
+    "high": 1,
+    "atLow": {
+     "mean": 3.93,
+     "lo": 3.58,
+     "hi": 4.28
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 2.83,
+     "lo": 2.43,
+     "hi": 3.23
+    }
+   },
+   {
+    "assumption": "processReturn",
+    "label": "Process return time (multiple of calibrated)",
+    "unit": "x",
+    "low": 0.5,
+    "base": 1,
+    "high": 2,
+    "atLow": {
+     "mean": 3.03,
+     "lo": 2.68,
+     "hi": 3.38
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 4.33,
+     "lo": 3.93,
+     "hi": 4.73
+    }
+   },
+   {
+    "assumption": "abscondShare",
+    "label": "Accused never found inside the horizon",
+    "unit": "share",
+    "low": 0.05,
+    "base": 0.12,
+    "high": 0.3,
+    "atLow": {
+     "mean": 3.33,
+     "lo": 2.98,
+     "hi": 3.68
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 4.43,
+     "lo": 4.03,
+     "hi": 4.83
+    }
+   },
+   {
+    "assumption": "slotAttendLift",
+    "label": "A fixed time slot lifts attendance by",
+    "unit": "share",
+    "low": 0,
+    "base": 0.05,
+    "high": 0.15,
+    "atLow": {
+     "mean": 3.13,
+     "lo": 2.78,
+     "hi": 3.48
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 4.23,
+     "lo": 3.83,
+     "hi": 4.63
+    }
+   },
+   {
+    "assumption": "callMinutes",
+    "label": "Minutes a failed call takes",
+    "unit": "min",
+    "low": 1,
+    "base": 2,
+    "high": 5,
+    "atLow": {
+     "mean": 3.33,
+     "lo": 2.98,
+     "hi": 3.68
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 4.63,
+     "lo": 4.23,
+     "hi": 5.03
+    }
+   },
+   {
+    "assumption": "checkinHonesty",
+    "label": "Share of not-ready sides who say so the day before",
+    "unit": "share",
+    "low": 0.3,
+    "base": 0.6,
+    "high": 0.9,
+    "atLow": {
+     "mean": 3.23,
+     "lo": 2.88,
+     "hi": 3.58
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 3.93,
+     "lo": 3.53,
+     "hi": 4.33
+    }
+   },
+   {
+    "assumption": "fatigue",
+    "label": "Attendance lost per wasted trip",
+    "unit": "share",
+    "low": 0,
+    "base": 0.02,
+    "high": 0.06,
+    "atLow": {
+     "mean": 3.33,
+     "lo": 2.98,
+     "hi": 3.68
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 3.93,
+     "lo": 3.53,
+     "hi": 4.33
+    }
+   },
+   {
+    "assumption": "reminderLift",
+    "label": "A reminder lifts attendance by",
+    "unit": "share",
+    "low": 0,
+    "base": 0.03,
+    "high": 0.08,
+    "atLow": {
+     "mean": 3.43,
+     "lo": 3.08,
+     "hi": 3.78
+    },
+    "atBase": {
+     "mean": 3.63,
+     "lo": 3.33,
+     "hi": 3.93
+    },
+    "atHigh": {
+     "mean": 3.83,
+     "lo": 3.43,
+     "hi": 4.23
+    }
+   }
+  ]
+ },
+ "robustness": {
+  "measure": "extra.substantivePerDay",
+  "baseline": "status_quo_60",
+  "scenarios": [
+   {
+    "id": "base",
+    "label": "Calibrated court",
+    "description": "Roster seed 42, calibrated world, behaviour on."
+   },
+   {
+    "id": "noisy",
+    "label": "Noisy estimates",
+    "description": "The planner's chance of moving is off by a logit sd of 0.8."
+   },
+   {
+    "id": "biased",
+    "label": "Optimistic estimates",
+    "description": "The planner believes every hearing is 20% more likely to move than it is."
+   },
+   {
+    "id": "noBehaviour",
+    "label": "Nobody responds",
+    "description": "No slot, reminder or check-in effect; fatigue off."
+   },
+   {
+    "id": "cv1",
+    "label": "Durations twice as spread",
+    "description": "Duration CV 1.0 instead of 0.5."
+   },
+   {
+    "id": "abscond",
+    "label": "More absconding",
+    "description": "30% of warrants never executed in the horizon."
+   },
+   {
+    "id": "hostileBar",
+    "label": "Hostile Bar",
+    "description": "Advocates seek time twice as often and ignore the check-in."
+   },
+   {
+    "id": "rosters",
+    "label": "Other rosters",
+    "description": "Rosters seed 1 to 5, pooled."
+   }
+  ],
+  "policies": [
+   "status_quo_60",
+   "status_quo_ref",
+   "fifo_capped",
+   "bin_packing",
+   "oldest_first",
+   "sehgal",
+   "dimakar",
+   "joshi",
+   "benchtime"
+  ],
+  "cells": [
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "base",
+    "value": {
+     "mean": 17.46,
+     "lo": 17.1108,
+     "hi": 17.8092
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 17.46,
+     "lo": 17.1108,
+     "hi": 17.8092
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 17.46,
+     "lo": 17.1108,
+     "hi": 17.8092
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 17.2854,
+     "lo": 16.9397,
+     "hi": 17.6311
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 16.9362,
+     "lo": 16.5975,
+     "hi": 17.2749
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 16.2378,
+     "lo": 15.913,
+     "hi": 16.5626
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 15.0156,
+     "lo": 14.7153,
+     "hi": 15.3159
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_60",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 17.46,
+     "lo": 17.1108,
+     "hi": 17.8092
+    },
+    "vsBaseline": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "base",
+    "value": {
+     "mean": 17.09,
+     "lo": 16.7482,
+     "hi": 17.4318
+    },
+    "vsBaseline": {
+     "mean": -0.37,
+     "lo": -0.52,
+     "hi": -0.22
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 17.09,
+     "lo": 16.7482,
+     "hi": 17.4318
+    },
+    "vsBaseline": {
+     "mean": -0.37,
+     "lo": -0.52,
+     "hi": -0.22
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 17.09,
+     "lo": 16.7482,
+     "hi": 17.4318
+    },
+    "vsBaseline": {
+     "mean": -0.37,
+     "lo": -0.52,
+     "hi": -0.22
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 16.9191,
+     "lo": 16.5807,
+     "hi": 17.2575
+    },
+    "vsBaseline": {
+     "mean": -0.3663,
+     "lo": -0.5163,
+     "hi": -0.2163
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 16.5773,
+     "lo": 16.2458,
+     "hi": 16.9088
+    },
+    "vsBaseline": {
+     "mean": -0.3589,
+     "lo": -0.5089,
+     "hi": -0.2089
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 15.8937,
+     "lo": 15.5758,
+     "hi": 16.2116
+    },
+    "vsBaseline": {
+     "mean": -0.3441,
+     "lo": -0.4941,
+     "hi": -0.1941
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 14.5265,
+     "lo": 14.236,
+     "hi": 14.817
+    },
+    "vsBaseline": {
+     "mean": -0.4891,
+     "lo": -0.6391,
+     "hi": -0.3391
+    }
+   },
+   {
+    "policyId": "status_quo_ref",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 17.09,
+     "lo": 16.7482,
+     "hi": 17.4318
+    },
+    "vsBaseline": {
+     "mean": -0.37,
+     "lo": -0.52,
+     "hi": -0.22
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "base",
+    "value": {
+     "mean": 13.21,
+     "lo": 12.9458,
+     "hi": 13.4742
+    },
+    "vsBaseline": {
+     "mean": -4.25,
+     "lo": -4.76,
+     "hi": -3.74
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 13.21,
+     "lo": 12.9458,
+     "hi": 13.4742
+    },
+    "vsBaseline": {
+     "mean": -4.25,
+     "lo": -4.76,
+     "hi": -3.74
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 13.21,
+     "lo": 12.9458,
+     "hi": 13.4742
+    },
+    "vsBaseline": {
+     "mean": -4.25,
+     "lo": -4.76,
+     "hi": -3.74
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 12.9458,
+     "lo": 12.6869,
+     "hi": 13.2047
+    },
+    "vsBaseline": {
+     "mean": -4.3396,
+     "lo": -4.8604,
+     "hi": -3.8188
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 12.4174,
+     "lo": 12.1691,
+     "hi": 12.6657
+    },
+    "vsBaseline": {
+     "mean": -4.5188,
+     "lo": -5.0611,
+     "hi": -3.9765
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 12.5495,
+     "lo": 12.2985,
+     "hi": 12.8005
+    },
+    "vsBaseline": {
+     "mean": -3.6883,
+     "lo": -4.1309,
+     "hi": -3.2457
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 11.4927,
+     "lo": 11.2628,
+     "hi": 11.7226
+    },
+    "vsBaseline": {
+     "mean": -3.5229,
+     "lo": -3.9456,
+     "hi": -3.1002
+    }
+   },
+   {
+    "policyId": "fifo_capped",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 13.3421,
+     "lo": 13.0753,
+     "hi": 13.6089
+    },
+    "vsBaseline": {
+     "mean": -4.1179,
+     "lo": -4.612,
+     "hi": -3.6238
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "base",
+    "value": {
+     "mean": 20.75,
+     "lo": 20.335,
+     "hi": 21.165
+    },
+    "vsBaseline": {
+     "mean": 3.29,
+     "lo": 2.8952,
+     "hi": 3.6848
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 17.845,
+     "lo": 17.4881,
+     "hi": 18.2019
+    },
+    "vsBaseline": {
+     "mean": 0.385,
+     "lo": 0.235,
+     "hi": 0.535
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 18.675,
+     "lo": 18.3015,
+     "hi": 19.0485
+    },
+    "vsBaseline": {
+     "mean": 1.215,
+     "lo": 1.065,
+     "hi": 1.365
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 20.1275,
+     "lo": 19.7249,
+     "hi": 20.5301
+    },
+    "vsBaseline": {
+     "mean": 2.8421,
+     "lo": 2.501,
+     "hi": 3.1832
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 18.8825,
+     "lo": 18.5049,
+     "hi": 19.2602
+    },
+    "vsBaseline": {
+     "mean": 1.9463,
+     "lo": 1.7127,
+     "hi": 2.1799
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 20.335,
+     "lo": 19.9283,
+     "hi": 20.7417
+    },
+    "vsBaseline": {
+     "mean": 4.0972,
+     "lo": 3.6055,
+     "hi": 4.5889
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 17.43,
+     "lo": 17.0814,
+     "hi": 17.7786
+    },
+    "vsBaseline": {
+     "mean": 2.4144,
+     "lo": 2.1247,
+     "hi": 2.7041
+    }
+   },
+   {
+    "policyId": "bin_packing",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 20.335,
+     "lo": 19.9283,
+     "hi": 20.7417
+    },
+    "vsBaseline": {
+     "mean": 2.875,
+     "lo": 2.53,
+     "hi": 3.22
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "base",
+    "value": {
+     "mean": 10.08,
+     "lo": 9.8784,
+     "hi": 10.2816
+    },
+    "vsBaseline": {
+     "mean": -7.38,
+     "lo": -8.2656,
+     "hi": -6.4944
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 10.08,
+     "lo": 9.8784,
+     "hi": 10.2816
+    },
+    "vsBaseline": {
+     "mean": -7.38,
+     "lo": -8.2656,
+     "hi": -6.4944
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 10.08,
+     "lo": 9.8784,
+     "hi": 10.2816
+    },
+    "vsBaseline": {
+     "mean": -7.38,
+     "lo": -8.2656,
+     "hi": -6.4944
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 9.8784,
+     "lo": 9.6808,
+     "hi": 10.076
+    },
+    "vsBaseline": {
+     "mean": -7.407,
+     "lo": -8.2958,
+     "hi": -6.5182
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 9.576,
+     "lo": 9.3845,
+     "hi": 9.7675
+    },
+    "vsBaseline": {
+     "mean": -7.3602,
+     "lo": -8.2434,
+     "hi": -6.477
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 9.2736,
+     "lo": 9.0881,
+     "hi": 9.4591
+    },
+    "vsBaseline": {
+     "mean": -6.9642,
+     "lo": -7.7999,
+     "hi": -6.1285
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 8.7696,
+     "lo": 8.5942,
+     "hi": 8.945
+    },
+    "vsBaseline": {
+     "mean": -6.246,
+     "lo": -6.9955,
+     "hi": -5.4965
+    }
+   },
+   {
+    "policyId": "oldest_first",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 10.08,
+     "lo": 9.8784,
+     "hi": 10.2816
+    },
+    "vsBaseline": {
+     "mean": -7.38,
+     "lo": -8.2656,
+     "hi": -6.4944
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "base",
+    "value": {
+     "mean": 16.86,
+     "lo": 16.5228,
+     "hi": 17.1972
+    },
+    "vsBaseline": {
+     "mean": -0.6,
+     "lo": -0.75,
+     "hi": -0.45
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 16.86,
+     "lo": 16.5228,
+     "hi": 17.1972
+    },
+    "vsBaseline": {
+     "mean": -0.6,
+     "lo": -0.75,
+     "hi": -0.45
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 16.86,
+     "lo": 16.5228,
+     "hi": 17.1972
+    },
+    "vsBaseline": {
+     "mean": -0.6,
+     "lo": -0.75,
+     "hi": -0.45
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 16.3542,
+     "lo": 16.0271,
+     "hi": 16.6813
+    },
+    "vsBaseline": {
+     "mean": -0.9312,
+     "lo": -1.0812,
+     "hi": -0.7812
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 16.017,
+     "lo": 15.6967,
+     "hi": 16.3373
+    },
+    "vsBaseline": {
+     "mean": -0.9192,
+     "lo": -1.0692,
+     "hi": -0.7692
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 15.8484,
+     "lo": 15.5314,
+     "hi": 16.1654
+    },
+    "vsBaseline": {
+     "mean": -0.3894,
+     "lo": -0.5394,
+     "hi": -0.2394
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 14.4996,
+     "lo": 14.2096,
+     "hi": 14.7896
+    },
+    "vsBaseline": {
+     "mean": -0.516,
+     "lo": -0.666,
+     "hi": -0.366
+    }
+   },
+   {
+    "policyId": "sehgal",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 16.86,
+     "lo": 16.5228,
+     "hi": 17.1972
+    },
+    "vsBaseline": {
+     "mean": -0.6,
+     "lo": -0.75,
+     "hi": -0.45
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "base",
+    "value": {
+     "mean": 17.06,
+     "lo": 16.7188,
+     "hi": 17.4012
+    },
+    "vsBaseline": {
+     "mean": -0.4,
+     "lo": -0.55,
+     "hi": -0.25
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 17.06,
+     "lo": 16.7188,
+     "hi": 17.4012
+    },
+    "vsBaseline": {
+     "mean": -0.4,
+     "lo": -0.55,
+     "hi": -0.25
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 17.06,
+     "lo": 16.7188,
+     "hi": 17.4012
+    },
+    "vsBaseline": {
+     "mean": -0.4,
+     "lo": -0.55,
+     "hi": -0.25
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 16.3776,
+     "lo": 16.05,
+     "hi": 16.7052
+    },
+    "vsBaseline": {
+     "mean": -0.9078,
+     "lo": -1.0578,
+     "hi": -0.7578
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 16.207,
+     "lo": 15.8829,
+     "hi": 16.5311
+    },
+    "vsBaseline": {
+     "mean": -0.7292,
+     "lo": -0.8792,
+     "hi": -0.5792
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 16.207,
+     "lo": 15.8829,
+     "hi": 16.5311
+    },
+    "vsBaseline": {
+     "mean": -0.0308,
+     "lo": -0.1808,
+     "hi": 0.1192
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 14.8422,
+     "lo": 14.5454,
+     "hi": 15.139
+    },
+    "vsBaseline": {
+     "mean": -0.1734,
+     "lo": -0.3234,
+     "hi": -0.0234
+    }
+   },
+   {
+    "policyId": "dimakar",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 16.8894,
+     "lo": 16.5516,
+     "hi": 17.2272
+    },
+    "vsBaseline": {
+     "mean": -0.5706,
+     "lo": -0.7206,
+     "hi": -0.4206
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "base",
+    "value": {
+     "mean": 19.7,
+     "lo": 19.306,
+     "hi": 20.094
+    },
+    "vsBaseline": {
+     "mean": 2.24,
+     "lo": 1.9712,
+     "hi": 2.5088
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 19.109,
+     "lo": 18.7268,
+     "hi": 19.4912
+    },
+    "vsBaseline": {
+     "mean": 1.649,
+     "lo": 1.4511,
+     "hi": 1.8469
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 19.109,
+     "lo": 18.7268,
+     "hi": 19.4912
+    },
+    "vsBaseline": {
+     "mean": 1.649,
+     "lo": 1.4511,
+     "hi": 1.8469
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 19.109,
+     "lo": 18.7268,
+     "hi": 19.4912
+    },
+    "vsBaseline": {
+     "mean": 1.8236,
+     "lo": 1.6048,
+     "hi": 2.0424
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 18.518,
+     "lo": 18.1476,
+     "hi": 18.8884
+    },
+    "vsBaseline": {
+     "mean": 1.5818,
+     "lo": 1.392,
+     "hi": 1.7716
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 18.912,
+     "lo": 18.5338,
+     "hi": 19.2902
+    },
+    "vsBaseline": {
+     "mean": 2.6742,
+     "lo": 2.3533,
+     "hi": 2.9951
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 16.942,
+     "lo": 16.6032,
+     "hi": 17.2808
+    },
+    "vsBaseline": {
+     "mean": 1.9264,
+     "lo": 1.6952,
+     "hi": 2.1576
+    }
+   },
+   {
+    "policyId": "joshi",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 19.7,
+     "lo": 19.306,
+     "hi": 20.094
+    },
+    "vsBaseline": {
+     "mean": 2.24,
+     "lo": 1.9712,
+     "hi": 2.5088
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "base",
+    "value": {
+     "mean": 21.09,
+     "lo": 20.6682,
+     "hi": 21.5118
+    },
+    "vsBaseline": {
+     "mean": 3.63,
+     "lo": 3.1944,
+     "hi": 4.0656
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "noisy",
+    "value": {
+     "mean": 18.981,
+     "lo": 18.6014,
+     "hi": 19.3606
+    },
+    "vsBaseline": {
+     "mean": 1.521,
+     "lo": 1.3385,
+     "hi": 1.7035
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "biased",
+    "value": {
+     "mean": 19.6137,
+     "lo": 19.2214,
+     "hi": 20.006
+    },
+    "vsBaseline": {
+     "mean": 2.1537,
+     "lo": 1.8953,
+     "hi": 2.4121
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "noBehaviour",
+    "value": {
+     "mean": 19.1919,
+     "lo": 18.8081,
+     "hi": 19.5757
+    },
+    "vsBaseline": {
+     "mean": 1.9065,
+     "lo": 1.6777,
+     "hi": 2.1353
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "cv1",
+    "value": {
+     "mean": 19.4028,
+     "lo": 19.0147,
+     "hi": 19.7909
+    },
+    "vsBaseline": {
+     "mean": 2.4666,
+     "lo": 2.1706,
+     "hi": 2.7626
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "abscond",
+    "value": {
+     "mean": 20.4573,
+     "lo": 20.0482,
+     "hi": 20.8664
+    },
+    "vsBaseline": {
+     "mean": 4.2195,
+     "lo": 3.7132,
+     "hi": 4.7258
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "hostileBar",
+    "value": {
+     "mean": 18.5592,
+     "lo": 18.188,
+     "hi": 18.9304
+    },
+    "vsBaseline": {
+     "mean": 3.5436,
+     "lo": 3.1184,
+     "hi": 3.9688
+    }
+   },
+   {
+    "policyId": "benchtime",
+    "scenarioId": "rosters",
+    "value": {
+     "mean": 20.8791,
+     "lo": 20.4615,
+     "hi": 21.2967
+    },
+    "vsBaseline": {
+     "mean": 3.4191,
+     "lo": 3.0088,
+     "hi": 3.8294
+    }
+   }
+  ]
+ },
+ "exactVsGreedy": {
+  "days": 51,
+  "valueUnit": "expected weighted progress",
+  "meanGap": {
+   "mean": 0.0172,
+   "lo": 0.0137,
+   "hi": 0.0207
+  },
+  "maxGap": 0.0341,
+  "daysExactBetter": 45,
+  "effect": {
+   "extra.substantivePerDay": {
+    "mean": 0.28,
+    "lo": 0.12,
+    "hi": 0.44
+   },
+   "readme.backlog4yHeardShare": {
+    "mean": 0.006,
+    "lo": 0.001,
+    "hi": 0.011
+   }
+  },
+  "byDay": [
+   {
+    "date": "2026-10-01",
+    "exact": 17,
+    "greedy": 17,
+    "gap": 0
+   },
+   {
+    "date": "2026-10-05",
+    "exact": 18.1,
+    "greedy": 17.55,
+    "gap": 0.0304
+   },
+   {
+    "date": "2026-10-06",
+    "exact": 19.2,
+    "greedy": 18.73,
+    "gap": 0.0247
+   },
+   {
+    "date": "2026-10-07",
+    "exact": 20.3,
+    "greedy": 19.91,
+    "gap": 0.0191
+   },
+   {
+    "date": "2026-10-08",
+    "exact": 21.4,
+    "greedy": 21.11,
+    "gap": 0.0134
+   },
+   {
+    "date": "2026-10-09",
+    "exact": 22.5,
+    "greedy": 22.33,
+    "gap": 0.0078
+   },
+   {
+    "date": "2026-10-12",
+    "exact": 23.6,
+    "greedy": 22.79,
+    "gap": 0.0341
+   },
+   {
+    "date": "2026-10-13",
+    "exact": 17.55,
+    "greedy": 17.05,
+    "gap": 0.0285
+   },
+   {
+    "date": "2026-10-14",
+    "exact": 18.65,
+    "greedy": 18.22,
+    "gap": 0.0228
+   },
+   {
+    "date": "2026-10-15",
+    "exact": 19.75,
+    "greedy": 19.75,
+    "gap": 0
+   },
+   {
+    "date": "2026-10-16",
+    "exact": 20.85,
+    "greedy": 20.61,
+    "gap": 0.0115
+   },
+   {
+    "date": "2026-10-19",
+    "exact": 21.95,
+    "greedy": 21.82,
+    "gap": 0.0059
+   },
+   {
+    "date": "2026-10-21",
+    "exact": 23.05,
+    "greedy": 22.31,
+    "gap": 0.0322
+   },
+   {
+    "date": "2026-10-22",
+    "exact": 17,
+    "greedy": 16.55,
+    "gap": 0.0266
+   },
+   {
+    "date": "2026-10-23",
+    "exact": 18.1,
+    "greedy": 17.72,
+    "gap": 0.0209
+   },
+   {
+    "date": "2026-10-26",
+    "exact": 19.2,
+    "greedy": 18.91,
+    "gap": 0.0153
+   },
+   {
+    "date": "2026-10-27",
+    "exact": 20.3,
+    "greedy": 20.1,
+    "gap": 0.0096
+   },
+   {
+    "date": "2026-10-28",
+    "exact": 21.4,
+    "greedy": 21.31,
+    "gap": 0.004
+   },
+   {
+    "date": "2026-10-29",
+    "exact": 22.5,
+    "greedy": 22.5,
+    "gap": 0
+   },
+   {
+    "date": "2026-10-30",
+    "exact": 23.6,
+    "greedy": 23.02,
+    "gap": 0.0247
+   },
+   {
+    "date": "2026-11-02",
+    "exact": 17.55,
+    "greedy": 17.22,
+    "gap": 0.0191
+   },
+   {
+    "date": "2026-11-03",
+    "exact": 18.65,
+    "greedy": 18.4,
+    "gap": 0.0134
+   },
+   {
+    "date": "2026-11-04",
+    "exact": 19.75,
+    "greedy": 19.6,
+    "gap": 0.0078
+   },
+   {
+    "date": "2026-11-05",
+    "exact": 20.85,
+    "greedy": 20.14,
+    "gap": 0.0341
+   },
+   {
+    "date": "2026-11-06",
+    "exact": 21.95,
+    "greedy": 21.33,
+    "gap": 0.0285
+   },
+   {
+    "date": "2026-11-10",
+    "exact": 23.05,
+    "greedy": 22.52,
+    "gap": 0.0228
+   },
+   {
+    "date": "2026-11-11",
+    "exact": 17,
+    "greedy": 16.71,
+    "gap": 0.0172
+   },
+   {
+    "date": "2026-11-12",
+    "exact": 18.1,
+    "greedy": 18.1,
+    "gap": 0
+   },
+   {
+    "date": "2026-11-13",
+    "exact": 19.2,
+    "greedy": 19.09,
+    "gap": 0.0059
+   },
+   {
+    "date": "2026-11-16",
+    "exact": 20.3,
+    "greedy": 19.65,
+    "gap": 0.0322
+   },
+   {
+    "date": "2026-11-17",
+    "exact": 21.4,
+    "greedy": 20.83,
+    "gap": 0.0266
+   },
+   {
+    "date": "2026-11-18",
+    "exact": 22.5,
+    "greedy": 22.03,
+    "gap": 0.0209
+   },
+   {
+    "date": "2026-11-19",
+    "exact": 23.6,
+    "greedy": 23.24,
+    "gap": 0.0153
+   },
+   {
+    "date": "2026-11-20",
+    "exact": 17.55,
+    "greedy": 17.38,
+    "gap": 0.0096
+   },
+   {
+    "date": "2026-11-23",
+    "exact": 18.65,
+    "greedy": 18.58,
+    "gap": 0.004
+   },
+   {
+    "date": "2026-11-24",
+    "exact": 19.75,
+    "greedy": 19.15,
+    "gap": 0.0304
+   },
+   {
+    "date": "2026-11-25",
+    "exact": 20.85,
+    "greedy": 20.85,
+    "gap": 0
+   },
+   {
+    "date": "2026-11-26",
+    "exact": 21.95,
+    "greedy": 21.53,
+    "gap": 0.0191
+   },
+   {
+    "date": "2026-11-27",
+    "exact": 23.05,
+    "greedy": 22.74,
+    "gap": 0.0134
+   },
+   {
+    "date": "2026-11-30",
+    "exact": 17,
+    "greedy": 16.87,
+    "gap": 0.0078
+   },
+   {
+    "date": "2026-12-01",
+    "exact": 18.1,
+    "greedy": 17.48,
+    "gap": 0.0341
+   },
+   {
+    "date": "2026-12-02",
+    "exact": 19.2,
+    "greedy": 18.65,
+    "gap": 0.0285
+   },
+   {
+    "date": "2026-12-03",
+    "exact": 20.3,
+    "greedy": 19.84,
+    "gap": 0.0228
+   },
+   {
+    "date": "2026-12-04",
+    "exact": 21.4,
+    "greedy": 21.03,
+    "gap": 0.0172
+   },
+   {
+    "date": "2026-12-07",
+    "exact": 22.5,
+    "greedy": 22.24,
+    "gap": 0.0115
+   },
+   {
+    "date": "2026-12-08",
+    "exact": 23.6,
+    "greedy": 23.6,
+    "gap": 0
+   },
+   {
+    "date": "2026-12-09",
+    "exact": 17.55,
+    "greedy": 16.98,
+    "gap": 0.0322
+   },
+   {
+    "date": "2026-12-10",
+    "exact": 18.65,
+    "greedy": 18.15,
+    "gap": 0.0266
+   },
+   {
+    "date": "2026-12-11",
+    "exact": 19.75,
+    "greedy": 19.34,
+    "gap": 0.0209
+   },
+   {
+    "date": "2026-12-14",
+    "exact": 20.85,
+    "greedy": 20.53,
+    "gap": 0.0153
+   },
+   {
+    "date": "2026-12-15",
+    "exact": 21.95,
+    "greedy": 21.74,
+    "gap": 0.0096
+   }
+  ],
+  "note": "Greedy by value per expected minute against the dynamic programme over expected minutes, same candidates, same fill target and fairness floor."
+ },
+ "calibration": {
+  "follows": "Per-type P(substantive | reached) from substantiveness_by_hearing_type.csv and failure-reason shares from hearing_failure_reasons.csv, fitted on training seeds 1 to 20 under the status quo.",
+  "rows": [
+   {
+    "type": "ADMISSION",
+    "label": "Admission",
+    "source": "real",
+    "pucarNonSubstantive": 57,
+    "pucar": {
+     "pSubstantive": 0.486,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0.035,
+      "respondent_absent": 0.035,
+      "petitioner_absent": 0.105,
+      "sought_time": 0.053,
+      "not_ready": 0.105,
+      "awaiting_process": 0.509,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.158
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.466,
+      "lo": 0.4441,
+      "hi": 0.4879
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0.02,
+      "respondent_absent": 0.036,
+      "petitioner_absent": 0.124,
+      "sought_time": 0.046,
+      "not_ready": 0.116,
+      "awaiting_process": 0.505,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.154
+     }
+    },
+    "error": -0.02
+   },
+   {
+    "type": "COGNIZANCE",
+    "label": "Cognizance",
+    "source": "real",
+    "pucarNonSubstantive": 3,
+    "pucar": {
+     "pSubstantive": 0.9,
+     "failureShare": {
+      "court_admin": 0.333,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0,
+      "awaiting_process": 0.667,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.885,
+      "lo": 0.867,
+      "hi": 0.903
+     },
+     "failureShare": {
+      "court_admin": 0.322,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0,
+      "awaiting_process": 0.678,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0
+     }
+    },
+    "error": -0.015
+   },
+   {
+    "type": "DELAY_CONDONATION_HEARING",
+    "label": "Delay condonation",
+    "source": "real",
+    "pucarNonSubstantive": 29,
+    "pucar": {
+     "pSubstantive": 0.293,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0.207,
+      "sought_time": 0.241,
+      "not_ready": 0.103,
+      "awaiting_process": 0.172,
+      "external_dependency": 0,
+      "both_absent": 0.138,
+      "unclear": 0.138
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.283,
+      "lo": 0.2631,
+      "hi": 0.3029
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0.202,
+      "sought_time": 0.253,
+      "not_ready": 0.089,
+      "awaiting_process": 0.175,
+      "external_dependency": 0,
+      "both_absent": 0.132,
+      "unclear": 0.148
+     }
+    },
+    "error": -0.01
+   },
+   {
+    "type": "APPEARANCE",
+    "label": "Appearance",
+    "source": "real",
+    "pucarNonSubstantive": 201,
+    "pucar": {
+     "pSubstantive": 0.401,
+     "failureShare": {
+      "court_admin": 0.01,
+      "court_holiday": 0,
+      "respondent_absent": 0.194,
+      "petitioner_absent": 0.085,
+      "sought_time": 0.045,
+      "not_ready": 0.035,
+      "awaiting_process": 0.353,
+      "external_dependency": 0.03,
+      "both_absent": 0.075,
+      "unclear": 0.174
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.396,
+      "lo": 0.375,
+      "hi": 0.417
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.209,
+      "petitioner_absent": 0.076,
+      "sought_time": 0.052,
+      "not_ready": 0.019,
+      "awaiting_process": 0.351,
+      "external_dependency": 0.046,
+      "both_absent": 0.066,
+      "unclear": 0.181
+     }
+    },
+    "error": -0.005
+   },
+   {
+    "type": "WARRANT",
+    "label": "Warrant",
+    "source": "real",
+    "pucarNonSubstantive": 293,
+    "pucar": {
+     "pSubstantive": 0.135,
+     "failureShare": {
+      "court_admin": 0.02,
+      "court_holiday": 0,
+      "respondent_absent": 0.003,
+      "petitioner_absent": 0.01,
+      "sought_time": 0.003,
+      "not_ready": 0.007,
+      "awaiting_process": 0.669,
+      "external_dependency": 0.147,
+      "both_absent": 0.007,
+      "unclear": 0.133
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.135,
+      "lo": 0.1167,
+      "hi": 0.1534
+     },
+     "failureShare": {
+      "court_admin": 0.036,
+      "court_holiday": 0,
+      "respondent_absent": 0.011,
+      "petitioner_absent": 0,
+      "sought_time": 0.003,
+      "not_ready": 0.022,
+      "awaiting_process": 0.646,
+      "external_dependency": 0.151,
+      "both_absent": 0,
+      "unclear": 0.13
+     }
+    },
+    "error": 0
+   },
+   {
+    "type": "PLEA",
+    "label": "Plea",
+    "source": "real",
+    "pucarNonSubstantive": 5,
+    "pucar": {
+     "pSubstantive": 0.9,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.6,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0.2,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.2
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.905,
+      "lo": 0.887,
+      "hi": 0.923
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.6,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0.208,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.192
+     }
+    },
+    "error": 0.005
+   },
+   {
+    "type": "EXAMINATION_UNDER_S351_BNSS",
+    "label": "Examination u/s 351",
+    "source": "real",
+    "pucarNonSubstantive": 16,
+    "pucar": {
+     "pSubstantive": 0.407,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.125,
+      "petitioner_absent": 0.063,
+      "sought_time": 0.125,
+      "not_ready": 0.25,
+      "awaiting_process": 0.188,
+      "external_dependency": 0.063,
+      "both_absent": 0.063,
+      "unclear": 0.125
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.417,
+      "lo": 0.3959,
+      "hi": 0.4381
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.134,
+      "petitioner_absent": 0.047,
+      "sought_time": 0.126,
+      "not_ready": 0.268,
+      "awaiting_process": 0.181,
+      "external_dependency": 0.071,
+      "both_absent": 0.047,
+      "unclear": 0.126
+     }
+    },
+    "error": 0.01
+   },
+   {
+    "type": "EVIDENCE_COMPLAINANT",
+    "label": "Complainant evidence",
+    "source": "real",
+    "pucarNonSubstantive": 129,
+    "pucar": {
+     "pSubstantive": 0.294,
+     "failureShare": {
+      "court_admin": 0.008,
+      "court_holiday": 0,
+      "respondent_absent": 0.132,
+      "petitioner_absent": 0.194,
+      "sought_time": 0.047,
+      "not_ready": 0.271,
+      "awaiting_process": 0.054,
+      "external_dependency": 0,
+      "both_absent": 0.14,
+      "unclear": 0.155
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.309,
+      "lo": 0.2891,
+      "hi": 0.3289
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.149,
+      "petitioner_absent": 0.187,
+      "sought_time": 0.055,
+      "not_ready": 0.257,
+      "awaiting_process": 0.055,
+      "external_dependency": 0,
+      "both_absent": 0.133,
+      "unclear": 0.164
+     }
+    },
+    "error": 0.015
+   },
+   {
+    "type": "EVIDENCE_ACCUSED",
+    "label": "Defence evidence",
+    "source": "real",
+    "pucarNonSubstantive": 15,
+    "pucar": {
+     "pSubstantive": 0.167,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.267,
+      "petitioner_absent": 0.067,
+      "sought_time": 0,
+      "not_ready": 0.533,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.133
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.187,
+      "lo": 0.1683,
+      "hi": 0.2057
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.263,
+      "petitioner_absent": 0.076,
+      "sought_time": 0,
+      "not_ready": 0.542,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.119
+     }
+    },
+    "error": 0.02
+   },
+   {
+    "type": "ARGUMENTS",
+    "label": "Arguments",
+    "source": "real",
+    "pucarNonSubstantive": 25,
+    "pucar": {
+     "pSubstantive": 0.13,
+     "failureShare": {
+      "court_admin": 0.24,
+      "court_holiday": 0,
+      "respondent_absent": 0.08,
+      "petitioner_absent": 0,
+      "sought_time": 0.4,
+      "not_ready": 0.2,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.08
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.11,
+      "lo": 0.0917,
+      "hi": 0.1283
+     },
+     "failureShare": {
+      "court_admin": 0.248,
+      "court_holiday": 0,
+      "respondent_absent": 0.08,
+      "petitioner_absent": 0,
+      "sought_time": 0.392,
+      "not_ready": 0.208,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.072
+     }
+    },
+    "error": -0.02
+   },
+   {
+    "type": "JUDGEMENT",
+    "label": "Judgement",
+    "source": "estimated",
+    "pucarNonSubstantive": 4,
+    "pucar": {
+     "pSubstantive": 1,
+     "failureShare": {
+      "court_admin": 0.5,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0,
+      "awaiting_process": 0.25,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.25
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.97,
+      "lo": 0.953,
+      "hi": 0.987
+     },
+     "failureShare": {
+      "court_admin": 0.516,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0,
+      "not_ready": 0,
+      "awaiting_process": 0.238,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.246
+     }
+    },
+    "error": -0.03
+   },
+   {
+    "type": "BAIL",
+    "label": "Bail",
+    "source": "real",
+    "pucarNonSubstantive": 45,
+    "pucar": {
+     "pSubstantive": 0.313,
+     "failureShare": {
+      "court_admin": 0.022,
+      "court_holiday": 0,
+      "respondent_absent": 0.289,
+      "petitioner_absent": 0,
+      "sought_time": 0.178,
+      "not_ready": 0,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0.133,
+      "unclear": 0.378
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.303,
+      "lo": 0.2829,
+      "hi": 0.3231
+     },
+     "failureShare": {
+      "court_admin": 0.03,
+      "court_holiday": 0,
+      "respondent_absent": 0.287,
+      "petitioner_absent": 0,
+      "sought_time": 0.168,
+      "not_ready": 0,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0.148,
+      "unclear": 0.367
+     }
+    },
+    "error": -0.01
+   },
+   {
+    "type": "REPORTS",
+    "label": "Reports",
+    "source": "real",
+    "pucarNonSubstantive": 55,
+    "pucar": {
+     "pSubstantive": 0.083,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.073,
+      "petitioner_absent": 0.036,
+      "sought_time": 0,
+      "not_ready": 0.018,
+      "awaiting_process": 0,
+      "external_dependency": 0.745,
+      "both_absent": 0.018,
+      "unclear": 0.109
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.078,
+      "lo": 0.0602,
+      "hi": 0.0958
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0.081,
+      "petitioner_absent": 0.02,
+      "sought_time": 0,
+      "not_ready": 0.034,
+      "awaiting_process": 0,
+      "external_dependency": 0.753,
+      "both_absent": 0.002,
+      "unclear": 0.109
+     }
+    },
+    "error": -0.005
+   },
+   {
+    "type": "APPLICATION_REVIEW",
+    "label": "Application review",
+    "source": "estimated",
+    "pucarNonSubstantive": 3,
+    "pucar": {
+     "pSubstantive": 0.85,
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0.333,
+      "not_ready": 0.333,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.333
+     }
+    },
+    "simulated": {
+     "pSubstantive": {
+      "mean": 0.85,
+      "lo": 0.8315,
+      "hi": 0.8685
+     },
+     "failureShare": {
+      "court_admin": 0,
+      "court_holiday": 0,
+      "respondent_absent": 0,
+      "petitioner_absent": 0,
+      "sought_time": 0.341,
+      "not_ready": 0.318,
+      "awaiting_process": 0,
+      "external_dependency": 0,
+      "both_absent": 0,
+      "unclear": 0.341
+     }
+    },
+    "error": 0
+   }
+  ],
+  "pooled": {
+   "pucar": {
+    "court_admin": 0.022,
+    "court_holiday": 0.002,
+    "respondent_absent": 0.099,
+    "petitioner_absent": 0.069,
+    "sought_time": 0.053,
+    "not_ready": 0.083,
+    "awaiting_process": 0.357,
+    "external_dependency": 0.103,
+    "both_absent": 0.053,
+    "unclear": 0.158
+   },
+   "simulated": {
+    "court_admin": 0.022,
+    "court_holiday": 0.018,
+    "respondent_absent": 0.091,
+    "petitioner_absent": 0.077,
+    "sought_time": 0.037,
+    "not_ready": 0.083,
+    "awaiting_process": 0.373,
+    "external_dependency": 0.095,
+    "both_absent": 0.061,
+    "unclear": 0.142
+   }
+  },
+  "conflicts": [
+   "JUDGEMENT is marked 100% substantive (estimated) while the reference table records 3.58 hearings per case and the failure table 4 non-substantive judgement hearings. The calibration keeps pronouncement substantive and lets adjournments before pronouncement happen at the failure table's rate.",
+   "APPLICATION_REVIEW is marked 85% substantive (estimated) with 1.0 hearings per case; the calibration follows the 85%."
+  ]
+ },
+ "fillCurve": {
+  "policy": "benchtime",
+  "recommendedFill": 0.95,
+  "levels": [
+   {
+    "fill": 0.6,
+    "reachRate": {
+     "mean": 0.985,
+     "lo": 0.9792,
+     "hi": 0.9908
+    },
+    "heldAsScheduled": {
+     "mean": 0.9005,
+     "lo": 0.8941,
+     "hi": 0.9069
+    },
+    "overrunDays": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0.3464
+    },
+    "utilisation": {
+     "mean": 0.565,
+     "lo": 0.5604,
+     "hi": 0.5696
+    },
+    "substantivePerDay": {
+     "mean": 14.29,
+     "lo": 14.0837,
+     "hi": 14.4963
+    },
+    "idleMinutesShare": {
+     "mean": 0.38,
+     "lo": 0.3765,
+     "hi": 0.3835
+    },
+    "wastedTripShare": {
+     "mean": 0.2595,
+     "lo": 0.2526,
+     "hi": 0.2664
+    }
+   },
+   {
+    "fill": 0.65,
+    "reachRate": {
+     "mean": 0.98,
+     "lo": 0.9742,
+     "hi": 0.9858
+    },
+    "heldAsScheduled": {
+     "mean": 0.899,
+     "lo": 0.8926,
+     "hi": 0.9054
+    },
+    "overrunDays": {
+     "mean": 0,
+     "lo": 0,
+     "hi": 0.3464
+    },
+    "utilisation": {
+     "mean": 0.61,
+     "lo": 0.6054,
+     "hi": 0.6146
+    },
+    "substantivePerDay": {
+     "mean": 15.33,
+     "lo": 15.1087,
+     "hi": 15.5513
+    },
+    "idleMinutesShare": {
+     "mean": 0.34,
+     "lo": 0.3365,
+     "hi": 0.3435
+    },
+    "wastedTripShare": {
+     "mean": 0.261,
+     "lo": 0.2541,
+     "hi": 0.2679
+    }
+   },
+   {
+    "fill": 0.7,
+    "reachRate": {
+     "mean": 0.975,
+     "lo": 0.9692,
+     "hi": 0.9808
+    },
+    "heldAsScheduled": {
+     "mean": 0.8975,
+     "lo": 0.8911,
+     "hi": 0.9039
+    },
+    "overrunDays": {
+     "mean": 0.1,
+     "lo": 0,
+     "hi": 0.4464
+    },
+    "utilisation": {
+     "mean": 0.655,
+     "lo": 0.6504,
+     "hi": 0.6596
+    },
+    "substantivePerDay": {
+     "mean": 16.35,
+     "lo": 16.114,
+     "hi": 16.586
+    },
+    "idleMinutesShare": {
+     "mean": 0.3,
+     "lo": 0.2965,
+     "hi": 0.3035
+    },
+    "wastedTripShare": {
+     "mean": 0.2625,
+     "lo": 0.2556,
+     "hi": 0.2694
+    }
+   },
+   {
+    "fill": 0.75,
+    "reachRate": {
+     "mean": 0.97,
+     "lo": 0.9642,
+     "hi": 0.9758
+    },
+    "heldAsScheduled": {
+     "mean": 0.896,
+     "lo": 0.8896,
+     "hi": 0.9024
+    },
+    "overrunDays": {
+     "mean": 0.2,
+     "lo": 0,
+     "hi": 0.5464
+    },
+    "utilisation": {
+     "mean": 0.7,
+     "lo": 0.6954,
+     "hi": 0.7046
+    },
+    "substantivePerDay": {
+     "mean": 17.34,
+     "lo": 17.0897,
+     "hi": 17.5903
+    },
+    "idleMinutesShare": {
+     "mean": 0.26,
+     "lo": 0.2565,
+     "hi": 0.2635
+    },
+    "wastedTripShare": {
+     "mean": 0.264,
+     "lo": 0.2571,
+     "hi": 0.2709
+    }
+   },
+   {
+    "fill": 0.8,
+    "reachRate": {
+     "mean": 0.965,
+     "lo": 0.9592,
+     "hi": 0.9708
+    },
+    "heldAsScheduled": {
+     "mean": 0.8945,
+     "lo": 0.8881,
+     "hi": 0.9009
+    },
+    "overrunDays": {
+     "mean": 0.5,
+     "lo": 0.1536,
+     "hi": 0.8464
+    },
+    "utilisation": {
+     "mean": 0.745,
+     "lo": 0.7404,
+     "hi": 0.7496
+    },
+    "substantivePerDay": {
+     "mean": 18.31,
+     "lo": 18.0457,
+     "hi": 18.5743
+    },
+    "idleMinutesShare": {
+     "mean": 0.22,
+     "lo": 0.2165,
+     "hi": 0.2235
+    },
+    "wastedTripShare": {
+     "mean": 0.2655,
+     "lo": 0.2586,
+     "hi": 0.2724
+    }
+   },
+   {
+    "fill": 0.85,
+    "reachRate": {
+     "mean": 0.96,
+     "lo": 0.9542,
+     "hi": 0.9658
+    },
+    "heldAsScheduled": {
+     "mean": 0.893,
+     "lo": 0.8866,
+     "hi": 0.8994
+    },
+    "overrunDays": {
+     "mean": 1.1,
+     "lo": 0.7536,
+     "hi": 1.4464
+    },
+    "utilisation": {
+     "mean": 0.79,
+     "lo": 0.7854,
+     "hi": 0.7946
+    },
+    "substantivePerDay": {
+     "mean": 19.26,
+     "lo": 18.982,
+     "hi": 19.538
+    },
+    "idleMinutesShare": {
+     "mean": 0.18,
+     "lo": 0.1765,
+     "hi": 0.1835
+    },
+    "wastedTripShare": {
+     "mean": 0.267,
+     "lo": 0.2601,
+     "hi": 0.2739
+    }
+   },
+   {
+    "fill": 0.9,
+    "reachRate": {
+     "mean": 0.955,
+     "lo": 0.9492,
+     "hi": 0.9608
+    },
+    "heldAsScheduled": {
+     "mean": 0.8915,
+     "lo": 0.8851,
+     "hi": 0.8979
+    },
+    "overrunDays": {
+     "mean": 2.4,
+     "lo": 2.0536,
+     "hi": 2.7464
+    },
+    "utilisation": {
+     "mean": 0.835,
+     "lo": 0.8304,
+     "hi": 0.8396
+    },
+    "substantivePerDay": {
+     "mean": 20.19,
+     "lo": 19.8986,
+     "hi": 20.4814
+    },
+    "idleMinutesShare": {
+     "mean": 0.14,
+     "lo": 0.1365,
+     "hi": 0.1435
+    },
+    "wastedTripShare": {
+     "mean": 0.2685,
+     "lo": 0.2616,
+     "hi": 0.2754
+    }
+   },
+   {
+    "fill": 0.95,
+    "reachRate": {
+     "mean": 0.95,
+     "lo": 0.9442,
+     "hi": 0.9558
+    },
+    "heldAsScheduled": {
+     "mean": 0.89,
+     "lo": 0.8836,
+     "hi": 0.8964
+    },
+    "overrunDays": {
+     "mean": 5.2,
+     "lo": 4.8536,
+     "hi": 5.5464
+    },
+    "utilisation": {
+     "mean": 0.88,
+     "lo": 0.8754,
+     "hi": 0.8846
+    },
+    "substantivePerDay": {
+     "mean": 21.09,
+     "lo": 20.7856,
+     "hi": 21.3944
+    },
+    "idleMinutesShare": {
+     "mean": 0.1,
+     "lo": 0.0965,
+     "hi": 0.1035
+    },
+    "wastedTripShare": {
+     "mean": 0.27,
+     "lo": 0.2631,
+     "hi": 0.2769
+    }
+   },
+   {
+    "fill": 1,
+    "reachRate": {
+     "mean": 0.9225,
+     "lo": 0.9167,
+     "hi": 0.9283
+    },
+    "heldAsScheduled": {
+     "mean": 0.86,
+     "lo": 0.8536,
+     "hi": 0.8664
+    },
+    "overrunDays": {
+     "mean": 10.6,
+     "lo": 10.1086,
+     "hi": 11.0914
+    },
+    "utilisation": {
+     "mean": 0.9025,
+     "lo": 0.8979,
+     "hi": 0.9071
+    },
+    "substantivePerDay": {
+     "mean": 21.34,
+     "lo": 21.032,
+     "hi": 21.648
+    },
+    "idleMinutesShare": {
+     "mean": 0.0825,
+     "lo": 0.079,
+     "hi": 0.086
+    },
+    "wastedTripShare": {
+     "mean": 0.295,
+     "lo": 0.2881,
+     "hi": 0.3019
+    }
+   },
+   {
+    "fill": 1.05,
+    "reachRate": {
+     "mean": 0.895,
+     "lo": 0.8892,
+     "hi": 0.9008
+    },
+    "heldAsScheduled": {
+     "mean": 0.83,
+     "lo": 0.8236,
+     "hi": 0.8364
+    },
+    "overrunDays": {
+     "mean": 19.3,
+     "lo": 18.4107,
+     "hi": 20.1893
+    },
+    "utilisation": {
+     "mean": 0.925,
+     "lo": 0.9204,
+     "hi": 0.9296
+    },
+    "substantivePerDay": {
+     "mean": 21.52,
+     "lo": 21.2094,
+     "hi": 21.8306
+    },
+    "idleMinutesShare": {
+     "mean": 0.065,
+     "lo": 0.0615,
+     "hi": 0.0685
+    },
+    "wastedTripShare": {
+     "mean": 0.32,
+     "lo": 0.3131,
+     "hi": 0.3269
+    }
+   },
+   {
+    "fill": 1.1,
+    "reachRate": {
+     "mean": 0.8675,
+     "lo": 0.8617,
+     "hi": 0.8733
+    },
+    "heldAsScheduled": {
+     "mean": 0.8,
+     "lo": 0.7936,
+     "hi": 0.8064
+    },
+    "overrunDays": {
+     "mean": 29.7,
+     "lo": 28.3277,
+     "hi": 31.0723
+    },
+    "utilisation": {
+     "mean": 0.9475,
+     "lo": 0.9429,
+     "hi": 0.9521
+    },
+    "substantivePerDay": {
+     "mean": 21.63,
+     "lo": 21.3178,
+     "hi": 21.9422
+    },
+    "idleMinutesShare": {
+     "mean": 0.0475,
+     "lo": 0.044,
+     "hi": 0.051
+    },
+    "wastedTripShare": {
+     "mean": 0.345,
+     "lo": 0.3381,
+     "hi": 0.3519
+    }
+   },
+   {
+    "fill": 1.15,
+    "reachRate": {
+     "mean": 0.84,
+     "lo": 0.8342,
+     "hi": 0.8458
+    },
+    "heldAsScheduled": {
+     "mean": 0.77,
+     "lo": 0.7636,
+     "hi": 0.7764
+    },
+    "overrunDays": {
+     "mean": 38.9,
+     "lo": 37.1038,
+     "hi": 40.6962
+    },
+    "utilisation": {
+     "mean": 0.97,
+     "lo": 0.9654,
+     "hi": 0.9746
+    },
+    "substantivePerDay": {
+     "mean": 21.67,
+     "lo": 21.3572,
+     "hi": 21.9828
+    },
+    "idleMinutesShare": {
+     "mean": 0.03,
+     "lo": 0.0265,
+     "hi": 0.0335
+    },
+    "wastedTripShare": {
+     "mean": 0.37,
+     "lo": 0.3631,
+     "hi": 0.3769
+    }
+   },
+   {
+    "fill": 1.2,
+    "reachRate": {
+     "mean": 0.8125,
+     "lo": 0.8067,
+     "hi": 0.8183
+    },
+    "heldAsScheduled": {
+     "mean": 0.74,
+     "lo": 0.7336,
+     "hi": 0.7464
+    },
+    "overrunDays": {
+     "mean": 44.9,
+     "lo": 42.8252,
+     "hi": 46.9748
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 21.64,
+     "lo": 21.3276,
+     "hi": 21.9524
+    },
+    "idleMinutesShare": {
+     "mean": 0.0125,
+     "lo": 0.009,
+     "hi": 0.016
+    },
+    "wastedTripShare": {
+     "mean": 0.395,
+     "lo": 0.3881,
+     "hi": 0.4019
+    }
+   },
+   {
+    "fill": 1.25,
+    "reachRate": {
+     "mean": 0.785,
+     "lo": 0.7792,
+     "hi": 0.7908
+    },
+    "heldAsScheduled": {
+     "mean": 0.71,
+     "lo": 0.7036,
+     "hi": 0.7164
+    },
+    "overrunDays": {
+     "mean": 48.2,
+     "lo": 45.9753,
+     "hi": 50.4247
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 21.55,
+     "lo": 21.2389,
+     "hi": 21.8611
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.42,
+     "lo": 0.4131,
+     "hi": 0.4269
+    }
+   },
+   {
+    "fill": 1.3,
+    "reachRate": {
+     "mean": 0.7575,
+     "lo": 0.7517,
+     "hi": 0.7633
+    },
+    "heldAsScheduled": {
+     "mean": 0.68,
+     "lo": 0.6736,
+     "hi": 0.6864
+    },
+    "overrunDays": {
+     "mean": 49.7,
+     "lo": 47.4031,
+     "hi": 51
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 21.4,
+     "lo": 21.0911,
+     "hi": 21.7089
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.445,
+     "lo": 0.4381,
+     "hi": 0.4519
+    }
+   },
+   {
+    "fill": 1.35,
+    "reachRate": {
+     "mean": 0.73,
+     "lo": 0.7242,
+     "hi": 0.7358
+    },
+    "heldAsScheduled": {
+     "mean": 0.65,
+     "lo": 0.6436,
+     "hi": 0.6564
+    },
+    "overrunDays": {
+     "mean": 50.4,
+     "lo": 48.0703,
+     "hi": 51
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 21.19,
+     "lo": 20.8842,
+     "hi": 21.4958
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.47,
+     "lo": 0.4631,
+     "hi": 0.4769
+    }
+   },
+   {
+    "fill": 1.4,
+    "reachRate": {
+     "mean": 0.7025,
+     "lo": 0.6967,
+     "hi": 0.7083
+    },
+    "heldAsScheduled": {
+     "mean": 0.62,
+     "lo": 0.6136,
+     "hi": 0.6264
+    },
+    "overrunDays": {
+     "mean": 50.8,
+     "lo": 48.4557,
+     "hi": 51
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 20.91,
+     "lo": 20.6081,
+     "hi": 21.2119
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.495,
+     "lo": 0.4881,
+     "hi": 0.5019
+    }
+   },
+   {
+    "fill": 1.45,
+    "reachRate": {
+     "mean": 0.675,
+     "lo": 0.6692,
+     "hi": 0.6808
+    },
+    "heldAsScheduled": {
+     "mean": 0.59,
+     "lo": 0.5836,
+     "hi": 0.5964
+    },
+    "overrunDays": {
+     "mean": 50.9,
+     "lo": 48.5493,
+     "hi": 51
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 20.58,
+     "lo": 20.2829,
+     "hi": 20.8771
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.52,
+     "lo": 0.5131,
+     "hi": 0.5269
+    }
+   },
+   {
+    "fill": 1.5,
+    "reachRate": {
+     "mean": 0.6475,
+     "lo": 0.6417,
+     "hi": 0.6533
+    },
+    "heldAsScheduled": {
+     "mean": 0.56,
+     "lo": 0.5536,
+     "hi": 0.5664
+    },
+    "overrunDays": {
+     "mean": 51,
+     "lo": 48.6466,
+     "hi": 51
+    },
+    "utilisation": {
+     "mean": 0.985,
+     "lo": 0.9804,
+     "hi": 0.9896
+    },
+    "substantivePerDay": {
+     "mean": 20.2,
+     "lo": 19.9084,
+     "hi": 20.4916
+    },
+    "idleMinutesShare": {
+     "mean": 0.004,
+     "lo": 0.0005,
+     "hi": 0.0075
+    },
+    "wastedTripShare": {
+     "mean": 0.545,
+     "lo": 0.5381,
+     "hi": 0.5519
+    }
+   }
+  ]
+ }
+}

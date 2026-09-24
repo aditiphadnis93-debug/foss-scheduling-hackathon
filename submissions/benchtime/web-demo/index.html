@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchtime: a better causelist for a Kollam court</title>
+<link rel="stylesheet" href="app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 fill=%22%230E6B4D%22/%3E%3C/svg%3E">
+</head>
+<body>
+<main id="deck" aria-live="polite">
+
+<!-- 0. Approach -->
+<section class="scene ink" id="s-approach" data-title="How I approached this" data-steps="5">
+  <header class="head">
+    <p class="kicker">How I approached this</p>
+    <h1 class="headline big-line" data-show="0" data-hide="1">I did this alone.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">Well, I actually had a relatively large team behind me.</h1>
+    <h1 class="headline swap" data-show="2" data-hide="3">My approach was simple: more tokens, more compute, more variations.</h1>
+    <h1 class="headline swap big-line" data-show="3" data-hide="4"><em>Yes, this is wildly inefficient.</em></h1>
+    <h1 class="headline swap" data-show="4">The most valuable work in the whole run was four reviewers reading the selection rule.</h1>
+  </header>
+  <div class="crowd-wrap" data-show="1" data-hide="2"><div id="crowd" class="crowd"></div><p class="source dark">80 agents, all Claude Opus 5.5. Each card is one agent from this run, and the labelled cards show a sample of the real roles.</p></div>
+  <div class="counters" data-show="2" data-hide="4">
+    <div class="ctr"><span class="pre">&nbsp;</span><span class="big num" data-count="80">0</span><span class="cap">AI agents, all Claude Opus 5.5</span></div>
+    <div class="ctr"><span class="pre">about</span><span class="big num"><span data-count="985">0</span><small> million</small></span><span class="cap">tokens processed, 1.55 million of them written</span></div>
+    <div class="ctr"><span class="pre">about</span><span class="big num" data-count="2600">0</span><span class="cap">scheduling designs tried</span></div>
+    <div class="ctr"><span class="pre">about</span><span class="big num" data-count="18000">0</span><span class="cap">simulated court quarters</span></div>
+  </div>
+  <div class="lesson" data-show="4">
+    <div class="lesson-cards" id="lesson-cards"></div>
+    <p class="cap-lg">The extra compute found the wrong answer faster. The four reviews found the right one.</p>
+  </div>
+  <aside class="tech dark">
+    <h3>How exactly</h3>
+    <p>The agents built the simulator, calibrated it to PUCAR's tables, wrote eight redesigns, ran the tournament and the held-out experiments, designed three consoles, wrote the judges' rules and the DRISTI branch, and checked the facts. Four of them reviewed the selection rule, each from one side, and their findings changed the rule at 14:15.</p>
+  </aside>
+</section>
+
+<!-- 1. The court -->
+<section class="scene paper" id="s-court" data-title="The court" data-steps="4">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">The court</p>
+    <h1 class="headline" data-show="0" data-hide="1">One magistrate in Kollam has 3,000 cheque-bounce cases and 420 minutes a day.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">The list for 22 September had 90 matters, about <span data-bind="court.totalMinutesFmt">1,460</span> minutes of work, for a 420-minute day.</h1>
+    <h1 class="headline swap" data-show="2" data-hide="3">Most hearings on that list would not move the case, and PUCAR's records say why.</h1>
+    <h1 class="headline swap question" data-show="3">Can a better list give justice more hearings that matter?</h1>
+  </header>
+  <div class="court-figures" data-show="0" data-hide="1">
+    <div class="fig"><span class="big num">3,000</span><span class="cap">cases under s.138 NI Act</span></div>
+    <div class="fig"><span class="big num">1</span><span class="cap">magistrate</span></div>
+    <div class="fig"><span class="big num">420</span><span class="cap">minutes of court a day</span></div>
+  </div>
+  <div class="causelist-wrap" data-show="1" data-hide="3">
+    <div class="cl-legend">
+      <span class="cl-day-label">One day of court holds 420 minutes</span>
+      <span class="cl-over-label">The list holds <b data-bind="court.overDays">3.5</b> days of work</span>
+    </div>
+    <div id="causelist" class="causelist"></div>
+    <p class="source">PUCAR's sample causelist for 22 September 2026 (90 matters). Minutes per hearing come from PUCAR's hearing type table.</p>
+  </div>
+  <div class="reasons-wrap" data-show="2" data-hide="3">
+    <div class="reasons-big"><span class="big num red" data-bind="court.processPct">36%</span><span class="cap">of failed hearings failed because the summons, notice or warrant had not come back</span></div>
+    <div id="reasons" class="reasons"></div>
+    <p class="source">PUCAR's hearing failure table gives the reason for <span data-bind="court.failTotal">880</span> failed hearings across all hearing types.</p>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>The 22 September sample causelist has 90 matters. PUCAR's estimated minutes per hearing type add up to <span data-bind="court.totalMinutes">1,460</span> minutes against a 420-minute sitting.</p>
+    <p>PUCAR's P(substantive) for each type, weighted by this list's mix, predicts that about <span data-bind="court.expectedUseful">28</span> of the 90 hearings would move the case. The green blocks are one draw of that many.</p>
+    <p>The failure reasons are summed over every hearing type in hearing_failure_reasons.csv. "A party absent" joins respondent absent, petitioner absent and both absent.</p>
+  </aside>
+</section>
+
+<!-- 2. How we test -->
+<section class="scene paper" id="s-test" data-title="How we test honestly" data-steps="3">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">How we test</p>
+    <h1 class="headline" data-show="0" data-hide="1">We built a simulated Kollam court that matches PUCAR's records.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">Every idea then faced that court under three rules.</h1>
+    <h1 class="headline swap" data-show="2">Here is one day in the simulated court.</h1>
+  </header>
+  <div class="calib" data-show="0" data-hide="1">
+    <div id="calib" class="calib-chart"></div>
+    <p class="calib-note"><span class="big num green" data-bind="calib.mae">0.2%</span><span class="cap">is the average gap between PUCAR's recorded chance that a hearing moves the case and the simulated court's chance</span></p>
+  </div>
+  <ol class="rules" data-show="1" data-hide="2">
+    <li><span class="rule-n">1</span><span><b>The planner knows only what the court knows the evening before.</b> It cannot see who will turn up tomorrow.</span></li>
+    <li><span class="rule-n">2</span><span><b>Every approach faces the same court and the same chance events.</b> The same parties stay away and the same summons come back late.</span></li>
+    <li><span class="rule-n">3</span><span><b>We report every measure, not one.</b> Each approach shows where it wins and where it loses.</span></li>
+  </ol>
+  <div class="dayrun" data-show="2">
+    <canvas id="daycanvas"></canvas>
+    <div class="day-tally">
+      <div><span class="dot g"></span><b id="t-moved">0</b> moved a step</div>
+      <div><span class="dot a"></span><b id="t-adj">0</b> adjourned</div>
+      <div><span class="dot r"></span><b id="t-proc">0</b> process not back</div>
+      <div><span class="dot k"></span><b id="t-abs">0</b> a party absent</div>
+    </div>
+    <p class="source" id="day-note">This is an illustration drawn with PUCAR's rates for this list, not a recorded day. We show a draw with 17 useful hearings, which is today's average day in the simulated court.</p>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>We calibrated the world by proportional fitting on world seeds 1-20 of the 3,000-case roster, which scales up PUCAR's 100-case sample with seed 42. The reached-weighted mean absolute error in P(substantive) is <span data-bind="calib.mae">0.2%</span>. The failure shares sit within two standard errors of PUCAR's estimates.</p>
+    <p>Common random numbers key every case's draws by roster id and world seed, so two policies see the same attendance and the same process returns. The search used seeds 1-6. We decided on seeds 7-20, confirmed on 21-30 and took the headline only from 31-60. Each run covers 1 October to 15 December 2026.</p>
+  </aside>
+</section>
+
+<!-- 3. Tournament -->
+<section class="scene paper" id="s-tournament" data-title="Every idea at once" data-steps="3">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">Every idea at once</p>
+    <h1 class="headline" data-show="0" data-hide="1">We wrote every scheduling idea as a string of <span data-bind="t.genes">41</span> genes that can be mixed.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">Then <span data-bind="t.distinct">2,587</span> schedules competed on the same court, generation by generation.</h1>
+    <h1 class="headline swap" data-show="2">The pick gives more useful hearings, and it passed all 19 guardrails on the seeds we decided on.</h1>
+  </header>
+  <div class="genes" data-show="0" data-hide="1">
+    <div id="genes"></div>
+  </div>
+  <div class="arena" data-show="1">
+    <div class="arena-plot"><canvas id="arena"></canvas></div>
+    <div class="arena-side">
+      <div class="gen-counter"><span class="cap">generation</span><span class="big num" id="gen-n">0</span><span class="cap" id="gen-count">0 schedules</span></div>
+      <div class="axis-switch" role="group" aria-label="Horizontal axis">
+        <button type="button" class="chip on" data-axis="honoured">Show against dates honoured</button>
+        <button type="button" class="chip" data-axis="neverHeard">Show against cases never heard</button>
+      </div>
+      <div class="pick-card" data-show="2">
+        <p class="stamp-line">The pick, g237</p>
+        <p>It ranks cases by one priority index and fills 111% of the day, with a standby list. It gives each next date on the earliest day with room after PUCAR's gap. The desk handles matters whose summons has not come back. Every case over 4 years old comes before the bench at least every 45 working days.</p>
+      </div>
+    </div>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>The zoo meta-policy has <span data-bind="t.genes">41</span> genes, including one gene of five objective weights. They cover the selection rule, first dates, the next-date rule, coverage, the desk, check-in, calibration, the fill target, the standby share, five objective weights, the ageing floor and its exponent, rotation days and the relist rules. Presets reproduce today's way, the three judges and the textbook rules (first come first served, bin packing, oldest first).</p>
+    <p>The search mixed random genomes and preset mutants, then ran NSGA-II (non-dominated sorting with crowding distance) on tuning seeds 1-6. The plot shows the <span data-bind="t.finalN">946</span> distinct genomes that ran fresh under the final rule on the shared court, on <span data-bind="t.finalSeeds">tuning seeds 1-6</span>.</p>
+  </aside>
+</section>
+
+<!-- 4. Twist -->
+<section class="scene ink" id="s-twist" data-title="The twist" data-steps="5">
+  <header class="head">
+    <p class="kicker">The twist</p>
+    <h1 class="headline" data-show="0" data-hide="1">Our first rule asked for the most useful hearings a day, behind a few guardrails.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">Then we counted what the winner cost the court.</h1>
+    <h1 class="headline swap" data-show="2" data-hide="3">Four independent reviews attacked the rule, each from one side.</h1>
+    <h1 class="headline swap" data-show="3" data-hide="4">We patched the rule, and the search found the next loophole.</h1>
+    <h1 class="headline swap" data-show="4">So we rewrote the rule before anyone ran the final test.</h1>
+  </header>
+  <div class="twist-hero" data-show="0" data-hide="2">
+    <div class="tw-chart"><canvas id="twistcanvas"></canvas></div>
+    <div class="tw-side">
+      <div class="tw-num" data-show="0" data-hide="1"><span class="huge num" id="tw-useful">25.9</span><span class="cap">useful hearings a day, against <span data-bind="old.todayUseful">17.1</span> for today's way. The first rule never checked whether the court kept its dates.</span></div>
+      <div class="tw-costs" data-show="1">
+        <div class="cost"><span class="big num red" data-bind="old.held">66%</span><span class="cap">of its dates kept<br>Today's way keeps <span data-bind="old.todayHeld">91%</span>.</span></div>
+        <div class="cost"><span class="big num red" data-bind="old.never">1,144</span><span class="cap">cases never heard<br>Today's way leaves <span data-bind="old.todayNever">276</span>.</span></div>
+        <div class="cost"><span class="big num red" data-bind="old.noDate">898</span><span class="cap">cases given no date<br>inside the quarter</span></div>
+      </div>
+    </div>
+    <p class="source dark">The first rule's winner is g921, measured on validation seeds 21-30 on an earlier copy of the simulated court.</p>
+  </div>
+  <div class="reviewers" data-show="2" data-hide="3" id="reviewers"></div>
+  <div class="parking" data-show="3" data-hide="4">
+    <div class="park-cal"><canvas id="parkcanvas"></canvas></div>
+    <div class="park-text">
+      <p class="park-line"><span class="big num">94 to 98%</span><span class="cap">of dates kept, as the patched rule counted them</span></p>
+      <p class="park-line"><span class="big num red">40 to 47%</span><span class="cap">of the docket got no date inside the quarter at all</span></p>
+      <p class="park-line"><span class="big num red">62%</span><span class="cap">of dates kept, once a parked case counts as a broken date</span></p>
+      <p class="source dark">Only an order in the file can change a date that the court has fixed. The loopholes review found this.</p>
+    </div>
+  </div>
+  <div class="newrule" data-show="4">
+    <div class="rule-grid" id="guardgrid"></div>
+    <div class="rule-text">
+      <p><span class="huge num">19</span></p>
+      <p class="cap-lg">guardrails must each be "no worse than today". Among the schedules that pass, the most useful hearings win. We fixed this rule at 14:15, before anyone ran seeds 31-60.</p>
+      <p class="cap-lg" id="guard-verdict"></p>
+    </div>
+  </div>
+  <aside class="tech dark">
+    <h3>How exactly</h3>
+    <p>The original rule maximised useful hearings a day behind 7 guardrails. Some guardrails compared against the best baseline instead of today's way, and a coverage limit relaxed itself to whatever the search reached.</p>
+    <p>The final rule is a paired non-inferiority test against today's way on the same seeds. A guardrail passes when the 95% t-bound of the candidate minus today clears its margin. Absolute limits compare means. No limit relaxes itself. We decided on seeds 7-20, confirmed on 21-30 and took the headline from 31-60 only.</p>
+  </aside>
+</section>
+
+<!-- 5. Found -->
+<section class="scene paper" id="s-found" data-title="What we found" data-steps="4">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">What we found</p>
+    <h1 class="headline" data-show="0" data-hide="1">On 30 test runs it had never seen, our list gives <span class="green">6% more useful hearings</span> and breaks a third fewer dates.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">We lose on one count. <span class="red">140 more cases</span> go the whole quarter without a hearing.</h1>
+    <h1 class="headline swap" data-show="2" data-hide="3">Our pick stays ahead of today in all 12 stress tests.</h1>
+    <h1 class="headline swap small" data-show="3">Four choices do the work: the priority index, a corrected judgment table, the standby list and first dates spread like today.</h1>
+  </header>
+  <div class="found-main" data-show="0" data-hide="2">
+    <div id="headline-chart" class="hchart"></div>
+    <p class="source">Held-out seeds 31-60, which are 30 simulated quarters from 1 October to 15 December 2026, on PUCAR's synthetic sample court. Each bar is our pick minus today's way, with its 95% interval.</p>
+  </div>
+  <div class="robust" data-show="2" data-hide="3">
+    <div id="robust-chart" class="rchart"></div>
+  </div>
+  <div class="ablate" data-show="3">
+    <div id="ablate-chart" class="achart"></div>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>Each difference is paired on the same 30 world seeds, with a 95% t interval on 29 degrees of freedom. Shared seeds pair the courts. Across seeds, the pick and today correlate at 0.61 on useful hearings a day and at 0.94 on merits disposals.</p>
+    <p>On seeds 31-60, <span data-bind="guard.passText">18 of 19</span> guardrails hold. The rule said in advance that we report a failure and keep the pick. The stress tests switch off behaviour responses, set the duration spread to 0.25 and 1.0, slow process returns by half, double false alarms, bias the planner by 30% either way and swap in five other rosters.</p>
+  </aside>
+</section>
+
+<!-- 5b. Why not higher -->
+<section class="scene paper" id="s-why" data-title="Why not higher" data-steps="2">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">Why not higher</p>
+    <h1 class="headline" data-show="0" data-hide="1">A list only knows what the court knows the evening before, and that is worth about one hearing a day.</h1>
+    <h1 class="headline swap" data-show="1">The rest of the gap sits in the courtroom, outside the list.</h1>
+  </header>
+  <div class="why">
+    <div class="wf-wrap"><div class="wf" id="wf"></div></div>
+    <div class="why-side">
+      <div class="why-fact" data-show="0" data-hide="1"><span class="big num">2 min</span><span class="cap">is what a failed call costs the bench. Today's 38 failed calls a day use 76 of the 420 minutes, and the court already uses about 91% of its day.</span></div>
+      <div class="why-fact" data-show="0" data-hide="1"><span class="big num blue">46%</span><span class="cap">of PUCAR's failed hearings have a cause the registry knows the evening before, a summons or report not back. In the simulated court the share is 23%.</span></div>
+      <div class="why-fact" data-show="1"><span class="big num">23.3</span><span class="cap">useful hearings a day for our pick in a diagnostic court where process comes back on time, everyone attends and everyone is ready. Today's list gets 16.8 there.</span></div>
+      <div class="why-fact" data-show="1"><span class="cap">So the next gain needs process, attendance and readiness. DRISTI's e-post can bring process back on time.</span></div>
+    </div>
+  </div>
+  <p class="source why-src">Seeds 31-40 on PUCAR's synthetic sample court. The grey steps and the ceiling are diagnostic arithmetic, not a policy result. Source: out/WHY.md.</p>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>On seeds 31-40, today's day gives 309 minutes to 17.3 hearings that move a case, 76 minutes to 38.1 failed calls and 38 minutes to idle time. At 17.9 minutes per useful hearing, avoiding the failures known the evening before frees 17.6 minutes, which is 1.0 hearing. Avoiding every failure frees 76.2 minutes (4.3 hearings), and filling every idle minute as well frees 114.4 (6.4 hearings).</p>
+    <p>Plain bin packing gives 15.0 useful hearings a day against today's 17.1 on seeds 31-60. PUCAR's table calls a judgment hearing 100% substantive, while PUCAR's own hearings-per-case column implies about 28%, so the packer books 216 minutes a day for judgments that use 72. Its score also has no term for age, and 281 of the 897 cases aged 4 years or more are never heard.</p>
+    <p>The diagnostic worlds change the court on purpose and leave both planners as they were. Process on time gives the pick +1.7 over today, full attendance +2.9, everyone ready +4.4, and all three together +6.5.</p>
+  </aside>
+</section>
+
+<!-- 6. Dial -->
+<section class="scene paper" id="s-dial" data-title="The dial" data-steps="2">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">The judge's dial</p>
+    <h1 class="headline" data-show="0" data-hide="1">The same engine can buy bigger gains, and the judge decides which cost to accept.</h1>
+    <h1 class="headline swap" data-show="1">Focusing the docket hears fewer cases this quarter, day to day, as s.143 NI Act intends.</h1>
+  </header>
+  <div class="dial" data-show="0" data-hide="1">
+    <div class="dial-left">
+      <svg id="dialsvg" viewBox="0 0 320 320" aria-hidden="true"></svg>
+      <div class="aim-list" id="aimlist" role="radiogroup" aria-label="The judge's aim"></div>
+    </div>
+    <div class="dial-right">
+      <p class="aim-desc" id="aimdesc"></p>
+      <div id="aimbars" class="aimbars"></div>
+      <p class="source">Grey bars show today's way and coloured bars show the chosen aim. Tuning seeds 1-6, 1 October to 15 December 2026, synthetic cases. Each aim is the best genome found for it among those that honour at least 85% of dates and leave at most 5 old cases unheard.</p>
+    </div>
+  </div>
+  <div class="focus" data-show="1">
+    <div class="focus-nums">
+      <div class="fig"><span class="big num green" data-bind="focus.useful">23.1</span><span class="cap">useful hearings a day<br>Today's way gives <span data-bind="focus.todayUseful">17.1</span>.</span></div>
+      <div class="fig"><span class="big num green" data-bind="focus.merits">120</span><span class="cap">cases decided on the merits<br>Today's way decides <span data-bind="focus.todayMerits">84.9</span>.</span></div>
+      <div class="fig"><span class="big num red" data-bind="focus.dated">1,810</span><span class="cap">of 3,000 cases get a date inside the quarter<br>Today's way dates all 3,000.</span></div>
+    </div>
+    <div id="focusbar" class="focusbar"></div>
+    <p class="source">Held-out seeds 31-60, the focused setting (g1121). It fails 5 of the 19 guardrails, so it is a setting on the dial and not our pick.</p>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>Each aim is the winner of the same archive under a different objective, with two floors. It must honour at least 85% of dates and leave at most 5 old cases unheard. The dial does not re-run the court. It shows measured points.</p>
+    <p>The held-out dial on seeds 31-60 (HEADLINE.md) gives 17.1 useful hearings a day for today, 18.2 for the pick, 18.7 for the pick with call times and 23.1 for the focused setting.</p>
+  </aside>
+</section>
+
+<!-- 7. Styles and console -->
+<section class="scene paper" id="s-styles" data-title="Your court, your way" data-steps="2">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">Your court, your way</p>
+    <h1 class="headline" data-show="0" data-hide="1">Each judge's way runs as a rule set on our scheduler, and we measured what each one costs.</h1>
+    <h1 class="headline swap small" data-show="1">The console shows what every rule costs before the judge keeps it.</h1>
+  </header>
+  <div class="styles" data-show="0" data-hide="1" id="styles"></div>
+  <div class="console" data-show="1">
+    <div class="console-frame">
+      <iframe id="console-iframe" title="The judge's console"></iframe>
+      <img id="console-shot" class="hidden" src="shots/home-1440-light.png" alt="The judge's console showing tomorrow's list with the process desk">
+    </div>
+    <p class="source" id="console-note">The live console runs on this machine. If it is not running, a screenshot shows instead.</p>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>The rule presets sehgal_way, dimakar_way and joshi_way sit over the pick's configuration field by field. Nobody can switch off the 15% ageing floor. A rules checker found 0 violations across every day plan and next date on seeds 31 and 32.</p>
+    <p>POST /api/rules/preview returns the plan and every scorecard with and without the rules, and says whether the plan keeps every rule.</p>
+  </aside>
+</section>
+
+<!-- 8. DRISTI -->
+<section class="scene paper" id="s-dristi" data-title="Into DRISTI 2.0" data-steps="3">
+  <div class="margin-rule"></div>
+  <header class="head">
+    <p class="kicker">Into DRISTI 2.0</p>
+    <h1 class="headline" data-show="0" data-hide="1">The engine already runs inside a local copy of DRISTI 2.0.</h1>
+    <h1 class="headline swap" data-show="1" data-hide="2">A court would start in shadow mode and add one new habit at a time.</h1>
+    <h1 class="headline swap" data-show="2">The next big gain lies outside the list.</h1>
+  </header>
+  <div class="arch" data-show="0" data-hide="1">
+    <div class="arch-box engine"><p class="arch-t">The benchtime engine</p><p>It is TypeScript with no dependencies. It holds the policies, the calibrated court and PUCAR's scorecards.</p></div>
+    <div class="arch-arrow" aria-hidden="true"></div>
+    <div class="arch-box dristi">
+      <p class="arch-t">A DRISTI 2.0 branch <span class="tag">local, not pushed</span></p>
+      <ul>
+        <li><b>packages/scheduler</b><span>holds the engine as a workspace package</span></li>
+        <li><b>6 routes</b><span>plan, outcome, process, check-in, simulate and rules</span></li>
+        <li><b>4 tables</b><span>hearing outcome, process event, check-in and judge rules</span></li>
+        <li><b>Next.js, Drizzle, Postgres</b><span>The branch builds, typechecks and passes its smoke test on PUCAR's 100-case sample.</span></li>
+      </ul>
+    </div>
+  </div>
+  <ol class="rollout" data-show="1" data-hide="2" id="rollout"></ol>
+  <div class="lever" data-show="2">
+    <div class="lever-num"><span class="huge num red" data-bind="court.processPct">36%</span><span class="cap-lg">of failed hearings wait on a summons, notice or warrant</span></div>
+    <div class="lever-text">
+      <p class="cap-lg">A causelist cannot bring a summons back. DRISTI's e-post can track each summons, and the list can take the case the day after its process returns. We would build that next.</p>
+    </div>
+  </div>
+  <aside class="tech">
+    <h3>How exactly</h3>
+    <p>lib/scheduler/adapter.ts maps DRISTI rows to the engine's case records and reports the source of every field. The routes live under app/api/scheduler. scripts/scheduler-smoke.ts runs the whole path without a database, and scripts/sync-scheduler.sh refreshes the engine in one step. The branch is feat/scheduler-kollam, cut from origin/main.</p>
+  </aside>
+</section>
+
+<!-- 9. Close -->
+<section class="scene ink" id="s-close" data-title="Close" data-steps="1">
+  <header class="head">
+    <p class="kicker">Close</p>
+    <h1 class="headline">A better list gives the court more hearings that matter, and we show what it costs.</h1>
+  </header>
+  <div class="close-body">
+    <div class="close-nums">
+      <div class="fig"><span class="big num" data-bind="close.useful">+6%</span><span class="cap">useful hearings a day</span></div>
+      <div class="fig"><span class="big num" data-bind="close.broken">79</span><span class="cap">fewer dates broken or never given</span></div>
+      <div class="fig"><span class="big num"><span data-bind="close.waited">14.5</span><small> min</small></span><span class="cap">less waiting per person heard</span></div>
+      <div class="fig loss"><span class="big num red" data-bind="close.never">+140</span><span class="cap">more cases never heard in the quarter</span></div>
+    </div>
+    <p class="close-line">We publish every measure and every loss.</p>
+    <p class="close-path">submission/submissions/benchtime, with the numbers in out/HEADLINE.md and out/heldout.md</p>
+    <p class="source dark">Held-out seeds 31-60 on PUCAR's synthetic sample court. Everything is advisory, and a judge signs every order.</p>
+  </div>
+</section>
+
+</main>
+
+<nav id="progress" aria-label="Scenes"></nav>
+<div id="jump" class="jump hidden" role="dialog" aria-label="Jump to a scene"></div>
+<button id="techbtn" class="techbtn" type="button" aria-pressed="false" title="How exactly (t)">t</button>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>

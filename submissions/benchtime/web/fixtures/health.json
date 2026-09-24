@@ -1,0 +1,3482 @@
+{
+ "date": "2026-10-01",
+ "policy": "benchtime",
+ "horizon": {
+  "start": "2026-10-01",
+  "end": "2026-12-15"
+ },
+ "pending": 3000,
+ "ageingRisk": {
+  "thresholds": [
+   3,
+   4,
+   5,
+   10
+  ],
+  "counts": {
+   "3": 194,
+   "4": 210,
+   "5": 95,
+   "10": 39
+  },
+  "byWeek": [
+   {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "10": 0,
+    "week": 1,
+    "start": "2026-10-01",
+    "end": "2026-10-04"
+   },
+   {
+    "3": 0,
+    "4": 38,
+    "5": 0,
+    "10": 0,
+    "week": 2,
+    "start": "2026-10-05",
+    "end": "2026-10-11"
+   },
+   {
+    "3": 74,
+    "4": 35,
+    "5": 0,
+    "10": 0,
+    "week": 3,
+    "start": "2026-10-12",
+    "end": "2026-10-18"
+   },
+   {
+    "3": 25,
+    "4": 39,
+    "5": 0,
+    "10": 0,
+    "week": 4,
+    "start": "2026-10-19",
+    "end": "2026-10-25"
+   },
+   {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "10": 0,
+    "week": 5,
+    "start": "2026-10-26",
+    "end": "2026-11-01"
+   },
+   {
+    "3": 0,
+    "4": 34,
+    "5": 30,
+    "10": 39,
+    "week": 6,
+    "start": "2026-11-02",
+    "end": "2026-11-08"
+   },
+   {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "10": 0,
+    "week": 7,
+    "start": "2026-11-09",
+    "end": "2026-11-15"
+   },
+   {
+    "3": 21,
+    "4": 0,
+    "5": 29,
+    "10": 0,
+    "week": 8,
+    "start": "2026-11-16",
+    "end": "2026-11-22"
+   },
+   {
+    "3": 28,
+    "4": 0,
+    "5": 0,
+    "10": 0,
+    "week": 9,
+    "start": "2026-11-23",
+    "end": "2026-11-29"
+   },
+   {
+    "3": 46,
+    "4": 30,
+    "5": 0,
+    "10": 0,
+    "week": 10,
+    "start": "2026-11-30",
+    "end": "2026-12-06"
+   },
+   {
+    "3": 0,
+    "4": 34,
+    "5": 36,
+    "10": 0,
+    "week": 11,
+    "start": "2026-12-07",
+    "end": "2026-12-13"
+   },
+   {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "10": 0,
+    "week": 12,
+    "start": "2026-12-14",
+    "end": "2026-12-15"
+   }
+  ],
+  "cases": [
+   {
+    "caseId": "ST/1922/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1100",
+    "nextDate": "2026-10-19",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1140/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-636",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2411/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-028",
+    "nextDate": "2026-10-07",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 7 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1335/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1156",
+    "nextDate": "2026-11-03",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 3 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2666/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-584",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/877/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-876",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1299/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-046",
+    "nextDate": "2026-11-13",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2949/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1178",
+    "nextDate": "2026-10-15",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 15 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/931/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-894",
+    "nextDate": "2026-10-23",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1901/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-436",
+    "nextDate": "2026-10-27",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 27 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1341/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-066",
+    "nextDate": "2026-11-13",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 13 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1725/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-367",
+    "nextDate": "2026-10-23",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 23 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1902/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-829",
+    "nextDate": "2026-10-09",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2351/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-286",
+    "nextDate": "2026-10-14",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 14 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2336/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-089",
+    "nextDate": "2026-10-22",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 22 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1164/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-253",
+    "nextDate": "2026-11-03",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2310/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-571",
+    "nextDate": "2026-10-09",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 9 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1147/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-522",
+    "nextDate": "2026-10-21",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 21 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2766/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-693",
+    "nextDate": "2026-10-21",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 21 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1991/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-818",
+    "nextDate": "2026-10-13",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 13 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/351/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-201",
+    "nextDate": "2026-10-29",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2794/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1228",
+    "nextDate": "2026-10-30",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 30 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2139/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-102",
+    "nextDate": "2026-10-21",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 21 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/488/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1208",
+    "nextDate": "2026-10-30",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/747/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-566",
+    "nextDate": "2026-11-12",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 12 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/648/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-759",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/561/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-086",
+    "nextDate": "2026-10-22",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 22 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2539/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1029",
+    "nextDate": "2026-10-29",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 29 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1636/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-963",
+    "nextDate": "2026-10-15",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 15 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2896/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1006",
+    "nextDate": "2026-11-11",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 11 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2607/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-569",
+    "nextDate": "2026-10-12",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 12 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/656/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-607",
+    "nextDate": "2026-10-21",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 21 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2593/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-666",
+    "nextDate": "2026-10-29",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 29 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1669/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-928",
+    "nextDate": "2026-10-09",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 9 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2048/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-789",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1958/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-471",
+    "nextDate": "2026-10-12",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/606/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-171",
+    "nextDate": "2026-10-30",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 30 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/507/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1055",
+    "nextDate": "2026-10-07",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1553/2016",
+    "ageYears": 9.9,
+    "threshold": 10,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-125",
+    "nextDate": "2026-10-26",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/605/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1166",
+    "nextDate": "2026-11-11",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2406/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-489",
+    "nextDate": "2026-10-07",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 7 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/302/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-336",
+    "nextDate": "2026-10-08",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 8 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1231/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-093",
+    "nextDate": "2026-11-04",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 4 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/794/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-827",
+    "nextDate": "2026-10-26",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 26 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/149/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1247",
+    "nextDate": "2026-10-30",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 30 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/28/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-942",
+    "nextDate": "2026-10-13",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 13 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1971/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1078",
+    "nextDate": "2026-10-05",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 5 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2334/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1128",
+    "nextDate": "2026-10-28",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 28 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/524/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-214",
+    "nextDate": "2026-10-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1987/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1218",
+    "nextDate": "2026-10-23",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 23 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/482/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-310",
+    "nextDate": "2026-11-10",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 10 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2081/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-399",
+    "nextDate": "2026-11-13",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1264/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-954",
+    "nextDate": "2026-10-08",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 8 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1603/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-395",
+    "nextDate": "2026-11-16",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 16 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1025/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-573",
+    "nextDate": "2026-11-03",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/1040/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-471",
+    "nextDate": "2026-10-01",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 1 October; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/553/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1183",
+    "nextDate": "2026-11-11",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 11 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2945/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-320",
+    "nextDate": "2026-11-05",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 5 November; not due before then",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/433/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-262",
+    "nextDate": "2026-10-05",
+    "whyCode": "no_room",
+    "whyNotHeard": "Deferred twice for want of room in the day",
+    "pSubstantive": 0.97
+   },
+   {
+    "caseId": "ST/2288/2021",
+    "ageYears": 4.9,
+    "threshold": 5,
+    "crossesOn": "2026-11-07",
+    "stage": "JUDGEMENT",
+    "stageLabel": "Judgement",
+    "nextPurpose": "JUDGEMENT",
+    "nextPurposeLabel": "Judgement",
+    "advocateId": "ADV-1088",
+    "nextDate": "2026-10-19",
+    "whyCode": "not_due",
+    "whyNotHeard": "Next date 19 October; not due before then",
+    "pSubstantive": 0.97
+   }
+  ]
+ },
+ "repeatAdjourned": {
+  "distribution": [
+   {
+    "consecutive": 0,
+    "cases": 1811,
+    "orMore": false
+   },
+   {
+    "consecutive": 1,
+    "cases": 286,
+    "orMore": false
+   },
+   {
+    "consecutive": 2,
+    "cases": 388,
+    "orMore": false
+   },
+   {
+    "consecutive": 3,
+    "cases": 322,
+    "orMore": false
+   },
+   {
+    "consecutive": 4,
+    "cases": 125,
+    "orMore": false
+   },
+   {
+    "consecutive": 5,
+    "cases": 68,
+    "orMore": false
+   }
+  ],
+  "cases": [
+   {
+    "caseId": "ST/1869/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1162",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-13",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2499/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1248",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-16",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1909/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1007",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-02",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/663/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1220",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-04",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/117/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-792",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-14",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/138/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-602",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-22",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/385/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1006",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-13",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/970/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-780",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-12",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2866/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-710",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-28",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2559/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-665",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-08",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/147/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-810",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-05",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2263/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-742",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-29",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1536/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-640",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-06",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1944/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1089",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-07",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2764/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-118",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-23",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2951/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-505",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-27",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/328/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-266",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-23",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2322/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1060",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-23",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/844/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-379",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-09",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/787/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-223",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-05",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2630/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-036",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-04",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1266/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1249",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-08",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1683/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-879",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-11-16",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/2203/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1054",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-08",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1446/2023",
+    "ageYears": 2.95,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-525",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "not_ready"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "not_ready": 1
+    },
+    "lastNote": "Complainant present; examined-in-chief by proof affidavit. Exhibits marked. Accused's counsel not ready for cross-examination; adjourned for cross-examination.",
+    "nextDate": "2026-10-23",
+    "pSubstantive": 0.294
+   },
+   {
+    "caseId": "ST/1410/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-408",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-19",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/152/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-284",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-22",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/1999/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-855",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-07",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/534/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1248",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-07",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2871/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-992",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-12",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/573/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-869",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-02",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2041/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-443",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-01",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/660/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-622",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-16",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/1993/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1250",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-03",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2111/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-692",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-13",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2110/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-360",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-05",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2109/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-411",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-11-16",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/2541/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-359",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-22",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/1483/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-1053",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-13",
+    "pSubstantive": 0.224
+   },
+   {
+    "caseId": "ST/1551/2023",
+    "ageYears": 2.76,
+    "stage": "EVIDENCE_COMPLAINANT",
+    "stageLabel": "Complainant evidence",
+    "nextPurpose": "EVIDENCE_COMPLAINANT",
+    "nextPurposeLabel": "Complainant evidence",
+    "advocateId": "ADV-057",
+    "consecutive": 5,
+    "pucarMedian": 5,
+    "reasons": [
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "unrecorded",
+     "both_absent"
+    ],
+    "reasonCounts": {
+     "unrecorded": 4,
+     "both_absent": 1
+    },
+    "lastNote": "Complainant absent despite sufficient opportunity; case posted for complainant's evidence on a last-chance basis.",
+    "nextDate": "2026-10-28",
+    "pSubstantive": 0.224
+   }
+  ]
+ },
+ "stuck": {
+  "byType": [
+   {
+    "type": "ADMISSION",
+    "label": "Admission",
+    "cases": 55,
+    "docketMedian": 1,
+    "pucarMedian": 1,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "COGNIZANCE",
+    "label": "Cognizance",
+    "cases": 27,
+    "docketMedian": 0,
+    "pucarMedian": 1,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "DELAY_CONDONATION_HEARING",
+    "label": "Delay condonation",
+    "cases": 199,
+    "docketMedian": 1,
+    "pucarMedian": 3,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "APPEARANCE",
+    "label": "Appearance",
+    "cases": 137,
+    "docketMedian": 1,
+    "pucarMedian": 3,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "WARRANT",
+    "label": "Warrant",
+    "cases": 356,
+    "docketMedian": 0,
+    "pucarMedian": 3,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "PLEA",
+    "label": "Plea",
+    "cases": 106,
+    "docketMedian": 0,
+    "pucarMedian": 1,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "EXAMINATION_UNDER_S351_BNSS",
+    "label": "Examination u/s 351",
+    "cases": 90,
+    "docketMedian": 0,
+    "pucarMedian": 2,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "EVIDENCE_COMPLAINANT",
+    "label": "Complainant evidence",
+    "cases": 365,
+    "docketMedian": 3,
+    "pucarMedian": 5,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "EVIDENCE_ACCUSED",
+    "label": "Defence evidence",
+    "cases": 556,
+    "docketMedian": 2,
+    "pucarMedian": 4,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "ARGUMENTS",
+    "label": "Arguments",
+    "cases": 235,
+    "docketMedian": 0,
+    "pucarMedian": 3,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "JUDGEMENT",
+    "label": "Judgement",
+    "cases": 361,
+    "docketMedian": 0,
+    "pucarMedian": 2,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "BAIL",
+    "label": "Bail",
+    "cases": 30,
+    "docketMedian": 0,
+    "pucarMedian": 2,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "REPORTS",
+    "label": "Reports",
+    "cases": 209,
+    "docketMedian": 0,
+    "pucarMedian": 3,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   },
+   {
+    "type": "APPLICATION_REVIEW",
+    "label": "Application review",
+    "cases": 274,
+    "docketMedian": 0,
+    "pucarMedian": 1,
+    "overMedian": 0,
+    "overTwiceMedian": 0
+   }
+  ],
+  "cases": []
+ },
+ "drift": {
+  "policy": "benchtime",
+  "policyName": "benchtime",
+  "seeds": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "weeks": [
+   {
+    "week": 1,
+    "start": "2026-10-01",
+    "end": "2026-10-04",
+    "sittingDays": 1,
+    "into": {
+     "3": 0,
+     "4": 0,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 2.1,
+      "lo": 1.6,
+      "hi": 2.6
+     },
+     "4": {
+      "mean": 1.2,
+      "lo": 0.8,
+      "hi": 1.6
+     },
+     "5": {
+      "mean": 0.6,
+      "lo": 0.3,
+      "hi": 0.9
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -2.1,
+      "lo": -2.6,
+      "hi": -1.6
+     },
+     "4": {
+      "mean": -1.2,
+      "lo": -1.6,
+      "hi": -0.8
+     },
+     "5": {
+      "mean": -0.6,
+      "lo": -0.9,
+      "hi": -0.3
+     }
+    },
+    "pending4Plus": {
+     "mean": 895,
+     "lo": 889,
+     "hi": 901
+    }
+   },
+   {
+    "week": 2,
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "sittingDays": 5,
+    "into": {
+     "3": 0,
+     "4": 38,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -10.4,
+      "lo": -11.9612,
+      "hi": -8.8388
+     },
+     "4": {
+      "mean": 31.8,
+      "lo": 30.6819,
+      "hi": 32.9181
+     },
+     "5": {
+      "mean": -3,
+      "lo": -3.6039,
+      "hi": -2.3961
+     }
+    },
+    "pending4Plus": {
+     "mean": 927,
+     "lo": 921,
+     "hi": 933
+    }
+   },
+   {
+    "week": 3,
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "sittingDays": 5,
+    "into": {
+     "3": 74,
+     "4": 35,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": 63.6,
+      "lo": 62.0388,
+      "hi": 65.1612
+     },
+     "4": {
+      "mean": 28.8,
+      "lo": 27.6819,
+      "hi": 29.9181
+     },
+     "5": {
+      "mean": -3,
+      "lo": -3.6039,
+      "hi": -2.3961
+     }
+    },
+    "pending4Plus": {
+     "mean": 957,
+     "lo": 951,
+     "hi": 963
+    }
+   },
+   {
+    "week": 4,
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "sittingDays": 4,
+    "into": {
+     "3": 25,
+     "4": 39,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 8.3,
+      "lo": 7.051,
+      "hi": 9.549
+     },
+     "4": {
+      "mean": 5,
+      "lo": 4.1055,
+      "hi": 5.8945
+     },
+     "5": {
+      "mean": 2.4,
+      "lo": 1.9169,
+      "hi": 2.8831
+     }
+    },
+    "net": {
+     "3": {
+      "mean": 16.7,
+      "lo": 15.451,
+      "hi": 17.949
+     },
+     "4": {
+      "mean": 34,
+      "lo": 33.1055,
+      "hi": 34.8945
+     },
+     "5": {
+      "mean": -2.4,
+      "lo": -2.8831,
+      "hi": -1.9169
+     }
+    },
+    "pending4Plus": {
+     "mean": 991,
+     "lo": 985,
+     "hi": 997
+    }
+   },
+   {
+    "week": 5,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "sittingDays": 5,
+    "into": {
+     "3": 0,
+     "4": 0,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -10.4,
+      "lo": -11.9612,
+      "hi": -8.8388
+     },
+     "4": {
+      "mean": -6.2,
+      "lo": -7.3181,
+      "hi": -5.0819
+     },
+     "5": {
+      "mean": -3,
+      "lo": -3.6039,
+      "hi": -2.3961
+     }
+    },
+    "pending4Plus": {
+     "mean": 984,
+     "lo": 978,
+     "hi": 990
+    }
+   },
+   {
+    "week": 6,
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "sittingDays": 5,
+    "into": {
+     "3": 0,
+     "4": 34,
+     "5": 30
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -10.4,
+      "lo": -11.9612,
+      "hi": -8.8388
+     },
+     "4": {
+      "mean": 27.8,
+      "lo": 26.6819,
+      "hi": 28.9181
+     },
+     "5": {
+      "mean": 27,
+      "lo": 26.3961,
+      "hi": 27.6039
+     }
+    },
+    "pending4Plus": {
+     "mean": 1012,
+     "lo": 1006,
+     "hi": 1018
+    }
+   },
+   {
+    "week": 7,
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "sittingDays": 4,
+    "into": {
+     "3": 0,
+     "4": 0,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 8.3,
+      "lo": 7.051,
+      "hi": 9.549
+     },
+     "4": {
+      "mean": 5,
+      "lo": 4.1055,
+      "hi": 5.8945
+     },
+     "5": {
+      "mean": 2.4,
+      "lo": 1.9169,
+      "hi": 2.8831
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -8.3,
+      "lo": -9.549,
+      "hi": -7.051
+     },
+     "4": {
+      "mean": -5,
+      "lo": -5.8945,
+      "hi": -4.1055
+     },
+     "5": {
+      "mean": -2.4,
+      "lo": -2.8831,
+      "hi": -1.9169
+     }
+    },
+    "pending4Plus": {
+     "mean": 1007,
+     "lo": 1001,
+     "hi": 1013
+    }
+   },
+   {
+    "week": 8,
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "sittingDays": 5,
+    "into": {
+     "3": 21,
+     "4": 0,
+     "5": 29
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": 10.6,
+      "lo": 9.0388,
+      "hi": 12.1612
+     },
+     "4": {
+      "mean": -6.2,
+      "lo": -7.3181,
+      "hi": -5.0819
+     },
+     "5": {
+      "mean": 26,
+      "lo": 25.3961,
+      "hi": 26.6039
+     }
+    },
+    "pending4Plus": {
+     "mean": 1001,
+     "lo": 995,
+     "hi": 1007
+    }
+   },
+   {
+    "week": 9,
+    "start": "2026-11-23",
+    "end": "2026-11-29",
+    "sittingDays": 5,
+    "into": {
+     "3": 28,
+     "4": 0,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": 17.6,
+      "lo": 16.0388,
+      "hi": 19.1612
+     },
+     "4": {
+      "mean": -6.2,
+      "lo": -7.3181,
+      "hi": -5.0819
+     },
+     "5": {
+      "mean": -3,
+      "lo": -3.6039,
+      "hi": -2.3961
+     }
+    },
+    "pending4Plus": {
+     "mean": 995,
+     "lo": 989,
+     "hi": 1001
+    }
+   },
+   {
+    "week": 10,
+    "start": "2026-11-30",
+    "end": "2026-12-06",
+    "sittingDays": 5,
+    "into": {
+     "3": 46,
+     "4": 30,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": 35.6,
+      "lo": 34.0388,
+      "hi": 37.1612
+     },
+     "4": {
+      "mean": 23.8,
+      "lo": 22.6819,
+      "hi": 24.9181
+     },
+     "5": {
+      "mean": -3,
+      "lo": -3.6039,
+      "hi": -2.3961
+     }
+    },
+    "pending4Plus": {
+     "mean": 1018,
+     "lo": 1012,
+     "hi": 1024
+    }
+   },
+   {
+    "week": 11,
+    "start": "2026-12-07",
+    "end": "2026-12-13",
+    "sittingDays": 5,
+    "into": {
+     "3": 0,
+     "4": 34,
+     "5": 36
+    },
+    "out": {
+     "3": {
+      "mean": 10.4,
+      "lo": 8.8388,
+      "hi": 11.9612
+     },
+     "4": {
+      "mean": 6.2,
+      "lo": 5.0819,
+      "hi": 7.3181
+     },
+     "5": {
+      "mean": 3,
+      "lo": 2.3961,
+      "hi": 3.6039
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -10.4,
+      "lo": -11.9612,
+      "hi": -8.8388
+     },
+     "4": {
+      "mean": 27.8,
+      "lo": 26.6819,
+      "hi": 28.9181
+     },
+     "5": {
+      "mean": 33,
+      "lo": 32.3961,
+      "hi": 33.6039
+     }
+    },
+    "pending4Plus": {
+     "mean": 1046,
+     "lo": 1040,
+     "hi": 1052
+    }
+   },
+   {
+    "week": 12,
+    "start": "2026-12-14",
+    "end": "2026-12-15",
+    "sittingDays": 2,
+    "into": {
+     "3": 0,
+     "4": 0,
+     "5": 0
+    },
+    "out": {
+     "3": {
+      "mean": 4.2,
+      "lo": 3.5755,
+      "hi": 4.8245
+     },
+     "4": {
+      "mean": 2.5,
+      "lo": 2.0528,
+      "hi": 2.9472
+     },
+     "5": {
+      "mean": 1.2,
+      "lo": 0.9,
+      "hi": 1.5
+     }
+    },
+    "net": {
+     "3": {
+      "mean": -4.2,
+      "lo": -4.8245,
+      "hi": -3.5755
+     },
+     "4": {
+      "mean": -2.5,
+      "lo": -2.9472,
+      "hi": -2.0528
+     },
+     "5": {
+      "mean": -1.2,
+      "lo": -1.5,
+      "hi": -0.9
+     }
+    },
+    "pending4Plus": {
+     "mean": 1044,
+     "lo": 1038,
+     "hi": 1050
+    }
+   }
+  ],
+  "byStage": [
+   {
+    "stage": "ADMISSION",
+    "label": "Admission",
+    "start": 55,
+    "end": {
+     "mean": 40,
+     "lo": 39,
+     "hi": 41
+    },
+    "change": {
+     "mean": -15,
+     "lo": -16,
+     "hi": -14
+    }
+   },
+   {
+    "stage": "DELAY_CONDONATION_HEARING",
+    "label": "Delay condonation",
+    "start": 199,
+    "end": {
+     "mean": 178,
+     "lo": 174.8027,
+     "hi": 181.1973
+    },
+    "change": {
+     "mean": -21,
+     "lo": -24.1973,
+     "hi": -17.8027
+    }
+   },
+   {
+    "stage": "COGNIZANCE",
+    "label": "Cognizance",
+    "start": 27,
+    "end": {
+     "mean": 43,
+     "lo": 42,
+     "hi": 44
+    },
+    "change": {
+     "mean": 16,
+     "lo": 15,
+     "hi": 17
+    }
+   },
+   {
+    "stage": "APPEARANCE",
+    "label": "Appearance",
+    "start": 223,
+    "end": {
+     "mean": 189,
+     "lo": 185.5919,
+     "hi": 192.4081
+    },
+    "change": {
+     "mean": -34,
+     "lo": -37.4081,
+     "hi": -30.5919
+    }
+   },
+   {
+    "stage": "WARRANT",
+    "label": "Warrant",
+    "start": 386,
+    "end": {
+     "mean": 405,
+     "lo": 397.704,
+     "hi": 412.296
+    },
+    "change": {
+     "mean": 19,
+     "lo": 11.704,
+     "hi": 26.296
+    }
+   },
+   {
+    "stage": "PLEA",
+    "label": "Plea",
+    "start": 106,
+    "end": {
+     "mean": 85,
+     "lo": 83.4749,
+     "hi": 86.5251
+    },
+    "change": {
+     "mean": -21,
+     "lo": -22.5251,
+     "hi": -19.4749
+    }
+   },
+   {
+    "stage": "EXAMINATION_UNDER_S351_BNSS",
+    "label": "Examination u/s 351",
+    "start": 90,
+    "end": {
+     "mean": 118,
+     "lo": 115.8682,
+     "hi": 120.1318
+    },
+    "change": {
+     "mean": 28,
+     "lo": 25.8682,
+     "hi": 30.1318
+    }
+   },
+   {
+    "stage": "EVIDENCE_COMPLAINANT",
+    "label": "Complainant evidence",
+    "start": 457,
+    "end": {
+     "mean": 402,
+     "lo": 394.7722,
+     "hi": 409.2278
+    },
+    "change": {
+     "mean": -55,
+     "lo": -62.2278,
+     "hi": -47.7722
+    }
+   },
+   {
+    "stage": "EVIDENCE_ACCUSED",
+    "label": "Defence evidence",
+    "start": 556,
+    "end": {
+     "mean": 577,
+     "lo": 566.613,
+     "hi": 587.387
+    },
+    "change": {
+     "mean": 21,
+     "lo": 10.613,
+     "hi": 31.387
+    }
+   },
+   {
+    "stage": "ARGUMENTS",
+    "label": "Arguments",
+    "start": 235,
+    "end": {
+     "mean": 276,
+     "lo": 271.0364,
+     "hi": 280.9636
+    },
+    "change": {
+     "mean": 41,
+     "lo": 36.0364,
+     "hi": 45.9636
+    }
+   },
+   {
+    "stage": "JUDGEMENT",
+    "label": "Judgement",
+    "start": 666,
+    "end": {
+     "mean": 512,
+     "lo": 502.7878,
+     "hi": 521.2122
+    },
+    "change": {
+     "mean": -154,
+     "lo": -163.2122,
+     "hi": -144.7878
+    }
+   }
+  ]
+ },
+ "processDesk": {
+  "total": 587,
+  "byKind": [
+   {
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "out": 265,
+    "ageDays": {
+     "0-14": 31,
+     "15-30": 85,
+     "31-60": 149,
+     "61+": 0
+    },
+    "oldestDays": 57
+   },
+   {
+    "kind": "summons",
+    "label": "Summons",
+    "out": 174,
+    "ageDays": {
+     "0-14": 22,
+     "15-30": 54,
+     "31-60": 98,
+     "61+": 0
+    },
+    "oldestDays": 57
+   },
+   {
+    "kind": "notice",
+    "label": "Notice",
+    "out": 95,
+    "ageDays": {
+     "0-14": 7,
+     "15-30": 37,
+     "31-60": 51,
+     "61+": 0
+    },
+    "oldestDays": 57
+   },
+   {
+    "kind": "warrant",
+    "label": "Warrant",
+    "out": 53,
+    "ageDays": {
+     "0-14": 10,
+     "15-30": 12,
+     "31-60": 31,
+     "61+": 0
+    },
+    "oldestDays": 57
+   }
+  ],
+  "cases": [
+   {
+    "caseId": "ST/1212/2023",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 2.86,
+    "advocateId": "ADV-896",
+    "nextDate": "2026-10-30",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/170/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 2.16,
+    "advocateId": "ADV-764",
+    "nextDate": "2026-11-13",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/451/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 1.6,
+    "advocateId": "ADV-598",
+    "nextDate": "2026-10-05",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2981/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 1.19,
+    "advocateId": "ADV-762",
+    "nextDate": "2026-10-15",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2234/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 1.07,
+    "advocateId": "ADV-249",
+    "nextDate": "2026-10-23",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/625/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 0.52,
+    "advocateId": "ADV-1049",
+    "nextDate": "2026-10-19",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2414/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 0.52,
+    "advocateId": "ADV-1125",
+    "nextDate": "2026-11-16",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/372/2026",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 0.5,
+    "advocateId": "ADV-301",
+    "nextDate": "2026-10-23",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2018/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 0.22,
+    "advocateId": "ADV-671",
+    "nextDate": "2026-10-19",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/8/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-05",
+    "daysOut": 57,
+    "ageYears": 0.13,
+    "advocateId": "ADV-536",
+    "nextDate": "2026-10-21",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/364/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 1.82,
+    "advocateId": "ADV-1034",
+    "nextDate": "2026-10-05",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2446/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 1.82,
+    "advocateId": "ADV-448",
+    "nextDate": "2026-11-11",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2978/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 1.82,
+    "advocateId": "ADV-203",
+    "nextDate": "2026-10-21",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2404/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 1.57,
+    "advocateId": "ADV-672",
+    "nextDate": "2026-10-22",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2353/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 1.19,
+    "advocateId": "ADV-154",
+    "nextDate": "2026-11-13",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/710/2025",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 0.79,
+    "advocateId": "ADV-1071",
+    "nextDate": "2026-10-05",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/194/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 0.64,
+    "advocateId": "ADV-242",
+    "nextDate": "2026-10-29",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1572/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 0.64,
+    "advocateId": "ADV-118",
+    "nextDate": "2026-10-13",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/694/2026",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-06",
+    "daysOut": 56,
+    "ageYears": 0.51,
+    "advocateId": "ADV-412",
+    "nextDate": "2026-11-10",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/574/2024",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 2.07,
+    "advocateId": "ADV-417",
+    "nextDate": "2026-11-04",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2586/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 1.57,
+    "advocateId": "ADV-933",
+    "nextDate": "2026-10-06",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1084/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 1.57,
+    "advocateId": "ADV-993",
+    "nextDate": "2026-11-02",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2161/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 1.4,
+    "advocateId": "ADV-480",
+    "nextDate": "2026-11-05",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/551/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 1.4,
+    "advocateId": "ADV-555",
+    "nextDate": "2026-11-04",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2976/2025",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 0.79,
+    "advocateId": "ADV-692",
+    "nextDate": "2026-11-10",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2811/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 0.51,
+    "advocateId": "ADV-841",
+    "nextDate": "2026-10-14",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2744/2026",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 0.51,
+    "advocateId": "ADV-577",
+    "nextDate": "2026-10-30",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1733/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-07",
+    "daysOut": 55,
+    "ageYears": 0.13,
+    "advocateId": "ADV-962",
+    "nextDate": "2026-10-27",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2058/2023",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.97,
+    "advocateId": "ADV-1045",
+    "nextDate": "2026-10-16",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2573/2023",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.97,
+    "advocateId": "ADV-301",
+    "nextDate": "2026-10-12",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/505/2024",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.2,
+    "advocateId": "ADV-022",
+    "nextDate": "2026-10-14",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1322/2024",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.2,
+    "advocateId": "ADV-565",
+    "nextDate": "2026-10-12",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/454/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.16,
+    "advocateId": "ADV-439",
+    "nextDate": "2026-11-10",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/2171/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.16,
+    "advocateId": "ADV-759",
+    "nextDate": "2026-10-13",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1493/2024",
+    "kind": "warrant",
+    "label": "Warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 2.16,
+    "advocateId": "ADV-878",
+    "nextDate": "2026-10-22",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/200/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 1.6,
+    "advocateId": "ADV-334",
+    "nextDate": "2026-10-13",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1522/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 1.19,
+    "advocateId": "ADV-880",
+    "nextDate": "2026-10-28",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1895/2025",
+    "kind": "warrant_nonbailable",
+    "label": "Non-bailable warrant",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 1.07,
+    "advocateId": "ADV-608",
+    "nextDate": "2026-10-14",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/1954/2025",
+    "kind": "notice",
+    "label": "Notice",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 0.79,
+    "advocateId": "ADV-181",
+    "nextDate": "2026-10-01",
+    "action": "reissue"
+   },
+   {
+    "caseId": "ST/225/2026",
+    "kind": "summons",
+    "label": "Summons",
+    "issuedOn": "2026-08-08",
+    "daysOut": 54,
+    "ageYears": 0.22,
+    "advocateId": "ADV-767",
+    "nextDate": "2026-11-10",
+    "action": "reissue"
+   }
+  ]
+ }
+}

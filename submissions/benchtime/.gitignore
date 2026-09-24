@@ -1,0 +1,17 @@
+node_modules/
+bun.lock
+bun.lockb
+# raw run logs: the compressed copies (.gz) are committed instead
+out/tournament/candidates.jsonl
+out/tournament/runs.json
+out/tournament/old-rule/runs.json
+out/experiments/runs.jsonl
+# draft screenshots from the console design rounds (final screenshots are kept)
+web-concepts/*/shots/round1/
+web-concepts/*/shots/rounds/
+# the demo's own screenshot checks
+web-demo/qa/
+web-demo/shots/
+# the presenter's private material (speaker script and notes stay out of the submission)
+web-demo/SCRIPT.md
+web-demo/notes.json

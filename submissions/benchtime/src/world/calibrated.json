@@ -1,0 +1,373 @@
+{
+  "note": "Fitted by src/world/calibrate.ts; see out/calibration-fit.md. Per-type keys are documented in src/world/world.ts.",
+  "fittedOn": {
+    "roster": "data/roster_3000_seed42.csv",
+    "cases": 3000,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "iterations": 10,
+    "judgement": "hearings_per_case",
+    "dailyCap": 75
+  },
+  "judgement": "hearings_per_case",
+  "callMinutes": 2,
+  "durationCv": 0.5,
+  "closureProb": 0.0015289057323359119,
+  "abscondShare": 0.15,
+  "settleOnReport": 0.4,
+  "pDelayCondonation": 0.25,
+  "pWarrantOnAbsence": 0.6,
+  "disposal": {
+    "acquittalOnDefault": 0.3,
+    "dismissalForSteps": 0.15,
+    "compoundingHazard": 0.01,
+    "lpSplit": 0.25,
+    "lpAfterWarrantHearings": 4
+  },
+  "behaviour": {
+    "slotAttendLift": 0.3,
+    "reminderAttendLift": 0.2,
+    "checkinHonesty": 0.7,
+    "standbyAttendMult": 0.85,
+    "fatiguePerWastedTrip": 0.02
+  },
+  "latent": {
+    "processMeanDays": {
+      "summons": 30,
+      "notice": 25,
+      "warrant": 45
+    },
+    "processCv": 0.8,
+    "externalMeanDays": 60,
+    "externalCv": 0.6,
+    "attendancePrior": {
+      "complainant": 0.21485676215856095,
+      "complainantAdvocate": 0.7221852098600933,
+      "accused": 0.15856095936042638,
+      "accusedAdvocate": 0.5576282478347768
+    },
+    "attendanceKappa": 4,
+    "attendanceObsWeight": 1,
+    "checkinResponse": 0.7,
+    "lastChanceCut": 0.5,
+    "producedPresence": 0.9,
+    "returnReportDelayDays": 0,
+    "checkinFalseAlarm": 0.05,
+    "checkinUnforeseen": 0.35,
+    "prepaidRounds": {
+      "summons": 4,
+      "notice": 1,
+      "warrant": 4
+    },
+    "unpaidRoundDelayDays": 14
+  },
+  "perType": {
+    "ADMISSION": {
+      "admin": 0,
+      "procP": 1,
+      "procScale": 1.5589,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 1,
+      "absC": 0.4231,
+      "both": 0,
+      "notReady": 0.0867,
+      "soughtTime": 0.0438,
+      "unclear": 0.1187
+    },
+    "DELAY_CONDONATION_HEARING": {
+      "admin": 0,
+      "procP": 1,
+      "procScale": 1.6512,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 1,
+      "absC": 0.7936,
+      "both": 0.1199,
+      "notReady": 0.1084,
+      "soughtTime": 0.3432,
+      "unclear": 0.2717
+    },
+    "COGNIZANCE": {
+      "admin": 0.0233,
+      "procP": 0.018,
+      "procScale": 0.8322,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 1,
+      "absC": 0,
+      "both": 0,
+      "notReady": 0,
+      "soughtTime": 0,
+      "unclear": 0
+    },
+    "APPEARANCE": {
+      "admin": 0.0058,
+      "procP": 1,
+      "procScale": 2.4909,
+      "extP": 0.0102,
+      "extScale": 0.9098,
+      "absA": 0.5437,
+      "absC": 0.8964,
+      "both": 0.092,
+      "notReady": 0.0497,
+      "soughtTime": 0.09,
+      "unclear": 0.3686
+    },
+    "WARRANT": {
+      "admin": 0.016,
+      "procP": 1,
+      "procScale": 2.2289,
+      "extP": 0.9493,
+      "extScale": 1,
+      "absA": 0.0075,
+      "absC": 0.4203,
+      "both": 0.0205,
+      "notReady": 0.03,
+      "soughtTime": 0.0182,
+      "unclear": 0.4665
+    },
+    "PLEA": {
+      "admin": 0,
+      "procP": 0,
+      "procScale": 0.0778,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 0.0707,
+      "absC": 0,
+      "both": 0,
+      "notReady": 0.0274,
+      "soughtTime": 0,
+      "unclear": 0.0208
+    },
+    "EXAMINATION_UNDER_S351_BNSS": {
+      "admin": 0,
+      "procP": 0.2235,
+      "procScale": 1,
+      "extP": 0.1338,
+      "extScale": 1,
+      "absA": 0.1344,
+      "absC": 0.4663,
+      "both": 0.0322,
+      "notReady": 0.2291,
+      "soughtTime": 0.143,
+      "unclear": 0.1509
+    },
+    "EVIDENCE_COMPLAINANT": {
+      "admin": 0.0064,
+      "procP": 0.2686,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 0.1296,
+      "absA": 0.3196,
+      "absC": 0.2939,
+      "both": 0.0826,
+      "notReady": 0.3628,
+      "soughtTime": 0.0925,
+      "unclear": 0.2852
+    },
+    "EVIDENCE_ACCUSED": {
+      "admin": 0,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 0.216,
+      "absA": 0.2609,
+      "absC": 0.4075,
+      "both": 0,
+      "notReady": 0.796,
+      "soughtTime": 0,
+      "unclear": 0.4186
+    },
+    "ARGUMENTS": {
+      "admin": 0.2021,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 0.2913,
+      "absC": 0,
+      "both": 0,
+      "notReady": 0.2699,
+      "soughtTime": 0.7475,
+      "unclear": 0.3471
+    },
+    "JUDGEMENT": {
+      "admin": 0.3628,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 0.25,
+      "absC": 0,
+      "both": 0,
+      "notReady": 0,
+      "soughtTime": 0,
+      "unclear": 0.4426
+    },
+    "BAIL": {
+      "admin": 0.0109,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 0.439,
+      "absC": 0,
+      "both": 0.1123,
+      "notReady": 0,
+      "soughtTime": 0.261,
+      "unclear": 0.5155
+    },
+    "REPORTS": {
+      "admin": 0,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 1,
+      "extScale": 1.7144,
+      "absA": 0.3152,
+      "absC": 0.1996,
+      "both": 0.0166,
+      "notReady": 0.0971,
+      "soughtTime": 0,
+      "unclear": 0.5675
+    },
+    "APPLICATION_REVIEW": {
+      "admin": 0,
+      "procP": 0,
+      "procScale": 1,
+      "extP": 0,
+      "extScale": 1,
+      "absA": 0,
+      "absC": 0,
+      "both": 0,
+      "notReady": 0.0601,
+      "soughtTime": 0.0566,
+      "unclear": 0.0523
+    }
+  },
+  "fit": {
+    "ADMISSION": {
+      "reached": 381,
+      "targetPSub": 0.486,
+      "simulatedPSub": 0.5065616797900262,
+      "maxShareError": 0.03636363636363636,
+      "withinTolerance": true
+    },
+    "DELAY_CONDONATION_HEARING": {
+      "reached": 1536,
+      "targetPSub": 0.293,
+      "simulatedPSub": 0.2942708333333333,
+      "maxShareError": 0.006203079272172035,
+      "withinTolerance": true
+    },
+    "COGNIZANCE": {
+      "reached": 260,
+      "targetPSub": 0.9,
+      "simulatedPSub": 0.9115384615384615,
+      "maxShareError": 0.014492753623188415,
+      "withinTolerance": true
+    },
+    "APPEARANCE": {
+      "reached": 1832,
+      "targetPSub": 0.401,
+      "simulatedPSub": 0.39574235807860264,
+      "maxShareError": 0.00485377988108239,
+      "withinTolerance": true
+    },
+    "WARRANT": {
+      "reached": 5451,
+      "targetPSub": 0.135,
+      "simulatedPSub": 0.13318657127132635,
+      "maxShareError": 0.0018780360077288402,
+      "withinTolerance": true
+    },
+    "PLEA": {
+      "reached": 1619,
+      "targetPSub": 0.9,
+      "simulatedPSub": 0.8968499073502162,
+      "maxShareError": 0.017964071856287425,
+      "withinTolerance": true
+    },
+    "EXAMINATION_UNDER_S351_BNSS": {
+      "reached": 1817,
+      "targetPSub": 0.40700000000000003,
+      "simulatedPSub": 0.4061640066042928,
+      "maxShareError": 0.007530120481927721,
+      "withinTolerance": true
+    },
+    "EVIDENCE_COMPLAINANT": {
+      "reached": 8148,
+      "targetPSub": 0.294,
+      "simulatedPSub": 0.29405989199803634,
+      "maxShareError": 0.001564673157162726,
+      "withinTolerance": true
+    },
+    "EVIDENCE_ACCUSED": {
+      "reached": 13165,
+      "targetPSub": 0.16699999999999998,
+      "simulatedPSub": 0.1627800987466768,
+      "maxShareError": 0.020685900925421885,
+      "withinTolerance": true
+    },
+    "ARGUMENTS": {
+      "reached": 6358,
+      "targetPSub": 0.13,
+      "simulatedPSub": 0.1300723497955332,
+      "maxShareError": 0.0010124751401193177,
+      "withinTolerance": true
+    },
+    "JUDGEMENT": {
+      "reached": 9184,
+      "targetPSub": 0.27932960893854747,
+      "simulatedPSub": 0.27961672473867594,
+      "maxShareError": 0.24274486094316808,
+      "withinTolerance": true
+    },
+    "BAIL": {
+      "reached": 322,
+      "targetPSub": 0.313,
+      "simulatedPSub": 0.3136645962732919,
+      "maxShareError": 0.015786827551533433,
+      "withinTolerance": true
+    },
+    "REPORTS": {
+      "reached": 5057,
+      "targetPSub": 0.083,
+      "simulatedPSub": 0.08404192208819458,
+      "maxShareError": 0.0020097346522216925,
+      "withinTolerance": true
+    },
+    "APPLICATION_REVIEW": {
+      "reached": 5151,
+      "targetPSub": 0.85,
+      "simulatedPSub": 0.8503203261502621,
+      "maxShareError": 0.0025940337224383825,
+      "withinTolerance": true
+    }
+  },
+  "statusQuo60": {
+    "meanPSubError": 0.005602343010545387,
+    "listedPerDay": 60,
+    "reachedPerDay": 54.996078431372545
+  }
+}

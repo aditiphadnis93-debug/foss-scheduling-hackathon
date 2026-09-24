@@ -1,0 +1,136 @@
+{
+ "id": "ST/2475/2026",
+ "filingNumber": "KL-002475-2026",
+ "filingDate": "2026-04-30",
+ "ageYears": 0.42,
+ "ageBand": "0-1",
+ "crossesNext": null,
+ "advocateId": "ADV-072",
+ "partyId": "PARTY-02475",
+ "stage": "DELAY_CONDONATION_HEARING",
+ "stageLabel": "Delay condonation",
+ "nextPurpose": "DELAY_CONDONATION_HEARING",
+ "nextPurposeLabel": "Delay condonation",
+ "hearingsAtPurpose": 2,
+ "pucarMedianAtPurpose": 3,
+ "totalHearings": 5,
+ "consecutiveNonSubstantive": 2,
+ "lastSummary": {
+  "raw": "Present: Complainant's Advocate, Accused Advocate\nAbsent: Complainant, Accused\nNotice served against accused. For objection and hearing.",
+  "notes": [
+   "Notice served against accused. For objection and hearing."
+  ],
+  "tags": [
+   "notice served",
+   "objections pending"
+  ]
+ },
+ "attendance": {
+  "last": {
+   "complainant": false,
+   "complainantAdvocate": true,
+   "accused": false,
+   "accusedAdvocate": true
+  },
+  "record": {
+   "complainant": {
+    "present": 3,
+    "recorded": 5
+   },
+   "complainantAdvocate": {
+    "present": 5,
+    "recorded": 5
+   },
+   "accused": {
+    "present": 2,
+    "recorded": 5
+   },
+   "accusedAdvocate": {
+    "present": 4,
+    "recorded": 4
+   }
+  }
+ },
+ "process": {
+  "kind": "notice",
+  "state": "served",
+  "issuedOn": null,
+  "daysOut": null,
+  "returnedKnownOn": null
+ },
+ "externalPending": null,
+ "prediction": {
+  "pSubstantive": 0.263,
+  "prior": 0.293,
+  "reasons": [
+   {
+    "text": "Complainant was absent at the last hearing",
+    "effect": -0.07
+   },
+   {
+    "text": "Both advocates appeared last time",
+    "effect": 0.04
+   }
+  ]
+ },
+ "nextDate": "2026-10-01",
+ "lastHeardOn": "2026-08-22",
+ "hearingCounts": {
+  "ADMISSION": 3,
+  "DELAY_CONDONATION_HEARING": 2,
+  "COGNIZANCE": 0,
+  "APPEARANCE": 0,
+  "WARRANT": 0,
+  "PLEA": 0,
+  "EXAMINATION_UNDER_S351_BNSS": 0,
+  "EVIDENCE_COMPLAINANT": 0,
+  "EVIDENCE_ACCUSED": 0,
+  "ARGUMENTS": 0,
+  "JUDGEMENT": 0,
+  "BAIL": 0,
+  "REPORTS": 0,
+  "APPLICATION_REVIEW": 0
+ },
+ "history": [
+  {
+   "date": "2026-05-09",
+   "type": "DELAY_CONDONATION_HEARING",
+   "outcome": "failed",
+   "reason": "unclear",
+   "minutes": 2,
+   "attendance": null,
+   "recordedBy": "roster"
+  },
+  {
+   "date": "2026-06-13",
+   "type": "DELAY_CONDONATION_HEARING",
+   "outcome": "failed",
+   "reason": "unclear",
+   "minutes": 2,
+   "attendance": null,
+   "recordedBy": "roster"
+  },
+  {
+   "date": "2026-07-18",
+   "type": "DELAY_CONDONATION_HEARING",
+   "outcome": "failed",
+   "reason": "unclear",
+   "minutes": 2,
+   "attendance": null,
+   "recordedBy": "roster"
+  },
+  {
+   "date": "2026-08-22",
+   "type": "DELAY_CONDONATION_HEARING",
+   "outcome": "failed",
+   "reason": "both_absent",
+   "minutes": 2,
+   "attendance": null,
+   "recordedBy": "roster"
+  }
+ ],
+ "nextDateRecommendation": {
+  "date": "2026-10-06",
+  "reason": "Earliest working day after the 5-day procedural minimum on which the case is expected to be ready and the day has room"
+ }
+}

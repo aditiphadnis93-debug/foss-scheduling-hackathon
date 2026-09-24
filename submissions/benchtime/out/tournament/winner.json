@@ -1,0 +1,1090 @@
+{
+  "criteria": "final rule, 14:15 (after adversarial review)",
+  "decidedOn": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "confirmedOn": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "confirmNote": "seeds 21-30 were already used once under the original rule; the headline comes only from seeds 31-60",
+  "name": "g237",
+  "origin": "archive g237",
+  "key": "0.802|0.33|none|off|cluster|false|false|true|false|false|true|85|false|rotation|true|true|1.105|spread|0.209|true|0.95|0|earliest|0.44|0.191|true|1.204|false|true|12|1.045|11|1.376|11|false|0.34|45|index|0.3|1.643/1.622/2.619/1.883/3|5",
+  "description": "Daily list: one priority index per case (value of a hearing today plus the waiting cost it stops, less wasted trips, per minute), filled to 111% of the day with a 30% standby list. Next dates: the earliest day with room after PUCAR's gap (failed or unheard matters sooner). Process desk: matters whose summons, notice or warrant is not back are handled at the desk. No check-in. Every 4+ year case before the bench at least every 45 working days.",
+  "guardrailsDecide": [
+    {
+      "label": "every case given a date inside the quarter",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 3000,
+      "bound": 3000
+    },
+    {
+      "label": "dates honoured (heard or desk order on the day)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.038,
+      "bound": 0.03
+    },
+    {
+      "label": "cases never acted on",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -145.571,
+      "bound": -123.961
+    },
+    {
+      "label": "cases never heard",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 105.357,
+      "bound": 128.715
+    },
+    {
+      "label": "4y+ heard at all (README)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.001,
+      "bound": -0.001
+    },
+    {
+      "label": "every 4y+ case heard at least once (README score)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -0.857,
+      "bound": -0.857
+    },
+    {
+      "label": "4y+ moved on",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.013,
+      "bound": 0.01
+    },
+    {
+      "label": "4y+ still pending at the end",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -6.929,
+      "bound": -5.183
+    },
+    {
+      "label": "disposals on the merits (verdict + settlement + compounded)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 2.429,
+      "bound": 0.498
+    },
+    {
+      "label": "next-date excess over PUCAR's gap",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -7.875,
+      "bound": -7.672
+    },
+    {
+      "label": "days that ran late",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -1.5,
+      "bound": 0.113
+    },
+    {
+      "label": "court time used",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -0.006,
+      "bound": -0.011
+    },
+    {
+      "label": "reach rate",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.042,
+      "bound": 0.034
+    },
+    {
+      "label": "substantiveness",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.015,
+      "bound": 0.013
+    },
+    {
+      "label": "trips per useful hearing",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -1.202,
+      "bound": -1.102
+    },
+    {
+      "label": "wasted listings",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -0.027,
+      "bound": -0.025
+    },
+    {
+      "label": "minutes waited",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -13.406,
+      "bound": -12.072
+    },
+    {
+      "label": "load balance across days",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.008,
+      "bound": 0.015
+    },
+    {
+      "label": "useful hearings a day at least today's",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 1.021,
+      "bound": 0.845
+    }
+  ],
+  "guardrailsConfirm": [
+    {
+      "label": "every case given a date inside the quarter",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 3000,
+      "bound": 3000
+    },
+    {
+      "label": "dates honoured (heard or desk order on the day)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.032,
+      "bound": 0.023
+    },
+    {
+      "label": "cases never acted on",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -124.3,
+      "bound": -98.589
+    },
+    {
+      "label": "cases never heard",
+      "pass": false,
+      "shortfall": 0.039,
+      "diff": 131.6,
+      "bound": 153.866
+    },
+    {
+      "label": "4y+ heard at all (README)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.003,
+      "bound": -0.001
+    },
+    {
+      "label": "every 4y+ case heard at least once (README score)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -2.5,
+      "bound": -2.5
+    },
+    {
+      "label": "4y+ moved on",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.013,
+      "bound": 0.01
+    },
+    {
+      "label": "4y+ still pending at the end",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -7.5,
+      "bound": -5.527
+    },
+    {
+      "label": "disposals on the merits (verdict + settlement + compounded)",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 2.8,
+      "bound": -0.619
+    },
+    {
+      "label": "next-date excess over PUCAR's gap",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -7.946,
+      "bound": -7.778
+    },
+    {
+      "label": "days that ran late",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -2,
+      "bound": -0.738
+    },
+    {
+      "label": "court time used",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -0.012,
+      "bound": -0.017
+    },
+    {
+      "label": "reach rate",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.036,
+      "bound": 0.028
+    },
+    {
+      "label": "substantiveness",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.015,
+      "bound": 0.011
+    },
+    {
+      "label": "trips per useful hearing",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -1.109,
+      "bound": -0.99
+    },
+    {
+      "label": "wasted listings",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -0.025,
+      "bound": -0.022
+    },
+    {
+      "label": "minutes waited",
+      "pass": true,
+      "shortfall": 0,
+      "diff": -11.882,
+      "bound": -10.107
+    },
+    {
+      "label": "load balance across days",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.016,
+      "bound": 0.02
+    },
+    {
+      "label": "useful hearings a day at least today's",
+      "pass": true,
+      "shortfall": 0,
+      "diff": 0.858,
+      "bound": 0.689
+    }
+  ],
+  "failedDecide": 0,
+  "failedConfirm": 1,
+  "overallPick": null,
+  "dominatedBy": [],
+  "measuresDecide": {
+    "readme.utilisation": {
+      "mean": 0.9089944764769909,
+      "ci95": 0.015387191064599222
+    },
+    "readme.reachRate": {
+      "mean": 0.9540295865789487,
+      "ci95": 0.009078934216095907
+    },
+    "readme.substantiveness": {
+      "mean": 0.32420625161223166,
+      "ci95": 0.005988747196718223
+    },
+    "readme.backlog4yHeardShare": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "readme.backlog4ySubstantiveShare": {
+      "mean": 0.30721452460582904,
+      "ci95": 0.00981203395041743
+    },
+    "readme.predictabilityGapDays": {
+      "mean": 0.5463595773951685,
+      "ci95": 0.06020216537528102
+    },
+    "caseStudy.utilisation": {
+      "mean": 0.8950871133441459,
+      "ci95": 0.012835211769764286
+    },
+    "caseStudy.overrunDays": {
+      "mean": 19.5,
+      "ci95": 2.5511289097742034
+    },
+    "caseStudy.idleMinutesShare": {
+      "mean": 0.10491288665585405,
+      "ci95": 0.012835211769764304
+    },
+    "caseStudy.heldAsScheduled": {
+      "mean": 0.945662752690626,
+      "ci95": 0.008712489909261852
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+      "mean": 0.864772819023868,
+      "ci95": 0.007606973048229769
+    },
+    "caseStudy.substantiveness": {
+      "mean": 0.32420625161223166,
+      "ci95": 0.005988747196718223
+    },
+    "caseStudy.ageBandsStart.0-1": {
+      "mean": 389,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.1-3": {
+      "mean": 1014,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.3-4": {
+      "mean": 700,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.4-5": {
+      "mean": 461,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.5+": {
+      "mean": 436,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.3+": {
+      "mean": 1597,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.4+": {
+      "mean": 897,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+      "mean": 383.5,
+      "ci95": 1.3775545101996614
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+      "mean": 810.5,
+      "ci95": 1.8329088123214734
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+      "mean": 569.3571428571429,
+      "ci95": 3.5852281884512327
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+      "mean": 519.2857142857143,
+      "ci95": 3.211481290873832
+    },
+    "caseStudy.ageBandsEnd.5+": {
+      "mean": 433.42857142857144,
+      "ci95": 4.8809960676326
+    },
+    "caseStudy.ageBandsEnd.3+": {
+      "mean": 1522.0714285714287,
+      "ci95": 6.93136648335165
+    },
+    "caseStudy.ageBandsEnd.4+": {
+      "mean": 952.7142857142857,
+      "ci95": 6.377782917188034
+    },
+    "caseStudy.nextDateExcessDays": {
+      "mean": 42.720302745778746,
+      "ci95": 0.18986707725987687
+    },
+    "caseStudy.wastedRelistShare": {
+      "mean": 0.34385406008036684,
+      "ci95": 0.012739244107946617
+    },
+    "siddarth.throughputPerMonth": {
+      "mean": 42.023202537593974,
+      "ci95": 2.8306571984814344
+    },
+    "siddarth.judgeTimeUsed": {
+      "mean": 0.908994476476991,
+      "ci95": 0.015387191064599149
+    },
+    "siddarth.wastedListings": {
+      "mean": 0.6908161952447088,
+      "ci95": 0.0035885634571313596
+    },
+    "siddarth.heldOnPromisedDate": {
+      "mean": 0.864772819023868,
+      "ci95": 0.007606973048229769
+    },
+    "siddarth.oldestPendingAgeYears": {
+      "mean": 10.102669404517455,
+      "ci95": 1.1144257462283032e-15
+    },
+    "siddarth.p95PendingAgeYears": {
+      "mean": 9.338809034907598,
+      "ci95": 0
+    },
+    "siddarth.neverHeard": {
+      "mean": 369.7857142857143,
+      "ci95": 22.645065194277123
+    },
+    "siddarth.loadBalanceCv": {
+      "mean": 0.14566553018280315,
+      "ci95": 0.009051877205874546
+    },
+    "extra.listedPerDay": {
+      "mean": 58.06703081232494,
+      "ci95": 0.22933833488059027
+    },
+    "extra.reachedPerDay": {
+      "mean": 55.39330532212885,
+      "ci95": 0.3686787067106495
+    },
+    "extra.substantivePerDay": {
+      "mean": 17.95403361344538,
+      "ci95": 0.23955581127789718
+    },
+    "extra.disposed": {
+      "mean": 104.92857142857143,
+      "ci95": 7.067924339534753
+    },
+    "extra.disposed4yPlus": {
+      "mean": 74.78571428571429,
+      "ci95": 5.495804108219139
+    },
+    "extra.tripsPerSubstantive": {
+      "mean": 10.624351412160191,
+      "ci95": 0.1327233069546836
+    },
+    "extra.wastedTripShare": {
+      "mean": 0.6678938525464372,
+      "ci95": 0.004512422054718905
+    },
+    "extra.deskPerDay": {
+      "mean": 5.460196078431372,
+      "ci95": 0.1141818503678913
+    },
+    "extra.vacatedPerDay": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.deferredPerDay": {
+      "mean": 0.5131372549019607,
+      "ci95": 0.06644160648322091
+    },
+    "extra.sittingDays": {
+      "mean": 50.92857142857143,
+      "ci95": 0.1615714285714286
+    },
+    "extra.overrunMinutes": {
+      "mean": 297.4599818073753,
+      "ci95": 65.71943903255153
+    },
+    "extra.reachRateExclStandby": {
+      "mean": 0.9855036654786327,
+      "ci95": 0.005332035245128275
+    },
+    "extra.reachRateSittingDays": {
+      "mean": 0.9552965271343717,
+      "ci95": 0.008248273752648218
+    },
+    "extra.predictabilityGapDaysCensored": {
+      "mean": 5.364119047619048,
+      "ci95": 0.32847137634450446
+    },
+    "extra.casesScheduled": {
+      "mean": 3000,
+      "ci95": 0
+    },
+    "extra.promisesHonouredInclDesk": {
+      "mean": 0.9500115233184167,
+      "ci95": 0.008268645293811997
+    },
+    "extra.promisesBroken": {
+      "mean": 163.14285714285714,
+      "ci95": 27.068138890961976
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "extra.nextDateGapDays": {
+      "mean": 59.36877045577421,
+      "ci95": 0.18999390697566534
+    },
+    "extra.nextDateShortShare": {
+      "mean": 0.01439306083917204,
+      "ci95": 0.0012985634095186876
+    },
+    "extra.wastedRelistShareInclAbsence": {
+      "mean": 0.5679181705684119,
+      "ci95": 0.014837469761599957
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+      "mean": 0.34426745321654245,
+      "ci95": 0.012966629794337386
+    },
+    "extra.neverHeard4yPlus": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.pending4yPlusEnd": {
+      "mean": 952.7142857142857,
+      "ci95": 6.377782917188034
+    },
+    "extra.disposalsInferred": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.heldSubstantiveAllDue": {
+      "mean": 0.2802647284039683,
+      "ci95": 0.003346725315830933
+    },
+    "extra.firstPromiseKept": {
+      "mean": 0.8647619047619048,
+      "ci95": 0.008249979656128288
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+      "mean": 42.51082137730104,
+      "ci95": 0.19222163931845967
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+      "mean": 0.9187911799951393,
+      "ci95": 0.0022607557904885957
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+      "mean": 0.9187911799951393,
+      "ci95": 0.0022607557904885957
+    },
+    "extra.predictabilityGapFromStartDays": {
+      "mean": 43.184119047619056,
+      "ci95": 0.3284713763445052
+    },
+    "extra.minutesWaited": {
+      "mean": 140.57041359263062,
+      "ci95": 1.6718747113247316
+    },
+    "extra.minutesWaitedInclNotReached": {
+      "mean": 151.61021065562724,
+      "ci95": 3.266144351535909
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+      "mean": 9.786115185293818,
+      "ci95": 0.010768474754659231
+    },
+    "extra.backlog4yActedOnShare": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "extra.neverActedOn": {
+      "mean": 118.85714285714286,
+      "ci95": 23.792519103830145
+    },
+    "extra.disposedVerdict": {
+      "mean": 74.14285714285714,
+      "ci95": 5.369948352276999
+    },
+    "extra.disposedSettlement": {
+      "mean": 3.2857142857142856,
+      "ci95": 0.9313968443325611
+    },
+    "extra.disposedCompounded": {
+      "mean": 12.571428571428571,
+      "ci95": 2.2832067138038954
+    },
+    "extra.disposedAcquittedDefault": {
+      "mean": 9.642857142857142,
+      "ci95": 1.830716336880853
+    },
+    "extra.disposedDismissedSteps": {
+      "mean": 5.285714285714286,
+      "ci95": 1.0976617076721753
+    },
+    "extra.disposedLpSplit": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.disposedPostJudgment": {
+      "mean": 179,
+      "ci95": 4.917067070055948
+    },
+    "extra.disposedAllRoutes": {
+      "mean": 283.92857142857144,
+      "ci95": 8.26350469824754
+    },
+    "extra.disposedRouteInferred": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.throughputPerMonthAllRoutes": {
+      "mean": 113.71152490601504,
+      "ci95": 3.3094792664856514
+    },
+    "derived.meritsDisposals": {
+      "mean": 90,
+      "ci95": 6.5240885077643505
+    }
+  },
+  "measuresConfirm": {
+    "readme.utilisation": {
+      "mean": 0.8962645428480073,
+      "ci95": 0.01628680782574244
+    },
+    "readme.reachRate": {
+      "mean": 0.9598198706397142,
+      "ci95": 0.010675245960810778
+    },
+    "readme.substantiveness": {
+      "mean": 0.3193621785388919,
+      "ci95": 0.005856442089545985
+    },
+    "readme.backlog4yHeardShare": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "readme.backlog4ySubstantiveShare": {
+      "mean": 0.2944258639910814,
+      "ci95": 0.006895315889967062
+    },
+    "readme.predictabilityGapDays": {
+      "mean": 0.5221327972686984,
+      "ci95": 0.13388507791043952
+    },
+    "caseStudy.utilisation": {
+      "mean": 0.884563758469873,
+      "ci95": 0.014958398584738712
+    },
+    "caseStudy.overrunDays": {
+      "mean": 17.3,
+      "ci95": 2.5244928916517075
+    },
+    "caseStudy.idleMinutesShare": {
+      "mean": 0.11543624153012703,
+      "ci95": 0.014958398584738799
+    },
+    "caseStudy.heldAsScheduled": {
+      "mean": 0.9517332773874279,
+      "ci95": 0.010860585287657907
+    },
+    "caseStudy.heldAsScheduledAllDue": {
+      "mean": 0.8689404946054363,
+      "ci95": 0.009884475343186889
+    },
+    "caseStudy.substantiveness": {
+      "mean": 0.3193621785388919,
+      "ci95": 0.005856442089545985
+    },
+    "caseStudy.ageBandsStart.0-1": {
+      "mean": 389,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.1-3": {
+      "mean": 1014,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.3-4": {
+      "mean": 700,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.4-5": {
+      "mean": 461,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.5+": {
+      "mean": 436,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.3+": {
+      "mean": 1597,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsStart.4+": {
+      "mean": 897,
+      "ci95": 0
+    },
+    "caseStudy.ageBandsEnd.0-1": {
+      "mean": 383.4,
+      "ci95": 1.7259848898527472
+    },
+    "caseStudy.ageBandsEnd.1-3": {
+      "mean": 810.5,
+      "ci95": 1.3168043894216026
+    },
+    "caseStudy.ageBandsEnd.3-4": {
+      "mean": 570.8,
+      "ci95": 3.248331411663533
+    },
+    "caseStudy.ageBandsEnd.4-5": {
+      "mean": 521.9,
+      "ci95": 4.324175209216203
+    },
+    "caseStudy.ageBandsEnd.5+": {
+      "mean": 436.5,
+      "ci95": 5.754655245972603
+    },
+    "caseStudy.ageBandsEnd.3+": {
+      "mean": 1529.2,
+      "ci95": 6.048941209831685
+    },
+    "caseStudy.ageBandsEnd.4+": {
+      "mean": 958.4,
+      "ci95": 5.654497310990606
+    },
+    "caseStudy.nextDateExcessDays": {
+      "mean": 42.76495391309125,
+      "ci95": 0.12630769621287946
+    },
+    "caseStudy.wastedRelistShare": {
+      "mean": 0.34797168442430626,
+      "ci95": 0.023978106564568814
+    },
+    "siddarth.throughputPerMonth": {
+      "mean": 40.28963815789474,
+      "ci95": 1.517090215717951
+    },
+    "siddarth.judgeTimeUsed": {
+      "mean": 0.8962645428480078,
+      "ci95": 0.0162868078257424
+    },
+    "siddarth.wastedListings": {
+      "mean": 0.6935322318139105,
+      "ci95": 0.004632836602220474
+    },
+    "siddarth.heldOnPromisedDate": {
+      "mean": 0.8689404946054363,
+      "ci95": 0.009884475343186889
+    },
+    "siddarth.oldestPendingAgeYears": {
+      "mean": 10.102669404517455,
+      "ci95": 1.3393730569077889e-15
+    },
+    "siddarth.p95PendingAgeYears": {
+      "mean": 9.338809034907598,
+      "ci95": 0
+    },
+    "siddarth.neverHeard": {
+      "mean": 351.1,
+      "ci95": 27.245286859198234
+    },
+    "siddarth.loadBalanceCv": {
+      "mean": 0.15552483848308038,
+      "ci95": 0.00940723136800539
+    },
+    "extra.listedPerDay": {
+      "mean": 58.24439215686275,
+      "ci95": 0.5207821515105365
+    },
+    "extra.reachedPerDay": {
+      "mean": 55.89737254901961,
+      "ci95": 0.4559583991568251
+    },
+    "extra.substantivePerDay": {
+      "mean": 17.847803921568627,
+      "ci95": 0.22994514000420946
+    },
+    "extra.disposed": {
+      "mean": 100.6,
+      "ci95": 3.7880527768234695
+    },
+    "extra.disposed4yPlus": {
+      "mean": 70.5,
+      "ci95": 4.34777609819089
+    },
+    "extra.tripsPerSubstantive": {
+      "mean": 10.727656185054048,
+      "ci95": 0.16997056484485124
+    },
+    "extra.wastedTripShare": {
+      "mean": 0.672220453760965,
+      "ci95": 0.00519848509753296
+    },
+    "extra.deskPerDay": {
+      "mean": 5.545647058823529,
+      "ci95": 0.14947888453914324
+    },
+    "extra.vacatedPerDay": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.deferredPerDay": {
+      "mean": 0.4951764705882352,
+      "ci95": 0.09524624042019035
+    },
+    "extra.sittingDays": {
+      "mean": 50.7,
+      "ci95": 0.3455262073996703
+    },
+    "extra.overrunMinutes": {
+      "mean": 249.41184345852162,
+      "ci95": 56.603418432868885
+    },
+    "extra.reachRateExclStandby": {
+      "mean": 0.9855176696948117,
+      "ci95": 0.006880098036184034
+    },
+    "extra.reachRateSittingDays": {
+      "mean": 0.965674185594132,
+      "ci95": 0.007072963402322118
+    },
+    "extra.predictabilityGapDaysCensored": {
+      "mean": 5.258466666666668,
+      "ci95": 0.3589913611417163
+    },
+    "extra.casesScheduled": {
+      "mean": 3000,
+      "ci95": 0
+    },
+    "extra.promisesHonouredInclDesk": {
+      "mean": 0.9551611229382363,
+      "ci95": 0.010508301187687209
+    },
+    "extra.promisesBroken": {
+      "mean": 146.3,
+      "ci95": 34.462089448552014
+    },
+    "extra.heldOnPromisedShareOfHeard": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "extra.nextDateGapDays": {
+      "mean": 59.38776640318027,
+      "ci95": 0.140454974496459
+    },
+    "extra.nextDateShortShare": {
+      "mean": 0.013661698458773023,
+      "ci95": 0.001397402336319564
+    },
+    "extra.wastedRelistShareInclAbsence": {
+      "mean": 0.5595611434455401,
+      "ci95": 0.01782430756640854
+    },
+    "extra.wastedRelistShareInclDeskRechecks": {
+      "mean": 0.34851275041601604,
+      "ci95": 0.024234030202266735
+    },
+    "extra.neverHeard4yPlus": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.pending4yPlusEnd": {
+      "mean": 958.4,
+      "ci95": 5.654497310990606
+    },
+    "extra.disposalsInferred": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.heldSubstantiveAllDue": {
+      "mean": 0.277448938211306,
+      "ci95": 0.004198255828652508
+    },
+    "extra.firstPromiseKept": {
+      "mean": 0.8715333333333334,
+      "ci95": 0.009833013159985329
+    },
+    "extra.nextDateExcessNextPurposeDays": {
+      "mean": 42.575203834583846,
+      "ci95": 0.14275466892444807
+    },
+    "extra.nextDateNextPurposeInferredShare": {
+      "mean": 0.9204362185757271,
+      "ci95": 0.002673477365583965
+    },
+    "extra.nextDatesBeyondHorizonShare": {
+      "mean": 0.9204362185757271,
+      "ci95": 0.002673477365583965
+    },
+    "extra.predictabilityGapFromStartDays": {
+      "mean": 43.07846666666667,
+      "ci95": 0.35899136114171715
+    },
+    "extra.minutesWaited": {
+      "mean": 139.96111319185704,
+      "ci95": 2.776963085289703
+    },
+    "extra.minutesWaitedInclNotReached": {
+      "mean": 148.28466924163064,
+      "ci95": 3.566887817437139
+    },
+    "extra.oldest100PendingMeanAgeYears": {
+      "mean": 9.782162902121822,
+      "ci95": 0.009165198910772956
+    },
+    "extra.backlog4yActedOnShare": {
+      "mean": 1,
+      "ci95": 0
+    },
+    "extra.neverActedOn": {
+      "mean": 95.2,
+      "ci95": 26.759671391106426
+    },
+    "extra.disposedVerdict": {
+      "mean": 70.1,
+      "ci95": 2.830263316371817
+    },
+    "extra.disposedSettlement": {
+      "mean": 2.8,
+      "ci95": 1.158316778778586
+    },
+    "extra.disposedCompounded": {
+      "mean": 12.4,
+      "ci95": 3.0571887478531643
+    },
+    "extra.disposedAcquittedDefault": {
+      "mean": 9.6,
+      "ci95": 1.6241657058317662
+    },
+    "extra.disposedDismissedSteps": {
+      "mean": 5.7,
+      "ci95": 1.5098838233453593
+    },
+    "extra.disposedLpSplit": {
+      "mean": 0.1,
+      "ci95": 0.22619999999999998
+    },
+    "extra.disposedPostJudgment": {
+      "mean": 176.2,
+      "ci95": 5.455959838561864
+    },
+    "extra.disposedAllRoutes": {
+      "mean": 276.9,
+      "ci95": 5.57603264337647
+    },
+    "extra.disposedRouteInferred": {
+      "mean": 0,
+      "ci95": 0
+    },
+    "extra.throughputPerMonthAllRoutes": {
+      "mean": 110.89662828947368,
+      "ci95": 2.233164389246992
+    },
+    "derived.meritsDisposals": {
+      "mean": 85.3,
+      "ci95": 4.37124956505574
+    }
+  },
+  "genome": {
+    "selection": "index",
+    "firstDates": "spread",
+    "nextDate": "earliest",
+    "coverage": "rotation",
+    "callOrder": "cluster",
+    "calibration": "off",
+    "caseEstimate": true,
+    "priorCheck": true,
+    "desk": true,
+    "checkin": false,
+    "checkinRobust": false,
+    "cluster": true,
+    "callTimes": false,
+    "fillTarget": 1.105,
+    "standbyShare": 0.3,
+    "promiseFill": 1.204,
+    "initialFill": 0.95,
+    "firstOldShare": 0.209,
+    "weights": {
+      "throughput": 1.643,
+      "disposal": 1.622,
+      "fairness": 2.619,
+      "trips": 1.883,
+      "predictability": 3
+    },
+    "ageExponent": 0.802,
+    "ageingFloor": 0.33,
+    "enforceFloor": true,
+    "windowDays": 5,
+    "relistDays": 11,
+    "relistCap": 1.045,
+    "quickRelist": true,
+    "gapOfHeard": true,
+    "countDiary": false,
+    "countCap": 85,
+    "pendingHold": 0.44,
+    "returnMargin": 1.376,
+    "recheckDays": 12,
+    "rotationDays": 45,
+    "rotationCap": 0.34,
+    "reviewDays": 11,
+    "mentionAfter": 0,
+    "portfolioOld": 0.191,
+    "blocks": "none",
+    "purposeDays": false,
+    "carryForward": false,
+    "rotationAll": false
+  },
+  "srcHashes": {
+    "src/planner/common.ts": "4fd0087b3b55608f",
+    "src/planner/judges.ts": "a48d49fc757713ce",
+    "src/planner/nextdate.ts": "968fccf7f8db5a1c",
+    "src/planner/zoo/genome.ts": "102a1a637a9892a4",
+    "src/planner/zoo/select.ts": "344997f9761c588f",
+    "src/planner/zoo/dates.ts": "802cc5f251481cd3",
+    "src/planner/zoo/estimate.ts": "a382c28bce7e0822",
+    "src/planner/zoo/presets.ts": "6715b894184b08f8",
+    "src/planner/predict.ts": "0839003443a38c1f",
+    "src/planner/zoo.ts": "4f37c4ee6559ef9e",
+    "src/planner/knapsack.ts": "f6187c126e20cc61",
+    "src/planner/index.ts": "9a2a4eb680aae238",
+    "src/planner/benchtime.ts": "b4e25dd6b71fe3ae",
+    "src/planner/baselines.ts": "f5a6b344dbb5b0fe",
+    "src/cli.ts": "fd921759e604de0b",
+    "src/world/calibrate.ts": "bf2589d8cadd0a88",
+    "src/world/defaults.ts": "54555cae40efced5",
+    "src/world/probe.ts": "84166b31701a1375",
+    "src/world/api.ts": "d39a69bc3c93257d",
+    "src/world/simulate.ts": "fc30c172647aa8f1",
+    "src/world/calibrated.json": "b69be78be6e8a4b3",
+    "src/world/resolve.ts": "da154d2cd5dbf12e",
+    "src/world/world.ts": "396f13ac291865a8",
+    "src/serve.ts": "8390ac19ae8497ec",
+    "src/api/meta.ts": "1eec8da9ed34b051",
+    "src/api/state.ts": "4cecbe59e5448e3e",
+    "src/api/evidence.ts": "459b55809042031e",
+    "src/api/pool.ts": "2a411d3373402d78",
+    "src/api/case.ts": "987465f6cb1fed13",
+    "src/api/detail.ts": "6ef1543f7b76ca49",
+    "src/api/context.ts": "7e9861b91fc05359",
+    "src/api/intervals.ts": "2b93728e17e31788",
+    "src/api/simulate.ts": "10eab743e514fb7e",
+    "src/api/health.ts": "612e866e0113bc30",
+    "src/api/runner.ts": "946e4993a3c6bc87",
+    "src/api/plan.ts": "f212f8677f6af9ac",
+    "src/api/worker.ts": "c664b73d98eff2ce",
+    "src/eval/arena.ts": "6899389b5b4d456a",
+    "src/eval/report.ts": "baee63aa99f18936",
+    "src/eval/stats.ts": "03570771abede16f",
+    "src/eval/metrics.ts": "d305952bd81474a5",
+    "src/data/roster.ts": "d74611e783b85c05",
+    "src/data/reference.ts": "8658a2e49ec4cf6f",
+    "src/data/csv.ts": "d5cba65c2db25d77",
+    "src/data/summary.ts": "8b0fe48dd79ec274",
+    "src/data/calendar.ts": "a087f5fbef139dac",
+    "src/domain/dates.ts": "30192b73bc2896b5",
+    "src/domain/lifecycle.ts": "6cf375c7e6436ed3",
+    "src/domain/hash.ts": "623c0c1e4ccab1f2",
+    "src/domain/types.ts": "f2c3b8dbd19e8820",
+    "src/domain/rng.ts": "e4f7c6656b337493",
+    "scripts/tournament.ts": "2840b544cff847b0",
+    "scripts/tournament-worker.ts": "3633e534618c9be6"
+  }
+}
