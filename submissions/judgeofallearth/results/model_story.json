@@ -1,0 +1,946 @@
+{
+ "seeds": 5,
+ "cases": 3000,
+ "sitting_days": null,
+ "metrics": [
+  {
+   "key": "utilisation",
+   "label": "Share of the day used",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "reach_rate",
+   "label": "Listed hearings reached",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "substantiveness",
+   "label": "Heard hearings that were useful",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "substantive_per_day",
+   "label": "Useful hearings per day",
+   "higher_is_better": true,
+   "kind": "num"
+  },
+  {
+   "key": "old_heard",
+   "label": "4+ yr cases heard",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "old_advanced",
+   "label": "4+ yr cases moved forward",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "predictability_days",
+   "label": "Days late vs promised date",
+   "higher_is_better": false,
+   "kind": "num"
+  },
+  {
+   "key": "appearances_per_advance",
+   "label": "Appearances per step forward",
+   "higher_is_better": false,
+   "kind": "num"
+  },
+  {
+   "key": "wasted_on_pending_process",
+   "label": "Listings wasted on pending paperwork / day",
+   "higher_is_better": false,
+   "kind": "num"
+  },
+  {
+   "key": "trips_per_case",
+   "label": "Advocate trips per listed case",
+   "higher_is_better": false,
+   "kind": "num"
+  },
+  {
+   "key": "slot_kept",
+   "label": "Called within the 1-hour slot",
+   "higher_is_better": true,
+   "kind": "pct"
+  },
+  {
+   "key": "projected_days_to_disposal",
+   "label": "Projected days to disposal",
+   "higher_is_better": false,
+   "kind": "num"
+  },
+  {
+   "key": "adjournment_heavy_advanced",
+   "label": "Adjournment-heavy cases moved forward",
+   "higher_is_better": true,
+   "kind": "pct"
+  }
+ ],
+ "steps": [
+  {
+   "key": "current",
+   "title": "Current practice",
+   "why": "The starting point: about 30 cases listed a day in the order they fall due, and a flat 60-day next date whatever happened. It's the case study's court.",
+   "planner": "current_practice",
+   "values": {
+    "utilisation": {
+     "mean": 0.7056207999999999,
+     "ci": 0.01668197342798698
+    },
+    "reach_rate": {
+     "mean": 0.9994772000000001,
+     "ci": 0.0006274906863882269
+    },
+    "substantiveness": {
+     "mean": 0.44494240000000007,
+     "ci": 0.009355550022719988
+    },
+    "substantive_per_day": {
+     "mean": 13.341176200000001,
+     "ci": 0.27568983450814794
+    },
+    "old_heard": {
+     "mean": 0.5131262000000001,
+     "ci": 0.01004294896898635
+    },
+    "old_advanced": {
+     "mean": 0.13295240000000003,
+     "ci": 0.005669376302269593
+    },
+    "predictability_days": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "appearances_per_advance": {
+     "mean": 3.1574228,
+     "ci": 0.02328906937620454
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.9529412,
+     "ci": 0.1130953063925193
+    },
+    "trips_per_case": {
+     "mean": 0.988758,
+     "ci": 0.001101974159043658
+    },
+    "slot_kept": {
+     "mean": 0.6599459999999999,
+     "ci": 0.015570471699685916
+    },
+    "projected_days_to_disposal": {
+     "mean": 1378.7752774,
+     "ci": 167.04691451888996
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.11369179999999998,
+     "ci": 0.008049654246432201
+    }
+   },
+   "delta": null
+  },
+  {
+   "key": "pack",
+   "title": "Pack each day by expected time",
+   "why": "A day is 420 minutes, not 30 slots. A 2-minute mention and a 30-minute evidence hearing aren't the same. List cases until there's an 80% chance the day fits, using each hearing's published duration and its chance of being useful (the clinic/airline overbooking idea).",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.955481,
+     "ci": 0.005556463143993689
+    },
+    "reach_rate": {
+     "mean": 0.9810354,
+     "ci": 0.004011914639981264
+    },
+    "substantiveness": {
+     "mean": 0.7311802000000001,
+     "ci": 0.013288279829524375
+    },
+    "substantive_per_day": {
+     "mean": 21.3607844,
+     "ci": 0.47484125959418233
+    },
+    "old_heard": {
+     "mean": 0.42652140000000005,
+     "ci": 0.006958091004137263
+    },
+    "old_advanced": {
+     "mean": 0.19296839999999998,
+     "ci": 0.008040060801497459
+    },
+    "predictability_days": {
+     "mean": 0.0594164,
+     "ci": 0.011857204466008669
+    },
+    "appearances_per_advance": {
+     "mean": 2.1212988,
+     "ci": 0.050762580449773706
+    },
+    "wasted_on_pending_process": {
+     "mean": 1.1019606,
+     "ci": 0.13055359016886856
+    },
+    "trips_per_case": {
+     "mean": 0.981817,
+     "ci": 0.002533077338764056
+    },
+    "slot_kept": {
+     "mean": 0.7839653999999999,
+     "ci": 0.01945501005240387
+    },
+    "projected_days_to_disposal": {
+     "mean": 1503.5117902,
+     "ci": 143.72890771128084
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.1372804,
+     "ci": 0.009384555702033844
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": 0.2498602,
+     "ci": 0.01817156539265191
+    },
+    "reach_rate": {
+     "mean": -0.018441800000000043,
+     "ci": 0.004129911828102863
+    },
+    "substantiveness": {
+     "mean": 0.2862378,
+     "ci": 0.008135744175214957
+    },
+    "substantive_per_day": {
+     "mean": 8.0196082,
+     "ci": 0.5225816762647643
+    },
+    "old_heard": {
+     "mean": -0.08660480000000001,
+     "ci": 0.012796035912431012
+    },
+    "old_advanced": {
+     "mean": 0.060016,
+     "ci": 0.003077822580331748
+    },
+    "predictability_days": {
+     "mean": 0.0594164,
+     "ci": 0.011857204466008669
+    },
+    "appearances_per_advance": {
+     "mean": -1.0361239999999998,
+     "ci": 0.04891906358745319
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.14901940000000005,
+     "ci": 0.2307801869765574
+    },
+    "trips_per_case": {
+     "mean": -0.0069409999999999975,
+     "ci": 0.002946902856356124
+    },
+    "slot_kept": {
+     "mean": 0.1240194,
+     "ci": 0.03192976335964573
+    },
+    "projected_days_to_disposal": {
+     "mean": 124.73651280000004,
+     "ci": 192.1952273383786
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.023588600000000008,
+     "ci": 0.010689956769219227
+    }
+   }
+  },
+  {
+   "key": "ready",
+   "title": "List only cases that can happen",
+   "why": "Most failed Warrant and Appearance hearings are waiting for a summons or warrant to come back. DRISTI already tracks e-post and police returns, so hold those cases back until it's back.",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.9662839999999999,
+     "ci": 0.003839523838977986
+    },
+    "reach_rate": {
+     "mean": 0.9932656,
+     "ci": 0.0030016012098504985
+    },
+    "substantiveness": {
+     "mean": 0.7493912,
+     "ci": 0.015837381117209483
+    },
+    "substantive_per_day": {
+     "mean": 22.015686199999998,
+     "ci": 0.3750556797314389
+    },
+    "old_heard": {
+     "mean": 0.42124939999999994,
+     "ci": 0.006313494444665024
+    },
+    "old_advanced": {
+     "mean": 0.1936542,
+     "ci": 0.007830422671477192
+    },
+    "predictability_days": {
+     "mean": 0.040084400000000006,
+     "ci": 0.010104903938683237
+    },
+    "appearances_per_advance": {
+     "mean": 2.0256438,
+     "ci": 0.03819788835894969
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.9845932,
+     "ci": 0.0019232148220477135
+    },
+    "slot_kept": {
+     "mean": 0.8371866000000001,
+     "ci": 0.03102640402051801
+    },
+    "projected_days_to_disposal": {
+     "mean": 1560.9544276000001,
+     "ci": 131.1004680730011
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.14209739999999998,
+     "ci": 0.006489122776814755
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": 0.010802999999999984,
+     "ci": 0.005996021127474495
+    },
+    "reach_rate": {
+     "mean": 0.012230200000000035,
+     "ci": 0.003388203728122632
+    },
+    "substantiveness": {
+     "mean": 0.018210999999999998,
+     "ci": 0.00615863195772562
+    },
+    "substantive_per_day": {
+     "mean": 0.6549017999999996,
+     "ci": 0.15873580918526617
+    },
+    "old_heard": {
+     "mean": -0.00527200000000001,
+     "ci": 0.0025417731606105234
+    },
+    "old_advanced": {
+     "mean": 0.0006858000000000031,
+     "ci": 0.0019845648386444836
+    },
+    "predictability_days": {
+     "mean": -0.019332,
+     "ci": 0.015949957742248718
+    },
+    "appearances_per_advance": {
+     "mean": -0.095655,
+     "ci": 0.02448251357809482
+    },
+    "wasted_on_pending_process": {
+     "mean": -1.1019606,
+     "ci": 0.13055359016886856
+    },
+    "trips_per_case": {
+     "mean": 0.0027761999999999843,
+     "ci": 0.002468558756048547
+    },
+    "slot_kept": {
+     "mean": 0.05322120000000001,
+     "ci": 0.024027392815532556
+    },
+    "projected_days_to_disposal": {
+     "mean": 57.442637399999924,
+     "ci": 20.333986171784503
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.004816999999999999,
+     "ci": 0.005980300565195697
+    }
+   }
+  },
+  {
+   "key": "nextdate",
+   "title": "Set the next date from what happened",
+   "why": "The brief: 'match the gap to the actual procedural minimum, rather than a flat default'. Moved on \u2192 the next type's gap; same stage \u2192 its gap; party absent \u2192 7 days; paperwork out \u2192 when it's back.",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.9395146000000001,
+     "ci": 0.008204221712758388
+    },
+    "reach_rate": {
+     "mean": 0.9932888,
+     "ci": 0.004019519209963305
+    },
+    "substantiveness": {
+     "mean": 0.669788,
+     "ci": 0.013067161952546529
+    },
+    "substantive_per_day": {
+     "mean": 24.2392156,
+     "ci": 0.19038071269585574
+    },
+    "old_heard": {
+     "mean": 0.1305676,
+     "ci": 0.014795193255252062
+    },
+    "old_advanced": {
+     "mean": 0.1301378,
+     "ci": 0.014729847355708207
+    },
+    "predictability_days": {
+     "mean": 0.8633751999999999,
+     "ci": 0.22405194947006574
+    },
+    "appearances_per_advance": {
+     "mean": 1.9964742000000002,
+     "ci": 0.05771610986420255
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.9800397999999999,
+     "ci": 0.005161619471342705
+    },
+    "slot_kept": {
+     "mean": 0.7891084,
+     "ci": 0.040261516024627984
+    },
+    "projected_days_to_disposal": {
+     "mean": 644.6124124,
+     "ci": 74.69644025941767
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.1474476,
+     "ci": 0.00505050180371971
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": -0.026769400000000033,
+     "ci": 0.007377482766826111
+    },
+    "reach_rate": {
+     "mean": 2.3200000000000998e-05,
+     "ci": 0.0044359754461250215
+    },
+    "substantiveness": {
+     "mean": -0.07960319999999999,
+     "ci": 0.012781556373120739
+    },
+    "substantive_per_day": {
+     "mean": 2.223529400000001,
+     "ci": 0.3632933616799116
+    },
+    "old_heard": {
+     "mean": -0.2906818,
+     "ci": 0.01806192700578939
+    },
+    "old_advanced": {
+     "mean": -0.0635164,
+     "ci": 0.00861968261175875
+    },
+    "predictability_days": {
+     "mean": 0.8232908,
+     "ci": 0.21797942711303578
+    },
+    "appearances_per_advance": {
+     "mean": -0.029169600000000084,
+     "ci": 0.02791454919740191
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": -0.004553400000000018,
+     "ci": 0.005015393695710847
+    },
+    "slot_kept": {
+     "mean": -0.0480782,
+     "ci": 0.04832052491782332
+    },
+    "projected_days_to_disposal": {
+     "mean": -916.3420151999999,
+     "ci": 196.97293782231648
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.005350199999999999,
+     "ci": 0.005754022022945693
+    }
+   }
+  },
+  {
+   "key": "promise",
+   "title": "Only promise dates that can be kept",
+   "why": "An experiment found that unlimited next dates crowded future days and made promises late. Only promise a date on days with room left (35% of a day).",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.9575348,
+     "ci": 0.0038436742100318457
+    },
+    "reach_rate": {
+     "mean": 0.992103,
+     "ci": 0.0017714122824458655
+    },
+    "substantiveness": {
+     "mean": 0.7270632,
+     "ci": 0.012286477008245448
+    },
+    "substantive_per_day": {
+     "mean": 22.894117599999998,
+     "ci": 0.33889417200792
+    },
+    "old_heard": {
+     "mean": 0.3407524,
+     "ci": 0.006141683396732187
+    },
+    "old_advanced": {
+     "mean": 0.1804262,
+     "ci": 0.01050746928242876
+    },
+    "predictability_days": {
+     "mean": 0.142493,
+     "ci": 0.08386169579458026
+    },
+    "appearances_per_advance": {
+     "mean": 2.011079,
+     "ci": 0.037364091195651435
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.9810772,
+     "ci": 0.0039397032350652955
+    },
+    "slot_kept": {
+     "mean": 0.834088,
+     "ci": 0.02322446200241115
+    },
+    "projected_days_to_disposal": {
+     "mean": 787.8301732,
+     "ci": 54.47644759927355
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.1462338,
+     "ci": 0.01157719862228786
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": 0.018020200000000042,
+     "ci": 0.008007067157289499
+    },
+    "reach_rate": {
+     "mean": -0.0011858000000000146,
+     "ci": 0.004298695637542172
+    },
+    "substantiveness": {
+     "mean": 0.05727519999999997,
+     "ci": 0.003771675133208592
+    },
+    "substantive_per_day": {
+     "mean": -1.3450980000000008,
+     "ci": 0.32167756687460813
+    },
+    "old_heard": {
+     "mean": 0.21018480000000003,
+     "ci": 0.014061092707344762
+    },
+    "old_advanced": {
+     "mean": 0.05028840000000001,
+     "ci": 0.004752012566626483
+    },
+    "predictability_days": {
+     "mean": -0.7208822,
+     "ci": 0.14593204917342503
+    },
+    "appearances_per_advance": {
+     "mean": 0.014604800000000084,
+     "ci": 0.02514097863337673
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.0010374000000000106,
+     "ci": 0.0031891665625639783
+    },
+    "slot_kept": {
+     "mean": 0.04497960000000001,
+     "ci": 0.03938325021682513
+    },
+    "projected_days_to_disposal": {
+     "mean": 143.2177608,
+     "ci": 62.77316587753676
+    },
+    "adjournment_heavy_advanced": {
+     "mean": -0.0012137999999999982,
+     "ci": 0.008261316424061237
+    }
+   }
+  },
+  {
+   "key": "old",
+   "title": "Guarantee time for old cases",
+   "why": "Ranking by 'useful per minute' favours quick hearings; old, long ones would wait forever (the brief's Justice Joshi problem). The brief says old cases must not be deprioritised, so: 30% of each day for ready 4+ yr cases, no ready old case waits over 10 sitting days, and a small age boost.",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.9368908000000001,
+     "ci": 0.007029705801529953
+    },
+    "reach_rate": {
+     "mean": 0.9945996000000001,
+     "ci": 0.0037027374950887454
+    },
+    "substantiveness": {
+     "mean": 0.6616951999999999,
+     "ci": 0.012914317613200615
+    },
+    "substantive_per_day": {
+     "mean": 20.227451,
+     "ci": 0.45482342082808763
+    },
+    "old_heard": {
+     "mean": 0.7327302,
+     "ci": 0.03241516526625991
+    },
+    "old_advanced": {
+     "mean": 0.2482396,
+     "ci": 0.011701588785969884
+    },
+    "predictability_days": {
+     "mean": 0.0691464,
+     "ci": 0.02949552555965762
+    },
+    "appearances_per_advance": {
+     "mean": 2.2641177999999997,
+     "ci": 0.05963909381469497
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.9867665999999999,
+     "ci": 0.004125300919362854
+    },
+    "slot_kept": {
+     "mean": 0.7957753999999999,
+     "ci": 0.011984622426910932
+    },
+    "projected_days_to_disposal": {
+     "mean": 735.814732,
+     "ci": 47.420362797644835
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.14931060000000002,
+     "ci": 0.010936416697369208
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": -0.020643999999999996,
+     "ci": 0.0059742594710574465
+    },
+    "reach_rate": {
+     "mean": 0.002496600000000004,
+     "ci": 0.003975401115150049
+    },
+    "substantiveness": {
+     "mean": -0.06536800000000001,
+     "ci": 0.01795504567716605
+    },
+    "substantive_per_day": {
+     "mean": -2.6666666,
+     "ci": 0.3469479521949215
+    },
+    "old_heard": {
+     "mean": 0.3919778,
+     "ci": 0.03756281096961598
+    },
+    "old_advanced": {
+     "mean": 0.0678134,
+     "ci": 0.00921762335020129
+    },
+    "predictability_days": {
+     "mean": -0.0733466,
+     "ci": 0.06644859591558767
+    },
+    "appearances_per_advance": {
+     "mean": 0.2530387999999998,
+     "ci": 0.042225202605582296
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.005689400000000022,
+     "ci": 0.003556583001941059
+    },
+    "slot_kept": {
+     "mean": -0.03831260000000003,
+     "ci": 0.01941563806450704
+    },
+    "projected_days_to_disposal": {
+     "mean": -52.015441199999984,
+     "ci": 81.49223977337384
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.003076800000000002,
+     "ci": 0.003552629325204642
+    }
+   }
+  },
+  {
+   "key": "group",
+   "title": "Group each advocate's cases",
+   "why": "Fewer trips for advocates (brief goal 1): among cases of similar priority, prefer advocates already on the day's list, and seat their matters together in one slot.",
+   "planner": "rule_based",
+   "values": {
+    "utilisation": {
+     "mean": 0.9352102,
+     "ci": 0.005008368920012188
+    },
+    "reach_rate": {
+     "mean": 0.9941587999999999,
+     "ci": 0.004517798613969431
+    },
+    "substantiveness": {
+     "mean": 0.6620374,
+     "ci": 0.012675284639938304
+    },
+    "substantive_per_day": {
+     "mean": 20.137255,
+     "ci": 0.46958665102045344
+    },
+    "old_heard": {
+     "mean": 0.7346002,
+     "ci": 0.03521150126415721
+    },
+    "old_advanced": {
+     "mean": 0.2469812,
+     "ci": 0.010631005786670613
+    },
+    "predictability_days": {
+     "mean": 0.06869080000000001,
+     "ci": 0.0293551957256998
+    },
+    "appearances_per_advance": {
+     "mean": 2.2788652,
+     "ci": 0.067337428236265
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.8729298,
+     "ci": 0.005410370502084316
+    },
+    "slot_kept": {
+     "mean": 0.7918936,
+     "ci": 0.02123699155862372
+    },
+    "projected_days_to_disposal": {
+     "mean": 767.786694,
+     "ci": 65.83977855432046
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.1447998,
+     "ci": 0.007621968592571336
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": -0.0016806000000000542,
+     "ci": 0.003287414964998454
+    },
+    "reach_rate": {
+     "mean": -0.00044080000000001895,
+     "ci": 0.0031365299759677197
+    },
+    "substantiveness": {
+     "mean": 0.0003422000000000036,
+     "ci": 0.0067053841673139
+    },
+    "substantive_per_day": {
+     "mean": -0.09019600000000025,
+     "ci": 0.13179207667693071
+    },
+    "old_heard": {
+     "mean": 0.0018700000000000162,
+     "ci": 0.007711037744189845
+    },
+    "old_advanced": {
+     "mean": -0.0012583999999999818,
+     "ci": 0.0033151141606792335
+    },
+    "predictability_days": {
+     "mean": -0.00045559999999999904,
+     "ci": 0.009599013697580393
+    },
+    "appearances_per_advance": {
+     "mean": 0.014747400000000166,
+     "ci": 0.019679307880730395
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": -0.11383680000000003,
+     "ci": 0.005059446576113228
+    },
+    "slot_kept": {
+     "mean": -0.003881800000000002,
+     "ci": 0.018563127347790948
+    },
+    "projected_days_to_disposal": {
+     "mean": 31.971961999999984,
+     "ci": 33.90296755615714
+    },
+    "adjournment_heavy_advanced": {
+     "mean": -0.004510800000000004,
+     "ci": 0.005240617175614342
+    }
+   }
+  },
+  {
+   "key": "adaptive",
+   "title": "Learn each case's reliability",
+   "why": "Parties differ: some keep missing hearings. Estimate each case's odds from its history and update after every hearing; use it to size the day and to space re-listing. It doesn't rank cases (fairness guard), so unreliable parties aren't pushed down the queue.",
+   "planner": "adaptive",
+   "values": {
+    "utilisation": {
+     "mean": 0.9434362000000001,
+     "ci": 0.005208627459212663
+    },
+    "reach_rate": {
+     "mean": 0.9943232,
+     "ci": 0.0036926247797987905
+    },
+    "substantiveness": {
+     "mean": 0.6534570000000001,
+     "ci": 0.009585369690005688
+    },
+    "substantive_per_day": {
+     "mean": 20.294117800000002,
+     "ci": 0.4356498102610529
+    },
+    "old_heard": {
+     "mean": 0.7548188,
+     "ci": 0.027983692178825598
+    },
+    "old_advanced": {
+     "mean": 0.25022479999999997,
+     "ci": 0.010394789687741837
+    },
+    "predictability_days": {
+     "mean": 0.0693796,
+     "ci": 0.025963135835563773
+    },
+    "appearances_per_advance": {
+     "mean": 2.292148,
+     "ci": 0.055004557594832096
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": 0.8728382,
+     "ci": 0.0055260795031617255
+    },
+    "slot_kept": {
+     "mean": 0.7699114,
+     "ci": 0.022501643566138343
+    },
+    "projected_days_to_disposal": {
+     "mean": 730.7554966,
+     "ci": 66.69179806149343
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.1461246,
+     "ci": 0.006382569640533195
+    }
+   },
+   "delta": {
+    "utilisation": {
+     "mean": 0.008226000000000044,
+     "ci": 0.00237884708263478
+    },
+    "reach_rate": {
+     "mean": 0.0001644000000000201,
+     "ci": 0.0061718409033623255
+    },
+    "substantiveness": {
+     "mean": -0.008580399999999998,
+     "ci": 0.005917244888636619
+    },
+    "substantive_per_day": {
+     "mean": 0.15686280000000039,
+     "ci": 0.09012961017730292
+    },
+    "old_heard": {
+     "mean": 0.020218599999999996,
+     "ci": 0.016907658762142563
+    },
+    "old_advanced": {
+     "mean": 0.0032435999999999854,
+     "ci": 0.0033385589449245923
+    },
+    "predictability_days": {
+     "mean": 0.000688799999999997,
+     "ci": 0.009862004710389463
+    },
+    "appearances_per_advance": {
+     "mean": 0.013282800000000084,
+     "ci": 0.017862423201169066
+    },
+    "wasted_on_pending_process": {
+     "mean": 0.0,
+     "ci": 0.0
+    },
+    "trips_per_case": {
+     "mean": -9.159999999996948e-05,
+     "ci": 0.003797049557698192
+    },
+    "slot_kept": {
+     "mean": -0.021982199999999997,
+     "ci": 0.009301779605201566
+    },
+    "projected_days_to_disposal": {
+     "mean": -37.031197399999975,
+     "ci": 43.39691722882501
+    },
+    "adjournment_heavy_advanced": {
+     "mean": 0.0013248000000000038,
+     "ci": 0.0034053027477838095
+    }
+   }
+  }
+ ]
+}

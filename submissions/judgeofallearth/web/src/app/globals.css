@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Light, low-contrast, warm palette: easy on the eyes for long sessions. */
+:root {
+  --bg: #f8f7f4;
+  --fg: #33332f;
+  --mut: #8a8983;
+  --line: #ebe9e3;
+  --card: #ffffff;
+  --soft: #f3f2ee;
+  --acc: #3f8a74;
+  --warn: #b27a2b;
+  --bad: #bf5b4f;
+  --blue: #4f74ad;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-mut: var(--mut);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-soft: var(--soft);
+  --color-acc: var(--acc);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-blue: var(--blue);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--acc) 18%, transparent);
+}
