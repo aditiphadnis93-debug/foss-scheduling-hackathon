@@ -157,10 +157,10 @@ hooks["s-approach"] = {
   built: false,
   build() {
     const host = $("#crowd"); host.innerHTML = "";
-    const R = rng(67), slots = Array.from({ length: 67 }, (_, k) => k);
+    const R = rng(67), slots = Array.from({ length: 80 }, (_, k) => k);
     for (let k = slots.length - 1; k > 0; k--) { const j = Math.floor(R() * (k + 1)); [slots[k], slots[j]] = [slots[j], slots[k]]; }
     const named = new Map(ROLES.map((r, k) => [slots[k], r]));
-    for (let k = 0; k < 67; k++) {
+    for (let k = 0; k < 80; k++) {
       const role = named.get(k); const d = el("div", "agent" + (role ? " named" : "") + (role && role.startsWith("Reviewer") ? " reviewer" : ""), role || "");
       d.style.transitionDelay = `${(k % 12) * 0.03 + Math.floor(k / 12) * 0.08}s`; host.append(d);
     }
@@ -383,7 +383,7 @@ hooks["s-tournament"] = {
     for (const gi of order) {
       const g = G[gi]; const row = el("div", "gene-row" + (gi === 5 ? " ours" : ""));
       const nm = g.name.replace(" (an operations-research rule)", "");
-      row.append(el("div", "gene-name", nm + (gi === 4 ? "<small>an operations-research rule</small>" : gi === 5 ? "<small>the tournament's pick</small>" : gi === 0 ? "<small>every due case, then a flat 60-day gap</small>" : "<small>a judge's way, as the brief describes it</small>")));
+      row.append(el("div", "gene-name", nm + (gi === 4 ? "<small>an operations-research rule</small>" : gi === 5 ? "<small>the tournament's pick</small>" : gi === 0 ? "<small>every due case, a 60-day gap</small>" : "<small>a judge's way, as the brief describes it</small>")));
       const cells = el("div", "gene-cells");
       names.forEach((n, ni) => {
         const v = g.genes[n]; const i = el("i"); let bg;
@@ -693,7 +693,7 @@ hooks["s-found"] = {
       ["prior check", "PUCAR's judgment table used as printed, without the correction", "PUCAR lists judgments as always substantive. Its own hearing counts say about 28%."],
       ["standby list off", "Standby list switched off", ""],
       ["first dates by priority", "First dates by priority instead of spread like today", ""],
-      ["process desk off", "Process desk switched off", "The desk keeps dates and saves journeys. It adds no hearings, and 168 of its cases are acted on at the desk instead of heard."],
+      ["process desk off", "Process desk switched off", "The desk keeps dates and saves trips to court. It adds no hearings, and 168 of its cases are acted on at the desk instead of heard."],
       ["SEP", "Tempting, but the search left them off", ""],
       ["day-before check-in on", "Day-before check-in switched on", "A not-ready answer releases the matter, which breaks 516 dates."],
       ["calibration on", "Recalibration switched on", "It adds hearings, runs late on 10.6 more days and breaks 266 dates."],
@@ -908,7 +908,7 @@ function presenter() {
   const render = () => {
     const s = S[cur.i] || S[0];
     main.innerHTML = "";
-    main.append(el("h1", null, `${cur.i + 1}. ${s.title}`), el("div", "meta", `Click ${cur.step + 1} of ${s.steps.length || stepsOf(cur.i)}, budget ${s.seconds} s`), el("p", "land", s.land ? `Land: ${s.land}` : ""));
+    main.append(el("h1", null, `${cur.i + 1}. ${s.title}`), el("div", "meta", `Click ${cur.step + 1} of ${s.steps.length || stepsOf(cur.i)}, budget ${s.seconds} s`), el("p", "land", s.land ? `The number to land is ${s.land}.` : ""));
     const ol = el("ol"); s.steps.forEach((t, k) => { const li = el("li", k === cur.step ? "now" : "", t); ol.append(li); }); main.append(ol);
     const nx = S[cur.i + 1];
     side.innerHTML = "";

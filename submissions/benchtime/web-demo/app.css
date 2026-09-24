@@ -139,12 +139,12 @@ body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: anti
 .dot.g { background: var(--green); } .dot.a { background: #B9B3A5; } .dot.r { background: var(--red); } .dot.k { background: #D2877F; }
 
 /* scene 3 */
-.genes { align-self: center; }
-.gene-row { display: grid; grid-template-columns: minmax(170px, 14vw) 1fr; align-items: center; gap: 1.5vw; margin: clamp(8px, 1.5vh, 16px) 0; opacity: 0; transform: translateX(-16px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.genes { align-self: start; margin-top: 1vh; }
+.gene-row { display: grid; grid-template-columns: minmax(170px, 14vw) 1fr; align-items: center; gap: 1.5vw; margin: clamp(4px, 1vh, 12px) 0; opacity: 0; transform: translateX(-16px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
 .genes.on .gene-row { opacity: 1; transform: none; }
 .gene-name { font-family: var(--serif); font-size: var(--cap-lg); }
 .gene-name small { display: block; font-family: var(--sans); font-size: .6em; color: var(--muted); }
-.gene-cells { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 3px; height: clamp(34px, 5.5vh, 60px); }
+.gene-cells { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 3px; height: clamp(30px, 4.6vh, 52px); }
 .gene-cells i { display: block; border-radius: 2px; }
 .gene-row.ours .gene-name { color: var(--green); font-weight: 600; }
 .gene-row.ours .gene-cells { outline: 2px solid var(--green); outline-offset: 4px; }
@@ -465,3 +465,5 @@ body.presenter #deck, body.presenter #progress, body.presenter .techbtn { displa
 .big.blue { color: var(--blue); }
 .why-src { grid-row: 3; grid-column: 1; margin-top: 7vh; }
 #s-why { grid-template-rows: auto 1fr auto; }
+.close-nums .big { white-space: nowrap; }
+.close-nums .fig { min-width: 0; }

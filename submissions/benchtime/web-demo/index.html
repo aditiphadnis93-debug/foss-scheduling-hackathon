@@ -20,10 +20,10 @@
     <h1 class="headline swap big-line" data-show="3" data-hide="4"><em>Yes, this is wildly inefficient.</em></h1>
     <h1 class="headline swap" data-show="4">The most valuable work in the whole run was four reviewers reading the selection rule.</h1>
   </header>
-  <div class="crowd-wrap" data-show="1" data-hide="2"><div id="crowd" class="crowd"></div><p class="source dark">67 agents, all Claude Opus 5.5. Each card is one agent from this run, and the labelled cards show a sample of the real roles.</p></div>
+  <div class="crowd-wrap" data-show="1" data-hide="2"><div id="crowd" class="crowd"></div><p class="source dark">80 agents, all Claude Opus 5.5. Each card is one agent from this run, and the labelled cards show a sample of the real roles.</p></div>
   <div class="counters" data-show="2" data-hide="4">
-    <div class="ctr"><span class="pre">&nbsp;</span><span class="big num" data-count="67">0</span><span class="cap">AI agents, all Claude Opus 5.5</span></div>
-    <div class="ctr"><span class="pre">about</span><span class="big num"><span data-count="721">0</span><small> million</small></span><span class="cap">tokens processed, 1.29 million of them written</span></div>
+    <div class="ctr"><span class="pre">&nbsp;</span><span class="big num" data-count="80">0</span><span class="cap">AI agents, all Claude Opus 5.5</span></div>
+    <div class="ctr"><span class="pre">about</span><span class="big num"><span data-count="985">0</span><small> million</small></span><span class="cap">tokens processed, 1.55 million of them written</span></div>
     <div class="ctr"><span class="pre">about</span><span class="big num" data-count="2600">0</span><span class="cap">scheduling designs tried</span></div>
     <div class="ctr"><span class="pre">about</span><span class="big num" data-count="18000">0</span><span class="cap">simulated court quarters</span></div>
   </div>
@@ -236,6 +236,7 @@
   <aside class="tech">
     <h3>How exactly</h3>
     <p>On seeds 31-40, today's day gives 309 minutes to 17.3 hearings that move a case, 76 minutes to 38.1 failed calls and 38 minutes to idle time. At 17.9 minutes per useful hearing, avoiding the failures known the evening before frees 17.6 minutes, which is 1.0 hearing. Avoiding every failure frees 76.2 minutes (4.3 hearings), and filling every idle minute as well frees 114.4 (6.4 hearings).</p>
+    <p>Plain bin packing gives 15.0 useful hearings a day against today's 17.1 on seeds 31-60. PUCAR's table calls a judgment hearing 100% substantive, while PUCAR's own hearings-per-case column implies about 28%, so the packer books 216 minutes a day for judgments that use 72. Its score also has no term for age, and 281 of the 897 cases aged 4 years or more are never heard.</p>
     <p>The diagnostic worlds change the court on purpose and leave both planners as they were. Process on time gives the pick +1.7 over today, full attendance +2.9, everyone ready +4.4, and all three together +6.5.</p>
   </aside>
 </section>
