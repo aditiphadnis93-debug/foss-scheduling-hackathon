@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vihitha"
+version = "0.3.0"
+description = "Vihitha: real court schedule (SQLite) + what-if simulator for a judge's roster"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.5",
+    "python-multipart>=0.0.9",
+    "sqlalchemy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+vihitha = "vihitha.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vihitha*", "api*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
