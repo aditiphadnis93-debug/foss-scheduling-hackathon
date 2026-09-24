@@ -203,8 +203,10 @@ If nobody records outcomes, nothing improves. So the outcome screen should take 
 should take whatever it can from other systems, such as process status from e-post. That screen does not exist
 yet, in this package or in the DRISTI branch. The held-out runs tested process returns 1.5 times
 slower than calibrated. The winner still beat today's way on useful hearings, merits disposals and dates
-honoured. The world model has a setting for process returns reported late (`returnReportDelayDays`, default
-0), but no held-out run has varied it yet. That run would put a number on what the e-post feed is worth.
+honoured. A diagnostic run varied how late process returns reach the court (`out/late-reporting.md`, seeds
+31-40). The winner keeps most of its gain with returns reported up to a week late (+0.86 useful hearings a day
+against +1.01), but at three weeks the gain falls to +0.24. So prompt process status, such as the e-post feed, is
+worth about 0.8 useful hearings a day to this planner.
 
 ## 7. What is real and what is modelled
 
