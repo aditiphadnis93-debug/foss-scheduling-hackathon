@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/*.db
+data/*.db-*
+node_modules/
+ui/**/node_modules/
+.DS_Store
+dist/
+.turbo/
+**/dist/
+*.tsbuildinfo
+.pnpm-store/

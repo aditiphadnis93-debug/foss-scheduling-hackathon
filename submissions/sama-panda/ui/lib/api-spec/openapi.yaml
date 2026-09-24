@@ -1,0 +1,433 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Court Time Planner API
+servers:
+  - url: /api
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/HealthStatus" }
+  /dashboard:
+    get:
+      operationId: getDashboard
+      responses:
+        "200":
+          description: Summary
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Dashboard" }
+  /calendar:
+    get:
+      operationId: getCalendar
+      responses:
+        "200":
+          description: Court days
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/CalendarDay" }
+  /calendar/leave:
+    get:
+      operationId: getLeave
+      responses:
+        "200":
+          description: Leave and sitting hours
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/CalendarSettings" }
+    post:
+      operationId: saveLeave
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CalendarSettings" }
+      responses:
+        "200":
+          description: Saved
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/CalendarSettings" }
+  /roster/upload:
+    post:
+      operationId: uploadRoster
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RosterUpload" }
+      responses:
+        "200":
+          description: Validation and summary
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RosterSummary" }
+  /roster/summary:
+    get:
+      operationId: getRosterSummary
+      responses:
+        "200":
+          description: Roster breakdown
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RosterSummary" }
+  /cases:
+    get:
+      operationId: getCases
+      responses:
+        "200":
+          description: All cases
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Case" }
+  /cases/{id}:
+    get:
+      operationId: getCase
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Case details
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Case" }
+  /rules:
+    get:
+      operationId: getRules
+      responses:
+        "200":
+          description: Current rules
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Rules" }
+    post:
+      operationId: saveRules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/Rules" }
+      responses:
+        "200":
+          description: Saved rules
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Rules" }
+  /schedule/preview:
+    post:
+      operationId: previewSchedule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ScheduleRequest" }
+      responses:
+        "200":
+          description: Recommended schedule
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/SchedulePreview" }
+  /schedule/impact:
+    post:
+      operationId: getScheduleImpact
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ImpactRequest" }
+      responses:
+        "200":
+          description: Side by side estimate
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Impact" }
+  /schedule/publish:
+    post:
+      operationId: publishSchedule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/PublishRequest" }
+      responses:
+        "200":
+          description: Published schedule
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/PublishResult" }
+  /schedule/publications:
+    get:
+      operationId: getPublications
+      responses:
+        "200":
+          description: Published cause lists and audit trail
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Publication" }
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      required: [status]
+      properties:
+        status: { type: string }
+    Reason:
+      type: object
+      required: [code, detail]
+      properties:
+        code: { type: string }
+        detail: { type: string }
+    Case:
+      type: object
+      required: [id, filingNumber, filingDate, advocateId, partyId, stage, purpose, lastHearing, totalHearings, ageYears, flags, waitingOn, history, reasons]
+      properties:
+        id: { type: string }
+        filingNumber: { type: string }
+        filingDate: { type: string }
+        advocateId: { type: string }
+        partyId: { type: string }
+        stage: { type: string }
+        purpose: { type: string }
+        lastHearing: { type: string }
+        totalHearings: { type: integer }
+        ageYears: { type: number }
+        flags:
+          type: array
+          items: { type: string }
+        waitingOn: { type: string }
+        history:
+          type: array
+          items: { type: string }
+        reasons:
+          type: array
+          items: { $ref: "#/components/schemas/Reason" }
+    CountGroup:
+      type: object
+      required: [label, count]
+      properties:
+        label: { type: string }
+        count: { type: integer }
+    RosterSummary:
+      type: object
+      required: [total, ready, waiting, stages, ages, errors]
+      properties:
+        total: { type: integer }
+        ready: { type: integer }
+        waiting: { type: integer }
+        stages:
+          type: array
+          items: { $ref: "#/components/schemas/CountGroup" }
+        ages:
+          type: array
+          items: { $ref: "#/components/schemas/CountGroup" }
+        errors:
+          type: array
+          items: { type: string }
+    RosterUpload:
+      type: object
+      required: [csv]
+      properties:
+        csv: { type: string }
+    CalendarDay:
+      type: object
+      required: [date, working, holiday, weeklyOff]
+      properties:
+        date: { type: string }
+        working: { type: boolean }
+        holiday: { type: string }
+        weeklyOff: { type: boolean }
+    CalendarSettings:
+      type: object
+      required: [leaveDays, morningStart, morningEnd, afternoonStart, afternoonEnd]
+      properties:
+        leaveDays:
+          type: array
+          items: { type: string }
+        morningStart: { type: string }
+        morningEnd: { type: string }
+        afternoonStart: { type: string }
+        afternoonEnd: { type: string }
+    Dashboard:
+      type: object
+      required: [nextDate, recommendedCount, sittingHours, movedForward, sentHome, oldCases, rosterDaysLeft, attention]
+      properties:
+        nextDate: { type: string }
+        recommendedCount: { type: integer }
+        sittingHours: { type: number }
+        movedForward: { type: integer }
+        sentHome: { type: integer }
+        oldCases: { type: integer }
+        rosterDaysLeft: { type: integer }
+        attention:
+          type: array
+          items: { $ref: "#/components/schemas/Case" }
+    Rules:
+      type: object
+      required: [name, preset, fullness, oldCaseShare, groupAdvocates, order]
+      properties:
+        name: { type: string }
+        preset: { type: string, enum: [balanced, block, advocate, new] }
+        fullness: { type: string, enum: [light, balanced, packed] }
+        oldCaseShare: { type: integer, minimum: 25, maximum: 75 }
+        groupAdvocates: { type: boolean }
+        order: { type: string, enum: [complex-first, short-first] }
+    ScheduleRequest:
+      type: object
+      required: [period, start_date, rules]
+      properties:
+        period: { type: string, enum: [day, week, month] }
+        start_date: { type: string }
+        rules: { $ref: "#/components/schemas/Rules" }
+        moves:
+          type: array
+          items: { $ref: "#/components/schemas/Move" }
+    ScheduledCase:
+      type: object
+      required: [caseId, date, start, end, window, block, likelihood, duration, reasons, advocateId, purpose]
+      properties:
+        caseId: { type: string }
+        date: { type: string }
+        start: { type: string }
+        end: { type: string }
+        window: { type: string }
+        block: { type: string }
+        likelihood: { type: string, enum: [High, Medium, Low] }
+        duration: { type: integer }
+        reasons:
+          type: array
+          items: { $ref: "#/components/schemas/Reason" }
+        advocateId: { type: string }
+        purpose: { type: string }
+    HeldCase:
+      type: object
+      required: [caseId, reason, readyDate]
+      properties:
+        caseId: { type: string }
+        reason: { $ref: "#/components/schemas/Reason" }
+        readyDate: { type: string }
+    ScheduleDay:
+      type: object
+      required: [date, cases, held, fullness, overflow]
+      properties:
+        date: { type: string }
+        cases:
+          type: array
+          items: { $ref: "#/components/schemas/ScheduledCase" }
+        held:
+          type: array
+          items: { $ref: "#/components/schemas/HeldCase" }
+        fullness: { type: integer }
+        overflow:
+          type: array
+          items: { type: string }
+    SchedulePreview:
+      type: object
+      required: [days, recommendedCount, explanation, generatedAt]
+      properties:
+        days:
+          type: array
+          items: { $ref: "#/components/schemas/ScheduleDay" }
+        recommendedCount: { type: integer }
+        explanation: { type: string }
+        generatedAt: { type: string }
+    Move:
+      type: object
+      required: [caseId, date, order]
+      properties:
+        caseId: { type: string }
+        date: { type: string }
+        order: { type: integer }
+        note: { type: string }
+    ImpactRequest:
+      type: object
+      required: [proposed_schedule, moves]
+      properties:
+        proposed_schedule: { $ref: "#/components/schemas/ScheduleRequest" }
+        moves:
+          type: array
+          items: { $ref: "#/components/schemas/Move" }
+    ImpactMetrics:
+      type: object
+      required: [heard, forward, unheard, oldTouched, hours]
+      properties:
+        heard: { type: integer }
+        forward: { type: integer }
+        unheard: { type: integer }
+        oldTouched: { type: integer }
+        hours: { type: number }
+    OutlookPoint:
+      type: object
+      required: [week, recommended, choice]
+      properties:
+        week: { type: string }
+        recommended: { type: integer }
+        choice: { type: integer }
+    AffectedCase:
+      type: object
+      required: [caseId, advocateId, oldDate, newDate]
+      properties:
+        caseId: { type: string }
+        advocateId: { type: string }
+        oldDate: { type: string }
+        newDate: { type: string }
+    Impact:
+      type: object
+      required: [recommended, choice, outlook, affected, extraTrips]
+      properties:
+        recommended: { $ref: "#/components/schemas/ImpactMetrics" }
+        choice: { $ref: "#/components/schemas/ImpactMetrics" }
+        outlook:
+          type: array
+          items: { $ref: "#/components/schemas/OutlookPoint" }
+        affected:
+          type: array
+          items: { $ref: "#/components/schemas/AffectedCase" }
+        extraTrips: { type: integer }
+    PublishRequest:
+      type: object
+      required: [proposed_schedule, moves]
+      properties:
+        proposed_schedule: { $ref: "#/components/schemas/ScheduleRequest" }
+        moves:
+          type: array
+          items: { $ref: "#/components/schemas/Move" }
+    PublishResult:
+      type: object
+      required: [id, publishedAt, days]
+      properties:
+        id: { type: string }
+        publishedAt: { type: string }
+        days:
+          type: array
+          items: { $ref: "#/components/schemas/ScheduleDay" }
+    Publication:
+      type: object
+      required: [id, publishedAt, days, moves, recommended]
+      properties:
+        id: { type: string }
+        publishedAt: { type: string }
+        days:
+          type: array
+          items: { $ref: "#/components/schemas/ScheduleDay" }
+        moves:
+          type: array
+          items: { $ref: "#/components/schemas/Move" }
+        recommended:
+          type: array
+          items: { $ref: "#/components/schemas/ScheduleDay" }

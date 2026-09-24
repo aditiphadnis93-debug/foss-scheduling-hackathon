@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Court Time Planner"
+description = "A court scheduling assistant for a judge and court master to review recommended cause lists, adjust priorities, inspect reasons and impact, and print a final list."
+version = "1.0.0"
+id = "artifacts/court-time-planner"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21932
+
+[services.development]
+run = "pnpm --filter @workspace/court-time-planner run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/court-time-planner", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/court-time-planner/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21932"
+BASE_PATH = "/"

@@ -1,0 +1,2 @@
+- [Mockup preview discovery](mockup-preview-discovery.md) — newly created previews may briefly render blank while the sandbox registry catches up.
+- [Court process signals](court-process-signals.md) — distinguish inferred process warnings from verified readiness; latest-hearing content is narrative, not a date.
