@@ -216,7 +216,8 @@ the rule: never earlier than the procedural date, and at most 14 days later (7 f
   little to learn beyond the tables. On the 3,000 roster, the learned P(goes ahead) scores a Brier of
   0.147 against 0.146 for the static estimate. Its extra caution (it notices the correlated
   advocate-day absences) makes the planner overbook, so more matters go unreached: 18% of delays
-  against 11%. So learning ships **switched off by default** and is a one-line toggle. In a test world
+  against 11%. Learning is **on in the recommended setup** (the published results include it, with
+  that cost) and is a one-line toggle (`learning: false`). In a test world
   where behaviour departs from the tables (30% of advocates miss 35% of the hearings they would have
   attended), it improves the Brier from 0.222 to 0.200. That is its real job: tracking a live court
   as it drifts away from any static table.
