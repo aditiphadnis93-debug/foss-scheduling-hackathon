@@ -1,0 +1,11 @@
+# Cluster by advocate: backlog reduction first, group each advocate's matters on the same day.
+name: cluster_by_advocate
+planner: milp
+weights: {substantive: 1.0, age: 2.0, wait: 0.5, fresh: 0.0, cluster: 1.5}
+ageing_share: 0.4
+carry_over: priority
+next_date_policy: procedural
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

@@ -1,0 +1,21 @@
+# Today's practice (case study): list up to 60 whatever is due, no time slots,
+# no readiness check, flat 60-day next date.
+name: baseline
+planner: baseline
+max_listed: 60
+next_date_policy: flat
+flat_gap_days: 60
+use_readiness: false
+give_appointments: false
+carry_over: none
+use_horizon: false
+advocate_correlation: true
+# court operations: today's practice keeps no reserve and does not learn or respond to strategic
+# delay; urgent matters and judge emergencies still happen (they are the world, not the planner)
+reserve_minutes: 0
+learning: false
+gaming_response: false
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

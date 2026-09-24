@@ -1,0 +1,11 @@
+# Sits straight through with no lunch break; administrative work only on Friday afternoon.
+name: marathon_bench
+planner: milp
+day_profile:
+  default:
+    sittings: [["10:00", "16:30"]]
+  fri:
+    sittings: [["10:00", "13:30"]]
+    admin: [["14:00", "17:00"]]
+weights: {substantive: 1.0, age: 1.0, wait: 0.5, fresh: 0.0, cluster: 0.2}
+ageing_share: 0.25

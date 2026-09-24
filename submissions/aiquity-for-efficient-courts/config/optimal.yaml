@@ -1,0 +1,32 @@
+# Recommended default. MILP maximising justice-weighted progress per unit of judicial time:
+#   value = P(substantive) x progress x justice weight   (see planning.py for the formulas)
+# Capacity is budgeted in expected court-clock minutes (call-overs and short adjournments
+# included) plus a risk buffer of one standard deviation of the day's minutes, so the day is
+# filled without long idle stretches while most listed matters are still reached.
+# Floors (ageing share >= 20%, age weight >= 1) are enforced in code, not here.
+name: optimal
+planner: milp
+fill_target: 1.0          # 1.0 = plan expected minutes to capacity (the risk buffer is added on top)
+overbook: 1.0             # no blind overbooking; the buffer is derived from hearing-length variance
+max_listed: 60
+# substantive scales every value; age/wait feed the justice weight; cluster is kept modest
+# because an absent advocate misses all of that day's matters (correlated risk).
+weights: {substantive: 1.0, age: 1.0, wait: 0.5, fresh: 0.0, cluster: 0.2}
+ageing_share: 0.25
+carry_over: priority
+next_date_policy: procedural
+use_readiness: true
+give_appointments: true
+# court operations: 30 min/day held back for urgent matters (released to standby when unused),
+# online learning of attendance, firm short dates for flagged strategic delay
+reserve_minutes: 30
+urgent_per_day: 1.5
+judge_emergency_p: 0.03
+learning: true
+gaming_response: true
+agency_delay_mult: 1.0
+checklists: default
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

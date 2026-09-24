@@ -1,0 +1,607 @@
+{
+ "settings": [
+  {
+   "key": "planner",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Court day",
+   "name": "How the list is made",
+   "what": "milp (the optimiser), greedy (a fast fallback) or baseline (current practice).",
+   "default": "milp",
+   "range": "3 options",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "day_start",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Court day",
+   "name": "When the court starts",
+   "what": "First sitting time when no day profile is set.",
+   "default": "10:30",
+   "range": "HH:MM",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "slots",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Court day",
+   "name": "Sittings",
+   "what": "Named sittings of the day (built from the day profile when one is set).",
+   "default": [],
+   "range": "guardrails below",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "leave",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Court day",
+   "name": "Judge on leave",
+   "what": "Dates the judge does not sit; no list is made and dates avoid them.",
+   "default": [],
+   "range": "any dates",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "day_minutes",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Court day",
+   "name": "Hearing minutes in a day",
+   "what": "Capacity of the day (follows the day profile).",
+   "default": 420,
+   "range": "120-420",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "day_profile",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Court day",
+   "name": "Day profile",
+   "what": "Sittings, lunch and administrative time per weekday.",
+   "default": null,
+   "range": "guardrails below",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "reserve_minutes",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Court day",
+   "name": "Minutes kept for urgent matters",
+   "what": "Held back every day for bail, stays, urgent mentions.",
+   "default": 30,
+   "range": "0-120",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "urgent_per_day",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Court day",
+   "name": "Urgent matters expected per day",
+   "what": "Simulation: how many urgent matters arrive.",
+   "default": 1.5,
+   "range": "0-10",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "judge_emergency_p",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Court day",
+   "name": "Chance the judge is called away",
+   "what": "Simulation: part of a day lost; the rest rolled with priority.",
+   "default": 0.03,
+   "range": "0-1",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "fill_target",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Overbooking",
+   "name": "Fill target",
+   "what": "Share of hearing time to plan for.",
+   "default": 1.0,
+   "range": "0.5-1.0",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "overbook",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Overbooking",
+   "name": "How full to list the day",
+   "what": "Lists this multiple of the expected minutes (1.0 = to capacity).",
+   "default": 1.0,
+   "range": "0.9-1.3",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "risk_kappa",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Overbooking",
+   "name": "Safety buffer",
+   "what": "Extra expected minutes, in standard deviations of the day's uncertainty. The minutes are recomputed daily from that day's matters.",
+   "default": 1.0,
+   "range": "0-2",
+   "who_can_change": "judge (per setup)",
+   "learned": "the minutes adapt daily; with learning on, the chances behind them are learned"
+  },
+  {
+   "key": "max_listed",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Overbooking",
+   "name": "Most matters on one day's list",
+   "what": "Hard cap on listings.",
+   "default": 60,
+   "range": "10-60",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "ageing_share",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Fairness",
+   "name": "Minimum time for old cases",
+   "what": "Share of the day's expected minutes for cases over 4 years old; 'auto' follows the roster.",
+   "default": 0.25,
+   "range": "20%-60% or auto",
+   "who_can_change": "judge above the floor; the floor is fixed",
+   "learned": "no"
+  },
+  {
+   "key": "weights.age",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Fairness",
+   "name": "Priority for age",
+   "what": "How much older cases are raised.",
+   "default": 1.0,
+   "range": ">= 1.0",
+   "who_can_change": "judge above the floor; the floor is fixed",
+   "learned": "no"
+  },
+  {
+   "key": "weights.wait",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Priority",
+   "name": "Priority for being passed over",
+   "what": "Raises a matter each time it is listed and not reached.",
+   "default": 0.5,
+   "range": "0-3",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "weights.fresh",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Priority",
+   "name": "Priority for fresh matters",
+   "what": "Raises early-stage matters (the fresh-first style).",
+   "default": 0.0,
+   "range": "0-3",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "weights.cluster",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Advocates",
+   "name": "Group each advocate's matters",
+   "what": "Small reward for each matter beyond an advocate's first on the same day (worth this share of a typical matter), so a lawyer is not sent between days for one matter each.",
+   "default": 0.3,
+   "range": "0-2",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "advocate_daily_cap",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Advocates",
+   "name": "Most matters of one advocate on one day",
+   "what": "The date plan never gives one advocate more than this many matters on one day, so a busy lawyer cannot crowd a day.",
+   "default": 6,
+   "range": "1-20",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "weights.substantive",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Priority",
+   "name": "Value of a hearing that moves",
+   "what": "Scale of the value of progress.",
+   "default": 1.0,
+   "range": "fixed at 1 by default",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "use_readiness",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Readiness",
+   "name": "Hold back matters that are not ready",
+   "what": "Do not list while a summons, warrant or filing is known to be outstanding.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "readiness_visibility",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Readiness",
+   "name": "Share of missing prerequisites the court can see",
+   "what": "How many unmet prerequisites are known before listing (process tracking).",
+   "default": 0.8,
+   "range": "0-1",
+   "who_can_change": "court (master list)",
+   "learned": "no"
+  },
+  {
+   "key": "checklists",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Readiness",
+   "name": "Checklist template",
+   "what": "Which prerequisite checklist per purpose of hearing applies.",
+   "default": "default",
+   "range": "config/checklists.yaml",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "give_appointments",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "People",
+   "name": "Give every matter a time window",
+   "what": "An appointment window instead of an all-day wait.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "carry_over",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Dates",
+   "name": "What happens to a matter not reached",
+   "what": "priority (next day, raised) / same weekday next week / none.",
+   "default": "priority",
+   "range": "3 options",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "next_date_policy",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Dates",
+   "name": "Next-date rule",
+   "what": "procedural (matched to the next step) or flat (a fixed gap).",
+   "default": "procedural",
+   "range": "2 options",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "flat_gap_days",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Dates",
+   "name": "Flat gap",
+   "what": "Used only by the flat rule (current practice: 60).",
+   "default": 60,
+   "range": "1-120",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "use_horizon",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Dates",
+   "name": "Plan dates ahead",
+   "what": "Rolling 10-day date plan, re-planned nightly.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "horizon_days",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Dates",
+   "name": "Days planned ahead",
+   "what": "Length of the rolling date plan.",
+   "default": 10,
+   "range": "5-20",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "learning",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Learning",
+   "name": "Learn as the court runs",
+   "what": "Updates each advocate's, party's and hearing type's chance of going ahead after every hearing.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "judge (per setup)",
+   "learned": "yes: this is the learning"
+  },
+  {
+   "key": "advocate_correlation",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Advocates",
+   "name": "An absent advocate misses all their matters",
+   "what": "Simulation: correlated absence (5% per advocate-day), so the plan is tested against a lawyer's whole day failing.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "court (master list)",
+   "learned": "no"
+  },
+  {
+   "key": "gaming_share",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Simulation",
+   "name": "Share of advocates who seek time strategically",
+   "what": "Simulation only.",
+   "default": 0.08,
+   "range": "0-0.5",
+   "who_can_change": "court (master list)",
+   "learned": "no"
+  },
+  {
+   "key": "gaming_response",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Fairness",
+   "name": "Respond to strategic delay",
+   "what": "Firm short date and a last chance for the requesting side; the other side is never penalised.",
+   "default": true,
+   "range": "on/off",
+   "who_can_change": "judge (per setup)",
+   "learned": "flags are learned from the record"
+  },
+  {
+   "key": "absence_mult",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Simulation",
+   "name": "How often people stay away",
+   "what": "Simulation only: multiplies every chance of absence.",
+   "default": 1.0,
+   "range": "0.5-3",
+   "who_can_change": "court (master list)",
+   "learned": "no"
+  },
+  {
+   "key": "agency_delay_mult",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Simulation",
+   "name": "State-agency delays",
+   "what": "Multiplies delays from process service, police and forensics.",
+   "default": 1.0,
+   "range": "0.5-3",
+   "who_can_change": "court (master list)",
+   "learned": "no"
+  },
+  {
+   "key": "judge",
+   "in_simulation": true,
+   "set_in": "Simulation page or the setup file",
+   "group": "Judge",
+   "name": "Judge background and experience",
+   "what": "Background (criminal bar, civil bar, judicial service, academic), years on the bench, specialisations: changes hearing time.",
+   "default": null,
+   "range": "see duration model",
+   "who_can_change": "judge (per setup)",
+   "learned": "no"
+  },
+  {
+   "key": "priors",
+   "in_simulation": false,
+   "set_in": "the setup file (config/<setup>.yaml)",
+   "group": "Judge",
+   "name": "Judge overrides of the court's master list",
+   "what": "Per hearing type: minutes, gap, chance it moves; per dispute type.",
+   "default": null,
+   "range": "bounded",
+   "who_can_change": "judge (per setup)",
+   "learned": "the effective values are the prior for learning"
+  }
+ ],
+ "floors": [
+  {
+   "name": "Minimum time for old cases",
+   "rule": "never below 20% of the day's expected minutes when old cases are waiting"
+  },
+  {
+   "name": "Priority for age",
+   "rule": "never below 1.0 (an old case is never ranked below neutral)"
+  },
+  {
+   "name": "Hearing time per week",
+   "rule": "an average of at least 3.5 hours a sitting day"
+  },
+  {
+   "name": "Hearing time per sitting day",
+   "rule": "between 2 and 7 hours"
+  },
+  {
+   "name": "Emergency reserve",
+   "rule": "always taken out of planning capacity when set"
+  },
+  {
+   "name": "Prerequisite checklists",
+   "rule": "a matter with a known unmet item is never listed and loses its reserved date"
+  },
+  {
+   "name": "The other side",
+   "rule": "a strategic-delay response never penalises the side that did not ask for time"
+  }
+ ],
+ "estimation": [
+  {
+   "step": "Where the chances start",
+   "how": "From the court's own records. For each kind of hearing (evidence, arguments, warrant...) we know how often it actually moved the case forward, and when it did not, why: papers or a summons were not ready, someone did not come or asked for time, or the court itself could not take it. Those shares are the starting chances for every matter of that kind."
+  },
+  {
+   "step": "Chance it goes ahead",
+   "how": "1 - (chance of absence + chance time is sought) x case adjustments; absence x1.4 if absent last time, x1.15 per adjournment in a row (up to 4), x0.5 if readiness confirmed, x0.85 with a time window; dispute type and town conditions also multiply."
+  },
+  {
+   "step": "Chance it moves forward",
+   "how": "chance it goes ahead x (1 - chance of a court-side problem)."
+  },
+  {
+   "step": "Expected minutes",
+   "how": "chance it goes ahead x usual length (hearing type x judge x recency x dispute type) + otherwise 1 minute to call it."
+  },
+  {
+   "step": "Uncertainty for the buffer",
+   "how": "each matter's minutes are uncertain (it may not go ahead, and its length varies); the day's total spread sets the buffer."
+  },
+  {
+   "step": "Learning (when on)",
+   "how": "Beta-Bayesian estimates per advocate, party and hearing type x stage, starting from the tables and updated after every hearing; the planner then uses the learned chance."
+  },
+  {
+   "step": "On the day (simulation)",
+   "how": "hearing length is drawn around the usual length (spread 0.5); attendance from the chances above, or from the AI agent's own stated chances."
+  }
+ ],
+ "advocate_rules": [
+  {
+   "name": "Who the lawyer is never counts",
+   "rule": "A matter's value is its chance of moving forward x how far a hearing takes it x the justice weight (age, time stuck, times passed over). No advocate's name, seniority, firm or number of cases enters it."
+  },
+  {
+   "name": "Grouping is a small bonus, not a priority",
+   "rule": "Each matter beyond an advocate's first on the same day earns the grouping reward (default 0.3 of a typical matter). It saves the lawyer a trip. It can only break near-ties: a matter worth more than 0.3 of a typical matter above another always wins, whoever the lawyers are."
+  },
+  {
+   "name": "A cap per advocate per day",
+   "rule": "The date plan never gives one advocate more than the daily cap of matters (default 6), so a busy practice cannot crowd out a day."
+  },
+  {
+   "name": "Called back to back",
+   "rule": "Within a sitting, an advocate's matters are called one after another, so no lawyer waits all day between two matters."
+  },
+  {
+   "name": "An absent lawyer does not cost the other side",
+   "rule": "If an advocate is absent or seeks time, the case gets a short, firm date; the side that came is never pushed back."
+  },
+  {
+   "name": "Strategic delay is answered at the requester",
+   "rule": "An advocate whose time requests cluster before evidence or judgement is flagged from the record; the response (firm short date, last chance) applies only to the side that asked."
+  },
+  {
+   "name": "Learning is per advocate, and bounded",
+   "rule": "With learning on, an advocate's own record of turning up adjusts the chance their matters go ahead, starting from the court's tables and never below 2% or above 99.9%. The client's matter is still listed by its value and still protected by the ageing floor."
+  },
+  {
+   "name": "The same rules for every lawyer",
+   "rule": "Every rule above applies identically to every advocate; nothing is set per name."
+  }
+ ],
+ "lawyer_check": {
+  "roster": 3000,
+  "rows": [
+   {
+    "bucket": "1 case",
+    "cases": 282,
+    "Current practice": {
+     "listed_per_case": 1.04,
+     "moved_per_case": 0.23
+    },
+    "Recommended list": {
+     "listed_per_case": 0.45,
+     "moved_per_case": 0.27
+    }
+   },
+   {
+    "bucket": "2 cases",
+    "cases": 692,
+    "Current practice": {
+     "listed_per_case": 1.04,
+     "moved_per_case": 0.267
+    },
+    "Recommended list": {
+     "listed_per_case": 0.42,
+     "moved_per_case": 0.266
+    }
+   },
+   {
+    "bucket": "3-4 cases",
+    "cases": 1374,
+    "Current practice": {
+     "listed_per_case": 1.04,
+     "moved_per_case": 0.242
+    },
+    "Recommended list": {
+     "listed_per_case": 0.42,
+     "moved_per_case": 0.264
+    }
+   },
+   {
+    "bucket": "5+ cases",
+    "cases": 652,
+    "Current practice": {
+     "listed_per_case": 1.05,
+     "moved_per_case": 0.239
+    },
+    "Recommended list": {
+     "listed_per_case": 0.37,
+     "moved_per_case": 0.229
+    }
+   }
+  ],
+  "takeaway": "Matters of advocates with many cases are not favoured: per case they move forward 0.23 times against 0.27 for a lawyer with a single case, a slight tilt the other way that we watch."
+ },
+ "presets": [
+  "baseline",
+  "block_schedule",
+  "cluster_by_advocate",
+  "fresh_matters_first",
+  "marathon_bench",
+  "morning_bench",
+  "new_judge_from_criminal_bar",
+  "optimal"
+ ],
+ "where": "Settings live in config/<setup>.yaml; the court master list in config/priors/court_default.yaml; checklists in config/checklists.yaml."
+}

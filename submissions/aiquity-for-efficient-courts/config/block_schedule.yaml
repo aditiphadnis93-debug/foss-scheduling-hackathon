@@ -1,0 +1,20 @@
+# Block scheduler: fresh + notice matters in the morning, oldest matters after lunch,
+# unheard matters stay on the same weekday next week until heard.
+name: block_schedule
+planner: milp
+slots:
+  - {name: fresh_and_notice, start: "10:00", end: "13:30",
+     purposes: [ADMISSION, DELAY_CONDONATION_HEARING, COGNIZANCE, APPEARANCE, WARRANT, PLEA, BAIL, APPLICATION_REVIEW, REPORTS]}
+  - {name: oldest_matters, start: "14:00", end: "16:30", min_age_years: 3}
+weights: {substantive: 1.0, age: 1.5, wait: 1.0, fresh: 0.0, cluster: 0.1}
+ageing_share: 0.3
+carry_over: same_weekday
+next_date_policy: procedural
+# This bench knows its own evidence sessions run long, and its old arguments need re-reading time.
+priors:
+  EVIDENCE_COMPLAINANT: {minutes: 40}
+  ARGUMENTS: {minutes_mult: 1.2}
+day_profile:
+  default:
+    sittings: [["10:00", "13:30"], ["14:00", "16:30"]]
+    admin: [["16:30", "17:30"]]

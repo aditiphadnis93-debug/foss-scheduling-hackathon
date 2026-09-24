@@ -1,0 +1,72 @@
+/* Brand palette (web/COLORS.md). Light is the default; dark is the toggle: <html data-theme="dark">.
+   Every colour in the app comes from these variables. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f9fafb;
+  --surface-2: #f1f5f9;
+  --border: #e1e7ef;
+  --text: #111827;
+  --text-muted: #65758b;
+  --text-faint: #9ca3b0;
+  --primary: #2463eb;
+  --primary-hover: #3c83f6;
+  --primary-strong: #1e3b8a;
+  --primary-subtle: #f0f6ff;
+  --primary-soft: #dcebfe;
+  --green: #10b77f;
+  --green-strong: #059467;
+  --green-subtle: #edfdf5;
+
+  /* meaning colours */
+  --c-ours: #2463eb;
+  --c-baseline: #9ca3b0;
+  --c-substantive: #10b77f;
+  --c-adjourned: #f59f0a;
+  --c-not-reached: #c678dd;
+  --c-not-ready: #274754;
+  --c-old: #e76e50;
+  --c-danger: #ef4343;
+
+  /* age buckets, youngest to oldest */
+  --age-0: #bedbfe;
+  --age-1: #91c3fd;
+  --age-2: #61a6fa;
+  --age-3: #2463eb;
+  --age-4: #1e3b8a;
+  --age-5: #e76e50;
+
+  --shadow-float: 0 1px 2px rgba(17, 24, 39, 0.06), 0 8px 24px rgba(17, 24, 39, 0.06);
+  --on-primary: #ffffff;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #030711;
+  --surface: #080c16;
+  --surface-2: #1a2333;
+  --border: #222f44;
+  --text: #f9fafb;
+  --text-muted: #94a3b8;
+  --text-faint: #6b7280;
+  --primary: #3c83f6;
+  --primary-hover: #61a6fa;
+  --primary-strong: #bedbfe;
+  --primary-subtle: #172554;
+  --primary-soft: #1e3b8a;
+  --green: #36d399;
+  --green-strong: #36d399;
+  --green-subtle: #064c39;
+
+  --c-ours: #3c83f6;
+  --c-baseline: #6b7280;
+  --c-substantive: #36d399;
+  --c-adjourned: #fab338;
+  --c-not-reached: #c678dd;
+  --c-not-ready: #7aa6b8;
+  --c-old: #e76e50;
+  --c-danger: #ef4343;
+
+  --shadow-float: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}

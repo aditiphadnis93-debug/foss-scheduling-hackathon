@@ -1,0 +1,83 @@
+# Court master list of priors per hearing type. Edit as the court's own records improve;
+# keep `source` honest. Judge presets can override any row under `priors:`.
+# Editable: minutes, minutes_mult, ideal_gap_days, p_substantive (see causelist/priors.py).
+hearing_types:
+  ADMISSION:
+    ideal_gap_days: 5
+    minutes: 5.0
+    p_substantive: 0.486
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  APPEARANCE:
+    ideal_gap_days: 21
+    minutes: 10.0
+    p_substantive: 0.401
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  APPLICATION_REVIEW:
+    ideal_gap_days: 5
+    minutes: 10.0
+    p_substantive: 0.85
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  ARGUMENTS:
+    ideal_gap_days: 14
+    minutes: 30.0
+    p_substantive: 0.13
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  BAIL:
+    ideal_gap_days: 14
+    minutes: 15.0
+    p_substantive: 0.313
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  COGNIZANCE:
+    ideal_gap_days: 14
+    minutes: 10.0
+    p_substantive: 0.9
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  DELAY_CONDONATION_HEARING:
+    ideal_gap_days: 5
+    minutes: 5.0
+    p_substantive: 0.293
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  EVIDENCE_ACCUSED:
+    ideal_gap_days: 14
+    minutes: 30.0
+    p_substantive: 0.167
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  EVIDENCE_COMPLAINANT:
+    ideal_gap_days: 14
+    minutes: 30.0
+    p_substantive: 0.294
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  EXAMINATION_UNDER_S351_BNSS:
+    ideal_gap_days: 14
+    minutes: 30.0
+    p_substantive: 0.407
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  JUDGEMENT:
+    ideal_gap_days: 21
+    minutes: 30.0
+    p_substantive: 1.0
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  PLEA:
+    ideal_gap_days: 14
+    minutes: 15.0
+    p_substantive: 0.9
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  REPORTS:
+    ideal_gap_days: 45
+    minutes: 10.0
+    p_substantive: 0.083
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+  WARRANT:
+    ideal_gap_days: 21
+    minutes: 10.0
+    p_substantive: 0.135
+    source: organiser tables (hearing_type_reference, substantiveness_by_hearing_type)
+# Factors by kind of dispute, multiplying the hearing-type values above (see causelist/priors.py).
+dispute_kinds:
+  unspecified: {minutes_mult: 1.0, absent_mult: 1.0}
+  cheque_loan: {minutes_mult: 1.0, absent_mult: 1.0}
+  supplier: {minutes_mult: 1.15, absent_mult: 0.9}
+  wages: {minutes_mult: 0.9, absent_mult: 1.25}
+  rent: {minutes_mult: 1.0, absent_mult: 1.1}
+  family_property: {minutes_mult: 1.3, absent_mult: 1.15}
+  other: {minutes_mult: 1.0, absent_mult: 1.0}
