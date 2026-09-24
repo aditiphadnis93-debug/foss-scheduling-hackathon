@@ -745,8 +745,8 @@ hooks["s-why"] = {
     for (const v of [0, 5, 10, 15, 20, 25]) { const t = el("div", "tick", `<span>${v}</span>`); t.style.bottom = (v / MAX) * 100 + "%"; if (v) host.append(t); }
     const cols = [
       { base: 0, h: 17.3, cls: "ink", val: "17.3", lab: "Today's list", later: false },
-      { base: 17.3, h: 1.0, cls: "blue", val: "+1.0", lab: "Failures known the evening before, avoided. Our pick measures 18.3.", later: false },
-      { base: 18.3, h: 3.3, cls: "grey", val: "+3.3", lab: "Failures that arise in court, avoided", later: true },
+      { base: 17.3, h: 1.0, cls: "blue", val: "+1.0", lab: "Known the evening before, our pick at 18.3", later: false },
+      { base: 18.3, h: 3.3, cls: "grey", val: "+3.3", lab: "Failures that arise in court", later: true },
       { base: 21.6, h: 2.1, cls: "grey", val: "+2.1", lab: "Idle minutes filled", later: true },
       { base: 0, h: 23.7, cls: "outline", val: "23.7", lab: "Arithmetic ceiling", later: true },
     ];

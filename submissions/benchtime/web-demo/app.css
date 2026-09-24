@@ -226,7 +226,7 @@ body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: anti
 .hrow.worse .bar { background: var(--red); }
 .hrow.worse .lab { color: var(--red); }
 .found-main.focus-loss .hrow:not(.worse):not(.head-row) { opacity: .22; }
-.found-main.focus-loss .hrow.worse { transform: scale(1.02); }
+.found-main.focus-loss .hrow.worse { font-weight: 600; }
 .rchart, .achart { display: flex; flex-direction: column; gap: clamp(3px, .6vh, 8px); }
 .rrow { display: grid; grid-template-columns: minmax(260px, 24vw) 1fr 1fr; gap: 2vw; align-items: center; font-size: var(--cap); }
 .rrow.hdr { color: var(--muted); font-size: clamp(12px, .85vw, 15px); }

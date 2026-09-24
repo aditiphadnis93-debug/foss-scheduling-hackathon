@@ -159,6 +159,15 @@ about 6% more useful hearings and 79 fewer dates broken or never given, but 140 
 - We fixed the final rule at 14:15 and added the old-case guardrail at 14:36, both on tuning seeds, before
   anything ran on seeds 31 to 60.
 
+### Why the numbers are not higher
+
+Today's list already uses about 91% of the bench time, and a failed call costs only 2 minutes. On seeds 31-40,
+avoiding every failure the registry could foresee the evening before would free about one useful hearing a day, which
+is the size of our gain. In a diagnostic world where process is always back, everyone attends and everyone is ready,
+the same pick gains +6.5 a day (+39%) while today's list stays near 17. The larger gains sit in process service,
+attendance and readiness, and in the judge's choice of aim. [out/WHY.md](out/WHY.md) gives the evidence, including why
+plain bin packing gives 15.0 useful hearings a day against today's 17.1.
+
 ### Where we lose
 
 Under `criteria.json` the winner fails 1 of 19 guardrails on seeds 31 to 60. It leaves 140 more cases never
