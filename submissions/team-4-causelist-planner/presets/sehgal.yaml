@@ -1,0 +1,24 @@
+# Justice Sehgal: block scheduler. Fresh/notice matters in the morning,
+# oldest matters in the afternoon; unheard cases roll to the same weekday next week.
+name: Justice Sehgal (block scheduler)
+courtroom: Court 1
+# How the judge describes their way of working (the brief, paraphrased). Only the L3 judge agent reads it.
+style: >-
+  I clear old backlog predictably. Fresh and notice matters in the morning, the oldest matters in the
+  afternoon, and a case not reached rolls to the same weekday next week until it is heard. Cases pending
+  for many years come first; I lose time when counsel are unprepared on old facts.
+max_cases_per_day: 60
+listing_factor: 1.0
+clustering: false
+rollover: true
+blocks:
+  - name: "A: fresh & notice"
+    start: "11:00"
+    end: "13:30"
+    purposes: [admission, mention, interim_application]
+    sort_by: newest
+  - name: "B: oldest matters"
+    start: "14:30"
+    end: "16:30"
+    purposes: [evidence, final_arguments]
+    sort_by: age
