@@ -1,0 +1,6 @@
+.git
+data
+docs
+**/__pycache__
+.pytest_cache
+!docs/scheduler-schema.sql

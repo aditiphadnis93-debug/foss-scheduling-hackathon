@@ -1,0 +1,15 @@
+# Light and dark themes. Users switch in ⋮ → Settings → Theme (Light / Dark / System).
+# Role colours (views/theme.py) are translucent washes and accents on top of these, so they work in both.
+[theme.light]
+primaryColor = "#475569"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f3f4f6"
+textColor = "#1f2328"
+borderColor = "#e1e4e8"
+
+[theme.dark]
+primaryColor = "#94a3b8"
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#1b1f27"
+textColor = "#e6e8eb"
+borderColor = "#2b303a"

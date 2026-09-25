@@ -1,0 +1,24 @@
+# Justice Joshi: new matters first. Asks for zero weight on age and heavy
+# overbooking; the locked rules clamp both and still reserve time for old cases.
+name: Justice Joshi (new matters first)
+courtroom: Court 3
+# How the judge describes their way of working (the brief, paraphrased). Only the L3 judge agent reads it.
+style: >-
+  I am newly posted and want to dispose of fresh, simple matters fast to build a track record. Old,
+  complicated files need reading time I don't have, so they wait. I readily grant adjournments.
+max_cases_per_day: 60
+listing_factor: 1.6
+clustering: false
+rollover: false
+weights:
+  age: 0
+  fresh: 40
+blocks:
+  - name: "Morning"
+    start: "11:00"
+    end: "13:30"
+    purposes: [admission, mention, interim_application, evidence, final_arguments]
+  - name: "Afternoon"
+    start: "14:30"
+    end: "16:30"
+    purposes: [admission, mention, interim_application, evidence, final_arguments]

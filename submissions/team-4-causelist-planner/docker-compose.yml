@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    environment:
+      LAYA_URL: http://laya:8000
+  test:
+    build: .
+    command: ["pytest", "-q"]
+    profiles: ["test"]
+  # Laya decision model for the L3 agents (optional: without it the agents use their rule fallback).
+  laya:
+    build: laya
+    profiles: ["agents"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      LAYA_MODELS: english
+      LAYA_PRELOAD: "1"
+      LAYA_THREADS: "4"
+    volumes:
+      - ./data/models:/models

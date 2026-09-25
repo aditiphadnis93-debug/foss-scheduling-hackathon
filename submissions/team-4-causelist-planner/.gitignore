@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+data/*.duckdb
+data/*.duckdb.wal
+data/synthetic/
+data/models/
+data/laya_decisions.json
+data/roster_synthetic.csv
+.~lock.*#
+docs/updated-provided-docs/
